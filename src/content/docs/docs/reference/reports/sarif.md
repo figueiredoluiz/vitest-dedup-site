@@ -1,9 +1,11 @@
 ---
 title: 'SARIF'
 description: 'SARIF 2.1.0. The log names the published schema in $schema.'
+sidebar:
+  order: 4
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/reports/sarif.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/sarif.md. Edits belong upstream. -->
 
 SARIF 2.1.0. The log names the published schema in `$schema`.
 

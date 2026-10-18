@@ -3,7 +3,7 @@ title: 'Incomplete runs and limits'
 description: 'incomplete is true when some tests could not be compared: an unreadable config, a dynamic title, a table that cannot be resolved statically, a limit reached....'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/incomplete-runs.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/incomplete-runs.md. Edits belong upstream. -->
 
 ## What `incomplete` means
 

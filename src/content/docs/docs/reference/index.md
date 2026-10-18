@@ -1,9 +1,11 @@
 ---
 title: 'VitestDedup documentation'
-description: 'Contributors start at CONTRIBUTING.md.'
+description: 'Index of the VitestDedup analyzer reference: configuration, rules, reports, baselines and the Vitest surface.'
+sidebar:
+  label: 'Overview'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/README.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/README.md. Edits belong upstream. -->
 
 | Page                                                                   | Contents                                                                                                                                                                                                                                                                                                                                  |
 | ---------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

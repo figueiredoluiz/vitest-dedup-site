@@ -3,7 +3,7 @@ title: 'Configuration'
 description: 'A .vitest-dedup.json file is found by walking upward from the analyzed directory, or named with --config. Command-line flags override it.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/configuration.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/configuration.md. Edits belong upstream. -->
 
 A `.vitest-dedup.json` file is found by walking upward from the analyzed directory, or named with
 `--config`. Command-line flags override it.

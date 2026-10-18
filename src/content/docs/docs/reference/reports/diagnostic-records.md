@@ -1,9 +1,11 @@
 ---
 title: 'Diagnostic records'
 description: 'Two opt-in flags add records to the jsonl stream. Both require --reporters jsonl.'
+sidebar:
+  order: 3
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/reports/diagnostic-records.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/diagnostic-records.md. Edits belong upstream. -->
 
 Two opt-in flags add records to the `jsonl` stream. Both require `--reporters jsonl`.
 

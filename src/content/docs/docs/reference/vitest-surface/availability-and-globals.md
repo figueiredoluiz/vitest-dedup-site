@@ -1,9 +1,11 @@
 ---
-title: '7. How `describe`/`test`/etc. become available'
+title: 'How describe/test/etc. become available'
 description: 'With globals: true, test, describe, it, suite, expect, the hooks and the rest are ambient globals, syntactically indistinguishable from any other free identi...'
+sidebar:
+  order: 6
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/availability-and-globals.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/availability-and-globals.md. Edits belong upstream. -->
 
 | Mode             | Form                                                              | Notes                                                                                                                                                                |
 | ---------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

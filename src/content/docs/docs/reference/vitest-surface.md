@@ -3,7 +3,7 @@ title: 'Vitest test-declaration surface'
 description: 'What VitestDedup recognizes, and why. This is the reference the extractor is written against: anything Vitest can express that the analyzer must either read ...'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface.md. Edits belong upstream. -->
 
 What VitestDedup recognizes, and why. This is the reference the extractor is written against:
 anything Vitest can express that the analyzer must either read or refuse.

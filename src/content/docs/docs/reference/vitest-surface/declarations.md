@@ -1,9 +1,11 @@
 ---
 title: 'Declarations: callables, modifiers and signatures'
 description: '[v5 CHANGE] The vitest/suite subpath entry point was removed in v5. The named export suite from the vitest package root is unaffected, so the extractor treat...'
+sidebar:
+  order: 1
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/declarations.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/declarations.md. Edits belong upstream. -->
 
 ## 1. Test-declaring callables
 

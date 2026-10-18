@@ -1,9 +1,11 @@
 ---
 title: 'Extraction hazards, ranked'
 description: '1. bench changed from a top-level import (v2-v4) to a TestContext fixture (v5), the single test-declaring callable whose entire declaration shape differs acr...'
+sidebar:
+  order: 12
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/hazards.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/hazards.md. Edits belong upstream. -->
 
 1. **`bench` changed from a top-level import (v2-v4) to a `TestContext` fixture (v5)**, the single
    test-declaring callable whose entire declaration _shape_ differs across the majors the
@@ -49,7 +51,7 @@ description: '1. bench changed from a top-level import (v2-v4) to a TestContext 
 11. **The mocking family is modelled only where hoisting makes a file-wide answer sound**:
     `collect_mocked_modules` folds module-top-level `vi.mock`/`vi.unmock` with string-literal
     specifiers into one mock set (last in source order wins per specifier, verified against a real
-    Vitest 5 run, see [§12](/docs/reference/vitest-surface/module-mocking/)), and taints the whole file for everything else: the non-hoisted
+    Vitest 5 run, see [The vi module-mocking family](/docs/reference/vitest-surface/module-mocking/)), and taints the whole file for everything else: the non-hoisted
     `vi.doMock`/`vi.doUnmock`, an unreadable specifier or factory, and **any** of the four called
     outside module top level. A tainted file's tests are excluded from comparison entirely, which
     trades a possible false duplicate for a certain false negative, the same direction throughout.
@@ -57,11 +59,11 @@ description: '1. bench changed from a top-level import (v2-v4) to a TestContext 
     `vi.mock` found inside a `describe`, a test body, or an `if` must not be recorded as file-wide.
     Vitest 5 refuses to run such a file at all (`vitest:mocks`: "defined outside of the module's
     top level scope"), so there is no runtime context there to model, including in the
-    conditional case, where the call is hoisted out of the branch. See [§12](/docs/reference/vitest-surface/module-mocking/) for the full table and
+    conditional case, where the call is hoisted out of the branch. See [The vi module-mocking family](/docs/reference/vitest-surface/module-mocking/) for the full table and
     `fixtures/edge/vi-unmock-file-wide.test.ts` / `vi-dounmock-scoped.test.ts`, which demonstrate
     the modelled and tainted shapes respectively, and the
     `fixtures/duplicates/not-duplicates-mock-then-unmock*` pair, which asserts the mocked and
     mocked-then-unmocked contexts are compared and found different rather than excluded.
-    `[status: current]` as implemented by `collect_mocked_modules` in `src/frontend/extract.rs`.
+    as implemented by `collect_mocked_modules` in `src/frontend/extract.rs`.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).

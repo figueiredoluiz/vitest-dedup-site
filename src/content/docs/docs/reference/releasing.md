@@ -3,7 +3,7 @@ title: 'Releasing'
 description: 'Tag-driven, from main.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/releasing.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/releasing.md. Edits belong upstream. -->
 
 Tag-driven, from `main`.
 

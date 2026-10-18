@@ -1,9 +1,11 @@
 ---
-title: '4. `.each` and `.for` tables'
+title: '.each and .for tables'
 description: 'Title derivation for these tables is on Title formatting.'
+sidebar:
+  order: 2
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/each-tables.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/each-tables.md. Edits belong upstream. -->
 
 Title derivation for these tables is on [Title formatting](/docs/reference/vitest-surface/title-formatting/).
 

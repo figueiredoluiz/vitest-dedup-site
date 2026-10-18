@@ -75,7 +75,7 @@ const currentVersion = await getCurrentVersion();
         title="vitest-dedup"
         command="npx vitest-dedup ."
         lines={[
-          { text: `vitest-dedup ${currentVersion.replace('v', '')}`, tone: 'dim' },
+          { text: `VitestDedup ${currentVersion}`, tone: 'dim' },
           { text: '' },
           { text: 'duplicate-test (1 error)', tone: 'rule' },
           { text: '  error  same normalized body under an equivalent context', tone: 'out' },
@@ -92,12 +92,13 @@ const currentVersion = await getCurrentVersion();
           { text: '    related: tests/api/admin-users.spec.ts:31:1 similar', tone: 'location' },
           { text: '    action: review before changing tests', tone: 'accent' },
           { text: '' },
-          { text: '318 tests in 42 files analyzed', tone: 'out' },
-          { text: 'errors: 1, warnings: 2, off: 0 · threshold: 0%', tone: 'dim' },
+          { text: 'Analyzed 369 tests in 29 files: 1 error, 2 warnings', tone: 'out' },
           { text: 'Analysis policy: FAIL', tone: 'warn' },
-          { text: 'Detection time: 412.7 ms', tone: 'dim' },
+          { text: '' },
+          { text: 'Found 3 findings.', tone: 'out' },
+          { text: 'Detection time: 56.9 ms', tone: 'dim' },
         ]}
-        note="Real command · output abridged and illustrative"
+        note="Real command · findings abridged and illustrative · counts and time measured with v0.5.1 on a 369-test open-source suite"
       />
     </div>
   </div>

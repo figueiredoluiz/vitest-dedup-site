@@ -3,7 +3,7 @@ title: 'Rules'
 description: 'Set a rule to off, warning or error in configuration or with --rule <id=<severity.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/rules.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/rules.md. Edits belong upstream. -->
 
 Set a rule to `off`, `warning` or `error` in [configuration](/docs/reference/configuration/) or with
 `--rule <id>=<severity>`.

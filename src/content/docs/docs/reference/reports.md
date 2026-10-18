@@ -3,7 +3,7 @@ title: 'Reports'
 description: 'Choose a reporter by how the result will be consumed.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/reports.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports.md. Edits belong upstream. -->
 
 Choose a reporter by how the result will be consumed.
 
