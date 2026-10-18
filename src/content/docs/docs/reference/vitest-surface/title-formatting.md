@@ -1,29 +1,28 @@
 ---
-title: 'Title formatting'
-description: 'How Vitest renders a .each / .for title, and how far this analyzer reproduces it. The table shapes are on .each and .for tables.'
+title: "Title formatting"
+description: "How Vitest renders a .each / .for title, and how far this analyzer reproduces it. The table shapes are on .each and .for tables."
 sidebar:
   order: 3
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/title-formatting.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/title-formatting.md. Edits belong upstream. -->
 How Vitest renders a `.each` / `.for` title, and how far this analyzer reproduces it. The table
 shapes are on [`.each` and `.for` tables](/docs/reference/vitest-surface/each-tables/).
 
 **Title interpolation directives** (printf-style, applied left-to-right against the row's
 positional values, independent of `$field` mode):
 
-| Directive | Meaning                                                        |
-| --------- | -------------------------------------------------------------- |
-| `%s`      | string                                                         |
-| `%d`      | number                                                         |
-| `%i`      | integer                                                        |
-| `%f`      | float                                                          |
-| `%j`      | JSON                                                           |
-| `%o`      | object                                                         |
-| `%#`      | 0-based index of the row within the table                      |
-| `%$`      | 1-based index of the row                                       |
-| `%%`      | documented as a literal `%`; **measured otherwise, see below** |
+| Directive | Meaning |
+| --- | --- |
+| `%s` | string |
+| `%d` | number |
+| `%i` | integer |
+| `%f` | float |
+| `%j` | JSON |
+| `%o` | object |
+| `%#` | 0-based index of the row within the table |
+| `%$` | 1-based index of the row |
+| `%%` | documented as a literal `%`; **measured otherwise, see below** |
 
 ## What the numeric directives actually coerce
 
@@ -32,30 +31,30 @@ inside the run rather than inferring it from the pattern. `%d` is `Number(value)
 `parseInt`/`parseFloat` over the value's **string** form, which is a different function on a different
 input and disagrees with `%d` on most non-numbers.
 
-| value       | `%s`        | `%d`       | `%i`  | `%f`       |
-| ----------- | ----------- | ---------- | ----- | ---------- |
-| `null`      | `null`      | `0`        | `NaN` | `NaN`      |
-| `true`      | `true`      | `1`        | `NaN` | `NaN`      |
-| `false`     | `false`     | `0`        | `NaN` | `NaN`      |
-| `undefined` | `undefined` | `NaN`      | `NaN` | `NaN`      |
-| `0`         | `0`         | `0`        | `0`   | `0`        |
-| `-0`        | `-0`        | `0`        | `0`   | `-0`       |
-| `1.5`       | `1.5`       | `1.5`      | `1`   | `1.5`      |
-| `-1.5`      | `-1.5`      | `-1.5`     | `-1`  | `-1.5`     |
-| `'a'`       | `a`         | `NaN`      | `NaN` | `NaN`      |
-| `''`        | _(empty)_   | `0`        | `NaN` | `NaN`      |
-| `'1.5'`     | `1.5`       | `1.5`      | `1`   | `1.5`      |
-| `'12abc'`   | `12abc`     | `NaN`      | `12`  | `12`       |
-| `'0x1F'`    | `0x1F`      | `31`       | `31`  | `0`        |
-| `[]`        | _(empty)_   | `0`        | `NaN` | `NaN`      |
-| `[2]`       | `2`         | `2`        | `2`   | `2`        |
-| `[2, 3]`    | `2,3`       | `NaN`      | `2`   | `2`        |
-| `[null]`    | _(empty)_   | `0`        | `NaN` | `NaN`      |
-| `[true]`    | `true`      | `NaN`      | `NaN` | `NaN`      |
-| `{ k: 1 }`  | `{ k: 1 }`  | `NaN`      | `NaN` | `NaN`      |
-| `NaN`       | `NaN`       | `NaN`      | `NaN` | `NaN`      |
-| `Infinity`  | `Infinity`  | `Infinity` | `NaN` | `Infinity` |
-| `10n`       | `10n`       | `10n`      | `10n` | `10`       |
+| value | `%s` | `%d` | `%i` | `%f` |
+| --- | --- | --- | --- | --- |
+| `null` | `null` | `0` | `NaN` | `NaN` |
+| `true` | `true` | `1` | `NaN` | `NaN` |
+| `false` | `false` | `0` | `NaN` | `NaN` |
+| `undefined` | `undefined` | `NaN` | `NaN` | `NaN` |
+| `0` | `0` | `0` | `0` | `0` |
+| `-0` | `-0` | `0` | `0` | `-0` |
+| `1.5` | `1.5` | `1.5` | `1` | `1.5` |
+| `-1.5` | `-1.5` | `-1.5` | `-1` | `-1.5` |
+| `'a'` | `a` | `NaN` | `NaN` | `NaN` |
+| `''` | *(empty)* | `0` | `NaN` | `NaN` |
+| `'1.5'` | `1.5` | `1.5` | `1` | `1.5` |
+| `'12abc'` | `12abc` | `NaN` | `12` | `12` |
+| `'0x1F'` | `0x1F` | `31` | `31` | `0` |
+| `[]` | *(empty)* | `0` | `NaN` | `NaN` |
+| `[2]` | `2` | `2` | `2` | `2` |
+| `[2, 3]` | `2,3` | `NaN` | `2` | `2` |
+| `[null]` | *(empty)* | `0` | `NaN` | `NaN` |
+| `[true]` | `true` | `NaN` | `NaN` | `NaN` |
+| `{ k: 1 }` | `{ k: 1 }` | `NaN` | `NaN` | `NaN` |
+| `NaN` | `NaN` | `NaN` | `NaN` | `NaN` |
+| `Infinity` | `Infinity` | `Infinity` | `NaN` | `Infinity` |
+| `10n` | `10n` | `10n` | `10n` | `10` |
 
 Four rows are worth naming because they are the ones a reimplementation gets wrong:
 
@@ -67,7 +66,7 @@ Four rows are worth naming because they are the ones a reimplementation gets wro
   `%d` yields `NaN`. `[]` is `''`, which `Number` reads as `0` but `parseInt` reads as `NaN`.
 - **`-0` keeps its sign under `%f` alone**, Vitest's own `formatTitle` rewrites the directive to
   `-%f` for a negative-zero item (read from the 5.0.3 bundle), while `%d`/`%i` print `0`. A BigInt
-  is _never_ `Number(value)`: `%d`/`%i` special-case it to print the literal's own `10n`, while
+  is *never* `Number(value)`: `%d`/`%i` special-case it to print the literal's own `10n`, while
   `%f` has no such case and prints `parseFloat('10')` = `10`.
 
 **What this analyzer renders, and where it refuses.** The coercions above that yield a real
@@ -86,14 +85,14 @@ rows that differ as the same case. The refusal lives in `numeric_directive`
 Documented as a literal `%`. Measured on Vitest 5.0.3, it emits `%`, a space, and **the next
 positional argument**, consuming it, so every directive after it shifts by one:
 
-| pattern             | row             | rendered title            |
-| ------------------- | --------------- | ------------------------- |
+| pattern | row | rendered title |
+| --- | --- | --- |
 | `%% x %s y %s z %s` | `['A','B','C']` | `% A x B y C z undefined` |
-| `x %s y %% z %s`    | `['A','B','C']` | `x A y % B z C`           |
-| `x %s y %s z %%`    | `['A','B','C']` | `x A y B z % C`           |
-| `%%%%`              | `['A','B','C']` | `% A% B`                  |
-| `100%% done %s`     | `['A','B']`     | `100% A done B`           |
-| `only %s`           | `['A','B','C']` | `only A`                  |
+| `x %s y %% z %s` | `['A','B','C']` | `x A y % B z C` |
+| `x %s y %s z %%` | `['A','B','C']` | `x A y B z % C` |
+| `%%%%` | `['A','B','C']` | `% A% B` |
+| `100%% done %s` | `['A','B']` | `100% A done B` |
+| `only %s` | `['A','B','C']` | `only A` |
 
 The last row rules out "leftover arguments are appended": they are not. `%%` is behaving as a
 directive, not as an escape.
@@ -121,7 +120,7 @@ by the measurements:
 1. Render the value with pretty-format at `maxDepth: 10`.
 2. While the result is **≥ 40 units** and `maxDepth > 1`, halve `maxDepth` (10 → 5 → 2 → 1)
    and re-render. A composite past `maxDepth` prints as `[Array]`/`[Object]`.
-3. If it is still > 40: a _string_ keeps its first 38 units inside the quotes, then `…`; an
+3. If it is still > 40: a *string* keeps its first 38 units inside the quotes, then `…`; an
    **array, object, set or map** re-renders at `maxDepth: 1` with a binary-searched item width so
    the result fits 40, marking the cut `…(k)` where `k` is the number of omitted entries; anything
    else re-renders at `maxDepth: 0`.
@@ -132,24 +131,24 @@ path, `truncateString(value, 40)`: unchanged at 40 units, otherwise the first 39
 of a plain object is the same `inspect` call as `%o` (the object has no own `toString`); `%s` of
 a string or an array is not truncated at all.
 
-| value interpolated into the title                                              | rendered (Vitest 5.0.3, truncate 40)                                                                  |
-| ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
-| `[0..9]`, 10 one-digit items (32 chars)                                        | `[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]`, full                                                              |
-| `[0..19]`, 20 items                                                            | `[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, …(10) ]`                                                             |
-| `[90..100]`, 11 two-digit items                                                | `[ 90, 91, 92, 93, 94, 95, 96, 97, …(3) ]`, the width is _searched_ to fit the budget, not a fixed 10 |
-| `{ <46-char key>: 1 }`                                                         | `{ …(1) }`, the search can find width 0                                                               |
-| array nested 9 deep (37 chars)                                                 | full, depth alone never truncates                                                                     |
-| array nested 10 deep (41 chars)                                                | `[ [ [ [ [ [Array] ] ] ] ] ]`, halving landed at 5 levels                                             |
-| object nested 5 deep (37 chars)                                                | `{ a: { a: { a: { a: { a: 1 } } } } }`, full                                                          |
-| object nested 6 deep (42 chars)                                                | `{ a: { a: [Object] } }`                                                                              |
-| the string `'a'×38` under `%o`                                                 | `'aaaa…aaa'`, full: 40 units with the quotes                                                          |
-| the string `'a'×39`, `×40`, `×41`, `×45` under `%o`                            | `'aaaa…aaa…'`, 38 characters, then `…`, inside the quotes                                             |
-| the string `'a'×38`, `×39`, `×40` under `$field`                               | full, no quotes                                                                                       |
-| the string `'a'×41`, `×45` under `$field`                                      | `aaaa…aaa…`, 39 characters, then `…`                                                                  |
-| `'😀'×19` / `'😀'×20` under `%o`                                               | full / `'😀…😀…'`, 19 emoji, then `…`                                                                 |
-| `'😀'×20` / `'😀'×21` under `$field`                                           | full / `😀…😀…`, 19 emoji, then `…`                                                                   |
-| `[ '😀'×10, '😀'×10, 1 ]` under `%o` (33 characters, 53 units)                 | `[ '😀😀😀😀😀😀😀😀😀😀', …(2) ]`                                                                    |
-| `{ aaaaaaaaaaaaaaa: 1, bbbbbbbbbbbbbbbbbb: 2, ccccccccccccccc: 3 }` under `%s` | `{ aaaaaaaaaaaaaaa: 1, …(2) }`                                                                        |
+| value interpolated into the title | rendered (Vitest 5.0.3, truncate 40) |
+| --- | --- |
+| `[0..9]`, 10 one-digit items (32 chars) | `[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]`, full |
+| `[0..19]`, 20 items | `[ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, …(10) ]` |
+| `[90..100]`, 11 two-digit items | `[ 90, 91, 92, 93, 94, 95, 96, 97, …(3) ]`, the width is *searched* to fit the budget, not a fixed 10 |
+| `{ <46-char key>: 1 }` | `{ …(1) }`, the search can find width 0 |
+| array nested 9 deep (37 chars) | full, depth alone never truncates |
+| array nested 10 deep (41 chars) | `[ [ [ [ [ [Array] ] ] ] ] ]`, halving landed at 5 levels |
+| object nested 5 deep (37 chars) | `{ a: { a: { a: { a: { a: 1 } } } } }`, full |
+| object nested 6 deep (42 chars) | `{ a: { a: [Object] } }` |
+| the string `'a'×38` under `%o` | `'aaaa…aaa'`, full: 40 units with the quotes |
+| the string `'a'×39`, `×40`, `×41`, `×45` under `%o` | `'aaaa…aaa…'`, 38 characters, then `…`, inside the quotes |
+| the string `'a'×38`, `×39`, `×40` under `$field` | full, no quotes |
+| the string `'a'×41`, `×45` under `$field` | `aaaa…aaa…`, 39 characters, then `…` |
+| `'😀'×19` / `'😀'×20` under `%o` | full / `'😀…😀…'`, 19 emoji, then `…` |
+| `'😀'×20` / `'😀'×21` under `$field` | full / `😀…😀…`, 19 emoji, then `…` |
+| `[ '😀'×10, '😀'×10, 1 ]` under `%o` (33 characters, 53 units) | `[ '😀😀😀😀😀😀😀😀😀😀', …(2) ]` |
+| `{ aaaaaaaaaaaaaaa: 1, bbbbbbbbbbbbbbbbbb: 2, ccccccccccccccc: 3 }` under `%s` | `{ aaaaaaaaaaaaaaa: 1, …(2) }` |
 
 **What this analyzer does with that:** the budget is mirrored for the mechanisms this section
 measures, and the depth refusal stays separate:
@@ -157,7 +156,7 @@ measures, and the depth refusal stays separate:
 - **Depth: still a refusal, not a rendering difference.** `render_inspect`
   (`src/frontend/registry.rs`) renders composites only down to `MAX_CELL_DEPTH` (8), a bound
   against unbounded recursion over repository content. A composite nested past that bound is
-  _refused outright_: the cell is unreadable, its row keeps the unrendered pattern, and the
+  *refused outright*: the cell is unreadable, its row keeps the unrendered pattern, and the
   declaration opts out of title comparison (`not-compared`). No partially-rendered title is
   produced, and the budget mirror does not change this: a value that refuses the full render
   refuses everything (Vitest's own halving starts at `maxDepth: 10`; ours would start from a
@@ -187,3 +186,4 @@ an extractor reproduces vs. pre-v5 Vitest, **the title-rendering logic must be v
 extractor must not claim byte-exact title reproduction across Vitest majors, only per-major).
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

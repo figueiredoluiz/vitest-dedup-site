@@ -1,28 +1,27 @@
 ---
-title: 'The vi module-mocking family'
-description: 'The mocking surface is larger than vi.mock, and two pairs in it differ from vi.mock exactly the way vi.doMock does. The distinction is easy to miss because t...'
+title: "The vi module-mocking family"
+description: "The mocking surface is larger than vi.mock, and two pairs in it differ from vi.mock exactly the way vi.doMock does. The distinction is easy to miss because t..."
 sidebar:
   order: 10
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/module-mocking.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/module-mocking.md. Edits belong upstream. -->
 The mocking surface is larger than `vi.mock`, and two pairs in it differ from `vi.mock` exactly
 the way `vi.doMock` does. The distinction is easy to miss because the call shape
 (`(specifier, factory?)`) is identical across all of them.
 
-| Member                           | Hoisted? | Handling           |
-| -------------------------------- | -------- | ------------------ |
-| `vi.mock(path, factory?)`        | Yes      | Modelled           |
-| `vi.doMock(path, factory?)`      | No       | Taints the file    |
-| `vi.unmock(path)`                | Yes      | Modelled           |
-| `vi.doUnmock(path)`              | No       | Taints the file    |
-| `vi.resetModules()`              | N/A      | Not a registration |
-| `vi.mocked(value, options?)`     | N/A      | Not a registration |
-| `vi.importActual<T>(path)`       | N/A      | Not a registration |
-| `vi.importMock<T>(path)`         | N/A      | Not a registration |
-| `vi.mockObject(value, options?)` | N/A      | Not a registration |
-| `vi.when(spy, options?)`         | N/A      | Not a registration |
+| Member | Hoisted? | Handling |
+| --- | --- | --- |
+| `vi.mock(path, factory?)` | Yes | Modelled |
+| `vi.doMock(path, factory?)` | No | Taints the file |
+| `vi.unmock(path)` | Yes | Modelled |
+| `vi.doUnmock(path)` | No | Taints the file |
+| `vi.resetModules()` | N/A | Not a registration |
+| `vi.mocked(value, options?)` | N/A | Not a registration |
+| `vi.importActual<T>(path)` | N/A | Not a registration |
+| `vi.importMock<T>(path)` | N/A | Not a registration |
+| `vi.mockObject(value, options?)` | N/A | Not a registration |
+| `vi.when(spy, options?)` | N/A | Not a registration |
 
 ## Members
 
@@ -30,12 +29,12 @@ the way `vi.doMock` does. The distinction is easy to miss because the call shape
 
 - **Hoisted:** **Yes**, moved to top of file, before all imports
 - **Scope:** File-wide; affects every `import` of `path` in the file
-- **Notes:** The primitive already covered by fixture 56 (`vi-mock-hoisting.test.ts`). Factory runs once, cached. `{ spy: true }` automocks while preserving original implementations. **Modelled** when written as a module-top-level statement with a string-literal specifier: it becomes a registration event in the fold described below. Written anywhere else, inside a function, a hook, an `if`, it taints the file instead; see the fold's third bullet.
+- **Notes:** The primitive, covered by `fixtures/edge/vi-mock-hoisting.test.ts`. Factory runs once, cached. `{ spy: true }` automocks while preserving original implementations. **Modelled** when written as a module-top-level statement with a string-literal specifier: it becomes a registration event in the fold described below. Written anywhere else, inside a function, a hook, an `if`, it taints the file instead; see the fold's third bullet.
 
 ### `vi.doMock(path, factory?)`
 
 - **Hoisted:** **No**
-- **Scope:** Scoped, affects only dynamic `import()`s evaluated _after_ this call runs, in whichever test/hook calls it; static imports and earlier dynamic imports are unaffected
+- **Scope:** Scoped, affects only dynamic `import()`s evaluated *after* this call runs, in whichever test/hook calls it; static imports and earlier dynamic imports are unaffected
 - **Notes:** **Handled conservatively** (`src/frontend/extract.rs`): a `doMock` call cannot be soundly attributed to one test by static analysis, so this extractor marks the **whole file's** mocks unresolved whenever any `vi.doMock` call appears anywhere in it. The alternatives are both false-duplicate hazards:
   - treating it as file-wide like `vi.mock`
   - silently ignoring it
@@ -67,7 +66,7 @@ the way `vi.doMock` does. The distinction is easy to miss because the call shape
 
 ### `vi.mocked(value, options?)`
 
-TypeScript-only type helper, returns its argument unchanged at runtime. `options: { partial?, deep? }` only narrows the returned _type_. Not a registration; purely a body-level call the generic body fingerprint already captures.
+TypeScript-only type helper, returns its argument unchanged at runtime. `options: { partial?, deep? }` only narrows the returned *type*. Not a registration; purely a body-level call the generic body fingerprint already captures.
 
 ### `vi.importActual<T>(path)`
 
@@ -85,11 +84,12 @@ Imports a module with every export automocked, following the same automocking al
 
 **New since 5.0.0.** Argument-matched stubbing on a spy: `.calledWith(...args).thenReturn(...)`/`.thenThrow(...)`/`.thenResolve(...)`/etc. A body-level API for shaping mock behavior per call signature, not a module-registration primitive, same low extraction risk as `vi.mocked`/`vi.importActual` above.
 
+
 ## Why the pairs matter
 
 The `mock`/`doMock` and `unmock`/`doUnmock` pairs matter for this analyzer specifically: a
 test's effective `Context` includes which modules are mocked and with what factory (the
-`duplicates/not-duplicates-different-mocks-*` pair asserts this for `vi.mock`). Anything that changes _whether_ a specifier is mocked, including un-mocking it,
+`duplicates/not-duplicates-different-mocks-*` pair asserts this for `vi.mock`). Anything that changes *whether* a specifier is mocked, including un-mocking it,
 is therefore part of that context, and any registration primitive the extractor doesn't recognize
 is a silent hole in context-equivalence: two files can look identically mocked while one is
 genuinely unmocked at runtime, which is exactly the shape of a false `duplicate-test` finding.
@@ -125,8 +125,8 @@ recording a mock state that may be wrong:
   `if` (the non-hoisted `vi.doMock` / `vi.doUnmock` are covered by the first bullet wherever they
   appear).
   Vitest 5 does not run such a file at all: the `vitest:mocks` plugin fails the transform with
-  _"N call(s) in `<file>` was defined outside of the module's top level scope … Although it appears
-  nested, it will be hoisted and executed before anything in this file"_. That was confirmed by
+  *"N call(s) in `<file>` was defined outside of the module's top level scope … Although it appears
+  nested, it will be hoisted and executed before anything in this file"*. That was confirmed by
   running the three shapes (inside `describe`, inside `test`, inside a top-level `if`) under
   Vitest 5.0.0. The error is also the answer to the conditional case: the call is hoisted out of
   the branch, so `if (flag) vi.mock(p)` is not conditional at all, and Vitest refuses it rather
@@ -135,3 +135,4 @@ recording a mock state that may be wrong:
   either way.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

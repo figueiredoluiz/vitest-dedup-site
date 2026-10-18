@@ -1,24 +1,23 @@
 ---
-title: 'Fixtures (test.extend)'
+title: "Fixtures and test.extend"
 description: "myTest('reads a row', async ({ db }) = { expect(await db.get('x')).toBeDefined() })"
 sidebar:
   order: 5
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/test-extend-fixtures.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/test-extend-fixtures.md. Edits belong upstream. -->
 ```ts
 const myTest = test.extend<{ db: Database }>({
   db: async ({}, use) => {
-    const db = await connect();
-    await use(db);
-    await db.close();
+    const db = await connect()
+    await use(db)
+    await db.close()
   },
-});
+})
 
 myTest('reads a row', async ({ db }) => {
-  expect(await db.get('x')).toBeDefined();
-});
+  expect(await db.get('x')).toBeDefined()
+})
 ```
 
 - Fixture keys are the **object's property names** (object-syntax) or the **first string argument**
@@ -38,7 +37,7 @@ myTest('reads a row', async ({ db }) => {
     should always use the object destructuring pattern `{ database }` to access context both in
     fixture function and test function".
   - So the detector is understood to work reliably on the destructured-name shape. Whole-object dot
-    access to a _custom fixture_ (`(ctx) => ctx.db`, as opposed to a built-in `TestContext` member
+    access to a *custom fixture* (`(ctx) => ctx.db`, as opposed to a built-in `TestContext` member
     like `ctx.expect`) is a discouraged, not-guaranteed-detected pattern, not merely a stylistic
     alternative.
   - `{ auto: true }` forces initialization unconditionally, sidestepping the detector entirely.
@@ -46,17 +45,17 @@ myTest('reads a row', async ({ db }) => {
     source).
   - **What it cannot fully know**: whether a given test transitively pulls in a given fixture's side
     effects without also statically re-deriving Vitest's own usage-detection heuristic against that
-    specific callback's access pattern. The extractor _can_ approximate the destructured shape (a
+    specific callback's access pattern. The extractor *can* approximate the destructured shape (a
     syntactic pattern-match on the callback's parameter list) but should treat whole-object access
     to a fixture name as a weaker, best-effort signal than a destructured one, not an equally
     reliable mirror of runtime behavior.
 - **`scope`**: `'test'` (default, per-test) / `'file'` (shared per file) / `'worker'` (shared per
   worker process), changes whether two tests sharing a fixture are "isolated" for context-equivalence
   purposes; a `file`/`worker`-scoped fixture means state genuinely carries over between tests, which
-  the context model should represent (two tests using the same file-scoped fixture are _not_
+  the context model should represent (two tests using the same file-scoped fixture are *not*
   automatically context-independent the way two `test`-scoped-fixture tests are).
 - **`injected: true`**: value supplied externally via project `provide` config; statically the
-  fixture's _value_ is unknowable (comes from config, not source), record as "external/opaque
+  fixture's *value* is unknowable (comes from config, not source), record as "external/opaque
   fixture value."
 - **`test.scoped(...)`** (deprecated 4.1+) / **`test.override(...)`** (4.1+, current): both mutate
   fixture values for the current suite (and nested suites) rather than defining new fixtures; must
@@ -71,3 +70,4 @@ myTest('reads a row', async ({ db }) => {
   the fixture keys visible from the `test.extend` chain that produced the local `test`/`it` binding.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

@@ -1,25 +1,24 @@
 ---
-title: 'Declarations: callables, modifiers and signatures'
-description: '[v5 CHANGE] The vitest/suite subpath entry point was removed in v5. The named export suite from the vitest package root is unaffected, so the extractor treat...'
+title: "Declarations: callables, modifiers and signatures"
+description: "[v5 CHANGE] The vitest/suite subpath entry point was removed in v5. The named export suite from the vitest package root is unaffected, so the extractor treat..."
 sidebar:
   order: 1
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/declarations.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/declarations.md. Edits belong upstream. -->
+## Test-declaring callables
 
-## 1. Test-declaring callables
-
-| Callable   | Alias of   | Import                             | Notes                                                                                                                        |
-| ---------- | ---------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `test`     | none       | `vitest`                           | Primary test declarator.                                                                                                     |
-| `it`       | `test`     | `vitest`                           | Full alias: the same object, with the same modifiers, and interchangeable everywhere including `.each` and `.extend` chains. |
-| `describe` | none       | `vitest`                           | Suite declarator.                                                                                                            |
-| `suite`    | `describe` | `vitest`                           | Full alias of `describe`. See [`suite` in v5](#suite-in-v5).                                                                 |
-| `bench`    | none       | v2-v4: `vitest`; v5: not an export | Declared differently in each major. See [`bench` in v5](#bench-in-v5).                                                       |
+| Callable | Alias of | Import | Notes |
+| --- | --- | --- | --- |
+| `test` | none | `vitest` | Primary test declarator. |
+| `it` | `test` | `vitest` | Full alias: the same object, with the same modifiers, and interchangeable everywhere including `.each` and `.extend` chains. |
+| `describe` | none | `vitest` | Suite declarator. |
+| `suite` | `describe` | `vitest` | Full alias of `describe`. See [`suite` in v5](#suite-in-v5). |
+| `bench` | none | v2-v4: `vitest`; v5: not an export | Declared differently in each major. See [`bench` in v5](#bench-in-v5). |
 
 ### `suite` in v5
 
-`[v5 CHANGE]` The `vitest/suite` _subpath_ entry point was removed in v5. The named export `suite`
+`[v5 CHANGE]` The `vitest/suite` *subpath* entry point was removed in v5. The named export `suite`
 from the `vitest` package root is unaffected, so the extractor treats `suite(...)` exactly as
 `describe(...)`.
 
@@ -42,34 +41,34 @@ The extractor supports **both shapes**, because the corpus contains both major v
 chain form below applies identically to both members of a pair. The pairs are not interchangeable
 with each other: `describe.only` and `test.only` are unrelated.
 
-## 2. Modifiers and chained forms
+## Modifiers and chained forms
 
-| Modifier            | Applies to                                             | Effect                                                                                                                                                                                                                                                                                                                            | Chainable with                                                               |
-| ------------------- | ------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| `.skip`             | test, describe (, bench in ≤v4)                        | Never runs; still listed/reported                                                                                                                                                                                                                                                                                                 | `.concurrent`, `.each`, `.for`                                               |
-| `.only`             | test, describe (, bench ≤v4)                           | Only `.only`-marked items run in the file/run                                                                                                                                                                                                                                                                                     | `.concurrent`, `.each`, `.for`                                               |
-| `.todo`             | test, describe (, bench ≤v4)                           | Placeholder, not executed, reported as todo                                                                                                                                                                                                                                                                                       | generally terminal (no body required)                                        |
-| `.fails`            | test only                                              | Inverts pass/fail, test **must** throw/fail or the run fails                                                                                                                                                                                                                                                                      | `.each`, `.for`                                                              |
-| `.concurrent`       | test, describe                                         | Runs in parallel with sibling concurrent tests                                                                                                                                                                                                                                                                                    | `.skip`, `.only`, `.todo`, `.each`, `.for`                                   |
-| `.sequential`       | test, describe                                         | `[v5 CHANGE]` **Removed in v5** ("Removed `test.sequential`, `describe.sequential`, and `sequential` Options"). Present and meaningful in v2-v4 as the inverse of `.concurrent` (forces sequential execution inside an otherwise-concurrent suite). Extractor must still recognize it as a legal chain member for pre-v5 corpora. | UNVERIFIED                                                                   |
-| `.skipIf(cond)`     | test, describe                                         | Skip when `cond` truthy, evaluated at collection time                                                                                                                                                                                                                                                                             | usually leaf of chain, precedes `.each`/`.for`? UNVERIFIED ordering          |
-| `.runIf(cond)`      | test, describe                                         | Inverse of `.skipIf`                                                                                                                                                                                                                                                                                                              | same                                                                         |
-| `.each(table)`      | test, describe (, bench ≤v4)                           | Expands one declaration into N declarations, one per table row                                                                                                                                                                                                                                                                    | combines with `.skip/.only/.todo/.concurrent`                                |
-| `.for(table)`       | test, describe                                         | Like `.each` but does not spread array rows into positional args, and gives the callback `TestContext` as its 2nd param                                                                                                                                                                                                           | same combinability as `.each`                                                |
-| `.extend(fixtures)` | test only                                              | Returns a **new** `test`-like function bound to merged fixtures; not a modifier on an individual test, it produces a new base object that itself has `.skip/.only/.each/...`                                                                                                                                                      | Chains from the new object, not from `test` directly                         |
-| `.scoped(...)`      | result of `.extend`                                    | Deprecated in v4.1 in favor of `.override`; sets/overrides fixture values for the current suite and nested suites                                                                                                                                                                                                                 | Must be called at top level of a `describe` block                            |
-| `.shuffle`          | describe (config-level `sequence.shuffle` also exists) | Randomizes execution order of tests within the suite; inherited by nested suites unless overridden with `{ shuffle: false }`                                                                                                                                                                                                      | UNVERIFIED whether `test.shuffle` exists (docs only show `describe.shuffle`) |
+| Modifier | Applies to | Effect | Chainable with |
+| --- | --- | --- | --- |
+| `.skip` | test, describe (, bench in ≤v4) | Never runs; still listed/reported | `.concurrent`, `.each`, `.for` |
+| `.only` | test, describe (, bench ≤v4) | Only `.only`-marked items run in the file/run | `.concurrent`, `.each`, `.for` |
+| `.todo` | test, describe (, bench ≤v4) | Placeholder, not executed, reported as todo | generally terminal (no body required) |
+| `.fails` | test only | Inverts pass/fail, test **must** throw/fail or the run fails | `.each`, `.for` |
+| `.concurrent` | test, describe | Runs in parallel with sibling concurrent tests | `.skip`, `.only`, `.todo`, `.each`, `.for` |
+| `.sequential` | test, describe | `[v5 CHANGE]` **Removed in v5** ("Removed `test.sequential`, `describe.sequential`, and `sequential` Options"). Present and meaningful in v2-v4 as the inverse of `.concurrent` (forces sequential execution inside an otherwise-concurrent suite). Extractor must still recognize it as a legal chain member for pre-v5 corpora. | UNVERIFIED |
+| `.skipIf(cond)` | test, describe | Skip when `cond` truthy, evaluated at collection time | usually leaf of chain, precedes `.each`/`.for`? UNVERIFIED ordering |
+| `.runIf(cond)` | test, describe | Inverse of `.skipIf` | same |
+| `.each(table)` | test, describe (, bench ≤v4) | Expands one declaration into N declarations, one per table row | combines with `.skip/.only/.todo/.concurrent` |
+| `.for(table)` | test, describe | Like `.each` but does not spread array rows into positional args, and gives the callback `TestContext` as its 2nd param | same combinability as `.each` |
+| `.extend(fixtures)` | test only | Returns a **new** `test`-like function bound to merged fixtures; not a modifier on an individual test, it produces a new base object that itself has `.skip/.only/.each/...` | Chains from the new object, not from `test` directly |
+| `.scoped(...)` | result of `.extend` | Deprecated in v4.1 in favor of `.override`; sets/overrides fixture values for the current suite and nested suites | Must be called at top level of a `describe` block |
+| `.shuffle` | describe (config-level `sequence.shuffle` also exists) | Randomizes execution order of tests within the suite; inherited by nested suites unless overridden with `{ shuffle: false }` | UNVERIFIED whether `test.shuffle` exists (docs only show `describe.shuffle`) |
 
 Newer, v4.1+/v5-only members (worth knowing exist even if a v1 extractor treats them as
 out-of-scope, so they don't get misparsed as unknown-and-ignored when they actually carry
 semantics):
 
-| Form                                                          | Since             | Meaning                                                                                                                                                                                                            |
-| ------------------------------------------------------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `test.override(fixtures)`                                     | 4.1               | Overrides fixture values for all tests in current + nested suites; supersedes `.scoped`. Must be called at the describe-block top level, so its call site (not just its existence) is part of the suite structure. |
-| `test.beforeEach` / `.afterEach` / `.beforeAll` / `.afterAll` | scoped-hook sugar | Hooks bound to a `test.extend`-produced object, typed with its fixtures, behaviorally identical to the free `beforeEach`/etc. but namespaced under the extended `test`.                                            |
-| `test.aroundEach` / `.aroundAll`                              | 4.1               | New hook forms combining before+after in one wrapper function. UNVERIFIED exact signature.                                                                                                                         |
-| `test.describe` / `test.suite`                                | 4.1               | "Scoped describe", a `describe` bound to the extended fixtures, same semantics as top-level `describe` otherwise.                                                                                                  |
+| Form | Since | Meaning |
+| --- | --- | --- |
+| `test.override(fixtures)` | 4.1 | Overrides fixture values for all tests in current + nested suites; supersedes `.scoped`. Must be called at the describe-block top level, so its call site (not just its existence) is part of the suite structure. |
+| `test.beforeEach` / `.afterEach` / `.beforeAll` / `.afterAll` | scoped-hook sugar | Hooks bound to a `test.extend`-produced object, typed with its fixtures, behaviorally identical to the free `beforeEach`/etc. but namespaced under the extended `test`. |
+| `test.aroundEach` / `.aroundAll` | 4.1 | New hook forms combining before+after in one wrapper function. UNVERIFIED exact signature. |
+| `test.describe` / `test.suite` | 4.1 | "Scoped describe", a `describe` bound to the extended fixtures, same semantics as top-level `describe` otherwise. |
 
 ### Legal chain orders
 
@@ -94,7 +93,7 @@ links, with `.each`/`.for`/`.skipIf(...)`/`.runIf(...)` as the (at most one) cha
 call-taking members, rather than hard-coding a specific order, the docs demonstrate both orders
 are accepted and there is no indication the parser cares about order for the boolean flags.
 
-## 3. Signature variants
+## Signature variants
 
 ```ts
 // title forms
@@ -124,3 +123,4 @@ test('name', ({ expect, skip, task, annotate, signal, onTestFailed, onTestFinish
   See [Hooks](/docs/reference/vitest-surface/hooks/) for the hook-table entry and the full caveat.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

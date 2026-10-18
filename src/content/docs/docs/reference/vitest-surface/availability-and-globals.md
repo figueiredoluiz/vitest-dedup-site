@@ -1,17 +1,16 @@
 ---
-title: 'How describe/test/etc. become available'
-description: 'With globals: true, test, describe, it, suite, expect, the hooks and the rest are ambient globals, syntactically indistinguishable from any other free identi...'
+title: "How describe, test and the rest become available"
+description: "With globals: true, test, describe, it, suite, expect, the hooks and the rest are ambient globals, syntactically indistinguishable from any other free identi..."
 sidebar:
   order: 6
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/availability-and-globals.md. Edits belong upstream. -->
-
-| Mode             | Form                                                              | Notes                                                                                                                                                                |
-| ---------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Named import     | `import { test, describe, it, expect, beforeEach } from 'vitest'` | The common case. Resolved with normal import-binding semantics (`oxc_semantic` symbol resolution), including renamed imports (`import { test as t } from 'vitest'`). |
-| Namespace import | `import * as vitest from 'vitest'; vitest.test(...)`              | Member access off a namespace-imported binding from the `'vitest'` specifier must be recognized, not just bare identifiers.                                          |
-| Globals          | `globals: true` in config                                         | No import at all. See [Globals](#globals).                                                                                                                           |
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/availability-and-globals.md. Edits belong upstream. -->
+| Mode | Form | Notes |
+| --- | --- | --- |
+| Named import | `import { test, describe, it, expect, beforeEach } from 'vitest'` | The common case. Resolved with normal import-binding semantics (`oxc_semantic` symbol resolution), including renamed imports (`import { test as t } from 'vitest'`). |
+| Namespace import | `import * as vitest from 'vitest'; vitest.test(...)` | Member access off a namespace-imported binding from the `'vitest'` specifier must be recognized, not just bare identifiers. |
+| Globals | `globals: true` in config | No import at all. See [Globals](#globals). |
 
 ## Globals
 
@@ -20,7 +19,7 @@ ambient globals, syntactically indistinguishable from any other free identifier 
 
 - Recognizing them **requires resolving the effective Vitest config for the file's project**.
 - Only when `globals: true` resolves for that file are the bare identifiers treated as Vitest globals.
-- A bare identifier that merely _looks_ like a test declarator is not one until the config says so.
+- A bare identifier that merely *looks* like a test declarator is not one until the config says so.
 
 ### `globals` config specifics
 
@@ -62,3 +61,4 @@ Config file lookup does **not** consider JSON files for the root config: `vitest
 in the documented lookup list. `UNVERIFIED` for legacy `vitest.workspace.json`.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

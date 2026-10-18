@@ -1,39 +1,30 @@
 ---
-title: '.each and .for tables'
-description: 'Title derivation for these tables is on Title formatting.'
+title: "Parameterized tables: .each and .for"
+description: "Title derivation for these tables is on Title formatting."
 sidebar:
   order: 2
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/each-tables.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/each-tables.md. Edits belong upstream. -->
 Title derivation for these tables is on [Title formatting](/docs/reference/vitest-surface/title-formatting/).
 
 Three table shapes:
 
 1. **Array of arrays**, each inner array is spread positionally into the callback params:
-
    ```ts
-   test.each([
-     [1, 1, 2],
-     [1, 2, 3],
-     [2, 1, 3],
-   ])('add(%i, %i) -> %i', (a, b, expected) => {
-     expect(a + b).toBe(expected);
-   });
+   test.each([[1, 1, 2], [1, 2, 3], [2, 1, 3]])('add(%i, %i) -> %i', (a, b, expected) => {
+     expect(a + b).toBe(expected)
+   })
    ```
-
    Row `[1, 1, 2]` + template `'add(%i, %i) -> %i'` → title `add(1, 1) -> 2`.
 
 2. **Array of objects**, each object is passed whole; `$field` / `$0`,`$1`.. / `$field.nested`
    interpolation reads properties off it for the title, and the callback destructures fields by name:
-
    ```ts
    test.each([{ a: 1, b: 1, expected: 2 }])('add($a, $b) -> $expected', ({ a, b, expected }) => {
-     expect(a + b).toBe(expected);
-   });
+     expect(a + b).toBe(expected)
+   })
    ```
-
    Also supports positional `$0`, `$1`, ... and dotted paths (`$a.val`).
 
 3. **Tagged-template-literal table**, a string header row (`|`-separated column names) followed
@@ -43,7 +34,7 @@ Three table shapes:
      a      | b      | expected
      ${1}   | ${1}   | ${2}
      ${'a'} | ${'b'} | ${'ab'}
-   `('returns $expected when $a is added $b', ({ a, b, expected }) => {});
+   `('returns $expected when $a is added $b', ({ a, b, expected }) => {})
    ```
    Statically: the header row's identifiers become field names; the `${...}` expressions are the
    `TaggedTemplateExpression`'s `expressions` array, positionally matched to header columns in
@@ -67,3 +58,4 @@ expression at the call site (e.g. `test.each(getCases())`), the extractor cannot
 all, it must record "parameterized, table unresolved" rather than guessing a row count.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

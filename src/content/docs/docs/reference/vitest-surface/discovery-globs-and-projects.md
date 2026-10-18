@@ -1,25 +1,24 @@
 ---
-title: 'Default file globs and projects'
-description: 'Discovery in the analyzer therefore has five independent admission channels per project: ordinary test files (include minus exclude), benchmark files (benchm...'
+title: "Default file globs and projects"
+description: "Discovery in the analyzer therefore has five independent admission channels per project: ordinary test files (include minus exclude), benchmark files (benchm..."
 sidebar:
   order: 8
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/discovery-globs-and-projects.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/discovery-globs-and-projects.md. Edits belong upstream. -->
+## Default file globs
 
-## 9. Default file globs
-
-| Option                    | Default                                               | Purpose                                                                                                                                                                                                                 |
-| ------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `include`                 | `['**/*.{test,spec}.?(c\|m)[jt]s?(x)']`               | Which files are "test files" and get collected at all. Resolved relative to `root`.                                                                                                                                     |
-| `exclude`                 | `['**/node_modules/**', '**/.git/**']`                | Files never scanned regardless of `include`.                                                                                                                                                                            |
-| `includeSource`           | `[]`                                                  | Additional non-test source files scanned **only** for `import.meta.vitest` blocks (see [In-source testing](/docs/reference/vitest-surface/in-source-testing/)). Empty by default, in-source testing is entirely opt-in. |
-| `benchmark.include`       | `['**/*.{bench,benchmark}.?(c\|m)[jt]s?(x)']`         | Legacy benchmark files collected independently of `include`.                                                                                                                                                            |
-| `benchmark.exclude`       | `['node_modules', 'dist', '.idea', '.git', '.cache']` | Benchmark-file exclusions, independent of `exclude`.                                                                                                                                                                    |
-| `benchmark.includeSource` | `[]`                                                  | Additional source files containing benchmarks; opt-in and independent of `includeSource`.                                                                                                                               |
-| `typecheck.enabled`       | `false`                                               | The gate for the whole type-test channel: while off, the files `typecheck.include` names are not test files at all (type tests run only under this switch or the `--typecheck` CLI flag).                               |
-| `typecheck.include`       | `['**/*.{test,spec}-d.?(c\|m)[jt]s?(x)']`             | Type-test files, consulted only while `typecheck.enabled` is on. A separate list from `include`: `.test-d.ts` matches the default `include` never.                                                                      |
-| `typecheck.exclude`       | Vitest's `configDefaults.exclude`                     | Type-test exclusions, independent of `exclude`.                                                                                                                                                                         |
+| Option | Default | Purpose |
+| --- | --- | --- |
+| `include` | `['**/*.{test,spec}.?(c\|m)[jt]s?(x)']` | Which files are "test files" and get collected at all. Resolved relative to `root`. |
+| `exclude` | `['**/node_modules/**', '**/.git/**']` | Files never scanned regardless of `include`. |
+| `includeSource` | `[]` | Additional non-test source files scanned **only** for `import.meta.vitest` blocks (see [in-source testing](/docs/reference/vitest-surface/in-source-testing/)). Empty by default, in-source testing is entirely opt-in. |
+| `benchmark.include` | `['**/*.{bench,benchmark}.?(c\|m)[jt]s?(x)']` | Legacy benchmark files collected independently of `include`. |
+| `benchmark.exclude` | `['node_modules', 'dist', '.idea', '.git', '.cache']` | Benchmark-file exclusions, independent of `exclude`. |
+| `benchmark.includeSource` | `[]` | Additional source files containing benchmarks; opt-in and independent of `includeSource`. |
+| `typecheck.enabled` | `false` | The gate for the whole type-test channel: while off, the files `typecheck.include` names are not test files at all (type tests run only under this switch or the `--typecheck` CLI flag). |
+| `typecheck.include` | `['**/*.{test,spec}-d.?(c\|m)[jt]s?(x)']` | Type-test files, consulted only while `typecheck.enabled` is on. A separate list from `include`: `.test-d.ts` matches the default `include` never. |
+| `typecheck.exclude` | Vitest's `configDefaults.exclude` | Type-test exclusions, independent of `exclude`. |
 
 Discovery in the analyzer therefore has five independent admission channels per project: ordinary
 test files (`include` minus `exclude`), benchmark files (`benchmark.include` minus
@@ -30,7 +29,7 @@ any channel admits the file once. Custom test globs do not replace benchmark def
 benchmark globs do not replace test defaults, and the type-test defaults apply only when
 `typecheck.include` is not written.
 
-## 10. Projects / workspace
+## Projects and workspaces
 
 - Current mechanism: root `test.projects: (string | InlineProjectConfig)[]`. Entries can be:
   - glob strings matching directories containing a project config (`'packages/*'`), including
@@ -45,7 +44,7 @@ benchmark globs do not replace test defaults, and the type-test defaults apply o
   `tags` replaces rather than merges. Certain options (`coverage`, `reporters`,
   `resolveSnapshotPath`, `attachmentsDir`, and reportedly more per the "not supported inside a
   project" marker on the config reference pages) are **root-only** and cannot vary per project,
-  `UNVERIFIED` whether `globals` is on that restricted list; treat as project-overridable per [How describe/test/etc. become available](/docs/reference/vitest-surface/availability-and-globals/).
+  `UNVERIFIED` whether `globals` is on that restricted list; treat as project-overridable per [how the API becomes available](/docs/reference/vitest-surface/availability-and-globals/#globals).
 - Legacy `vitest.workspace.{ts,js}` files are deprecated (since 3.2) but documented as still
   functionally equivalent to a `projects` array, the extractor should treat a discovered
   `vitest.workspace.*` the same as a root `projects` list.
@@ -57,3 +56,4 @@ benchmark globs do not replace test defaults, and the type-test defaults apply o
   repository.
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

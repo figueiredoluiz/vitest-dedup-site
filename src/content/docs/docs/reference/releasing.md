@@ -1,10 +1,9 @@
 ---
-title: 'Releasing'
-description: 'Tag-driven, from main.'
+title: "Releasing"
+description: "Tag-driven, from main."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/releasing.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/releasing.md. Edits belong upstream. -->
 Tag-driven, from `main`.
 
 ## Steps
@@ -83,3 +82,4 @@ in GitHub secrets. The already-published v0.2.0 tag cannot gain this new workflo
 crate job applies to later tags.
 
 Back to the [documentation index](/docs/reference/README/).
+

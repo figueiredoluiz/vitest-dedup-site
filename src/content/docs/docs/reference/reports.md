@@ -1,19 +1,18 @@
 ---
-title: 'Reports'
-description: 'Choose a reporter by how the result will be consumed.'
+title: "Reports"
+description: "Choose a reporter by how the result will be consumed."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/reports.md. Edits belong upstream. -->
 Choose a reporter by how the result will be consumed.
 
-| Reporter   | Destination | Best for                                                                            |
-| ---------- | ----------- | ----------------------------------------------------------------------------------- |
-| `terminal` | stdout      | Interactive use and readable CI logs.                                               |
-| `jsonl`    | stdout      | Streaming shell pipelines and AI agent workflows.                                   |
-| `json`     | File        | Structured integrations and complete run metadata.                                  |
-| `html`     | File        | Searchable human review with light and dark themes and per-finding source snippets. |
-| `sarif`    | File        | GitHub code scanning and other SARIF 2.1.0 consumers.                               |
+| Reporter | Destination | Best for |
+| --- | --- | --- |
+| `terminal` | stdout | Interactive use and readable CI logs. |
+| `jsonl` | stdout | Streaming shell pipelines and AI agent workflows. |
+| `json` | File | Structured integrations and complete run metadata. |
+| `html` | File | Searchable human review with light and dark themes and per-finding source snippets. |
+| `sarif` | File | GitHub code scanning and other SARIF 2.1.0 consumers. |
 
 ```sh
 vitest-dedup .                                            # terminal
@@ -25,16 +24,16 @@ vitest-dedup . --reporters jsonl | jq -c 'select(.type == "finding")'
 `terminal` and `jsonl` both own stdout and cannot be selected together. `jsonl` combines freely
 with the file reporters, which never touch stdout.
 
-| Page                                                              | Contents                                                                         |
-| ----------------------------------------------------------------- | -------------------------------------------------------------------------------- |
-| [Terminal](/docs/reference/reports/terminal/)                     | Layout, footer, detection time, color.                                           |
-| [Findings](/docs/reference/reports/findings/)                     | `verdict`, `fingerprint` and the structured fields machine formats carry.        |
-| [Diagnostic records](/docs/reference/reports/diagnostic-records/) | `--emit-test-fingerprints` and `--debug-memory`.                                 |
-| [SARIF](/docs/reference/reports/sarif/)                           | How findings and rules map to SARIF 2.1.0.                                       |
-| [Report safety](/docs/reference/reports/safety/)                  | Why report content is data, and how every reporter sanitizes it.                 |
-| [Baselines and changed-file scoping](/docs/reference/baselines/)  | `--baseline`, `--update-baseline`, `--changed-since`, `--baseline-from-ref`.     |
-| [Incomplete runs and limits](/docs/reference/incomplete-runs/)    | What `incomplete` means, `--fail-on-incomplete`, work and memory limits.         |
-| [Imported runners](/docs/reference/imported-runners/)             | Which first-party helper functions are expanded into tests, and what is refused. |
+| Page | Contents |
+| --- | --- |
+| [Terminal](/docs/reference/reports/terminal/) | Layout, footer, detection time, color. |
+| [Findings](/docs/reference/reports/findings/) | `verdict`, `fingerprint` and the structured fields machine formats carry. |
+| [Diagnostic records](/docs/reference/reports/diagnostic-records/) | `--emit-test-fingerprints` and `--debug-memory`. |
+| [SARIF](/docs/reference/reports/sarif/) | How findings and rules map to SARIF 2.1.0. |
+| [Report safety](/docs/reference/reports/safety/) | Why report content is data, and how every reporter sanitizes it. |
+| [Baselines and changed-file scoping](/docs/reference/baselines/) | `--baseline`, `--update-baseline`, `--changed-since`, `--baseline-from-ref`. |
+| [Incomplete runs and limits](/docs/reference/incomplete-runs/) | What `incomplete` means, `--fail-on-incomplete`, work and memory limits. |
+| [Imported runners](/docs/reference/imported-runners/) | Which first-party helper functions are expanded into tests, and what is refused. |
 
 ## Writing files
 
@@ -87,3 +86,4 @@ process-dependent figures such as peak RSS. A memory-limited run may admit a dif
 file prefix as process residency changes. Findings are ordered by their participants' locations
 (root-relative path, then position), then by rule, then by message. Paths are compared component by
 component rather than as strings, so the order does not depend on the platform's separator.
+

@@ -1,12 +1,11 @@
 ---
-title: 'Diagnostic records'
-description: 'Two opt-in flags add records to the jsonl stream. Both require --reporters jsonl.'
+title: "Diagnostic records"
+description: "Two opt-in flags add records to the jsonl stream. Both require --reporters jsonl."
 sidebar:
   order: 3
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/diagnostic-records.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/reports/diagnostic-records.md. Edits belong upstream. -->
 Two opt-in flags add records to the `jsonl` stream. Both require `--reporters jsonl`.
 
 ## `--emit-test-fingerprints`
@@ -15,22 +14,7 @@ Adds one record per test and per hook: the comparison keys themselves, for debug
 did or did not match.
 
 ```jsonl
-{
-  "type": "test",
-  "schemaVersion": "0.1",
-  "path": "cart.test.ts",
-  "line": 13,
-  "column": 1,
-  "title": "totals a two-line cart",
-  "alpha": "24ca2dec36cb546b",
-  "structural": "61d3c3582d21bc51",
-  "behavior": "6ace5d410965ead9",
-  "trivial": false,
-  "comparable": true,
-  "contextKey": "9b9573371b170f09",
-  "modifierKey": "09612b07b5ecb5a5",
-  "truncatedFields": []
-}
+{"type":"test","schemaVersion":"0.1","path":"cart.test.ts","line":13,"column":1,"title":"totals a two-line cart","alpha":"24ca2dec36cb546b","structural":"61d3c3582d21bc51","behavior":"6ace5d410965ead9","trivial":false,"comparable":true,"contextKey":"9b9573371b170f09","modifierKey":"09612b07b5ecb5a5","truncatedFields":[]}
 ```
 
 Comparable tests from distinct declarations registered in one file are a `duplicate-test` when
@@ -39,16 +23,16 @@ those three to see which one disagrees.
 
 ### `"test"` records
 
-| Field              | Meaning                                                                                                                                                                                                    |
-| ------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `registrationFile` | Optional caller path when different from the declaration's `path`; otherwise `path` also identifies the registering file.                                                                                  |
-| `alpha`            | Identifiers normalized to their resolved symbol; literal values preserved, except inert literal-data properties that a `const` object destructure does not select from its own object-literal initializer. |
-| `structural`       | `alpha` with literal values collapsed to their kind.                                                                                                                                                       |
-| `behavior`         | The ordered behavior events: callee paths, assertions, awaits, control flow.                                                                                                                               |
-| `trivial`          | The body is empty or a recognized stub, and is excluded from comparison whatever the hashes say.                                                                                                           |
-| `comparable`       | The context resolved well enough to participate in comparison. `false` means the test was not compared, not that it was verified distinct.                                                                 |
-| `contextKey`       | The ambient facts that gate comparison: hook chain, `vi.mock` registrations, `test.extend` fixtures, imports, module-scope setup, per-directory config scope.                                              |
-| `modifierKey`      | Modifiers that change what the test does (`.each` data, `.skipIf`/`.runIf`, `.fails`), never ones that only change whether or when it runs.                                                                |
+| Field | Meaning |
+| --- | --- |
+| `registrationFile` | Optional caller path when different from the declaration's `path`; otherwise `path` also identifies the registering file. |
+| `alpha` | Identifiers normalized to their resolved symbol; literal values preserved, except inert literal-data properties that a `const` object destructure does not select from its own object-literal initializer. |
+| `structural` | `alpha` with literal values collapsed to their kind. |
+| `behavior` | The ordered behavior events: callee paths, assertions, awaits, control flow. |
+| `trivial` | The body is empty or a recognized stub, and is excluded from comparison whatever the hashes say. |
+| `comparable` | The context resolved well enough to participate in comparison. `false` means the test was not compared, not that it was verified distinct. |
+| `contextKey` | The ambient facts that gate comparison: hook chain, `vi.mock` registrations, `test.extend` fixtures, imports, module-scope setup, per-directory config scope. |
+| `modifierKey` | Modifiers that change what the test does (`.each` data, `.skipIf`/`.runIf`, `.fails`), never ones that only change whether or when it runs. |
 
 ### `"hook"` records
 
@@ -68,3 +52,4 @@ and divided among them, so the per-test figure is an average rather than an over
 the parser's transient arenas, neither of which is retained.
 
 Back to [Reports](/docs/reference/reports/).
+

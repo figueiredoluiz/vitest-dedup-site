@@ -1,10 +1,9 @@
 ---
-title: 'Configuration'
-description: 'A .vitest-dedup.json file is found by walking upward from the analyzed directory, or named with --config. Command-line flags override it.'
+title: "Configuration"
+description: "A .vitest-dedup.json file is found by walking upward from the analyzed directory, or named with --config. Command-line flags override it."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/configuration.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/configuration.md. Edits belong upstream. -->
 A `.vitest-dedup.json` file is found by walking upward from the analyzed directory, or named with
 `--config`. Command-line flags override it.
 
@@ -21,11 +20,11 @@ A `.vitest-dedup.json` file is found by walking upward from the analyzed directo
 
 Every key is optional, and an unknown key is an error.
 
-| Key                  | Meaning                                        |
-| -------------------- | ---------------------------------------------- |
-| `include`, `exclude` | Globs relative to the analyzed directory.      |
-| `threshold`          | A percentage from 0 to 100.                    |
-| `rules`              | Maps a rule id to `off`, `warning` or `error`. |
+| Key | Meaning |
+| --- | --- |
+| `include`, `exclude` | Globs relative to the analyzed directory. |
+| `threshold` | A percentage from 0 to 100. |
+| `rules` | Maps a rule id to `off`, `warning` or `error`. |
 
 Files matched by `.gitignore` or by a `.vitest-dedupignore` file in the same syntax are skipped as
 well.
@@ -91,3 +90,4 @@ Source size, nesting and work limits, and the memory budget, are on
 [Incomplete runs and limits](/docs/reference/incomplete-runs/).
 
 Back to the [documentation index](/docs/reference/README/).
+
