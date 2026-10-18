@@ -21,12 +21,12 @@ The verdict names what the finding claims, because the remedies differ. See
 [Detection Concepts](/docs/detection-concepts/#verdicts) for which rules produce which verdict — the
 short version:
 
-| Verdict | What it claims | Remedy |
-| --- | --- | --- |
-| `redundant` | One copy can go. | Review removal, or repair intended coverage. |
-| `consolidatable` | Every case is needed. | One `test.each` table — do not delete rows. |
-| `name-collision` | Two tests share a title. | Rename one. |
-| `similar-uncertain` | The tests look equivalent; that is not established. | Review decides. |
+| Verdict             | What it claims                                      | Remedy                                       |
+| ------------------- | --------------------------------------------------- | -------------------------------------------- |
+| `redundant`         | One copy can go.                                    | Review removal, or repair intended coverage. |
+| `consolidatable`    | Every case is needed.                               | One `test.each` table — do not delete rows.  |
+| `name-collision`    | Two tests share a title.                            | Rename one.                                  |
+| `similar-uncertain` | The tests look equivalent; that is not established. | Review decides.                              |
 
 ## Fingerprints
 

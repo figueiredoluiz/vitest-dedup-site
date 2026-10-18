@@ -1,0 +1,93 @@
+---
+title: 'Configuration'
+description: 'A .vitest-dedup.json file is found by walking upward from the analyzed directory, or named with --config. Command-line flags override it.'
+---
+
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/configuration.md. Edits belong upstream. -->
+
+A `.vitest-dedup.json` file is found by walking upward from the analyzed directory, or named with
+`--config`. Command-line flags override it.
+
+```json
+{
+  "include": ["src/**/*.test.ts"],
+  "exclude": ["**/fixtures/**"],
+  "threshold": 0,
+  "rules": { "subsumed-test": "warning" }
+}
+```
+
+## Keys
+
+Every key is optional, and an unknown key is an error.
+
+| Key                  | Meaning                                        |
+| -------------------- | ---------------------------------------------- |
+| `include`, `exclude` | Globs relative to the analyzed directory.      |
+| `threshold`          | A percentage from 0 to 100.                    |
+| `rules`              | Maps a rule id to `off`, `warning` or `error`. |
+
+Files matched by `.gitignore` or by a `.vitest-dedupignore` file in the same syntax are skipped as
+well.
+
+## Glob semantics
+
+Single `*` and `?` wildcards stay within a path component; use `**` to match across directories.
+This also applies to resolved Vitest project globs and project paths, and to the base revision
+`--baseline-from-ref` reads.
+
+## How Vitest configuration is read
+
+VitestDedup reads `test.include`, `test.exclude`, `test.globals`, project lists, and the typecheck
+channel from `vitest.config.*` and `vite.config.*` without executing them.
+
+### Test file naming
+
+`*.test.*` and `*.spec.*` are recognized by default. A Vitest config that declares its own `include`
+replaces that list, so a project naming `**/*.unit.ts` gets exactly those files. An `include`
+written in `.vitest-dedup.json` is an instruction and is never widened by a project's broader list.
+
+Differences from the set Vitest runs:
+
+- The analyzer applies its own default `exclude` list when none is written: `node_modules`, `dist`,
+  `build`, `coverage`, `.idea`, `.git`, `.cache`, `.output` and `.temp`. Vitest's default excludes
+  only `node_modules` and `.git`, so test files under `build/` or `coverage/` are not analyzed.
+- Hidden (dot-prefixed) directories are skipped.
+- `includeSource` is additive. A file matching it is also scanned for in-source tests, whether or not
+  `include` matches it.
+
+### Monorepos
+
+A config declaring `test.projects`, or a `vitest.workspace.*` file, is resolved entry by entry,
+honouring `extends: false`.
+
+### Globals
+
+`globals: true` is detected from the resolved config. When the project list is built in a way no
+static reader can follow, such as a bare variable or `mergeConfig` with a dynamic import, the
+setting is reported as undetermined and the flag is needed:
+
+```sh
+vitest-dedup . --globals
+```
+
+The flag is opt-in because ambient `describe` and `it` cannot be told apart from Cypress, Mocha, or
+Jasmine without project configuration, and guessing would invent findings in those files.
+
+## Runs that analyze no tests
+
+When no executable tests are analyzed and no quality-gate failure applies, the command exits with
+operational-error code 2 instead of treating an empty report as clean. A real suite-level quality
+failure or too many new findings under `--fail-on-new` remains exit 1.
+
+- If test-shaped files were read but yielded no tests, the diagnostic reports that observation and
+  suggests checking both `test.globals` (or `--globals`) and build-time transforms such as
+  auto-imports. It does not claim either cause was proved.
+- Known cases, such as statically empty `.each`/`.for` tables, receive a more specific diagnostic.
+
+## Limits
+
+Source size, nesting and work limits, and the memory budget, are on
+[Incomplete runs and limits](/docs/reference/incomplete-runs/).
+
+Back to the [documentation index](/docs/reference/README/).

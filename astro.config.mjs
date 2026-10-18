@@ -8,6 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 // deploy time; the default is the real local origin so built pages never
 // carry a fictitious production domain.
 const site = process.env.SITE_URL ?? 'http://localhost:4321';
+const ogImageUrl = new URL('/images/og.png', site).href;
 
 // GA4 measurement id; unset (local dev) means no tracking scripts at all.
 const gaId = process.env.PUBLIC_GA_ID;
@@ -44,6 +45,28 @@ export default defineConfig({
           tag: 'link',
           attrs: { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         },
+        {
+          tag: 'meta',
+          attrs: {
+            property: 'og:image',
+            content: ogImageUrl,
+          },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:width', content: '1200' },
+        },
+        {
+          tag: 'meta',
+          attrs: { property: 'og:image:height', content: '630' },
+        },
+        {
+          tag: 'meta',
+          attrs: {
+            name: 'twitter:card',
+            content: 'summary_large_image',
+          },
+        },
         ...(gaId
           ? [
               {
@@ -77,6 +100,10 @@ export default defineConfig({
             { label: 'Understanding Results', slug: 'docs/understanding-results' },
             { label: 'Reports', slug: 'docs/reports' },
           ],
+        },
+        {
+          label: 'Analyzer Reference',
+          items: [{ autogenerate: { directory: 'docs/reference' } }],
         },
         {
           label: 'Guides',

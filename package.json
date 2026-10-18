@@ -9,6 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "sync:docs": "node scripts/sync-docs.mjs",
+    "og:image": "node scripts/generate-og.mjs",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },

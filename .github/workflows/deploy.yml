@@ -15,12 +15,19 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: figueiredoluiz/vitest-dedup
+          path: vitest-dedup-source
       - uses: pnpm/action-setup@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: pnpm
       - run: pnpm install --frozen-lockfile
+      - run: node scripts/sync-docs.mjs
+        env:
+          VITEST_DEDUP_REPO: ${{ github.workspace }}/vitest-dedup-source
       - run: pnpm build
         env:
           SITE_URL: https://vitestdedup.dev

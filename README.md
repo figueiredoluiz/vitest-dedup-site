@@ -29,11 +29,11 @@ Documentation search (Pagefind) indexes at build time, so test it in `pnpm previ
 
 ## Pages
 
-| Route | Content |
-| --- | --- |
-| `/` | Custom landing page: hero with terminal demo, problem/solution, features, report showcase, workflow, community. |
-| `/docs/` | Starlight documentation: 11 pages of verified reference for the analyzer. |
-| `/changelog/` | Release history rendered from a local fixture. |
+| Route         | Content                                                                                                         |
+| ------------- | --------------------------------------------------------------------------------------------------------------- |
+| `/`           | Custom landing page: hero with terminal demo, problem/solution, features, report showcase, workflow, community. |
+| `/docs/`      | Starlight documentation: 11 pages of verified reference for the analyzer.                                       |
+| `/changelog/` | Release history rendered from a local fixture.                                                                  |
 
 ## Structure
 
@@ -109,8 +109,26 @@ The changelog fetches releases from the GitHub Releases API at build time (authe
 workflow's `github.token` when available) and falls back to the local fixture
 `src/data/releases.json` when the API is unreachable.
 
+### Documentation sync
+
+The Analyzer Reference section under `/docs/reference/` is generated from the VitestDedup source
+repository's published `docs/` (the same file set the npm package ships — internal `*.local.md`
+notes and working documents are excluded):
+
+- `pnpm sync:docs` regenerates `src/content/docs/docs/reference/` from a local clone
+  (default `../vitest-dedup`, override with `VITEST_DEDUP_REPO`). The output is committed so
+  builds stay deterministic and offline-friendly.
+- CI checks out the source repo and re-runs the sync before every build, so deploys always carry
+  the latest upstream docs even without a manual sync.
+- Each generated file carries a provenance comment naming the source commit. Edits belong
+  upstream; the curated website docs remain hand-written.
+
+### Social preview image
+
+`public/images/og.png` (1200×630) is referenced by Open Graph and Twitter card tags on every
+page. Regenerate after brand changes with `pnpm og:image`.
+
 ## Deferred until a later phase
 
-- Build-time sync of docs Markdown from the source repository.
 - Import of real VitestDedup report output to replace the sample fixture.
-- Automated rebuilds on source-repo changes; versioned docs; pt-BR/ja localization.
+- Versioned docs; pt-BR/ja localization.

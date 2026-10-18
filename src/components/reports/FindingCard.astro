@@ -11,8 +11,7 @@ const verdictStyles: Record<Verdict, string> = {
   redundant: 'border-rose-500/30 bg-rose-500/10 text-rose-600 dark:text-rose-300',
   consolidatable: 'border-sky-500/30 bg-sky-500/10 text-sky-600 dark:text-sky-300',
   'name-collision': 'border-violet-500/30 bg-violet-500/10 text-violet-600 dark:text-violet-300',
-  'similar-uncertain':
-    'border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300',
+  'similar-uncertain': 'border-amber-500/30 bg-amber-500/10 text-amber-600 dark:text-amber-300',
 };
 
 const verdictLabels: Record<Verdict, string> = {
@@ -25,9 +24,7 @@ const verdictLabels: Record<Verdict, string> = {
 
 <article class="overflow-hidden rounded-xl border border-line bg-panel">
   <details class="group">
-    <summary
-      class="flex cursor-pointer list-none flex-wrap items-center gap-x-3 gap-y-2 px-5 py-4 [&::-webkit-details-marker]:hidden"
-    >
+    <summary class="flex cursor-pointer list-none flex-wrap items-center gap-x-3 gap-y-2 px-5 py-4 [&::-webkit-details-marker]:hidden">
       <span
         class={`inline-flex items-center rounded-full border px-2.5 py-0.5 font-mono text-[11px] font-semibold ${verdictStyles[finding.verdict]}`}
       >
@@ -69,21 +66,19 @@ const verdictLabels: Record<Verdict, string> = {
       </p>
       <p class="mt-2 text-sm">{finding.message}.</p>
       <ul class="mt-3 space-y-1.5">
-        {
-          finding.participants.map((participant) => (
-            <li class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 font-mono text-xs">
-              <span class="text-sky-600 dark:text-sky-300">
-                {participant.file}:{participant.line}:{participant.column}
+        {finding.participants.map((participant) => (
+          <li class="flex flex-wrap items-baseline gap-x-2 gap-y-0.5 font-mono text-xs">
+            <span class="text-sky-600 dark:text-sky-300">
+              {participant.file}:{participant.line}:{participant.column}
+            </span>
+            <span class="text-muted">“{participant.title}”</span>
+            {participant.inert && (
+              <span class="rounded bg-line px-1.5 py-px text-[10px] font-semibold uppercase text-muted">
+                inert
               </span>
-              <span class="text-muted">“{participant.title}”</span>
-              {participant.inert && (
-                <span class="rounded bg-line px-1.5 py-px text-[10px] font-semibold uppercase text-muted">
-                  inert
-                </span>
-              )}
-            </li>
-          ))
-        }
+            )}
+          </li>
+        ))}
       </ul>
       <p class="mt-3 border-t border-line pt-3 text-sm text-muted">
         <span class="font-semibold text-ink">Action:</span> {finding.action}.

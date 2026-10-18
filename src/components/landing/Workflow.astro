@@ -1,5 +1,4 @@
 ---
-
 const steps = [
   {
     title: 'Install',
@@ -33,31 +32,28 @@ const steps = [
       </h2>
     </div>
     <ol class="mt-10 grid gap-4 md:grid-cols-2">
-      {
-        steps.map((step, index) => (
-          <li class="rounded-xl border border-line bg-bg p-6">
-            <div class="flex items-center gap-3">
-              <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-accent-soft font-mono text-xs font-bold text-accent">
-                {index + 1}
-              </span>
-              <h3 class="font-semibold">{step.title}</h3>
-            </div>
-            <p class="mt-3 text-sm leading-relaxed text-muted">{step.body}</p>
-            <code class="mt-4 block overflow-x-auto rounded-lg border border-line bg-panel px-3.5 py-2.5 font-mono text-[13px] text-ink">
-              {step.code}
-            </code>
-          </li>
-        ))
-      }
+      {steps.map((step, index) => (
+        <li class="rounded-xl border border-line bg-bg p-6">
+          <div class="flex items-center gap-3">
+            <span class="inline-flex h-7 w-7 items-center justify-center rounded-full bg-accent-soft font-mono text-xs font-bold text-accent">
+              {index + 1}
+            </span>
+            <h3 class="font-semibold">{step.title}</h3>
+          </div>
+          <p class="mt-3 text-sm leading-relaxed text-muted">{step.body}</p>
+          <code class="mt-4 block overflow-x-auto rounded-lg border border-line bg-panel px-3.5 py-2.5 font-mono text-[13px] text-ink">
+            {step.code}
+          </code>
+        </li>
+      ))}
     </ol>
     <div class="mt-8 flex flex-wrap gap-3 text-sm">
-      <a
-        href="/docs/quick-start/"
-        class="font-semibold text-accent hover:underline">Quick start guide →</a
-      >
-      <a href="/docs/ci-integration/" class="font-semibold text-accent hover:underline"
-        >CI integration →</a
-      >
+      <a href="/docs/quick-start/" class="font-semibold text-accent hover:underline">
+        Quick start guide →
+      </a>
+      <a href="/docs/ci-integration/" class="font-semibold text-accent hover:underline">
+        CI integration →
+      </a>
     </div>
   </div>
 </section>

@@ -5,13 +5,13 @@ description: Choosing between terminal, jsonl, json, html, and sarif, and how re
 
 Choose a reporter by how the result will be consumed.
 
-| Reporter | Destination | Best for |
-| --- | --- | --- |
-| `terminal` | stdout | Interactive use and readable CI logs. |
-| `jsonl` | stdout | Streaming shell pipelines and AI agent workflows. |
-| `json` | File | Structured integrations and complete run metadata. |
-| `html` | File | Searchable human review with light and dark themes and per-finding source snippets. |
-| `sarif` | File | GitHub code scanning and other SARIF 2.1.0 consumers. |
+| Reporter   | Destination | Best for                                                                            |
+| ---------- | ----------- | ----------------------------------------------------------------------------------- |
+| `terminal` | stdout      | Interactive use and readable CI logs.                                               |
+| `jsonl`    | stdout      | Streaming shell pipelines and AI agent workflows.                                   |
+| `json`     | File        | Structured integrations and complete run metadata.                                  |
+| `html`     | File        | Searchable human review with light and dark themes and per-finding source snippets. |
+| `sarif`    | File        | GitHub code scanning and other SARIF 2.1.0 consumers.                               |
 
 ```sh
 vitest-dedup .                                             # terminal

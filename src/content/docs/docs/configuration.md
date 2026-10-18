@@ -19,11 +19,11 @@ A `.vitest-dedup.json` file is found by walking upward from the analyzed directo
 
 Every key is optional, and an unknown key is an error.
 
-| Key | Meaning |
-| --- | --- |
-| `include`, `exclude` | Globs relative to the analyzed directory. |
-| `threshold` | A percentage from 0 to 100. |
-| `rules` | Maps a rule id to `off`, `warning`, or `error`. |
+| Key                  | Meaning                                         |
+| -------------------- | ----------------------------------------------- |
+| `include`, `exclude` | Globs relative to the analyzed directory.       |
+| `threshold`          | A percentage from 0 to 100.                     |
+| `rules`              | Maps a rule id to `off`, `warning`, or `error`. |
 
 Files matched by `.gitignore` or by a `.vitest-dedupignore` file in the same syntax are skipped as
 well.

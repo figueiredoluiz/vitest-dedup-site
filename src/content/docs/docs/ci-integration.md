@@ -21,7 +21,7 @@ Fail the job on any non-zero code, and read code 2 as "fix the pipeline", not "f
   with:
     path: .
     version: 0.5.0
-    threshold: "5"
+    threshold: '5'
 ```
 
 The action downloads the release binary for the runner's platform and verifies its SHA-256 and, with

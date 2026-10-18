@@ -49,19 +49,13 @@ const commandHtml = commandTokens
   .join('');
 
 const outputHtml = lines
-  .map(
-    (line) => `<span class="${toneClass[line.tone ?? 'out']}">${escapeHtml(line.text)}</span>\n`,
-  )
+  .map((line) => `<span class="${toneClass[line.tone ?? 'out']}">${escapeHtml(line.text)}</span>\n`)
   .join('');
 ---
 
 <div class="not-prose">
-  <figure
-    class="overflow-hidden rounded-xl border border-[#1f2c25] bg-[#0c1310] shadow-lg shadow-black/20"
-  >
-    <figcaption
-      class="flex items-center justify-between gap-3 border-b border-[#1f2c25] bg-[#101a15] px-4 py-2.5"
-    >
+  <figure class="overflow-hidden rounded-xl border border-[#1f2c25] bg-[#0c1310] shadow-lg shadow-black/20">
+    <figcaption class="flex items-center justify-between gap-3 border-b border-[#1f2c25] bg-[#101a15] px-4 py-2.5">
       <span class="flex items-center gap-2">
         <span class="flex gap-1.5" aria-hidden="true">
           <span class="h-2.5 w-2.5 rounded-full bg-[#e0655f]/70"></span>
@@ -94,11 +88,7 @@ const outputHtml = lines
     </figcaption>
     <div class="overflow-x-auto p-4 font-mono text-[11px] leading-relaxed sm:text-xs">
       <pre class="whitespace-pre"><code><span class="select-none text-emerald-400">$ </span><Fragment set:html={commandHtml} /></code></pre>
-      {
-        lines.length > 0 && (
-          <pre class="mt-1 whitespace-pre"><code set:html={outputHtml} /></pre>
-        )
-      }
+      {lines.length > 0 && <pre class="mt-1 whitespace-pre"><code set:html={outputHtml} /></pre>}
     </div>
   </figure>
   {note && <p class="mt-2 text-xs text-muted">{note}</p>}

@@ -10,39 +10,30 @@ import { headerNav, siteConfig } from '../../lib/site';
       <Logo />
     </a>
     <nav class="hidden items-center gap-1 md:flex" aria-label="Main">
-      {
-        headerNav.map((item) => (
-          <a
-            href={item.href}
-            class="rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-ink"
-          >
-            {item.label}
-          </a>
-        ))
-      }
-      {
-        siteConfig.repoUrl && (
-          <a
-            href={siteConfig.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-ink"
-          >
-            GitHub
-            <svg
-              viewBox="0 0 16 16"
-              fill="currentColor"
-              class="h-3 w-3"
-              aria-hidden="true"
-            >
-              <path
-                d="M8 0L9.1 6.9 16 8l-6.9 1.1L8 16l-1.1-6.9L0 8l6.9-1.1L8 0z"
-                transform="scale(0.7) translate(3.5 3.5)"
-              ></path>
-            </svg>
-          </a>
-        )
-      }
+      {headerNav.map((item) => (
+        <a
+          href={item.href}
+          class="rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-ink"
+        >
+          {item.label}
+        </a>
+      ))}
+      {siteConfig.repoUrl && (
+        <a
+          href={siteConfig.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-md px-3 py-2 text-sm font-medium text-muted transition-colors hover:bg-accent-soft hover:text-ink"
+        >
+          GitHub
+          <svg viewBox="0 0 16 16" fill="currentColor" class="h-3 w-3" aria-hidden="true">
+            <path
+              d="M8 0L9.1 6.9 16 8l-6.9 1.1L8 16l-1.1-6.9L0 8l6.9-1.1L8 0z"
+              transform="scale(0.7) translate(3.5 3.5)"
+            ></path>
+          </svg>
+        </a>
+      )}
     </nav>
     <div class="flex items-center gap-2">
       <ThemeToggle />
@@ -54,12 +45,26 @@ import { headerNav, siteConfig } from '../../lib/site';
         data-menu-button
       >
         <span class="sr-only">Toggle menu</span>
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"
-          stroke-linecap="round" class="h-4 w-4 group-aria-expanded:hidden" aria-hidden="true">
+        <svg
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          class="h-4 w-4 group-aria-expanded:hidden"
+          aria-hidden="true"
+        >
           <path d="M3 5.5h14M3 10h14M3 14.5h14"></path>
         </svg>
-        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"
-          stroke-linecap="round" class="hidden h-4 w-4 group-aria-expanded:block" aria-hidden="true">
+        <svg
+          viewBox="0 0 20 20"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+          class="hidden h-4 w-4 group-aria-expanded:block"
+          aria-hidden="true"
+        >
           <path d="M5 5l10 10M15 5L5 15"></path>
         </svg>
       </button>
@@ -67,25 +72,24 @@ import { headerNav, siteConfig } from '../../lib/site';
   </div>
   <nav id="mobile-nav" class="hidden border-t border-line md:hidden" aria-label="Mobile">
     <div class="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6">
-      {
-        headerNav.map((item) => (
-          <a href={item.href} class="rounded-md px-3 py-2 text-sm font-medium text-muted hover:bg-accent-soft hover:text-ink">
-            {item.label}
-          </a>
-        ))
-      }
-      {
-        siteConfig.repoUrl && (
-          <a
-            href={siteConfig.repoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            class="rounded-md px-3 py-2 text-sm font-medium text-muted hover:bg-accent-soft hover:text-ink"
-          >
-            GitHub
-          </a>
-        )
-      }
+      {headerNav.map((item) => (
+        <a
+          href={item.href}
+          class="rounded-md px-3 py-2 text-sm font-medium text-muted hover:bg-accent-soft hover:text-ink"
+        >
+          {item.label}
+        </a>
+      ))}
+      {siteConfig.repoUrl && (
+        <a
+          href={siteConfig.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="rounded-md px-3 py-2 text-sm font-medium text-muted hover:bg-accent-soft hover:text-ink"
+        >
+          GitHub
+        </a>
+      )}
     </div>
   </nav>
 </header>

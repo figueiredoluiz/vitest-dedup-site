@@ -24,18 +24,18 @@ const stats = [
   </div>
 
   <dl class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
-    {
-      stats.map((stat) => (
-        <div class="rounded-xl border border-line bg-panel px-5 py-4">
-          <dt class="text-xs font-medium uppercase tracking-wide text-muted">{stat.label}</dt>
-          <dd class="mt-1.5 font-mono text-2xl font-bold text-ink">{stat.value}</dd>
-        </div>
-      ))
-    }
+    {stats.map((stat) => (
+      <div class="rounded-xl border border-line bg-panel px-5 py-4">
+        <dt class="text-xs font-medium uppercase tracking-wide text-muted">{stat.label}</dt>
+        <dd class="mt-1.5 font-mono text-2xl font-bold text-ink">{stat.value}</dd>
+      </div>
+    ))}
   </dl>
 
   <div class="mt-6 space-y-3">
-    {sampleReport.findings.map((finding) => <FindingCard finding={finding} />)}
+    {sampleReport.findings.map((finding) => (
+      <FindingCard finding={finding} />
+    ))}
   </div>
 
   <p class="mt-5 text-xs leading-relaxed text-muted">
@@ -44,8 +44,8 @@ const stats = [
   </p>
 
   <div class="mt-6">
-    <a href="/docs/reports/" class="text-sm font-semibold text-accent hover:underline"
-      >All five reporters →</a
-    >
+    <a href="/docs/reports/" class="text-sm font-semibold text-accent hover:underline">
+      All five reporters →
+    </a>
   </div>
 </section>

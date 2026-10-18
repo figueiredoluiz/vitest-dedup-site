@@ -24,13 +24,14 @@ you. It never edits or deletes your tests.
 - [Quick Start](/docs/quick-start/) — your first analysis run and what to do with its findings.
 - [Detection Concepts](/docs/detection-concepts/) — the rules, how bodies are normalized, and what a verdict claims.
 - [CI Integration](/docs/ci-integration/) — thresholds, baselines, and the GitHub Action.
+- [Analyzer Reference](/docs/reference/) — the complete upstream documentation, synced from the source repository.
 
 ## At a glance
 
-| | |
-| --- | --- |
-| Current version | v0.5.0 — see the [changelog](/changelog/) |
-| License | MIT |
-| Runtime | Node 20 or later launches the analyzer binary; the analysis itself runs without importing your code |
-| Platforms | macOS (arm64, x64), Linux (arm64, x64; glibc and musl), Windows (arm64, x64) |
-| Source | [figueiredoluiz/vitest-dedup](https://github.com/figueiredoluiz/vitest-dedup) |
+|                 |                                                                                                     |
+| --------------- | --------------------------------------------------------------------------------------------------- |
+| Current version | v0.5.0 — see the [changelog](/changelog/)                                                           |
+| License         | MIT                                                                                                 |
+| Runtime         | Node 20 or later launches the analyzer binary; the analysis itself runs without importing your code |
+| Platforms       | macOS (arm64, x64), Linux (arm64, x64; glibc and musl), Windows (arm64, x64)                        |
+| Source          | [figueiredoluiz/vitest-dedup](https://github.com/figueiredoluiz/vitest-dedup)                       |

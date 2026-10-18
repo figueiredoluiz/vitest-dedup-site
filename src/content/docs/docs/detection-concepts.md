@@ -9,23 +9,23 @@ Two tests that do the same thing under different titles are duplicates. Two text
 bodies that run under different hooks, mocks, or fixtures are not.
 
 To make that comparison, bodies are normalized before they are compared: titles are ignored, and the
-shape of what a test *does* is what counts. The context a body runs in — hooks, mocks, fixtures —
+shape of what a test _does_ is what counts. The context a body runs in — hooks, mocks, fixtures —
 participates in the comparison, which is why identical text under different circumstances is left
 alone.
 
 ## The rules
 
-| Rule | Default | Meaning |
-| --- | --- | --- |
-| `duplicate-test` | Error | Two tests have the same normalized body under an equivalent context. |
-| `duplicate-test-name` | Warning | Two tests in one file share a full title. |
-| `parameterization-candidate` | Warning | Two tests have the same structure and differ only in literal values. |
-| `near-duplicate-test` | Warning | Two tests perform the same behavior under an equivalent context, but their normalized bodies differ. |
-| `cross-file-duplicate` | Warning | The `duplicate-test` criteria without the single-file restriction. |
-| `subsumed-test` | Off | One test's behavior is a strict ordered subsequence of another's. Off by default: its findings are frequently distinct tests rather than redundant ones. |
-| `duplicate-suite` | Warning | A whole `describe` block is duplicated within one file, reported once instead of per test. |
-| `duplicate-each-row` | Warning | Two rows of one parameterized test, benchmark, or suite carry the same case. |
-| `redundant-hook` | Warning | A nested lifecycle hook repeats work an ancestor hook already performs. |
+| Rule                         | Default | Meaning                                                                                                                                                  |
+| ---------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `duplicate-test`             | Error   | Two tests have the same normalized body under an equivalent context.                                                                                     |
+| `duplicate-test-name`        | Warning | Two tests in one file share a full title.                                                                                                                |
+| `parameterization-candidate` | Warning | Two tests have the same structure and differ only in literal values.                                                                                     |
+| `near-duplicate-test`        | Warning | Two tests perform the same behavior under an equivalent context, but their normalized bodies differ.                                                     |
+| `cross-file-duplicate`       | Warning | The `duplicate-test` criteria without the single-file restriction.                                                                                       |
+| `subsumed-test`              | Off     | One test's behavior is a strict ordered subsequence of another's. Off by default: its findings are frequently distinct tests rather than redundant ones. |
+| `duplicate-suite`            | Warning | A whole `describe` block is duplicated within one file, reported once instead of per test.                                                               |
+| `duplicate-each-row`         | Warning | Two rows of one parameterized test, benchmark, or suite carry the same case.                                                                             |
+| `redundant-hook`             | Warning | A nested lifecycle hook repeats work an ancestor hook already performs.                                                                                  |
 
 A rule configured at severity `off` is not computed, so a run never reports a finding for it.
 

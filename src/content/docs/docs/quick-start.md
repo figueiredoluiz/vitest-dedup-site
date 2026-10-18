@@ -44,7 +44,9 @@ code instead of in a baseline file:
 
 ```ts
 // vitest-dedup-disable-next-line these two are deliberately parallel examples
-test('adds numbers', () => { expect(add(1, 1)).toBe(2); });
+test('adds numbers', () => {
+  expect(add(1, 1)).toBe(2);
+});
 ```
 
 Every report states how many findings were suppressed this way.

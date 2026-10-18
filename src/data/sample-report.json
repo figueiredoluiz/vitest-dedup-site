@@ -24,8 +24,20 @@
       "action": "review removal of one copy or repair of intended coverage",
       "fingerprint": "duplicate-test:tests/auth/login.spec.ts:redirects-unauthenticated-users",
       "participants": [
-        { "file": "tests/auth/login.spec.ts", "title": "redirects unauthenticated users to /login", "line": 14, "column": 1, "inert": false },
-        { "file": "tests/auth/session.spec.ts", "title": "redirects unauthenticated users to /login", "line": 22, "column": 1, "inert": false }
+        {
+          "file": "tests/auth/login.spec.ts",
+          "title": "redirects unauthenticated users to /login",
+          "line": 14,
+          "column": 1,
+          "inert": false
+        },
+        {
+          "file": "tests/auth/session.spec.ts",
+          "title": "redirects unauthenticated users to /login",
+          "line": 22,
+          "column": 1,
+          "inert": false
+        }
       ]
     },
     {
@@ -37,8 +49,20 @@
       "action": "preserve every case and assertion in one test.each table",
       "fingerprint": "parameterization-candidate:tests/cart/totals.spec.ts:applies-discount-code",
       "participants": [
-        { "file": "tests/cart/totals.spec.ts", "title": "applies discount code SAVE10", "line": 31, "column": 1, "inert": false },
-        { "file": "tests/cart/totals.spec.ts", "title": "applies discount code SAVE20", "line": 39, "column": 1, "inert": false }
+        {
+          "file": "tests/cart/totals.spec.ts",
+          "title": "applies discount code SAVE10",
+          "line": 31,
+          "column": 1,
+          "inert": false
+        },
+        {
+          "file": "tests/cart/totals.spec.ts",
+          "title": "applies discount code SAVE20",
+          "line": 39,
+          "column": 1,
+          "inert": false
+        }
       ]
     },
     {
@@ -50,8 +74,20 @@
       "action": "review before changing tests; the usual outcome is one test.each table",
       "fingerprint": "near-duplicate-test:tests/api/users.spec.ts:lists-users-for-admin",
       "participants": [
-        { "file": "tests/api/users.spec.ts", "title": "lists users for an admin requester", "line": 8, "column": 1, "inert": false },
-        { "file": "tests/api/admin-users.spec.ts", "title": "lists users for an admin requester", "line": 31, "column": 1, "inert": false }
+        {
+          "file": "tests/api/users.spec.ts",
+          "title": "lists users for an admin requester",
+          "line": 8,
+          "column": 1,
+          "inert": false
+        },
+        {
+          "file": "tests/api/admin-users.spec.ts",
+          "title": "lists users for an admin requester",
+          "line": 31,
+          "column": 1,
+          "inert": false
+        }
       ]
     },
     {
@@ -63,8 +99,20 @@
       "action": "rename one of the tests",
       "fingerprint": "duplicate-test-name:tests/schemas/order.spec.ts:validates-payload",
       "participants": [
-        { "file": "tests/schemas/order.spec.ts", "title": "validates the payload", "line": 12, "column": 3, "inert": false },
-        { "file": "tests/schemas/order.spec.ts", "title": "validates the payload", "line": 57, "column": 3, "inert": true }
+        {
+          "file": "tests/schemas/order.spec.ts",
+          "title": "validates the payload",
+          "line": 12,
+          "column": 3,
+          "inert": false
+        },
+        {
+          "file": "tests/schemas/order.spec.ts",
+          "title": "validates the payload",
+          "line": 57,
+          "column": 3,
+          "inert": true
+        }
       ]
     },
     {
@@ -76,8 +124,20 @@
       "action": "review removal; duplication across unit and integration layers is sometimes deliberate",
       "fingerprint": "cross-file-duplicate:tests/unit/format.spec.ts:formats-currency",
       "participants": [
-        { "file": "tests/unit/format.spec.ts", "title": "formats currency amounts", "line": 6, "column": 1, "inert": false },
-        { "file": "tests/integration/invoice.spec.ts", "title": "formats currency amounts", "line": 88, "column": 1, "inert": false }
+        {
+          "file": "tests/unit/format.spec.ts",
+          "title": "formats currency amounts",
+          "line": 6,
+          "column": 1,
+          "inert": false
+        },
+        {
+          "file": "tests/integration/invoice.spec.ts",
+          "title": "formats currency amounts",
+          "line": 88,
+          "column": 1,
+          "inert": false
+        }
       ]
     },
     {
@@ -89,7 +149,13 @@
       "action": "remove the nested hook",
       "fingerprint": "redundant-hook:tests/db/repository.spec.ts:beforeEach-seed",
       "participants": [
-        { "file": "tests/db/repository.spec.ts", "title": "beforeEach seeds the database", "line": 18, "column": 3, "inert": false }
+        {
+          "file": "tests/db/repository.spec.ts",
+          "title": "beforeEach seeds the database",
+          "line": 18,
+          "column": 3,
+          "inert": false
+        }
       ]
     }
   ]
