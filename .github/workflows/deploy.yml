@@ -5,6 +5,8 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  repository_dispatch:
+    types: [release-published]
 
 jobs:
   deploy:
@@ -22,6 +24,8 @@ jobs:
       - run: pnpm build
         env:
           SITE_URL: https://vitestdedup.dev
+          PUBLIC_GA_ID: ${{ vars.PUBLIC_GA_ID }}
+          GITHUB_TOKEN: ${{ github.token }}
       - name: Deploy to Cloudflare Pages
         run: |
           pnpm exec wrangler pages deploy dist \

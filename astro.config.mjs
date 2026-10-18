@@ -9,6 +9,15 @@ import tailwindcss from '@tailwindcss/vite';
 // carry a fictitious production domain.
 const site = process.env.SITE_URL ?? 'http://localhost:4321';
 
+// GA4 measurement id; unset (local dev) means no tracking scripts at all.
+const gaId = process.env.PUBLIC_GA_ID;
+
+const gaInitScript = (id) =>
+  `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${id}');`;
+
+// Surfaces docs-search terms (Pagefind input) as GA `search` events.
+const gaSearchScript = `(function(){var t=null,last='';document.addEventListener('input',function(e){var el=e.target;if(!(el&&el.matches&&el.matches('input[type="search"]')))return;var term=(el.value||'').trim();clearTimeout(t);t=setTimeout(function(){if(term&&term!==last&&window.gtag){window.gtag('event','search',{search_term:term});last=term;}},800);},true);})();`;
+
 export default defineConfig({
   site,
   integrations: [
@@ -35,6 +44,19 @@ export default defineConfig({
           tag: 'link',
           attrs: { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
         },
+        ...(gaId
+          ? [
+              {
+                tag: 'script',
+                attrs: {
+                  async: true,
+                  src: `https://www.googletagmanager.com/gtag/js?id=${gaId}`,
+                },
+              },
+              { tag: 'script', content: gaInitScript(gaId) },
+              { tag: 'script', content: gaSearchScript },
+            ]
+          : []),
       ],
       sidebar: [
         {

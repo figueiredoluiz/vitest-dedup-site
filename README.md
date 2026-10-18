@@ -85,19 +85,32 @@ site. Brand tokens live in `src/styles/tailwind.css`; Starlight's palette is ali
 ## Deployment
 
 Production hosting is Cloudflare Pages, published by the GitHub Actions workflow in
-`.github/workflows/deploy.yml` (direct upload via `wrangler-action`, not the Git integration).
+`.github/workflows/deploy.yml` (direct upload via wrangler, not the Git integration).
 
-- Canonical domain: **vitestdedup.dev** — set at build time through `SITE_URL`, which feeds
-  canonical URLs, Open Graph tags, and the sitemap.
-- Pages project: `vitest-dedup-site` (production URL `https://vitest-dedup-site.pages.dev` until
-  the custom domain is attached).
+- Canonical domain: **vitestdedup.dev** (apex; `www` 301-redirects to it) — set at build time
+  through `SITE_URL`, which feeds canonical URLs, Open Graph tags, and the sitemap.
+- Pages project: `vitest-dedup-site`.
 - Required repository secrets: `CLOUDFLARE_API_TOKEN` (Account → Cloudflare Pages → Edit) and
   `CLOUDFLARE_ACCOUNT_ID`.
-- Pushes to `main` deploy to production; pull requests get preview deployments.
+- Triggers: pushes to `main` (production), pull requests (previews), manual `workflow_dispatch`,
+  and `repository_dispatch` (`release-published`), which the VitestDedup source repository's
+  release workflow can fire to rebuild the site when a new version ships.
+
+### Analytics
+
+Google Analytics 4 loads only when `PUBLIC_GA_ID` is set (a GitHub Actions **variable**, not a
+secret — measurement ids are public). Unset locally, so `pnpm dev` never tracks. Docs-search terms
+are reported as GA `search` events; enable Enhanced Measurement in the GA admin for scrolls,
+outbound clicks, and downloads.
+
+### Release notes
+
+The changelog fetches releases from the GitHub Releases API at build time (authenticated with the
+workflow's `github.token` when available) and falls back to the local fixture
+`src/data/releases.json` when the API is unreachable.
 
 ## Deferred until a later phase
 
 - Build-time sync of docs Markdown from the source repository.
-- Build-time fetch of releases from the GitHub Releases API.
 - Import of real VitestDedup report output to replace the sample fixture.
 - Automated rebuilds on source-repo changes; versioned docs; pt-BR/ja localization.

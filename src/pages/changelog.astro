@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { releases, formatDate } from '../lib/releases';
+import { getReleases, formatDate } from '../lib/releases';
 import { renderMarkdown } from '../lib/markdown';
 import { siteConfig } from '../lib/site';
 
+const releases = await getReleases();
 const rendered = await Promise.all(
   releases.map(async (release) => ({
     release,
