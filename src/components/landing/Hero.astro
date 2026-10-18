@@ -1,6 +1,9 @@
 ---
 import Terminal from '../shared/Terminal.astro';
 import { siteConfig } from '../../lib/site';
+import { getCurrentVersion } from '../../lib/releases';
+
+const currentVersion = await getCurrentVersion();
 ---
 
 <section class="relative overflow-hidden">
@@ -12,7 +15,7 @@ import { siteConfig } from '../../lib/site';
     <div>
       <p class="inline-flex items-center gap-2 rounded-full border border-line bg-panel px-3 py-1 text-xs font-medium text-muted">
         <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true"></span>
-        {siteConfig.currentVersion} · {siteConfig.license} · static analysis
+        {currentVersion} · {siteConfig.license} · static analysis
       </p>
       <h1 class="mt-5 text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-[3.4rem] lg:leading-[1.08]">
         Find duplicated tests.
@@ -72,7 +75,7 @@ import { siteConfig } from '../../lib/site';
         title="vitest-dedup"
         command="npx vitest-dedup ."
         lines={[
-          { text: 'vitest-dedup 0.5.0', tone: 'dim' },
+          { text: `vitest-dedup ${currentVersion.replace('v', '')}`, tone: 'dim' },
           { text: '' },
           { text: 'duplicate-test (1 error)', tone: 'rule' },
           { text: '  error  same normalized body under an equivalent context', tone: 'out' },

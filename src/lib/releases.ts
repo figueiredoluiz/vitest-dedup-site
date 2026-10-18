@@ -58,8 +58,16 @@ const fetchReleases = async (): Promise<Release[] | null> => {
   }
 };
 
-export const getReleases = async (): Promise<Release[]> =>
-  (await fetchReleases()) ?? fixtureReleases;
+let releasesPromise: Promise<Release[]> | null = null;
+
+export const getReleases = (): Promise<Release[]> =>
+  (releasesPromise ??= fetchReleases().then((releases) => releases ?? fixtureReleases));
+
+// Newest stable release — the version a fresh `npm install` would get.
+export const getCurrentVersion = async (): Promise<string> => {
+  const releases = await getReleases();
+  return releases.find((release) => !release.prerelease)?.tagName ?? 'v0.5.0';
+};
 
 export const formatDate = (iso: string): string =>
   new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(iso));

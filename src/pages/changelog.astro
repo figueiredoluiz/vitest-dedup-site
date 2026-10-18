@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { getReleases, formatDate } from '../lib/releases';
+import { getReleases, getCurrentVersion, formatDate } from '../lib/releases';
 import { renderMarkdown } from '../lib/markdown';
 import { siteConfig } from '../lib/site';
 
@@ -13,7 +13,7 @@ const rendered = await Promise.all(
 );
 
 const title = `Changelog — ${siteConfig.name}`;
-const description = `Release history for VitestDedup, from ${releases[releases.length - 1]?.tagName} to ${siteConfig.currentVersion}.`;
+const description = `Release history for VitestDedup, from ${releases[releases.length - 1]?.tagName} to ${await getCurrentVersion()}.`;
 ---
 
 <BaseLayout title={title} description={description}>

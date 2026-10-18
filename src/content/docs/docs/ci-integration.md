@@ -16,11 +16,13 @@ Fail the job on any non-zero code, and read code 2 as "fix the pipeline", not "f
 
 ## GitHub Action
 
+Pin the version you are using — the [changelog](/changelog/) lists every release:
+
 ```yaml
-- uses: figueiredoluiz/vitest-dedup@v0.5.0
+- uses: figueiredoluiz/vitest-dedup@vX.Y.Z
   with:
     path: .
-    version: 0.5.0
+    version: X.Y.Z
     threshold: '5'
 ```
 

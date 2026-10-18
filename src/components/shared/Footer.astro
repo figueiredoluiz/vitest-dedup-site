@@ -1,7 +1,9 @@
 ---
 import Logo from './Logo.astro';
 import { siteConfig } from '../../lib/site';
+import { getCurrentVersion } from '../../lib/releases';
 
+const currentVersion = await getCurrentVersion();
 const year = new Date().getFullYear();
 ---
 
@@ -17,7 +19,7 @@ const year = new Date().getFullYear();
         <p class="mt-4 text-xs text-muted">
           {year} · {siteConfig.license} license · current release
           <a href="/changelog/" class="text-accent hover:underline">
-            {siteConfig.currentVersion}
+            {currentVersion}
           </a>
         </p>
       </div>

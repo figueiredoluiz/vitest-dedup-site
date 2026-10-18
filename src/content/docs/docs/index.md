@@ -30,7 +30,7 @@ you. It never edits or deletes your tests.
 
 |                 |                                                                                                     |
 | --------------- | --------------------------------------------------------------------------------------------------- |
-| Current version | v0.5.0 — see the [changelog](/changelog/)                                                           |
+| Current version | See the [changelog](/changelog/)                                                                    |
 | License         | MIT                                                                                                 |
 | Runtime         | Node 20 or later launches the analyzer binary; the analysis itself runs without importing your code |
 | Platforms       | macOS (arm64, x64), Linux (arm64, x64; glibc and musl), Windows (arm64, x64)                        |
