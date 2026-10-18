@@ -1,12 +1,11 @@
 ---
-title: 'Local classes and constructors'
-description: 'How tests that construct classes declared in the same file are compared.'
+title: "Local classes and constructors"
+description: "How tests that construct classes declared in the same file are compared."
 sidebar:
   order: 100
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/rules/local-classes.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/rules/local-classes.md. Edits belong upstream. -->
 How tests that construct classes declared in the same file are compared.
 
 ## What counts as the same
@@ -51,7 +50,7 @@ A test body can use values declared outside it, and readable `.each` cells.
 
 ## What is left out of comparison
 
-State the analyzer cannot model makes the dependent body _unresolved_, and an unresolved body is
+State the analyzer cannot model makes the dependent body *unresolved*, and an unresolved body is
 excluded from comparison:
 
 - dynamic control-flow writes
@@ -79,3 +78,4 @@ interpolations. It keeps nested calls, constructors and other modeled effects in
 deferred scope. Tagged-template call modeling is separate.
 
 Back to [Rules](/docs/reference/rules/).
+

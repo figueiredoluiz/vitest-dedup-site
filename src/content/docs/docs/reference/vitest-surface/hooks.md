@@ -1,25 +1,24 @@
 ---
-title: 'Hooks'
-description: "Both are destructurable off TestContext (as shown in Declarations: callables, modifiers and signatures) and importable directly from 'vitest' as named export..."
+title: "Hooks"
+description: "Both are destructurable off TestContext (as shown in signature variants) and importable directly from 'vitest' as named exports, the same shape as beforeEach..."
 sidebar:
   order: 4
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/hooks.md. Edits belong upstream. -->
-
-| Hook                       | Signature                                                                   | Scope                                    | Notes                                                                                                                                                            |
-| -------------------------- | --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `beforeAll(fn, timeout?)`  | `fn: (ctx: ModuleContext) => unknown`                                       | File (top-level) or enclosing `describe` | Runs once before all tests in scope.                                                                                                                             |
-| `afterAll(fn, timeout?)`   | same                                                                        | same                                     | Runs once after all tests in scope.                                                                                                                              |
-| `beforeEach(fn, timeout?)` | `fn: (ctx: TestContext) => unknown`                                         | File or enclosing `describe`             | Runs before every test in scope; may **return a cleanup function**, which runs after all `afterEach` hooks in that scope (i.e. later than ordinary `afterEach`). |
-| `afterEach(fn, timeout?)`  | same                                                                        | same                                     | Runs after every test in scope.                                                                                                                                  |
-| `onTestFinished(fn)`       | `fn: (ctx: TestContext) => unknown`, called from inside a running test/hook | Single test instance                     | Runs after that test's `afterEach` chain; multiple registrations run in **reverse** registration order; not affected by `sequence.hooks` config.                 |
-| `onTestFailed(fn)`         | same shape                                                                  | Single test instance                     | Only fires if the test failed; also runs after `afterEach`.                                                                                                      |
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/vitest-surface/hooks.md. Edits belong upstream. -->
+| Hook | Signature | Scope | Notes |
+| --- | --- | --- | --- |
+| `beforeAll(fn, timeout?)` | `fn: (ctx: ModuleContext) => unknown` | File (top-level) or enclosing `describe` | Runs once before all tests in scope. |
+| `afterAll(fn, timeout?)` | same | same | Runs once after all tests in scope. |
+| `beforeEach(fn, timeout?)` | `fn: (ctx: TestContext) => unknown` | File or enclosing `describe` | Runs before every test in scope; may **return a cleanup function**, which runs after all `afterEach` hooks in that scope (i.e. later than ordinary `afterEach`). |
+| `afterEach(fn, timeout?)` | same | same | Runs after every test in scope. |
+| `onTestFinished(fn)` | `fn: (ctx: TestContext) => unknown`, called from inside a running test/hook | Single test instance | Runs after that test's `afterEach` chain; multiple registrations run in **reverse** registration order; not affected by `sequence.hooks` config. |
+| `onTestFailed(fn)` | same shape | Single test instance | Only fires if the test failed; also runs after `afterEach`. |
 
 ## `onTestFinished` and `onTestFailed` have two call forms
 
 Both are destructurable off
-`TestContext` (as shown in [Declarations: callables, modifiers and signatures](/docs/reference/vitest-surface/declarations/)) _and_ importable directly from `'vitest'` as named exports, the same
+`TestContext` (as shown in [signature variants](/docs/reference/vitest-surface/declarations/#signature-variants)) *and* importable directly from `'vitest'` as named exports, the same
 shape as `beforeEach`/`afterEach`. Both forms throw if called outside a running test body. The
 docs explicitly warn the global/imported form is unsound under `.concurrent`: "If you are running
 tests concurrently, you should always use the `onTestFailed`/`onTestFinished` hook from the test
@@ -52,3 +51,4 @@ declaration order, **plus** the corresponding `afterEach`/`afterAll` from each l
 this is exactly the ordered set the analyzer needs to compare for "equivalent context."
 
 Back to the [Vitest surface index](/docs/reference/vitest-surface/).
+

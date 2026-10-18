@@ -1,12 +1,11 @@
 ---
-title: 'Terminal report'
-description: 'The terminal report starts with the tool version and groups findings by rule, ordered by first-participant file within each rule. Blank lines separate rule h...'
+title: "Terminal report"
+description: "The terminal report starts with the tool version and groups findings by rule, ordered by first-participant file within each rule. Blank lines separate rule h..."
 sidebar:
   order: 1
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/terminal.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/reports/terminal.md. Edits belong upstream. -->
 ## Layout
 
 The terminal report starts with the tool version and groups findings by rule, ordered by
@@ -79,3 +78,4 @@ an empty value allows color.
   reporting do not change console modes.
 
 Back to [Reports](/docs/reference/reports/).
+

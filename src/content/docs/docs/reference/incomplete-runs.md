@@ -1,10 +1,9 @@
 ---
-title: 'Incomplete runs and limits'
-description: 'incomplete is true when some tests could not be compared: an unreadable config, a dynamic title, a table that cannot be resolved statically, a limit reached....'
+title: "Incomplete runs and limits"
+description: "incomplete is true when some tests could not be compared: an unreadable config, a dynamic title, a table that cannot be resolved statically, a limit reached...."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/incomplete-runs.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/incomplete-runs.md. Edits belong upstream. -->
 ## What `incomplete` means
 
 `incomplete` is true when some tests could not be compared: an unreadable config, a dynamic title, a
@@ -13,11 +12,11 @@ evidence of its absence.
 
 How each reporter says so:
 
-| Reporter           | Where                                                                                  |
-| ------------------ | -------------------------------------------------------------------------------------- |
-| `terminal`, `html` | A banner before the findings.                                                          |
-| `json`, `jsonl`    | The `incomplete` flag, plus `incompleteCauses`, which enumerates the reasons, counted. |
-| `sarif`            | `invocations[0].properties.incomplete`. SARIF does not carry the causes.               |
+| Reporter | Where |
+| --- | --- |
+| `terminal`, `html` | A banner before the findings. |
+| `json`, `jsonl` | The `incomplete` flag, plus `incompleteCauses`, which enumerates the reasons, counted. |
+| `sarif` | `invocations[0].properties.incomplete`. SARIF does not carry the causes. |
 
 `--fail-on-incomplete` turns the flag into a non-zero exit. A file in which every test was excluded
 is a blind spot; see [Blind spots](#blind-spots).
@@ -93,3 +92,4 @@ the same findings as a run over exactly those files. `--baseline-from-ref` appli
 to the base revision.
 
 Back to the [documentation index](/docs/reference/README/).
+

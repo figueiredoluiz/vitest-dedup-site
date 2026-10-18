@@ -1,10 +1,9 @@
 ---
-title: 'Imported runners'
-description: 'A runner is a first-party function that registers tests when called. VitestDedup expands a call to one as if its tests were written at the call site, so wrap...'
+title: "Imported runners"
+description: "A runner is a first-party function that registers tests when called. VitestDedup expands a call to one as if its tests were written at the call site, so wrap..."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/imported-runners.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/imported-runners.md. Edits belong upstream. -->
 A runner is a first-party function that registers tests when called. VitestDedup expands a call to
 one as if its tests were written at the call site, so wrapper helpers do not hide duplicates.
 
@@ -109,3 +108,4 @@ partial. File baselines from complete current analyses retain imported source an
 normally.
 
 Back to the [documentation index](/docs/reference/README/).
+

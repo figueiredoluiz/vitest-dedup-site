@@ -1,23 +1,22 @@
 ---
-title: 'Findings: verdict, fingerprint and structured fields'
-description: 'Machine formats carry both verdict and fingerprint.'
+title: "Findings, verdicts and fingerprints"
+description: "Machine formats carry both verdict and fingerprint."
 sidebar:
   order: 2
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/findings.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/reports/findings.md. Edits belong upstream. -->
 Machine formats carry both `verdict` and `fingerprint`.
 
 ## `verdict`
 
 `verdict` names what the finding claims, because the remedies differ:
 
-| Verdict             | Meaning                                                                  |
-| ------------------- | ------------------------------------------------------------------------ |
-| `redundant`         | One copy can go.                                                         |
-| `consolidatable`    | Every case is needed; they belong in one table.                          |
-| `name-collision`    | Two tests share a title.                                                 |
+| Verdict | Meaning |
+| --- | --- |
+| `redundant` | One copy can go. |
+| `consolidatable` | Every case is needed; they belong in one table. |
+| `name-collision` | Two tests share a title. |
 | `similar-uncertain` | A review prompt: the tests look equivalent, but that is not established. |
 
 ## `fingerprint`
@@ -45,3 +44,4 @@ Registrations that come from called helper functions are described on
 [Imported runners](/docs/reference/imported-runners/).
 
 Back to [Reports](/docs/reference/reports/).
+

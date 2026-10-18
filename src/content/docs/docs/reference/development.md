@@ -1,10 +1,9 @@
 ---
-title: 'Development'
-description: 'Maintainer reference for building, verifying and landing changes. The short version for contributors is in CONTRIBUTING.md.'
+title: "Development"
+description: "Maintainer reference for building, verifying and landing changes. The short version for contributors is in CONTRIBUTING.md."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/development.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/development.md. Edits belong upstream. -->
 Maintainer reference for building, verifying and landing changes. The short version for
 contributors is in [CONTRIBUTING.md](https://github.com/figueiredoluiz/vitest-dedup/blob/main/CONTRIBUTING.md).
 
@@ -30,6 +29,20 @@ binary older than the working tree. An up-to-date build is a sub-second no-op.
 They are slow: `check:memory`, `check:memory:scaling`, `check:coverage:rust`, `check:mutation`.
 CI runs the first three; `check:mutation` runs weekly from `mutants.yml`. `npm run check:not-run`
 prints the current list.
+
+## Writing documentation
+
+The website syncs these pages, so how they are named shows up there.
+
+- **Titles are plain text.** The first heading is the page title and its sidebar label. Give it no
+  section number and no inline code, and keep it short. `tests/docs_contract.rs` fails on either.
+- **Folders become groups.** A folder's name is displayed as a sidebar group, so name it as a
+  readable noun in kebab-case (`vitest-surface`, not `vs` or `part-2`).
+- **Every folder has an index page** next to it (`rules.md` for `rules/`) whose first heading names
+  the group, and whose table lists the pages in reading order. The website derives the sidebar
+  order from that table.
+- **Cite pages by name.** Link to "module mocking", not to a section number. The numbers in the
+  Vitest surface index exist for code comments; prose does not use them.
 
 ## Local verification
 
@@ -125,3 +138,4 @@ existence alone is not evidence that the check ran. New commits invalidate the p
 need another check before merge. Coverage floors and scope stay unchanged.
 
 Back to the [documentation index](/docs/reference/README/).
+

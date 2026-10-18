@@ -1,16 +1,15 @@
 ---
-title: 'GitHub Action'
-description: 'Replace X.Y.Z with a released version; the README carries the current pin.'
+title: "GitHub Action"
+description: "Replace X.Y.Z with a released version; the README carries the current pin."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/github-action.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/github-action.md. Edits belong upstream. -->
 ```yaml
 - uses: figueiredoluiz/vitest-dedup@vX.Y.Z
   with:
     path: .
     version: X.Y.Z
-    threshold: '5'
+    threshold: "5"
 ```
 
 Replace `X.Y.Z` with a released version; the [README](https://github.com/figueiredoluiz/vitest-dedup/blob/main/README.md#github-action) carries the
@@ -45,19 +44,20 @@ The inputs are `path`, `config`, `threshold`, `reporters`, `output`, `rule`, `gl
 
 ## Outputs
 
-| Output           | Description                                                          |
-| ---------------- | -------------------------------------------------------------------- |
-| `exit-code`      | Native exit code (0, 1, or 2)                                        |
-| `findings`       | Total findings, baselined or not                                     |
-| `errors`         | Error-severity findings                                              |
-| `warnings`       | Warning-severity findings                                            |
-| `tests-analyzed` | Tests extracted                                                      |
-| `files-analyzed` | Files parsed                                                         |
-| `incomplete`     | `"true"` when the run could not fully cover the corpus               |
-| `baselined`      | Findings the baseline accounted for                                  |
-| `new-findings`   | Findings absent from the baseline                                    |
-| `json-report`    | Path to the JSON report                                              |
-| `html-report`    | Path to the HTML report, when the html reporter was selected         |
-| `attestation`    | `verified`, or `unavailable` when only the checksum could be checked |
+| Output | Description |
+| --- | --- |
+| `exit-code` | Native exit code (0, 1, or 2) |
+| `findings` | Total findings, baselined or not |
+| `errors` | Error-severity findings |
+| `warnings` | Warning-severity findings |
+| `tests-analyzed` | Tests extracted |
+| `files-analyzed` | Files parsed |
+| `incomplete` | `"true"` when the run could not fully cover the corpus |
+| `baselined` | Findings the baseline accounted for |
+| `new-findings` | Findings absent from the baseline |
+| `json-report` | Path to the JSON report |
+| `html-report` | Path to the HTML report, when the html reporter was selected |
+| `attestation` | `verified`, or `unavailable` when only the checksum could be checked |
 
 Back to the [documentation index](/docs/reference/README/).
+

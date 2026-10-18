@@ -1,10 +1,9 @@
 ---
-title: 'Baselines and changed-file scoping'
-description: 'Both exist so a gate can act on what a change adds, not on what a codebase already holds. A run that examined a subset says so in its output, because it is n...'
+title: "Baselines and changed-file scoping"
+description: "Both exist so a gate can act on what a change adds, not on what a codebase already holds. A run that examined a subset says so in its output, because it is n..."
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/baselines.md. Edits belong upstream. -->
-
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@faceb45 docs/baselines.md. Edits belong upstream. -->
 Both exist so a gate can act on what a change adds, not on what a codebase already holds. A run
 that examined a subset says so in its output, because it is not a verdict on the whole repository.
 
@@ -48,3 +47,4 @@ A finding removed by an inline suppression directive is absent from the finding 
 `suppressionsApplied` is what stops that absence from reading as a clean result.
 
 Back to [Reports](/docs/reference/reports/).
+
