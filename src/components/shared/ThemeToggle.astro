@@ -1,0 +1,46 @@
+---
+// Shares Starlight's storage key and data-theme attribute with the docs pages.
+---
+
+<button
+  type="button"
+  data-theme-toggle
+  class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-accent hover:text-ink"
+  aria-label="Toggle dark mode"
+>
+  <svg
+    viewBox="0 0 20 20"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    class="hidden h-4 w-4 dark:block"
+    aria-hidden="true"
+  >
+    <circle cx="10" cy="10" r="3.5"></circle>
+    <path
+      d="M10 2v1.5M10 16.5V18M2 10h1.5M16.5 10H18M4.3 4.3l1 1M14.7 14.7l1 1M15.7 4.3l-1 1M5.3 14.7l-1 1"
+    ></path>
+  </svg>
+  <svg
+    viewBox="0 0 20 20"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    class="block h-4 w-4 dark:hidden"
+    aria-hidden="true"
+  >
+    <path d="M16 11.5A6.5 6.5 0 0 1 8.5 4a6.5 6.5 0 1 0 7.5 7.5z"></path>
+  </svg>
+</button>
+
+<script is:inline>
+  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
+    const root = document.documentElement;
+    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    root.dataset.theme = next;
+    localStorage.setItem('starlight-theme', next);
+  });
+</script>

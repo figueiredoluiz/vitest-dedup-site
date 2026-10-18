@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+/* Landing pages and Starlight docs share the data-theme attribute and the
+   starlight-theme storage key, so one toggle drives the whole site. */
+@custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
+
+:root {
+  --vd-bg: #f7faf7;
+  --vd-panel: #ffffff;
+  --vd-ink: #17221b;
+  --vd-muted: #55665c;
+  --vd-line: #dfe7e0;
+  --vd-accent: #1c7a4e;
+  --vd-accent-soft: rgb(28 122 78 / 0.09);
+}
+
+[data-theme='dark'] {
+  --vd-bg: #0b0f0d;
+  --vd-panel: #111915;
+  --vd-ink: #e8efe9;
+  --vd-muted: #93a59a;
+  --vd-line: #21302a;
+  --vd-accent: #5fd6a4;
+  --vd-accent-soft: rgb(95 214 164 / 0.12);
+}
+
+@theme inline {
+  --color-bg: var(--vd-bg);
+  --color-panel: var(--vd-panel);
+  --color-ink: var(--vd-ink);
+  --color-muted: var(--vd-muted);
+  --color-line: var(--vd-line);
+  --color-accent: var(--vd-accent);
+  --color-accent-soft: var(--vd-accent-soft);
+}
+
+@theme {
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', 'Cascadia Code', 'JetBrains Mono', Menlo, Consolas, monospace;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  body {
+    background-color: var(--vd-bg);
+    color: var(--vd-ink);
+  }
+
+  ::selection {
+    background-color: var(--vd-accent);
+    color: var(--vd-bg);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--vd-accent);
+    outline-offset: 2px;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+}
+
+@layer components {
+  /* Markdown rendered from release-note fixtures on the changelog page. */
+  .md-content {
+    line-height: 1.7;
+  }
+  .md-content > :not(:last-child) {
+    margin-bottom: 0.75rem;
+  }
+  .md-content h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+  }
+  .md-content h3 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-top: 1rem;
+  }
+  .md-content ul {
+    list-style: disc;
+    padding-left: 1.4rem;
+  }
+  .md-content ol {
+    list-style: decimal;
+    padding-left: 1.4rem;
+  }
+  .md-content li {
+    margin-bottom: 0.25rem;
+  }
+  .md-content a {
+    color: var(--vd-accent);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .md-content code {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    background-color: var(--vd-panel);
+    border: 1px solid var(--vd-line);
+    border-radius: 0.375rem;
+    padding: 0.1rem 0.35rem;
+  }
+  .md-content pre {
+    background-color: #0c1310;
+    border: 1px solid #1f2c25;
+    border-radius: 0.5rem;
+    padding: 0.9rem 1.1rem;
+    overflow-x: auto;
+  }
+  .md-content pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    color: #dbe5dd;
+  }
+}

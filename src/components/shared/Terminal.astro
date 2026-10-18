@@ -1,0 +1,106 @@
+---
+export interface TerminalLine {
+  text: string;
+  tone?: 'out' | 'ok' | 'warn' | 'dim' | 'accent' | 'rule' | 'location';
+}
+
+interface Props {
+  title?: string;
+  command: string;
+  lines?: TerminalLine[];
+  note?: string;
+}
+
+const { title = 'sh', command, lines = [], note } = Astro.props;
+
+const copyId = `terminal-src-${Math.random().toString(36).slice(2, 10)}`;
+
+const toneClass: Record<NonNullable<TerminalLine['tone']>, string> = {
+  out: 'text-slate-300',
+  ok: 'text-emerald-300',
+  warn: 'text-amber-300',
+  dim: 'text-slate-500',
+  accent: 'text-emerald-200',
+  rule: 'font-semibold text-cyan-300',
+  location: 'text-sky-300',
+};
+
+const commandTokens = command
+  .split(/(\s+)/)
+  .filter((token) => token.length > 0)
+  .map((token) => {
+    if (/^\s+$/.test(token)) return { text: token, cls: '' };
+    if (token.startsWith('--') || token.startsWith('-') || token.startsWith('=')) {
+      return { text: token, cls: 'text-sky-300' };
+    }
+    if (/^[./]/.test(token) || /^\w+\.\w+$/.test(token)) {
+      return { text: token, cls: 'text-amber-200' };
+    }
+    return { text: token, cls: 'text-slate-100' };
+  });
+
+// Rendered through set:html so no template whitespace can leak into the
+// <pre>, where every stray newline would become a visible blank line.
+const escapeHtml = (text: string): string =>
+  text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+const commandHtml = commandTokens
+  .map((token) => `<span class="${token.cls}">${escapeHtml(token.text)}</span>`)
+  .join('');
+
+const outputHtml = lines
+  .map(
+    (line) => `<span class="${toneClass[line.tone ?? 'out']}">${escapeHtml(line.text)}</span>\n`,
+  )
+  .join('');
+---
+
+<div class="not-prose">
+  <figure
+    class="overflow-hidden rounded-xl border border-[#1f2c25] bg-[#0c1310] shadow-lg shadow-black/20"
+  >
+    <figcaption
+      class="flex items-center justify-between gap-3 border-b border-[#1f2c25] bg-[#101a15] px-4 py-2.5"
+    >
+      <span class="flex items-center gap-2">
+        <span class="flex gap-1.5" aria-hidden="true">
+          <span class="h-2.5 w-2.5 rounded-full bg-[#e0655f]/70"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#e0b05f]/70"></span>
+          <span class="h-2.5 w-2.5 rounded-full bg-[#6fd08c]/70"></span>
+        </span>
+        <span class="font-mono text-xs text-slate-500">{title}</span>
+      </span>
+      <button
+        type="button"
+        data-copy={copyId}
+        class="inline-flex items-center gap-1.5 rounded-md border border-[#2a3a31] px-2 py-1 font-mono text-xs text-slate-400 transition-colors hover:border-[#5fd6a4]/50 hover:text-emerald-200 data-[state=copied]:border-emerald-400/60 data-[state=copied]:text-emerald-300"
+        aria-label="Copy command to clipboard"
+      >
+        <svg
+          viewBox="0 0 16 16"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="h-3 w-3"
+          aria-hidden="true"
+        >
+          <rect x="5" y="5" width="8" height="8" rx="1.5"></rect>
+          <path d="M3 10.5V4A1.5 1.5 0 0 1 4.5 2.5H11"></path>
+        </svg>
+        <span data-copy-label>Copy</span>
+      </button>
+    </figcaption>
+    <div class="overflow-x-auto p-4 font-mono text-[11px] leading-relaxed sm:text-xs">
+      <pre class="whitespace-pre"><code><span class="select-none text-emerald-400">$ </span><Fragment set:html={commandHtml} /></code></pre>
+      {
+        lines.length > 0 && (
+          <pre class="mt-1 whitespace-pre"><code set:html={outputHtml} /></pre>
+        )
+      }
+    </div>
+  </figure>
+  {note && <p class="mt-2 text-xs text-muted">{note}</p>}
+  <pre id={copyId} class="hidden">{command}</pre>
+</div>

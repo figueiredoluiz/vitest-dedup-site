@@ -1,0 +1,50 @@
+[
+  {
+    "tagName": "v0.5.0",
+    "name": "v0.5.0",
+    "publishedAt": "2026-10-18",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.5.0",
+    "body": "Comparison-accuracy and robustness release.\n\n### Fixed\n\n- Fingerprints keep destructured values distinct from the instances they name.\n- Local constructors are compared by what they do: owned behavior, wrapped callees, external constructor behavior, and nested private-name ownership are all modeled.\n- Loop initializers and template literals contribute their effects to a test's identity.\n- A process RSS backstop complements the existing memory budget.\n\n### Changed\n\n- Report and baseline files are replaced atomically: a failed write leaves the previous file intact.\n- Base-revision analysis for `--baseline-from-ref` admits files through the same globs as discovery."
+  },
+  {
+    "tagName": "v0.4.0",
+    "name": "v0.4.0",
+    "publishedAt": "2026-10-17",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.4.0",
+    "body": "Resource limits for large repositories.\n\n### Added\n\n- `--max-memory` stops reading files at a memory budget (default 2048 MiB) instead of relying on the process backstop alone.\n\n### Fixed\n\n- Declaration nesting and loop unrolling are bounded per file, so pathological inputs degrade instead of stalling.\n- Helper-file imports are read from the helper's own parse; helper export lookups are memoized.\n\n### Changed\n\n- Release workflow selects explicit npm publication tags."
+  },
+  {
+    "tagName": "v0.3.0",
+    "name": "v0.3.0",
+    "publishedAt": "2026-10-16",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.3.0",
+    "body": "Performance release focused on import resolution and base-revision analysis.\n\n### Performance\n\n- Import origins are parsed once per file; each helper file is read once per version.\n- Report file writes are buffered.\n- `--baseline-from-ref` reads base revision blobs through a single git process.\n\n### Fixed\n\n- Test-file imports come from the extraction parse itself.\n- The GitHub Action authenticates `gh` for build-provenance verification."
+  },
+  {
+    "tagName": "v0.2.1",
+    "name": "v0.2.1",
+    "publishedAt": "2026-10-15",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.2.1",
+    "body": "Correctness and documentation release.\n\n### Fixed\n\n- Function declaration binding identity is preserved during comparison.\n- Tagged publishing is aligned with the CukeDedup release process.\n\n### Documentation\n\n- Per-file documentation coverage completed across the frontend, reporters, and project resolution, including the resolver construction policy."
+  },
+  {
+    "tagName": "v0.2.0",
+    "name": "v0.2.0",
+    "publishedAt": "2026-10-14",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.2.0",
+    "body": "Terminal reporter and parser hardening.\n\n### Added\n\n- The terminal reporter gains rule-specific `action:` guidance, result and policy summaries, and detection timing with a reproducible `--no-metrics` opt-out.\n- Diagnostics are bounded with explicit omission counts.\n\n### Fixed\n\n- Parser stack usage is bounded for deeply nested sources.\n- Published platform packages are locked as workspaces, fixing binary resolution on install."
+  },
+  {
+    "tagName": "v0.1.0",
+    "name": "v0.1.0",
+    "publishedAt": "2026-10-13",
+    "prerelease": false,
+    "url": "https://github.com/figueiredoluiz/vitest-dedup/releases/tag/v0.1.0",
+    "body": "First public release.\n\n- Static analysis of duplicate and near-duplicate Vitest tests: a test's identity is its body, not its title.\n- npm launcher with prebuilt binaries for macOS (arm64, x64), Linux (arm64, x64; glibc and musl), and Windows (arm64, x64).\n- Reporters: `terminal`, `jsonl`, `json`, `html`, `sarif`.\n- Quality gates with `--threshold`, baselines, and distinct exit codes for CI.\n- Release workflow with npm trusted publishing, SHA-256 checksums, Sigstore signatures, and build provenance attestations."
+  }
+]

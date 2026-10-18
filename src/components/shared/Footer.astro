@@ -1,0 +1,91 @@
+---
+import Logo from './Logo.astro';
+import { siteConfig } from '../../lib/site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-line">
+  <div class="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+    <div class="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div>
+        <Logo />
+        <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+          A static analyzer that finds duplicate and near-duplicate Vitest tests. It reads your test
+          files and configuration without importing or executing either one.
+        </p>
+        <p class="mt-4 text-xs text-muted">
+          {year} · {siteConfig.license} license · current release
+          <a href="/changelog/" class="text-accent hover:underline">{siteConfig.currentVersion}</a>
+        </p>
+      </div>
+      <nav aria-label="Footer resources">
+        <h2 class="text-sm font-semibold">Resources</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li><a href="/docs/" class="text-muted hover:text-accent">Documentation</a></li>
+          <li>
+            <a href="/docs/cli-reference/" class="text-muted hover:text-accent">CLI reference</a>
+          </li>
+          <li><a href="/docs/reports/" class="text-muted hover:text-accent">Reports</a></li>
+          <li><a href="/changelog/" class="text-muted hover:text-accent">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Footer project links">
+        <h2 class="text-sm font-semibold">Project</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          {
+            siteConfig.repoUrl ? (
+              <>
+                <li>
+                  <a
+                    href={siteConfig.repoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-muted hover:text-accent"
+                  >
+                    Source code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`${siteConfig.repoUrl}/issues`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-muted hover:text-accent"
+                  >
+                    Issues
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={`${siteConfig.repoUrl}/releases`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-muted hover:text-accent"
+                  >
+                    Releases
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href={siteConfig.npmUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-muted hover:text-accent"
+                  >
+                    npm package
+                  </a>
+                </li>
+              </>
+            ) : (
+              <li class="text-muted">
+                Repository links appear once a public URL is configured in
+                <code class="font-mono text-xs">src/lib/site.ts</code>.
+              </li>
+            )
+          }
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>

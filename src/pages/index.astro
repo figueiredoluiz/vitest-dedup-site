@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/landing/Hero.astro';
+import ProblemSolution from '../components/landing/ProblemSolution.astro';
+import Features from '../components/landing/Features.astro';
+import ReportShowcase from '../components/reports/ReportShowcase.astro';
+import Workflow from '../components/landing/Workflow.astro';
+import Community from '../components/landing/Community.astro';
+import { siteConfig } from '../lib/site';
+
+const title = `${siteConfig.name} — ${siteConfig.tagline}`;
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: siteConfig.name,
+  description: siteConfig.description,
+  applicationCategory: 'DeveloperApplication',
+  operatingSystem: 'macOS, Linux, Windows',
+  softwareVersion: siteConfig.currentVersion.replace('v', ''),
+  license: 'https://spdx.org/licenses/MIT.html',
+  ...(siteConfig.repoUrl ? { codeRepository: siteConfig.repoUrl } : {}),
+};
+---
+
+<BaseLayout title={title} description={siteConfig.description} schema={schema}>
+  <Hero />
+  <ProblemSolution />
+  <Features />
+  <ReportShowcase />
+  <Workflow />
+  <Community />
+</BaseLayout>

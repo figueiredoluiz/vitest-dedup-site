@@ -1,0 +1,48 @@
+---
+
+<section class="border-y border-line bg-panel/40">
+  <div class="mx-auto max-w-6xl px-4 py-20 sm:px-6">
+    <div class="grid gap-10 lg:grid-cols-2 lg:gap-12">
+      <div>
+        <h2 class="text-2xl font-bold tracking-tight sm:text-3xl">Test suites grow. Duplication compounds.</h2>
+        <p class="mt-4 leading-relaxed text-muted">
+          Copy-pasting a test and tweaking a value is the fastest way to add coverage today — and the
+          slowest way to change anything tomorrow. As a suite grows, duplicated tests quietly pile up:
+        </p>
+        <ul class="mt-5 space-y-2.5 text-sm leading-relaxed text-muted">
+          <li class="flex gap-2.5">
+            <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" aria-hidden="true"></span>
+            A refactor touches the same logic in three places, or none of them get updated.
+          </li>
+          <li class="flex gap-2.5">
+            <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" aria-hidden="true"></span>
+            Redundant cases keep executing on every run, inflating CI time.
+          </li>
+          <li class="flex gap-2.5">
+            <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" aria-hidden="true"></span>
+            Nobody can say which test is authoritative, so failures get skimmed instead of read.
+          </li>
+          <li class="flex gap-2.5">
+            <span class="mt-2 h-1 w-1 shrink-0 rounded-full bg-muted" aria-hidden="true"></span>
+            Reviewing new tests gets harder because near-copies look intentional.
+          </li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border border-line bg-bg p-6 sm:p-8">
+        <h3 class="text-lg font-semibold">A test's identity is its body</h3>
+        <p class="mt-3 text-sm leading-relaxed text-muted">
+          The analyzer's core judgment, in two sentences:
+        </p>
+        <blockquote class="mt-4 border-l-2 border-accent pl-4 text-sm leading-relaxed">
+          Two tests that do the same thing under different titles are duplicates. Two textually
+          identical bodies that run under different hooks, mocks, or fixtures are not.
+        </blockquote>
+        <p class="mt-4 text-sm leading-relaxed text-muted">
+          That distinction is why VitestDedup is an analysis tool rather than an auto-fixer. It names
+          what each finding claims — <a href="/docs/understanding-results/" class="text-accent hover:underline">a verdict with a remedy</a>
+          — and the decision to consolidate stays with you.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

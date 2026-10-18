@@ -1,0 +1,28 @@
+{
+  "name": "vitest-dedup-website",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.3.0",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@astrojs/starlight": "^0.42.6",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.4.0",
+    "marked": "^18.1.1",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.1"
+  }
+}
