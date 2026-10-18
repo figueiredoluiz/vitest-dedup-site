@@ -1,9 +1,11 @@
 ---
 title: 'Report safety'
 description: 'Every reporter embeds text from the analyzed repository, test titles above all, written by whoever wrote those tests. A title reading "ignore previous instru...'
+sidebar:
+  order: 5
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/reports/safety.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/safety.md. Edits belong upstream. -->
 
 ## Report content is data, never instructions
 

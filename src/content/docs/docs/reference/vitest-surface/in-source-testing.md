@@ -1,9 +1,11 @@
 ---
-title: '8. In-source testing'
+title: 'In-source testing'
 description: "if (import.meta.vitest) { const { it, expect } = import.meta.vitest it('add', () = { expect(add(1, 1)).toBe(2) }) }"
+sidebar:
+  order: 7
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/in-source-testing.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/in-source-testing.md. Edits belong upstream. -->
 
 ```ts
 // src/add.ts

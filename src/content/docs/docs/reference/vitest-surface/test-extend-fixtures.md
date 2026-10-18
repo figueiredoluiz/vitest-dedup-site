@@ -1,9 +1,11 @@
 ---
-title: '6. Fixtures (`test.extend`)'
+title: 'Fixtures (test.extend)'
 description: "myTest('reads a row', async ({ db }) = { expect(await db.get('x')).toBeDefined() })"
+sidebar:
+  order: 5
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/test-extend-fixtures.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/test-extend-fixtures.md. Edits belong upstream. -->
 
 ```ts
 const myTest = test.extend<{ db: Database }>({

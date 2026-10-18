@@ -1,9 +1,11 @@
 ---
 title: 'Local classes and constructors'
 description: 'How tests that construct classes declared in the same file are compared.'
+sidebar:
+  order: 100
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/rules/local-classes.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/rules/local-classes.md. Edits belong upstream. -->
 
 How tests that construct classes declared in the same file are compared.
 

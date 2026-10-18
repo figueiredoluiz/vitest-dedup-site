@@ -3,6 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
+import { referenceTopLevel } from './src/reference-nav.mjs';
 
 // Canonical origin for metadata and the sitemap. Override with SITE_URL at
 // deploy time; the default is the real local origin so built pages never
@@ -102,8 +103,37 @@ export default defineConfig({
           ],
         },
         {
+          // The pages under docs/reference are synced from the analyzer repository
+          // (`pnpm sync:docs`). A folder becomes a sidebar group named after the folder, so each
+          // group is declared here with a real label; page order inside a group comes from the
+          // `sidebar.order` the sync derives from the upstream index tables. Add a new upstream
+          // top-level page here, or the sync fails (see `referenceTopLevel`).
           label: 'Analyzer Reference',
-          items: [{ autogenerate: { directory: 'docs/reference' } }],
+          items: [
+            { label: 'Overview', slug: 'docs/reference' },
+            ...referenceTopLevel.map(({ label, slug }) => ({ label, slug })),
+            {
+              label: 'Rules',
+              items: [
+                { label: 'Overview', slug: 'docs/reference/rules' },
+                { autogenerate: { directory: 'docs/reference/rules' } },
+              ],
+            },
+            {
+              label: 'Reports',
+              items: [
+                { label: 'Overview', slug: 'docs/reference/reports' },
+                { autogenerate: { directory: 'docs/reference/reports' } },
+              ],
+            },
+            {
+              label: 'Vitest surface',
+              items: [
+                { label: 'Overview', slug: 'docs/reference/vitest-surface' },
+                { autogenerate: { directory: 'docs/reference/vitest-surface' } },
+              ],
+            },
+          ],
         },
         {
           label: 'Guides',

@@ -3,7 +3,7 @@ title: 'Development'
 description: 'Maintainer reference for building, verifying and landing changes. The short version for contributors is in CONTRIBUTING.md.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/development.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/development.md. Edits belong upstream. -->
 
 Maintainer reference for building, verifying and landing changes. The short version for
 contributors is in [CONTRIBUTING.md](https://github.com/figueiredoluiz/vitest-dedup/blob/main/CONTRIBUTING.md).

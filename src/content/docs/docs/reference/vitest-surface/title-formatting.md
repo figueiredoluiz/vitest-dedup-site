@@ -1,9 +1,11 @@
 ---
-title: '4b. Title formatting'
+title: 'Title formatting'
 description: 'How Vitest renders a .each / .for title, and how far this analyzer reproduces it. The table shapes are on .each and .for tables.'
+sidebar:
+  order: 3
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/title-formatting.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/title-formatting.md. Edits belong upstream. -->
 
 How Vitest renders a `.each` / `.for` title, and how far this analyzer reproduces it. The table
 shapes are on [`.each` and `.for` tables](/docs/reference/vitest-surface/each-tables/).

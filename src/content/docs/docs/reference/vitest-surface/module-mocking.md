@@ -1,9 +1,11 @@
 ---
-title: '12. The `vi` module-mocking family'
+title: 'The vi module-mocking family'
 description: 'The mocking surface is larger than vi.mock, and two pairs in it differ from vi.mock exactly the way vi.doMock does. The distinction is easy to miss because t...'
+sidebar:
+  order: 10
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/module-mocking.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/module-mocking.md. Edits belong upstream. -->
 
 The mocking surface is larger than `vi.mock`, and two pairs in it differ from `vi.mock` exactly
 the way `vi.doMock` does. The distinction is easy to miss because the call shape

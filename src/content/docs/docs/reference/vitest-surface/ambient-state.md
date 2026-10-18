@@ -1,9 +1,11 @@
 ---
-title: '12b. The module-scope ambient-state family'
+title: 'The module-scope ambient-state family'
 description: 'Mocking is not the only way a file establishes state its tests run under. A second family of module-scope calls swaps the conditions rather than the dependen...'
+sidebar:
+  order: 11
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/ambient-state.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/ambient-state.md. Edits belong upstream. -->
 
 Mocking is not the only way a file establishes state its tests run under. A second family of
 module-scope calls swaps the _conditions_ rather than the _dependencies_: the timer mode, a

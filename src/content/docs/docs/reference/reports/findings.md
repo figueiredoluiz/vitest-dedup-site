@@ -1,9 +1,11 @@
 ---
-title: 'Findings: `verdict`, `fingerprint` and structured fields'
+title: 'Findings: verdict, fingerprint and structured fields'
 description: 'Machine formats carry both verdict and fingerprint.'
+sidebar:
+  order: 2
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/reports/findings.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/reports/findings.md. Edits belong upstream. -->
 
 Machine formats carry both `verdict` and `fingerprint`.
 

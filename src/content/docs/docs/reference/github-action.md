@@ -3,7 +3,7 @@ title: 'GitHub Action'
 description: 'Replace X.Y.Z with a released version; the README carries the current pin.'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/github-action.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/github-action.md. Edits belong upstream. -->
 
 ```yaml
 - uses: figueiredoluiz/vitest-dedup@vX.Y.Z

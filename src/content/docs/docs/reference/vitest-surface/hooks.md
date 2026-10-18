@@ -1,9 +1,11 @@
 ---
-title: '5. Hooks'
-description: "Both are destructurable off TestContext (as shown in §3) and importable directly from 'vitest' as named exports, the same shape as beforeEach/afterEach. Both..."
+title: 'Hooks'
+description: "Both are destructurable off TestContext (as shown in Declarations: callables, modifiers and signatures) and importable directly from 'vitest' as named export..."
+sidebar:
+  order: 4
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/hooks.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/hooks.md. Edits belong upstream. -->
 
 | Hook                       | Signature                                                                   | Scope                                    | Notes                                                                                                                                                            |
 | -------------------------- | --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -17,7 +19,7 @@ description: "Both are destructurable off TestContext (as shown in §3) and impo
 ## `onTestFinished` and `onTestFailed` have two call forms
 
 Both are destructurable off
-`TestContext` (as shown in [§3](/docs/reference/vitest-surface/declarations/)) _and_ importable directly from `'vitest'` as named exports, the same
+`TestContext` (as shown in [Declarations: callables, modifiers and signatures](/docs/reference/vitest-surface/declarations/)) _and_ importable directly from `'vitest'` as named exports, the same
 shape as `beforeEach`/`afterEach`. Both forms throw if called outside a running test body. The
 docs explicitly warn the global/imported form is unsound under `.concurrent`: "If you are running
 tests concurrently, you should always use the `onTestFailed`/`onTestFinished` hook from the test

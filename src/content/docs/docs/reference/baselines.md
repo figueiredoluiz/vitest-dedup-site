@@ -3,7 +3,7 @@ title: 'Baselines and changed-file scoping'
 description: 'Both exist so a gate can act on what a change adds, not on what a codebase already holds. A run that examined a subset says so in its output, because it is n...'
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/baselines.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/baselines.md. Edits belong upstream. -->
 
 Both exist so a gate can act on what a change adds, not on what a codebase already holds. A run
 that examined a subset says so in its output, because it is not a verdict on the whole repository.

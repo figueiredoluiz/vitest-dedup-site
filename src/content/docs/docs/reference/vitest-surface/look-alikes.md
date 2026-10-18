@@ -1,9 +1,11 @@
 ---
-title: '11. Look-alikes that are not Vitest tests'
+title: 'Look-alikes that are not Vitest tests'
 description: 'How to tell them apart statically, in priority order: 1. Resolve the import specifier of the binding used to call test/describe/etc. via oxcsemantic. If it t...'
+sidebar:
+  order: 9
 ---
 
-<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@6fe1373 docs/vitest-surface/look-alikes.md. Edits belong upstream. -->
+<!-- Synced from https://github.com/figueiredoluiz/vitest-dedup@77b79ee docs/vitest-surface/look-alikes.md. Edits belong upstream. -->
 
 | Framework                                                            | Import shape                                                                                                                               | Distinguishing signal                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +24,7 @@ description: 'How to tell them apart statically, in priority order: 1. Resolve t
    resolved project config has `globals: true` **and** no _other_ globally-injected test framework
    is active for that project (Vitest and Jest/Mocha/Cypress globals are not normally combined in
    one project, but a monorepo could have different projects using different runners, hence
-   resolving config **per project**, [§10](/docs/reference/vitest-surface/discovery-globs-and-projects/), matters here too).
+   resolving config **per project**, [Default file globs and projects](/docs/reference/vitest-surface/discovery-globs-and-projects/), matters here too).
 3. If the binding traces to a **different** package specifier (`@playwright/test`, `@jest/globals`,
    `node:test`, a Cypress support-file global, etc.), it is definitively **not** a Vitest test,
    regardless of how structurally similar the call shape looks (`describe(str, fn)` is common to
