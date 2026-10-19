@@ -1,20 +1,17 @@
 ---
 // Shares Starlight's storage key and data-theme attribute with the docs pages.
+// Styles are scoped CSS rather than Tailwind utilities so the toggle renders
+// identically on the Starlight docs pages, which do not load Tailwind.
 ---
 
-<button
-  type="button"
-  data-theme-toggle
-  class="inline-flex h-9 w-9 items-center justify-center rounded-md border border-line text-muted transition-colors hover:border-accent hover:text-ink"
-  aria-label="Toggle dark mode"
->
+<button type="button" data-theme-toggle class="theme-toggle" aria-label="Toggle dark mode">
   <svg
     viewBox="0 0 20 20"
     fill="none"
     stroke="currentColor"
     stroke-width="1.6"
     stroke-linecap="round"
-    class="hidden h-4 w-4 dark:block"
+    class="icon icon-moon"
     aria-hidden="true"
   >
     <circle cx="10" cy="10" r="3.5"></circle>
@@ -27,18 +24,58 @@
     stroke-width="1.6"
     stroke-linecap="round"
     stroke-linejoin="round"
-    class="block h-4 w-4 dark:hidden"
+    class="icon icon-sun"
     aria-hidden="true"
   >
     <path d="M16 11.5A6.5 6.5 0 0 1 8.5 4a6.5 6.5 0 1 0 7.5 7.5z"></path>
   </svg>
 </button>
 
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    height: 2.25rem;
+    width: 2.25rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--vd-line);
+    border-radius: 0.375rem;
+    color: var(--vd-muted);
+    background: transparent;
+    cursor: pointer;
+    transition:
+      color 150ms ease,
+      border-color 150ms ease;
+  }
+  .theme-toggle:hover {
+    border-color: var(--vd-accent);
+    color: var(--vd-ink);
+  }
+  .icon {
+    height: 1rem;
+    width: 1rem;
+  }
+  .icon-moon {
+    display: none;
+  }
+  :global([data-theme='dark']) .icon-moon {
+    display: block;
+  }
+  :global([data-theme='dark']) .icon-sun {
+    display: none;
+  }
+</style>
+
 <script is:inline>
-  document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
-    const root = document.documentElement;
-    const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
-    root.dataset.theme = next;
-    localStorage.setItem('starlight-theme', next);
+  // Binds every instance (the docs pages render one in the header and one in
+  // the mobile menu); the data attribute keeps repeated runs idempotent.
+  document.querySelectorAll('[data-theme-toggle]:not([data-theme-bound])').forEach((button) => {
+    button.dataset.themeBound = '';
+    button.addEventListener('click', () => {
+      const root = document.documentElement;
+      const next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+      root.dataset.theme = next;
+      localStorage.setItem('starlight-theme', next);
+    });
   });
 </script>

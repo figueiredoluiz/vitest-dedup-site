@@ -1,16 +1,76 @@
-/* Aligns Starlight's palette with the website tokens in tailwind.css.
-   Dark values live on :root (Starlight's dark default); light overrides
-   sit under [data-theme='light'] like Starlight itself organizes them. */
+/* Bridges Starlight's palette with the website tokens in tailwind.css.
+   Docs pages do not load Tailwind, so the --vd-* tokens are re-declared here
+   for the shared header components — keep them in sync with tailwind.css.
+   Starlight keeps dark values on :root with light overrides under
+   [data-theme='light']; these unlayered declarations win over Starlight's
+   layered defaults in both modes. Overriding --sl-color-black/--sl-color-white
+   is safe because the whole gray scale is redefined per mode: Starlight flips
+   black/white between themes, so a :root-only value would leak the dark page
+   background into light mode. */
 :root {
-  --sl-color-accent: #5fd6a4;
+  /* Site tokens (dark) — mirror src/styles/tailwind.css. */
+  --vd-bg: #0b0f0d;
+  --vd-panel: #111915;
+  --vd-ink: #e8efe9;
+  --vd-muted: #93a59a;
+  --vd-line: #21302a;
+  --vd-accent: #5fd6a4;
+  --vd-accent-soft: rgb(95 214 164 / 0.12);
+
+  /* Starlight gray scale mapped onto the site palette (dark). */
+  --sl-color-white: #f7faf7;
+  --sl-color-gray-1: #eef4ef;
+  --sl-color-gray-2: var(--vd-ink);
+  --sl-color-gray-3: var(--vd-muted);
+  --sl-color-gray-4: #46564c;
+  --sl-color-gray-5: var(--vd-line);
+  --sl-color-gray-6: var(--vd-panel);
+  --sl-color-black: var(--vd-bg);
+
+  --sl-color-accent: var(--vd-accent);
   --sl-color-accent-high: #8ae4bf;
   --sl-color-accent-low: #143228;
-  --sl-color-black: #0b0f0d;
-  --sl-color-white: #f7faf7;
+
+  --sl-color-text: var(--vd-ink);
+  --sl-color-text-accent: var(--vd-accent);
+  --sl-color-bg: var(--vd-bg);
+  --sl-color-bg-nav: var(--vd-panel);
+  --sl-color-bg-sidebar: var(--vd-panel);
+  --sl-color-hairline-light: var(--vd-line);
+  --sl-color-hairline: var(--vd-line);
 }
 
 [data-theme='light'] {
-  --sl-color-accent: #1c7a4e;
+  /* Site tokens (light) — mirror src/styles/tailwind.css. */
+  --vd-bg: #f7faf7;
+  --vd-panel: #ffffff;
+  --vd-ink: #17221b;
+  --vd-muted: #55665c;
+  --vd-line: #dfe7e0;
+  --vd-accent: #1c7a4e;
+  --vd-accent-soft: rgb(28 122 78 / 0.09);
+
+  /* Starlight gray scale mapped onto the site palette (light). */
+  --sl-color-white: var(--vd-ink);
+  --sl-color-gray-1: var(--vd-ink);
+  --sl-color-gray-2: var(--vd-ink);
+  --sl-color-gray-3: var(--vd-muted);
+  --sl-color-gray-4: #a8b5ac;
+  --sl-color-gray-5: var(--vd-line);
+  --sl-color-gray-6: #eef3ee;
+  /* Distinct from the page background: Expressive Code frames use gray-7. */
+  --sl-color-gray-7: #e9f0ea;
+  --sl-color-black: var(--vd-bg);
+
+  --sl-color-accent: var(--vd-accent);
   --sl-color-accent-high: #14573a;
   --sl-color-accent-low: #d9efe2;
+
+  --sl-color-text: var(--vd-ink);
+  --sl-color-text-accent: var(--vd-accent);
+  --sl-color-bg: var(--vd-bg);
+  --sl-color-bg-nav: var(--vd-bg);
+  --sl-color-bg-sidebar: var(--vd-bg);
+  --sl-color-hairline-light: var(--vd-line);
+  --sl-color-hairline: var(--vd-line);
 }

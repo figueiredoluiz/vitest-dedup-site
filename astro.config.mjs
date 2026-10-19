@@ -29,6 +29,13 @@ export default defineConfig({
         'A static analyzer that finds duplicate and near-duplicate Vitest tests without importing or executing them.',
       logo: { src: './src/assets/logo.svg' },
       customCss: ['./src/styles/starlight.css'],
+      // Header overrides so the docs match the main site: the shared logo
+      // lockup instead of Starlight's title, and the shared icon toggle
+      // instead of the theme dropdown.
+      components: {
+        SiteTitle: './src/components/starlight/SiteTitle.astro',
+        ThemeSelect: './src/components/starlight/ThemeSelect.astro',
+      },
       social: [
         {
           icon: 'github',

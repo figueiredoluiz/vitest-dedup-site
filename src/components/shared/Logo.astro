@@ -1,8 +1,10 @@
 ---
 // The mark colors are fixed; the wordmark follows the current text color.
+// Styles are scoped CSS rather than Tailwind utilities so the logo renders
+// identically on the Starlight docs pages, which do not load Tailwind.
 ---
 
-<svg viewBox="0 0 32 32" fill="none" class="h-7 w-7 shrink-0" aria-hidden="true">
+<svg viewBox="0 0 32 32" fill="none" class="mark" aria-hidden="true">
   <rect
     x="2.5"
     y="2.5"
@@ -22,6 +24,27 @@
     stroke-linejoin="round"
   ></path>
 </svg>
-<span class="text-base font-semibold tracking-tight sm:text-lg">
-  Vitest<span class="text-accent">Dedup</span>
+<span class="word">
+  Vitest<span class="word-accent">Dedup</span>
 </span>
+
+<style>
+  .mark {
+    height: 1.75rem;
+    width: 1.75rem;
+    flex-shrink: 0;
+  }
+  .word {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+  }
+  @media (min-width: 40rem) {
+    .word {
+      font-size: 1.125rem;
+    }
+  }
+  .word-accent {
+    color: var(--vd-accent);
+  }
+</style>

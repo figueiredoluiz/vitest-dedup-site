@@ -1,0 +1,23 @@
+---
+import Logo from '../shared/Logo.astro';
+
+// Overrides Starlight's default site title (config logo image + title text)
+// with the same logo lockup the main site header uses.
+const { siteTitleHref } = Astro.locals.starlightRoute;
+---
+
+<a href={siteTitleHref} class="site-title" aria-label="VitestDedup — home">
+  <Logo />
+</a>
+
+<style>
+  .site-title {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    color: var(--vd-ink);
+    text-decoration: none;
+    white-space: nowrap;
+    min-width: 0;
+  }
+</style>
