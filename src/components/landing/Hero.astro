@@ -67,7 +67,7 @@ const currentVersion = await getCurrentVersion();
         </a>
       </div>
       <p class="mt-6 text-xs text-muted">
-        Every command shown on this site is real. Sample output is marked as illustrative.
+        Every command and output shown on this site comes from a real run of the CLI.
       </p>
     </div>
     <div class="min-w-0">
@@ -77,28 +77,56 @@ const currentVersion = await getCurrentVersion();
         lines={[
           { text: `VitestDedup ${currentVersion}`, tone: 'dim' },
           { text: '' },
-          { text: 'duplicate-test (1 error)', tone: 'rule' },
-          { text: '  error  same normalized body under an equivalent context', tone: 'out' },
+          { text: 'duplicate-test', tone: 'rule' },
+          { text: '  [error] 2 tests have identical bodies under an equivalent context', tone: 'out' },
           {
-            text: '    --> tests/auth/login.spec.ts:14:1 redirects when signed out',
+            text: '    --> tests/seeded/session.spec.ts:5:3  session > sends anonymous visitors to login',
             tone: 'location',
           },
-          { text: '    related: tests/auth/session.spec.ts:22:1 same test', tone: 'location' },
-          { text: '    action: review removal or repair of intended coverage', tone: 'accent' },
+          {
+            text: '    related: tests/seeded/session.spec.ts:10:3  session > redirects when signed out',
+            tone: 'location',
+          },
+          {
+            text: '    action: Review whether to remove a redundant test or repair a test whose body misses its named behavior.',
+            tone: 'accent',
+          },
           { text: '' },
-          { text: 'near-duplicate-test (1 warning)', tone: 'rule' },
-          { text: '  warning  same behavior under an equivalent context', tone: 'out' },
-          { text: '    --> tests/api/users.spec.ts:8:1 lists admin users', tone: 'location' },
-          { text: '    related: tests/api/admin-users.spec.ts:31:1 similar', tone: 'location' },
-          { text: '    action: review before changing tests', tone: 'accent' },
+          { text: 'cross-file-duplicate', tone: 'rule' },
+          {
+            text: '  [warning] 2 tests across 2 files have identical bodies under an equivalent context',
+            tone: 'out',
+          },
+          {
+            text: '    --> tests/seeded/login.spec.ts:5:3  login > redirects when signed out',
+            tone: 'location',
+          },
+          {
+            text: '    related: tests/seeded/session.spec.ts:5:3  session > sends anonymous visitors to login',
+            tone: 'location',
+          },
           { text: '' },
-          { text: 'Analyzed 369 tests in 29 files: 1 error, 2 warnings', tone: 'out' },
+          { text: 'parameterization-candidate', tone: 'rule' },
+          {
+            text: '  [warning] 2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row',
+            tone: 'out',
+          },
+          {
+            text: '    --> tests/seeded/users.spec.ts:5:3  users > lists admin users',
+            tone: 'location',
+          },
+          {
+            text: '    related: tests/seeded/users.spec.ts:9:3  users > lists guest users',
+            tone: 'location',
+          },
+          { text: '' },
+          { text: 'Analyzed 1007 tests in 43 files: 1 error, 3 warnings, 0 off; 0 suppressed', tone: 'out' },
           { text: 'Analysis policy: FAIL', tone: 'warn' },
           { text: '' },
-          { text: 'Found 3 findings.', tone: 'out' },
-          { text: 'Detection time: 56.9 ms', tone: 'dim' },
+          { text: 'Found 4 findings.', tone: 'out' },
+          { text: 'Detection time: 222.4 ms', tone: 'dim' },
         ]}
-        note="Real command · findings abridged and illustrative · counts and time measured with v0.5.1 on a 369-test open-source suite"
+        note={`Real output of vitest-dedup ${currentVersion} on a generated 1,007-test project, abridged: two findings are left out`}
       />
     </div>
   </div>
