@@ -1,0 +1,538 @@
+{
+ "date": "2026-10-22",
+ "generatedAt": "2026-10-25T19:09:11.110Z",
+ "source": "backfill-new-entries",
+ "note": "Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by vitalets/github-trending-repos; each was analysed at its last commit before that time.",
+ "analyzerVersion": "0.7.0",
+ "scanned": 9,
+ "repos": [
+  {
+   "name": "supabase/supabase",
+   "url": "https://github.com/supabase/supabase",
+   "description": "The Postgres development platform. Supabase gives you a dedicated Postgres database to build your web, mobile, and AI applications.",
+   "language": "TypeScript",
+   "stars": 113917,
+   "starsToday": 504,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "master",
+   "headSha": "d4584290813a59954d7d6f098a5fb31ff433afaa",
+   "scanMs": 3506,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 10036,
+    "unresolved": 705,
+    "files": 1017
+   },
+   "comparablePercent": 93,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 106,
+     "tests": 289
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 55,
+     "tests": 416
+    }
+   ],
+   "findings": {
+    "total": 888,
+    "errors": 15,
+    "warnings": 873,
+    "byRule": {
+     "parameterization-candidate": 855,
+     "near-duplicate-test": 14,
+     "duplicate-test": 15,
+     "duplicate-test-name": 3,
+     "duplicate-each-row": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "parseEdgeFunctionEventMessage > should strip method and status code when they match the structured fields",
+      "parseEdgeFunctionEventMessage > should handle whitespace around parts correctly"
+     ],
+     "locations": [
+      {
+       "path": "apps/studio/components/interfaces/Functions/EdgeFunctionRecentInvocations.utils.test.ts",
+       "line": 6,
+       "endLine": 11,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Functions/EdgeFunctionRecentInvocations.utils.test.ts#L6-L11"
+      },
+      {
+       "path": "apps/studio/components/interfaces/Functions/EdgeFunctionRecentInvocations.utils.test.ts",
+       "line": 71,
+       "endLine": 76,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Functions/EdgeFunctionRecentInvocations.utils.test.ts#L71-L76"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "getHealthStatus > error status > returns error when error rate is exactly 1%",
+      "getHealthStatus > edge cases > returns error when total is exactly 100 and error rate is 1%"
+     ],
+     "locations": [
+      {
+       "path": "apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts",
+       "line": 128,
+       "endLine": 135,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts#L128-L135"
+      },
+      {
+       "path": "apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts",
+       "line": 240,
+       "endLine": 247,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts#L240-L247"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "getHealthStatus > healthy status > returns healthy when error rate is 0% with sufficient data",
+      "getHealthStatus > edge cases > returns healthy when total is exactly 100 and error rate is 0"
+     ],
+     "locations": [
+      {
+       "path": "apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts",
+       "line": 166,
+       "endLine": 173,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts#L166-L173"
+      },
+      {
+       "path": "apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts",
+       "line": 231,
+       "endLine": 238,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/Observability/ObservabilityOverview.utils.test.ts#L231-L238"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "SQLEditor.utils:updateWithoutWhere > contains both an update query and a delete query, triggers no where",
+      "SQLEditor.utils:updateWithoutWhere > contains both an update query and a delete query, triggers no where"
+     ],
+     "locations": [
+      {
+       "path": "apps/studio/components/interfaces/SQLEditor/SQLEditor.utils.test.ts",
+       "line": 615,
+       "endLine": 621,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/SQLEditor/SQLEditor.utils.test.ts#L615-L621"
+      },
+      {
+       "path": "apps/studio/components/interfaces/SQLEditor/SQLEditor.utils.test.ts",
+       "line": 622,
+       "endLine": 628,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/interfaces/SQLEditor/SQLEditor.utils.test.ts#L622-L628"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "LocalVersionPopover.utils:semverLte > Same value comparison should return true",
+      "LocalVersionPopover.utils:semverGte > Same value comparison should return true"
+     ],
+     "locations": [
+      {
+       "path": "apps/studio/components/layouts/Navigation/LayoutHeader/LocalVersionPopover.test.ts",
+       "line": 24,
+       "endLine": 29,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/layouts/Navigation/LayoutHeader/LocalVersionPopover.test.ts#L24-L29"
+      },
+      {
+       "path": "apps/studio/components/layouts/Navigation/LayoutHeader/LocalVersionPopover.test.ts",
+       "line": 45,
+       "endLine": 50,
+       "url": "https://github.com/supabase/supabase/blob/d4584290813a59954d7d6f098a5fb31ff433afaa/apps/studio/components/layouts/Navigation/LayoutHeader/LocalVersionPopover.test.ts#L45-L50"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "strelov1/freehire",
+   "url": "https://github.com/strelov1/freehire",
+   "description": "freehire — the open-source search engine for job seekers",
+   "language": "Go",
+   "stars": 3037,
+   "starsToday": 360,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "c2685c0c9e8cf223a591e51c86bd0964daa3651e",
+   "scanMs": 1768,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2959,
+    "unresolved": 42,
+    "files": 281
+   },
+   "comparablePercent": 98.6,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 9,
+     "tests": 42
+    }
+   ],
+   "findings": {
+    "total": 224,
+    "errors": 0,
+    "warnings": 224,
+    "byRule": {
+     "parameterization-candidate": 220,
+     "cross-file-duplicate": 1,
+     "near-duplicate-test": 3
+    }
+   },
+   "top": [
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "buildActivityGrid shape > asks for a span the endpoint will answer, on every day of the year",
+      "buildActivityGrid west of UTC > asks for a span the endpoint will answer, on every day of the year"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/activityGrid.test.ts",
+       "line": 233,
+       "endLine": 240,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/activityGrid.test.ts#L233-L240"
+      },
+      {
+       "path": "web/src/lib/activityGrid.west.test.ts",
+       "line": 70,
+       "endLine": 77,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/activityGrid.west.test.ts#L70-L77"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "adzunaLocalDomain > falls back to the domain the terms name when the URL cannot supply one",
+      "adzunaLocalDomain > never credits a non-Adzuna host"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/adzuna.test.ts",
+       "line": 18,
+       "endLine": 22,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/adzuna.test.ts#L18-L22"
+      },
+      {
+       "path": "web/src/lib/adzuna.test.ts",
+       "line": 24,
+       "endLine": 35,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/adzuna.test.ts#L24-L35"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "matchesQuery > keeps every application when the query is empty or blank",
+      "matchesQuery > matches a partial word, so a search narrows as it is typed"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/board.test.ts",
+       "line": 124,
+       "endLine": 127,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/board.test.ts#L124-L127"
+      },
+      {
+       "path": "web/src/lib/board.test.ts",
+       "line": 140,
+       "endLine": 143,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/board.test.ts#L140-L143"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "cachePolicy holds an entity page longer than a listing > leaves listings and index pages on the short lifetime",
+      "cachePolicy holds an entity page longer than a listing > does not extend the lifetime to a detail page sub-route"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/httpCache.test.ts",
+       "line": 78,
+       "endLine": 88,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/httpCache.test.ts#L78-L88"
+      },
+      {
+       "path": "web/src/lib/httpCache.test.ts",
+       "line": 92,
+       "endLine": 96,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/httpCache.test.ts#L92-L96"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "autoApplyProgressSteps > shows the Tailoring stage active while a CV is being prepared",
+      "autoApplyProgressSteps > marks the Tailoring stage as stopped when tailoring itself failed",
+      "autoApplyProgressSteps > shows the Review stage active while awaiting the candidate decision",
+      "autoApplyProgressSteps > marks the Review stage as stopped when the candidate declined"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/autoApplyProgress.test.ts",
+       "line": 5,
+       "endLine": 11,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/autoApplyProgress.test.ts#L5-L11"
+      },
+      {
+       "path": "web/src/lib/autoApplyProgress.test.ts",
+       "line": 13,
+       "endLine": 19,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/autoApplyProgress.test.ts#L13-L19"
+      },
+      {
+       "path": "web/src/lib/autoApplyProgress.test.ts",
+       "line": 21,
+       "endLine": 27,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/autoApplyProgress.test.ts#L21-L27"
+      },
+      {
+       "path": "web/src/lib/autoApplyProgress.test.ts",
+       "line": 29,
+       "endLine": 35,
+       "url": "https://github.com/strelov1/freehire/blob/c2685c0c9e8cf223a591e51c86bd0964daa3651e/web/src/lib/autoApplyProgress.test.ts#L29-L35"
+      }
+     ],
+     "more": 3
+    }
+   ]
+  },
+  {
+   "name": "twentyhq/twenty",
+   "url": "https://github.com/twentyhq/twenty",
+   "description": "The open alternative to Salesforce, designed for AI.",
+   "language": "TypeScript",
+   "stars": 59729,
+   "starsToday": 112,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "64f3be585be5e505da76324da23a3defd0152c85",
+   "scanMs": 5726,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 5668,
+    "unresolved": 425,
+    "files": 4792
+   },
+   "comparablePercent": 92.5,
+   "exclusions": [
+    {
+     "reason": "helper-setup-effects",
+     "files": 91,
+     "tests": 149
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 84,
+     "tests": 274
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 177,
+    "errors": 1,
+    "warnings": 176,
+    "byRule": {
+     "cross-file-duplicate": 1,
+     "parameterization-candidate": 172,
+     "near-duplicate-test": 3,
+     "duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "manifestValidate > valid object extensions > should pass validation with valid object extension by nameSingular",
+      "manifestValidate > UUID version validation > should pass with UUID v4 identifiers"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts",
+       "line": 174,
+       "endLine": 182,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts#L174-L182"
+      },
+      {
+       "path": "packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts",
+       "line": 614,
+       "endLine": 622,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts#L614-L622"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "application identifiers > should expose the application metadata constants",
+      "application identifiers > should expose the application metadata constants"
+     ],
+     "locations": [
+      {
+       "path": "packages/create-twenty-app/src/constants/template/src/__tests__/application-config.test.ts",
+       "line": 9,
+       "endLine": 13,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/create-twenty-app/src/constants/template/src/__tests__/application-config.test.ts#L9-L13"
+      },
+      {
+       "path": "packages/twenty-cli/app-template/src/__tests__/application-config.test.ts",
+       "line": 9,
+       "endLine": 13,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-cli/app-template/src/__tests__/application-config.test.ts#L9-L13"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "verifyFirefliesWebhookSignature > accepts a valid bare-hex signature",
+      "verifyFirefliesWebhookSignature > accepts a valid signature with sha256= prefix"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts",
+       "line": 13,
+       "endLine": 24,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts#L13-L24"
+      },
+      {
+       "path": "packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts",
+       "line": 26,
+       "endLine": 37,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts#L26-L37"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "pull base file > should read back a base whose manifest has no views and no view fields",
+      "pull base file > should read back a base whose manifest has no page layouts and no page layout tabs"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 135,
+       "endLine": 151,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L135-L151"
+      },
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 183,
+       "endLine": 199,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L183-L199"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "pull base file > should read back a base whose manifest has no page layouts and no page layout tabs",
+      "pull base file > should read back a base whose manifest has no navigation menu items"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 183,
+       "endLine": 199,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L183-L199"
+      },
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 231,
+       "endLine": 246,
+       "url": "https://github.com/twentyhq/twenty/blob/64f3be585be5e505da76324da23a3defd0152c85/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L231-L246"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": []
+}

@@ -1,0 +1,837 @@
+{
+ "updatedAt": "2026-10-25T18:21:02.747Z",
+ "days": [
+  {
+   "date": "2026-10-19",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 15,
+   "repos": 5,
+   "tests": 15058,
+   "findings": 557,
+   "errors": 10,
+   "skipped": 0
+  },
+  {
+   "date": "2026-10-20",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 17,
+   "repos": 3,
+   "tests": 2958,
+   "findings": 53,
+   "errors": 0,
+   "skipped": 1
+  },
+  {
+   "date": "2026-10-21",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 14,
+   "repos": 3,
+   "tests": 15611,
+   "findings": 666,
+   "errors": 5,
+   "skipped": 1
+  },
+  {
+   "date": "2026-10-22",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 9,
+   "repos": 3,
+   "tests": 18663,
+   "findings": 1289,
+   "errors": 16,
+   "skipped": 0
+  },
+  {
+   "date": "2026-10-23",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 18,
+   "repos": 8,
+   "tests": 26787,
+   "findings": 1175,
+   "errors": 13,
+   "skipped": 0
+  },
+  {
+   "date": "2026-10-24",
+   "source": "backfill-new-entries",
+   "analyzerVersion": "0.7.0",
+   "scanned": 15,
+   "repos": 6,
+   "tests": 163801,
+   "findings": 4259,
+   "errors": 25,
+   "skipped": 0
+  },
+  {
+   "date": "2026-10-25",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.7.0",
+   "scanned": 60,
+   "repos": 17,
+   "tests": 113126,
+   "findings": 3169,
+   "errors": 68,
+   "skipped": 0
+  }
+ ],
+ "repos": {
+  "diegosouzapw/OmniRoute": {
+   "name": "diegosouzapw/OmniRoute",
+   "appearances": [
+    {
+     "date": "2026-10-19",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "40523566e611838978835adbb6b84cda99602504",
+     "stars": 81070,
+     "tests": 3308,
+     "comparablePercent": 98.5,
+     "findings": 187,
+     "errors": 8
+    }
+   ],
+   "latest": "2026-10-19"
+  },
+  "earendil-works/pi": {
+   "name": "earendil-works/pi",
+   "appearances": [
+    {
+     "date": "2026-10-19",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "1402973a9dbe8c627341e04c9744c54953e285ca",
+     "stars": 117765,
+     "tests": 6078,
+     "comparablePercent": 90.6,
+     "findings": 179,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-19"
+  },
+  "iptv-org/iptv": {
+   "name": "iptv-org/iptv",
+   "appearances": [
+    {
+     "date": "2026-10-19",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "8aebc5621085b0dfc81914af1fef7f36f1afbec6",
+     "stars": 142334,
+     "tests": 25,
+     "comparablePercent": 100,
+     "findings": 3,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-19"
+  },
+  "twentyhq/twenty": {
+   "name": "twentyhq/twenty",
+   "appearances": [
+    {
+     "date": "2026-10-19",
+     "rank": 4,
+     "analyzerVersion": "0.7.0",
+     "headSha": "dd7099a02f83ddc021231b71d5344d3b83f4cf7d",
+     "stars": 59728,
+     "tests": 5631,
+     "comparablePercent": 92.6,
+     "findings": 178,
+     "errors": 1
+    },
+    {
+     "date": "2026-10-22",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "64f3be585be5e505da76324da23a3defd0152c85",
+     "stars": 59729,
+     "tests": 5668,
+     "comparablePercent": 92.5,
+     "findings": 177,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-22"
+  },
+  "JacobLinCool/d1-manager": {
+   "name": "JacobLinCool/d1-manager",
+   "appearances": [
+    {
+     "date": "2026-10-19",
+     "rank": 5,
+     "analyzerVersion": "0.7.0",
+     "headSha": "3d446a75d1ce4135b9e7728199f364d1721f4984",
+     "stars": 651,
+     "tests": 16,
+     "comparablePercent": 100,
+     "findings": 10,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-19"
+  },
+  "headroomlabs-ai/headroom": {
+   "name": "headroomlabs-ai/headroom",
+   "appearances": [
+    {
+     "date": "2026-10-20",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "fbf7bc3278c11975299b9bd0a2ecf200dfd25a05",
+     "stars": 77803,
+     "tests": 528,
+     "comparablePercent": 94.7,
+     "findings": 16,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-20"
+  },
+  "koala73/worldmonitor": {
+   "name": "koala73/worldmonitor",
+   "appearances": [
+    {
+     "date": "2026-10-20",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "6254e4d40526e756eaa5931a7d82ae6bb929c25a",
+     "stars": 89502,
+     "tests": 2260,
+     "comparablePercent": 85.4,
+     "findings": 35,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-20"
+  },
+  "flizzywine/dsh-tavern": {
+   "name": "flizzywine/dsh-tavern",
+   "appearances": [
+    {
+     "date": "2026-10-20",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "21e952afd805e4cf829b418778740ff6b851a535",
+     "stars": 1293,
+     "tests": 170,
+     "comparablePercent": 99.4,
+     "findings": 2,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-20"
+  },
+  "mifi/lossless-cut": {
+   "name": "mifi/lossless-cut",
+   "appearances": [
+    {
+     "date": "2026-10-21",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "c40730ae73d3edeab32d166710fb4987b393be0a",
+     "stars": 45226,
+     "tests": 149,
+     "comparablePercent": 100,
+     "findings": 22,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-21"
+  },
+  "emdash-cms/emdash": {
+   "name": "emdash-cms/emdash",
+   "appearances": [
+    {
+     "date": "2026-10-21",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "6ec17985513c4239dd1b16b2787c78d302e90584",
+     "stars": 13952,
+     "tests": 15338,
+     "comparablePercent": 95.8,
+     "findings": 632,
+     "errors": 5
+    }
+   ],
+   "latest": "2026-10-21"
+  },
+  "openfoodfacts/openfoodfacts-explorer": {
+   "name": "openfoodfacts/openfoodfacts-explorer",
+   "appearances": [
+    {
+     "date": "2026-10-21",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "a25150154eddf46b609d45358c3bfa3a59e12ce4",
+     "stars": 78,
+     "tests": 124,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-21"
+  },
+  "supabase/supabase": {
+   "name": "supabase/supabase",
+   "appearances": [
+    {
+     "date": "2026-10-22",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "d4584290813a59954d7d6f098a5fb31ff433afaa",
+     "stars": 113917,
+     "tests": 10036,
+     "comparablePercent": 93,
+     "findings": 888,
+     "errors": 15
+    }
+   ],
+   "latest": "2026-10-22"
+  },
+  "strelov1/freehire": {
+   "name": "strelov1/freehire",
+   "appearances": [
+    {
+     "date": "2026-10-22",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "c2685c0c9e8cf223a591e51c86bd0964daa3651e",
+     "stars": 3037,
+     "tests": 2959,
+     "comparablePercent": 98.6,
+     "findings": 224,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-22"
+  },
+  "remotion-dev/remotion": {
+   "name": "remotion-dev/remotion",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "b53f8540f5b21432c4c183cfde7440fc1af3c0b6",
+     "stars": 67380,
+     "tests": 464,
+     "comparablePercent": 96.6,
+     "findings": 18,
+     "errors": 0
+    },
+    {
+     "date": "2026-10-25",
+     "rank": 5,
+     "analyzerVersion": "0.7.0",
+     "headSha": "65ce99e14bb0509bc75a562bfd453aa5941c18a6",
+     "stars": 67376,
+     "tests": 468,
+     "comparablePercent": 96.6,
+     "findings": 18,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "bowenliang123/dsh-context": {
+   "name": "bowenliang123/dsh-context",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f",
+     "stars": 3585,
+     "tests": 2597,
+     "comparablePercent": 98.2,
+     "findings": 37,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "genspark-ai/genoffice": {
+   "name": "genspark-ai/genoffice",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "e416f9ba831273fe5874fc082854b9ecdbcc9379",
+     "stars": 10815,
+     "tests": 17875,
+     "comparablePercent": 98.2,
+     "findings": 610,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "Open-Dev-Society/OpenStock": {
+   "name": "Open-Dev-Society/OpenStock",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 4,
+     "analyzerVersion": "0.7.0",
+     "headSha": "855ca6af33ae0b86f8835ecda6c31707f4ec3891",
+     "stars": 20861,
+     "tests": 136,
+     "comparablePercent": 94.9,
+     "findings": 9,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "Dokploy/dokploy": {
+   "name": "Dokploy/dokploy",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 5,
+     "analyzerVersion": "0.7.0",
+     "headSha": "e255f699998449215dca61ee5192f314ad046a6b",
+     "stars": 38017,
+     "tests": 1306,
+     "comparablePercent": 95.9,
+     "findings": 99,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "vitejs/vite": {
+   "name": "vitejs/vite",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 6,
+     "analyzerVersion": "0.7.0",
+     "headSha": "4ca25e1d3a24cb3343352f781a276cbfd2d206d6",
+     "stars": 83537,
+     "tests": 849,
+     "comparablePercent": 96.5,
+     "findings": 67,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "github/docs": {
+   "name": "github/docs",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 7,
+     "analyzerVersion": "0.7.0",
+     "headSha": "f49817dbd67fa154a89625cbfb9039d7baac1cc8",
+     "stars": 21108,
+     "tests": 3496,
+     "comparablePercent": 86.7,
+     "findings": 327,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "kodadot/nft-gallery": {
+   "name": "kodadot/nft-gallery",
+   "appearances": [
+    {
+     "date": "2026-10-23",
+     "rank": 8,
+     "analyzerVersion": "0.7.0",
+     "headSha": "f6fd1be96feef8790156e4cc610639d0e79c8675",
+     "stars": 686,
+     "tests": 64,
+     "comparablePercent": 96.9,
+     "findings": 8,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-23"
+  },
+  "stablyai/orca": {
+   "name": "stablyai/orca",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "41db63f8c25961e69632c0d9b73e959cb7a1f917",
+     "stars": 105634,
+     "tests": 130414,
+     "comparablePercent": 91.6,
+     "findings": 2865,
+     "errors": 6
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "liguobao/ds-harness-remote": {
+   "name": "liguobao/ds-harness-remote",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "4d888ad3e359416836072796d06348eba37eccc6",
+     "stars": 851,
+     "tests": 772,
+     "comparablePercent": 99.2,
+     "findings": 2,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "Vincentwei1021/video-shotcraft": {
+   "name": "Vincentwei1021/video-shotcraft",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "43bd349a136651865ecfa6ea1cf012f6e957d304",
+     "stars": 13581,
+     "tests": 23,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "promptfoo/promptfoo": {
+   "name": "promptfoo/promptfoo",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 4,
+     "analyzerVersion": "0.7.0",
+     "headSha": "c0b88a324175c60019cc80de1b2e32b4c849d4c3",
+     "stars": 26417,
+     "tests": 31390,
+     "comparablePercent": 81.6,
+     "findings": 1299,
+     "errors": 19
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "logto-io/logto": {
+   "name": "logto-io/logto",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 5,
+     "analyzerVersion": "0.7.0",
+     "headSha": "3caf470e5bb465e21c15714b569f7db697e31516",
+     "stars": 14784,
+     "tests": 582,
+     "comparablePercent": 87.3,
+     "findings": 22,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "lissy93/dashy": {
+   "name": "lissy93/dashy",
+   "appearances": [
+    {
+     "date": "2026-10-24",
+     "rank": 6,
+     "analyzerVersion": "0.7.0",
+     "headSha": "93a33d945c8b84e5dd37c8bef103770d4701d175",
+     "stars": 26807,
+     "tests": 620,
+     "comparablePercent": 98.4,
+     "findings": 71,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-24"
+  },
+  "google-gemini/gemini-cli": {
+   "name": "google-gemini/gemini-cli",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 1,
+     "analyzerVersion": "0.7.0",
+     "headSha": "cd1b45c2db0a5ea7b7fc3b67c1ba5879601d6005",
+     "stars": 108382,
+     "tests": 14235,
+     "comparablePercent": 94.4,
+     "findings": 942,
+     "errors": 35
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "makecindy/cindy": {
+   "name": "makecindy/cindy",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 2,
+     "analyzerVersion": "0.7.0",
+     "headSha": "206b24ccc88ec6fab473f84040c7b23321c28e75",
+     "stars": 4694,
+     "tests": 72267,
+     "comparablePercent": 93.8,
+     "findings": 1291,
+     "errors": 25
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "tashfeenahmed/freellmapi": {
+   "name": "tashfeenahmed/freellmapi",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 3,
+     "analyzerVersion": "0.7.0",
+     "headSha": "22b7ec74a09892d3efdb9107ec3e74c764dd71a1",
+     "stars": 41454,
+     "tests": 4997,
+     "comparablePercent": 97.5,
+     "findings": 175,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "firecrawl/firecrawl": {
+   "name": "firecrawl/firecrawl",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 4,
+     "analyzerVersion": "0.7.0",
+     "headSha": "c351eb6dac466c2853550ce98a8e1440580e28f7",
+     "stars": 195266,
+     "tests": 1187,
+     "comparablePercent": 89.4,
+     "findings": 25,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "thedotmack/claude-mem": {
+   "name": "thedotmack/claude-mem",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 6,
+     "analyzerVersion": "0.7.0",
+     "headSha": "834e438ef66ac495683c7d3f4ab2dc249dd81de5",
+     "stars": 103046,
+     "tests": 145,
+     "comparablePercent": 97.9,
+     "findings": 1,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "every-app/open-seo": {
+   "name": "every-app/open-seo",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 7,
+     "analyzerVersion": "0.7.0",
+     "headSha": "236761ad848716077cd10d8503713bb690971b3b",
+     "stars": 24926,
+     "tests": 1460,
+     "comparablePercent": 87.1,
+     "findings": 18,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "nightly-labs/openbot": {
+   "name": "nightly-labs/openbot",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 8,
+     "analyzerVersion": "0.7.0",
+     "headSha": "1d92ac43bddc4863bac9b26825bb8cda132fc7bd",
+     "stars": 943,
+     "tests": 366,
+     "comparablePercent": 85,
+     "findings": 4,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "moeru-ai/airi": {
+   "name": "moeru-ai/airi",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 9,
+     "analyzerVersion": "0.7.0",
+     "headSha": "74ddd90c04deed806eaef1e89a2b7ecaac529ba9",
+     "stars": 50709,
+     "tests": 4,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "algerkong/AlgerMusicPlayer": {
+   "name": "algerkong/AlgerMusicPlayer",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 10,
+     "analyzerVersion": "0.7.0",
+     "headSha": "4666fd0ca874452fda804e2d091524c2448bded9",
+     "stars": 17096,
+     "tests": 68,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "MoonshotAI/kimi-code": {
+   "name": "MoonshotAI/kimi-code",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 11,
+     "analyzerVersion": "0.7.0",
+     "headSha": "743f140978bddaf8b6aa524765fcd578f7c22fc9",
+     "stars": 8014,
+     "tests": 14807,
+     "comparablePercent": 97.3,
+     "findings": 456,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "CorentinTh/it-tools": {
+   "name": "CorentinTh/it-tools",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 12,
+     "analyzerVersion": "0.7.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 40966,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "frappe/crm": {
+   "name": "frappe/crm",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 13,
+     "analyzerVersion": "0.7.0",
+     "headSha": "c6443738c959e75ddb0703fe2a7cacb1347b1877",
+     "stars": 3854,
+     "tests": 131,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "tranxuanthang/lrcget": {
+   "name": "tranxuanthang/lrcget",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 14,
+     "analyzerVersion": "0.7.0",
+     "headSha": "0ced53573b0638d0acff9654db697d12e7747888",
+     "stars": 3294,
+     "tests": 142,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "vaibhav-kakde-in/mdhero": {
+   "name": "vaibhav-kakde-in/mdhero",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 15,
+     "analyzerVersion": "0.7.0",
+     "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
+     "stars": 299,
+     "tests": 327,
+     "comparablePercent": 95.4,
+     "findings": 25,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "unovue/reka-ui": {
+   "name": "unovue/reka-ui",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 16,
+     "analyzerVersion": "0.7.0",
+     "headSha": "78fb7748aa4f87cdaad60d0282002ab685d6bf58",
+     "stars": 6902,
+     "tests": 2140,
+     "comparablePercent": 96.3,
+     "findings": 174,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-25"
+  },
+  "zwave-js/zwave-js-ui": {
+   "name": "zwave-js/zwave-js-ui",
+   "appearances": [
+    {
+     "date": "2026-10-25",
+     "rank": 17,
+     "analyzerVersion": "0.7.0",
+     "headSha": "8481471246783b645adc9d2f63e270f323a642b1",
+     "stars": 1247,
+     "tests": 248,
+     "comparablePercent": 91.1,
+     "findings": 20,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-25"
+  }
+ }
+}

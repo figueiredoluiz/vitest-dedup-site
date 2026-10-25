@@ -5,3 +5,6 @@ dist/
 *.local
 *.local.md
 demo/.generated/
+
+# Full trending analyzer output (uploaded as a workflow artifact)
+.trending-artifacts/

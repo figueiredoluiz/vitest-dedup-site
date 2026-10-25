@@ -1,0 +1,1450 @@
+{
+ "date": "2026-10-23",
+ "generatedAt": "2026-10-25T19:12:01.997Z",
+ "source": "backfill-new-entries",
+ "note": "Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by vitalets/github-trending-repos; each was analysed at its last commit before that time.",
+ "analyzerVersion": "0.7.0",
+ "scanned": 18,
+ "repos": [
+  {
+   "name": "remotion-dev/remotion",
+   "url": "https://github.com/remotion-dev/remotion",
+   "description": "🎥      Make videos programmatically with React",
+   "language": "TypeScript",
+   "stars": 67380,
+   "starsToday": 348,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "b53f8540f5b21432c4c183cfde7440fc1af3c0b6",
+   "scanMs": 2450,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 464,
+    "unresolved": 16,
+    "files": 1100
+   },
+   "comparablePercent": 96.6,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 5,
+     "tests": 10
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 6
+    }
+   ],
+   "findings": {
+    "total": 18,
+    "errors": 0,
+    "warnings": 18,
+    "byRule": {
+     "parameterization-candidate": 17,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"cannot call getInputProps() while rendering client-side\"",
+     "titles": [
+      "cannot call getInputProps() while rendering client-side",
+      "cannot call getInputProps() while rendering client-side"
+     ],
+     "locations": [
+      {
+       "path": "packages/web-renderer/src/test/input-props.test.tsx",
+       "line": 41,
+       "endLine": 56,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/input-props.test.tsx#L41-L56"
+      },
+      {
+       "path": "packages/web-renderer/src/test/input-props.test.tsx",
+       "line": 58,
+       "endLine": 76,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/input-props.test.tsx#L58-L76"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "17 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 17 tests form one cluster, reported as a single finding instead of 136 pairwise findings (spa",
+     "titles": [
+      "should parse single pixel value",
+      "should parse zero value",
+      "should parse two values",
+      "should parse three values"
+     ],
+     "locations": [
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 5,
+       "endLine": 17,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/parse-border-radius.test.tsx#L5-L17"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 19,
+       "endLine": 31,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/parse-border-radius.test.tsx#L19-L31"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 33,
+       "endLine": 45,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/parse-border-radius.test.tsx#L33-L45"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 47,
+       "endLine": 59,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/web-renderer/src/test/parse-border-radius.test.tsx#L47-L59"
+      }
+     ],
+     "more": 13
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "should not create too many iterators when the audio ends",
+      "should not create too many iterators when the audio ends (variant)"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/audio-iterator.test.ts",
+       "line": 260,
+       "endLine": 279,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/audio-iterator.test.ts#L260-L279"
+      },
+      {
+       "path": "packages/media/src/test/audio-iterator.test.ts",
+       "line": 281,
+       "endLine": 300,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/audio-iterator.test.ts#L281-L300"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "should inhibit the same behavior as <Html5Video> - no loop",
+      "should inhibit the same loop behavior as <Html5Video> - edge case"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/loop-trim-time-calculation.test.ts",
+       "line": 4,
+       "endLine": 18,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/loop-trim-time-calculation.test.ts#L4-L18"
+      },
+      {
+       "path": "packages/media/src/test/loop-trim-time-calculation.test.ts",
+       "line": 68,
+       "endLine": 82,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/loop-trim-time-calculation.test.ts#L68-L82"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "a small configured budget shrinks the source cache",
+      "a large configured budget is capped at the mediabunny default"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/max-source-cache-size.test.ts",
+       "line": 18,
+       "endLine": 20,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/max-source-cache-size.test.ts#L18-L20"
+      },
+      {
+       "path": "packages/media/src/test/max-source-cache-size.test.ts",
+       "line": 22,
+       "endLine": 24,
+       "url": "https://github.com/remotion-dev/remotion/blob/b53f8540f5b21432c4c183cfde7440fc1af3c0b6/packages/media/src/test/max-source-cache-size.test.ts#L22-L24"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "bowenliang123/dsh-context",
+   "url": "https://github.com/bowenliang123/dsh-context",
+   "description": "The best DeepSeek Harness plugin for context insight and management, with context dashboard / browser / sidebar and context command, for context statistics, composition, breakdown, evolution details, agent teams, understanding how the context is made of, and how it evolves. 一站式 DeepSeek Harness 上下文可视化插件，Context 面板、浏览器、侧栏、命令，透视上下文组成、演进、压缩、多 Agent等。",
+   "language": "TypeScript",
+   "stars": 3585,
+   "starsToday": 296,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f",
+   "scanMs": 6172,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2597,
+    "unresolved": 48,
+    "files": 169
+   },
+   "comparablePercent": 98.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 7,
+     "tests": 48
+    }
+   ],
+   "findings": {
+    "total": 37,
+    "errors": 2,
+    "warnings": 35,
+    "byRule": {
+     "parameterization-candidate": 26,
+     "duplicate-test": 2,
+     "near-duplicate-test": 8,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "client entry: sessions scope seam > absent sessions service: apply is a noop for the sessions seams",
+      "client entry: /context command effect > absent inputTriggers service: no source, nothing thrown"
+     ],
+     "locations": [
+      {
+       "path": "tests/client/index.spec.ts",
+       "line": 184,
+       "endLine": 188,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/index.spec.ts#L184-L188"
+      },
+      {
+       "path": "tests/client/index.spec.ts",
+       "line": 199,
+       "endLine": 203,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/index.spec.ts#L199-L203"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "settings face (the Config-form projection) > the projection is read redacted, so a row's literal key never enters the fold",
+      "settings face (the Config-form projection) > the projection is read redacted, so a row's literal key never enters the fold"
+     ],
+     "locations": [
+      {
+       "path": "tests/host/balance.spec.ts",
+       "line": 376,
+       "endLine": 387,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/host/balance.spec.ts#L376-L387"
+      },
+      {
+       "path": "tests/host/balance.spec.ts",
+       "line": 389,
+       "endLine": 400,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/host/balance.spec.ts#L389-L400"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "timelineOf > a well-formed wire value passes through by reference",
+      "timelineOf > a slim head carrying the (empty) collections passes through by reference, markers intact"
+     ],
+     "locations": [
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 94,
+       "endLine": 108,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L94-L108"
+      },
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 344,
+       "endLine": 358,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L344-L358"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "timelineOf > a slim head carrying the (empty) collections passes through by reference, markers intact",
+      "timelineOf — the live system-prompt nodes > a well-formed systems list passes through by reference (fast path)"
+     ],
+     "locations": [
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 344,
+       "endLine": 358,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L344-L358"
+      },
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 550,
+       "endLine": 553,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L550-L553"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "timelineOf — the live system-prompt nodes > a well-formed systems list passes through by reference (fast path)",
+      "timelineOf — timing integration > a well-formed timing passes through by reference (fast path)"
+     ],
+     "locations": [
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 550,
+       "endLine": 553,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L550-L553"
+      },
+      {
+       "path": "tests/client/services.spec.ts",
+       "line": 604,
+       "endLine": 607,
+       "url": "https://github.com/bowenliang123/dsh-context/blob/16c5c0fb3a00b41804af5c6e192ae457bbe7ea2f/tests/client/services.spec.ts#L604-L607"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "genspark-ai/genoffice",
+   "url": "https://github.com/genspark-ai/genoffice",
+   "description": "Free, open-source AI Office suite: Docs, Sheets, Slides, PDF, Markdown and HTML editors with a built-in AI agent, plus a `genoffice` CLI and agent skill so Claude Code, Codex and Cursor can create and edit real .docx/.xlsx/.pptx files locally. Bring your own key. macOS, Windows & Linux.",
+   "language": "TypeScript",
+   "stars": 10815,
+   "starsToday": 193,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "e416f9ba831273fe5874fc082854b9ecdbcc9379",
+   "scanMs": 17083,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 17875,
+    "unresolved": 330,
+    "files": 1831
+   },
+   "comparablePercent": 98.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 56,
+     "tests": 117
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 12,
+     "tests": 175
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 4,
+     "tests": 14
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 2,
+     "tests": 24
+    }
+   ],
+   "findings": {
+    "total": 610,
+    "errors": 4,
+    "warnings": 606,
+    "byRule": {
+     "parameterization-candidate": 597,
+     "near-duplicate-test": 5,
+     "cross-file-duplicate": 2,
+     "duplicate-test": 4,
+     "redundant-hook": 1,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "spliceIntoEngine > applies mid-string replacements",
+      "spliceIntoEngine > keeps single engine spaces around a replaced word"
+     ],
+     "locations": [
+      {
+       "path": "apps/pdf/tests/text-splice.test.ts",
+       "line": 77,
+       "endLine": 81,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/pdf/tests/text-splice.test.ts#L77-L81"
+      },
+      {
+       "path": "apps/pdf/tests/text-splice.test.ts",
+       "line": 99,
+       "endLine": 103,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/pdf/tests/text-splice.test.ts#L99-L103"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "a deliberate teardown is not a crash > does not recover when a read races the Save swap",
+      "a deliberate teardown is not a crash > does not recover when the post-closeWorkbook guard rejects a read"
+     ],
+     "locations": [
+      {
+       "path": "apps/sheets/tests/sidecar-session-recovery.test.ts",
+       "line": 238,
+       "endLine": 251,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/sheets/tests/sidecar-session-recovery.test.ts#L238-L251"
+      },
+      {
+       "path": "apps/sheets/tests/sidecar-session-recovery.test.ts",
+       "line": 253,
+       "endLine": 260,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/sheets/tests/sidecar-session-recovery.test.ts#L253-L260"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "calcChain invalidation > a plain cell edit — formula cell turned into a literal — also drops calcChain",
+      "structural save integration > drops calcChain on a plain cell edit too — a formula overwritten by a literal invalidates it"
+     ],
+     "locations": [
+      {
+       "path": "apps/sheets/tests/xlsx-structure.test.ts",
+       "line": 619,
+       "endLine": 633,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/sheets/tests/xlsx-structure.test.ts#L619-L633"
+      },
+      {
+       "path": "apps/sheets/tests/xlsx-structure.test.ts",
+       "line": 682,
+       "endLine": 702,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/sheets/tests/xlsx-structure.test.ts#L682-L702"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "parsePrintRange > accepts spaces around dashes",
+      "parsePrintRange > accepts spaces around dashes"
+     ],
+     "locations": [
+      {
+       "path": "apps/slides/tests/print-html.test.ts",
+       "line": 27,
+       "endLine": 30,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/slides/tests/print-html.test.ts#L27-L30"
+      },
+      {
+       "path": "apps/slides/tests/print-html.test.ts",
+       "line": 40,
+       "endLine": 43,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/slides/tests/print-html.test.ts#L40-L43"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "toleranceToThreshold > 0 → 0, increases monotonically with tolerance, clamps out-of-range values",
+      "toleranceToThreshold > 0 → 0, increases monotonically with tolerance, clamps out-of-range values"
+     ],
+     "locations": [
+      {
+       "path": "apps/pdf/tests/cutout.test.ts",
+       "line": 55,
+       "endLine": 60,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/pdf/tests/cutout.test.ts#L55-L60"
+      },
+      {
+       "path": "apps/slides/tests/cutout.test.ts",
+       "line": 55,
+       "endLine": 60,
+       "url": "https://github.com/genspark-ai/genoffice/blob/e416f9ba831273fe5874fc082854b9ecdbcc9379/apps/slides/tests/cutout.test.ts#L55-L60"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "Open-Dev-Society/OpenStock",
+   "url": "https://github.com/Open-Dev-Society/OpenStock",
+   "description": "OpenStock is an open-source alternative to expensive market platforms. Track real-time prices, set personalized alerts, and explore detailed company insights — built openly, for everyone, forever free.",
+   "language": "TypeScript",
+   "stars": 20861,
+   "starsToday": 109,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "855ca6af33ae0b86f8835ecda6c31707f4ec3891",
+   "scanMs": 1468,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 136,
+    "unresolved": 7,
+    "files": 9
+   },
+   "comparablePercent": 94.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 7
+    }
+   ],
+   "findings": {
+    "total": 9,
+    "errors": 0,
+    "warnings": 9,
+    "byRule": {
+     "parameterization-candidate": 9
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "22 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 22 tests form one cluster, reported as a single finding instead of 231 pairwise findings (spa",
+     "titles": [
+      "formatSymbolForTradingView > returns empty string for empty input",
+      "formatSymbolForTradingView > maps Taiwan (.TW) to TWSE prefix",
+      "formatSymbolForTradingView > maps Taiwan OTC (.TWO) to TPEX prefix",
+      "formatSymbolForTradingView > maps Tokyo (.T) to TSE prefix"
+     ],
+     "locations": [
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L13-L15"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 23,
+       "endLine": 25,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L23-L25"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 27,
+       "endLine": 29,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L27-L29"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 31,
+       "endLine": 33,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L31-L33"
+      }
+     ],
+     "more": 18
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "6 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 6 tests form one cluster, reported as a single finding instead of 15 pairwise findings (spanni",
+     "titles": [
+      "formatSymbolForTradingView > returns uppercase US symbol as-is",
+      "formatSymbolForTradingView > maps London (.L) to LSE prefix",
+      "formatSymbolForTradingView > maps Stockholm (.ST) to OMXSTO prefix",
+      "formatSymbolForTradingView > maps Toronto (.TO) to TSX prefix"
+     ],
+     "locations": [
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 17,
+       "endLine": 20,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L17-L20"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 75,
+       "endLine": 78,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L75-L78"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 104,
+       "endLine": 107,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L104-L107"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 110,
+       "endLine": 113,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L110-L113"
+      }
+     ],
+     "more": 2
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "MiniMax integration > handles a longer prompt",
+      "MiniMax integration > generates HTML content for email personalization"
+     ],
+     "locations": [
+      {
+       "path": "__tests__/ai-provider.integration.test.ts",
+       "line": 23,
+       "endLine": 30,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/ai-provider.integration.test.ts#L23-L30"
+      },
+      {
+       "path": "__tests__/ai-provider.integration.test.ts",
+       "line": 32,
+       "endLine": 39,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/ai-provider.integration.test.ts#L32-L39"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "getFallbackProviderName > returns gemini when primary is minimax",
+      "getFallbackProviderName > returns gemini when primary is siray"
+     ],
+     "locations": [
+      {
+       "path": "__tests__/ai-provider.test.ts",
+       "line": 91,
+       "endLine": 93,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/ai-provider.test.ts#L91-L93"
+      },
+      {
+       "path": "__tests__/ai-provider.test.ts",
+       "line": 95,
+       "endLine": 97,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/ai-provider.test.ts#L95-L97"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "formatMarketCapValue > formats trillions",
+      "formatMarketCapValue > formats billions"
+     ],
+     "locations": [
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 151,
+       "endLine": 153,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L151-L153"
+      },
+      {
+       "path": "__tests__/utils.test.ts",
+       "line": 155,
+       "endLine": 157,
+       "url": "https://github.com/Open-Dev-Society/OpenStock/blob/855ca6af33ae0b86f8835ecda6c31707f4ec3891/__tests__/utils.test.ts#L155-L157"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "Dokploy/dokploy",
+   "url": "https://github.com/Dokploy/dokploy",
+   "description": "Open Source Alternative to Vercel, Netlify and Heroku.",
+   "language": "TypeScript",
+   "stars": 38017,
+   "starsToday": 51,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "canary",
+   "headSha": "e255f699998449215dca61ee5192f314ad046a6b",
+   "scanMs": 2061,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 1306,
+    "unresolved": 53,
+    "files": 147
+   },
+   "comparablePercent": 95.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 11,
+     "tests": 47
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 6
+    }
+   ],
+   "findings": {
+    "total": 99,
+    "errors": 2,
+    "warnings": 97,
+    "byRule": {
+     "parameterization-candidate": 93,
+     "cross-file-duplicate": 1,
+     "duplicate-test-name": 3,
+     "duplicate-test": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "GitHub Packages Docker Image Tag Extraction > should extract tag from package_url when container_metadata tag matches version",
+      "GitHub Packages Docker Image Tag Extraction > should ignore tag if it matches the version (digest)"
+     ],
+     "locations": [
+      {
+       "path": "apps/dokploy/__test__/deploy/github.test.ts",
+       "line": 138,
+       "endLine": 157,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/deploy/github.test.ts#L138-L157"
+      },
+      {
+       "path": "apps/dokploy/__test__/deploy/github.test.ts",
+       "line": 279,
+       "endLine": 298,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/deploy/github.test.ts#L279-L298"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "enterpriseOnlyResources set > does NOT contain free-tier resources",
+      "enterpriseOnlyResources set > free and enterprise sets don't overlap"
+     ],
+     "locations": [
+      {
+       "path": "apps/dokploy/__test__/permissions/enterprise-only-resources.test.ts",
+       "line": 55,
+       "endLine": 59,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/permissions/enterprise-only-resources.test.ts#L55-L59"
+      },
+      {
+       "path": "apps/dokploy/__test__/permissions/enterprise-only-resources.test.ts",
+       "line": 70,
+       "endLine": 74,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/permissions/enterprise-only-resources.test.ts#L70-L74"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "13 tests across 13 files have identical bodies under an equivalent context; 13 tests form one cluster, reported as a single finding instead of 78 pairwise findings (spanning-set reporting stops at 4 members)",
+     "titles": [
+      "Generate random hash with 8 characters",
+      "Generate random hash with 8 characters",
+      "Generate random hash with 8 characters",
+      "Generate random hash with 8 characters"
+     ],
+     "locations": [
+      {
+       "path": "apps/dokploy/__test__/compose/config/config-root.test.ts",
+       "line": 6,
+       "endLine": 11,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config-root.test.ts#L6-L11"
+      },
+      {
+       "path": "apps/dokploy/__test__/compose/config/config.test.ts",
+       "line": 6,
+       "endLine": 11,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config.test.ts#L6-L11"
+      },
+      {
+       "path": "apps/dokploy/__test__/compose/network/network-root.test.ts",
+       "line": 30,
+       "endLine": 35,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/network/network-root.test.ts#L30-L35"
+      },
+      {
+       "path": "apps/dokploy/__test__/compose/secrets/secret-root.test.ts",
+       "line": 6,
+       "endLine": 11,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/secrets/secret-root.test.ts#L6-L11"
+      }
+     ],
+     "more": 9
+    },
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"Add suffix to configs in root property\"",
+     "titles": [
+      "Add suffix to configs in root property",
+      "Add suffix to configs in root property"
+     ],
+     "locations": [
+      {
+       "path": "apps/dokploy/__test__/compose/config/config-root.test.ts",
+       "line": 25,
+       "endLine": 40,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config-root.test.ts#L25-L40"
+      },
+      {
+       "path": "apps/dokploy/__test__/compose/config/config-root.test.ts",
+       "line": 164,
+       "endLine": 177,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config-root.test.ts#L164-L177"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"Add suffix to configs in services\"",
+     "titles": [
+      "Add suffix to configs in services",
+      "Add suffix to configs in services"
+     ],
+     "locations": [
+      {
+       "path": "apps/dokploy/__test__/compose/config/config-service.test.ts",
+       "line": 24,
+       "endLine": 39,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config-service.test.ts#L24-L39"
+      },
+      {
+       "path": "apps/dokploy/__test__/compose/config/config-service.test.ts",
+       "line": 184,
+       "endLine": 199,
+       "url": "https://github.com/Dokploy/dokploy/blob/e255f699998449215dca61ee5192f314ad046a6b/apps/dokploy/__test__/compose/config/config-service.test.ts#L184-L199"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "vitejs/vite",
+   "url": "https://github.com/vitejs/vite",
+   "description": "Next generation frontend tooling. It's fast!",
+   "language": "TypeScript",
+   "stars": 83537,
+   "starsToday": 35,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "4ca25e1d3a24cb3343352f781a276cbfd2d206d6",
+   "scanMs": 2318,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 849,
+    "unresolved": 30,
+    "files": 72
+   },
+   "comparablePercent": 96.5,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 15,
+     "tests": 30
+    }
+   ],
+   "findings": {
+    "total": 67,
+    "errors": 1,
+    "warnings": 66,
+    "byRule": {
+     "parameterization-candidate": 59,
+     "near-duplicate-test": 6,
+     "duplicate-test": 1,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "mergeConfig > handles `rolldownOptions`",
+      "mergeConfig > handles `build.rolldownOptions`"
+     ],
+     "locations": [
+      {
+       "path": "packages/vite/src/node/__tests__/config.spec.ts",
+       "line": 627,
+       "endLine": 704,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/config.spec.ts#L627-L704"
+      },
+      {
+       "path": "packages/vite/src/node/__tests__/config.spec.ts",
+       "line": 706,
+       "endLine": 783,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/config.spec.ts#L706-L783"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "resolveLibFilename > multiple entries with aliases",
+      "resolveLibFilename > multiple entries as array"
+     ],
+     "locations": [
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 966,
+       "endLine": 985,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L966-L985"
+      },
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 1032,
+       "endLine": 1048,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L1032-L1048"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "resolveLibFilename > multiple entries with aliases: custom filename function",
+      "resolveLibFilename > multiple entries as array: custom filename function"
+     ],
+     "locations": [
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 987,
+       "endLine": 1008,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L987-L1008"
+      },
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 1050,
+       "endLine": 1068,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L1050-L1068"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "resolveLibFilename > multiple entries with aliases: custom filename string",
+      "resolveLibFilename > multiple entries as array: custom filename string"
+     ],
+     "locations": [
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 1010,
+       "endLine": 1030,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L1010-L1030"
+      },
+      {
+       "path": "packages/vite/src/node/__tests__/build.spec.ts",
+       "line": 1070,
+       "endLine": 1087,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/build.spec.ts#L1070-L1087"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "mergeConfig > handles ssr.noExternal",
+      "mergeConfig > handles environments.*.resolve.noExternal"
+     ],
+     "locations": [
+      {
+       "path": "packages/vite/src/node/__tests__/config.spec.ts",
+       "line": 475,
+       "endLine": 500,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/config.spec.ts#L475-L500"
+      },
+      {
+       "path": "packages/vite/src/node/__tests__/config.spec.ts",
+       "line": 502,
+       "endLine": 536,
+       "url": "https://github.com/vitejs/vite/blob/4ca25e1d3a24cb3343352f781a276cbfd2d206d6/packages/vite/src/node/__tests__/config.spec.ts#L502-L536"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "github/docs",
+   "url": "https://github.com/github/docs",
+   "description": "The open-source repo for docs.github.com",
+   "language": "TypeScript",
+   "stars": 21108,
+   "starsToday": 12,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f49817dbd67fa154a89625cbfb9039d7baac1cc8",
+   "scanMs": 3292,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 3496,
+    "unresolved": 466,
+    "files": 429
+   },
+   "comparablePercent": 86.7,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 85,
+     "tests": 438
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 10,
+     "tests": 28
+    }
+   ],
+   "findings": {
+    "total": 327,
+    "errors": 4,
+    "warnings": 323,
+    "byRule": {
+     "parameterization-candidate": 310,
+     "cross-file-duplicate": 3,
+     "duplicate-test": 4,
+     "duplicate-test-name": 3,
+     "near-duplicate-test": 7
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "REST transformer > API version is mentioned in auth note",
+      "REST transformer > Missing apiVersion defaults to latest"
+     ],
+     "locations": [
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 113,
+       "endLine": 118,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/article-api/tests/rest-transformer.ts#L113-L118"
+      },
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 206,
+       "endLine": 211,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/article-api/tests/rest-transformer.ts#L206-L211"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "REST transformer > Code examples include specified API version in auth note",
+      "REST transformer > Valid apiVersion passes validation"
+     ],
+     "locations": [
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 120,
+       "endLine": 125,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/article-api/tests/rest-transformer.ts#L120-L125"
+      },
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 199,
+       "endLine": 204,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/article-api/tests/rest-transformer.ts#L199-L204"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "buildMiniTocFromCollected > creates empty toc",
+      "buildMiniTocFromCollected > returns empty for no headings"
+     ],
+     "locations": [
+      {
+       "path": "src/frame/tests/mini-toc-items.ts",
+       "line": 47,
+       "endLine": 50,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/frame/tests/mini-toc-items.ts#L47-L50"
+      },
+      {
+       "path": "src/frame/tests/mini-toc-items.ts",
+       "line": 95,
+       "endLine": 98,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/frame/tests/mini-toc-items.ts#L95-L98"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "sidebar custom links > page without sidebarLink frontmatter does not show custom link",
+      "sidebar custom links > sidebar custom link does not appear on unrelated pages"
+     ],
+     "locations": [
+      {
+       "path": "src/landings/tests/sidebar-custom-links.ts",
+       "line": 14,
+       "endLine": 20,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/landings/tests/sidebar-custom-links.ts#L14-L20"
+      },
+      {
+       "path": "src/landings/tests/sidebar-custom-links.ts",
+       "line": 71,
+       "endLine": 77,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/landings/tests/sidebar-custom-links.ts#L71-L77"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "enterprise deprecation > redirects language-prefixed requests for deprecated enterprise content",
+      "redirects > <2.12 deprecated enterprise > english language code redirects to no language code"
+     ],
+     "locations": [
+      {
+       "path": "src/archives/tests/deprecated-enterprise-versions.ts",
+       "line": 10,
+       "endLine": 14,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/archives/tests/deprecated-enterprise-versions.ts#L10-L14"
+      },
+      {
+       "path": "src/redirects/tests/redirects.ts",
+       "line": 238,
+       "endLine": 242,
+       "url": "https://github.com/github/docs/blob/f49817dbd67fa154a89625cbfb9039d7baac1cc8/src/redirects/tests/redirects.ts#L238-L242"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "kodadot/nft-gallery",
+   "url": "https://github.com/kodadot/nft-gallery",
+   "description": "Generative Art Marketplace ",
+   "language": "Vue",
+   "stars": 686,
+   "starsToday": 0,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f6fd1be96feef8790156e4cc610639d0e79c8675",
+   "scanMs": 1599,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 64,
+    "unresolved": 2,
+    "files": 34
+   },
+   "comparablePercent": 96.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 2,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 8,
+    "errors": 0,
+    "warnings": 8,
+    "byRule": {
+     "parameterization-candidate": 6,
+     "near-duplicate-test": 1,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "8 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "FARCASTER PROFILE TEST <> getBioWithLinks > can correctly format bio links",
+      "FARCASTER PROFILE TEST <> getBioWithLinks > handles text with multiple spaces correctly",
+      "FARCASTER PROFILE TEST <> getBioWithLinks > handles text with mixed content",
+      "FARCASTER PROFILE TEST <> getBioWithLinks > handles trailing special characters correctly"
+     ],
+     "locations": [
+      {
+       "path": "tests/farcaster.spec.ts",
+       "line": 7,
+       "endLine": 12,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/farcaster.spec.ts#L7-L12"
+      },
+      {
+       "path": "tests/farcaster.spec.ts",
+       "line": 20,
+       "endLine": 25,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/farcaster.spec.ts#L20-L25"
+      },
+      {
+       "path": "tests/farcaster.spec.ts",
+       "line": 27,
+       "endLine": 32,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/farcaster.spec.ts#L27-L32"
+      },
+      {
+       "path": "tests/farcaster.spec.ts",
+       "line": 56,
+       "endLine": 61,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/farcaster.spec.ts#L56-L61"
+      }
+     ],
+     "more": 4
+    },
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"sortItemListByIds TEST > test case 3\"",
+     "titles": [
+      "sortItemListByIds TEST > test case 3",
+      "sortItemListByIds TEST > test case 3"
+     ],
+     "locations": [
+      {
+       "path": "tests/sorting.spec.ts",
+       "line": 25,
+       "endLine": 28,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/sorting.spec.ts#L25-L28"
+      },
+      {
+       "path": "tests/sorting.spec.ts",
+       "line": 30,
+       "endLine": 39,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/sorting.spec.ts#L30-L39"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "Balance balanceFrom > should return correct value",
+      "Balance balanceFrom > should process number with 2 decimal places",
+      "Balance balanceFrom > should process float with 2 decimal places",
+      "Balance balanceFrom > should process number with 0 decimal places"
+     ],
+     "locations": [
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 11,
+       "endLine": 15,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L11-L15"
+      },
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 16,
+       "endLine": 20,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L16-L20"
+      },
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 21,
+       "endLine": 25,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L21-L25"
+      },
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 26,
+       "endLine": 30,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L26-L30"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Balance balanceFrom > should throw when the number has more that decimal places",
+      "Balance balanceFrom > should throw when there is float instead of number"
+     ],
+     "locations": [
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 36,
+       "endLine": 40,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L36-L40"
+      },
+      {
+       "path": "tests/balance.spec.ts",
+       "line": 41,
+       "endLine": 45,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/balance.spec.ts#L41-L45"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "should ignore keyDown event TEST > should ignore keyDown in input",
+      "should ignore keyDown event TEST > should ignore keyDown in textarea"
+     ],
+     "locations": [
+      {
+       "path": "tests/keyboardEvents.spec.ts",
+       "line": 4,
+       "endLine": 9,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/keyboardEvents.spec.ts#L4-L9"
+      },
+      {
+       "path": "tests/keyboardEvents.spec.ts",
+       "line": 11,
+       "endLine": 16,
+       "url": "https://github.com/kodadot/nft-gallery/blob/f6fd1be96feef8790156e4cc610639d0e79c8675/tests/keyboardEvents.spec.ts#L11-L16"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": []
+}

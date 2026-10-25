@@ -1,0 +1,799 @@
+{
+ "date": "2026-10-19",
+ "generatedAt": "2026-10-25T19:01:47.317Z",
+ "source": "backfill-new-entries",
+ "note": "Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by vitalets/github-trending-repos; each was analysed at its last commit before that time.",
+ "analyzerVersion": "0.7.0",
+ "scanned": 15,
+ "repos": [
+  {
+   "name": "diegosouzapw/OmniRoute",
+   "url": "https://github.com/diegosouzapw/OmniRoute",
+   "description": "Never stop coding. Free MIT AI gateway: one endpoint, 375 providers (150+ free), 1,400+ models Kimi, Claude, GPT, Gemini, GLM, DeepSeek, MiniMax. Works with Claude Code, Codex, Cursor, OpenCode, Cline & Copilot. Quota-aware auto-fallback, RTK+Caveman compression saves 15-95% tokens, MCP/A2A, Desktop/PWA. Built by 900+ contributors",
+   "language": "TypeScript",
+   "stars": 81070,
+   "starsToday": 429,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "release/v3.8.53",
+   "headSha": "40523566e611838978835adbb6b84cda99602504",
+   "scanMs": 13035,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 3308,
+    "unresolved": 50,
+    "files": 496
+   },
+   "comparablePercent": 98.5,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 20,
+     "tests": 50
+    }
+   ],
+   "findings": {
+    "total": 187,
+    "errors": 8,
+    "warnings": 179,
+    "byRule": {
+     "near-duplicate-test": 4,
+     "parameterization-candidate": 175,
+     "duplicate-test": 8
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "claudeTlsClient > exports > exports TlsFetchOptions interface",
+      "claudeTlsClient > exports > exports TlsFetchResult interface"
+     ],
+     "locations": [
+      {
+       "path": "open-sse/services/__tests__/claudeTlsClient.test.ts",
+       "line": 57,
+       "endLine": 62,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/claudeTlsClient.test.ts#L57-L62"
+      },
+      {
+       "path": "open-sse/services/__tests__/claudeTlsClient.test.ts",
+       "line": 64,
+       "endLine": 68,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/claudeTlsClient.test.ts#L64-L68"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "ManifestAdapter > generateRoutingHints - target classification > handles empty targets array gracefully",
+      "ManifestAdapter > edge cases > handles empty targets array"
+     ],
+     "locations": [
+      {
+       "path": "open-sse/services/__tests__/manifestAdapter.test.ts",
+       "line": 58,
+       "endLine": 64,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/manifestAdapter.test.ts#L58-L64"
+      },
+      {
+       "path": "open-sse/services/__tests__/manifestAdapter.test.ts",
+       "line": 118,
+       "endLine": 124,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/manifestAdapter.test.ts#L118-L124"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "TierResolver > classifyTier - config overrides > respects model-level glob pattern override",
+      "TierResolver > classifyTier - config overrides > glob pattern gpt-4o-mini* matches gpt-4o-mini-2024-07-18"
+     ],
+     "locations": [
+      {
+       "path": "open-sse/services/__tests__/tierResolver.test.ts",
+       "line": 136,
+       "endLine": 142,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/tierResolver.test.ts#L136-L142"
+      },
+      {
+       "path": "open-sse/services/__tests__/tierResolver.test.ts",
+       "line": 144,
+       "endLine": 150,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/__tests__/tierResolver.test.ts#L144-L150"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Task Fitness Resolution Chain > getTaskFitness should return static table score for known models",
+      "Task Fitness DB Resolution Chain > falls back to static FITNESS_TABLE when DB is not initialized"
+     ],
+     "locations": [
+      {
+       "path": "open-sse/services/autoCombo/__tests__/autoCombo.test.ts",
+       "line": 633,
+       "endLine": 636,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/autoCombo/__tests__/autoCombo.test.ts#L633-L636"
+      },
+      {
+       "path": "open-sse/services/autoCombo/__tests__/autoCombo.test.ts",
+       "line": 732,
+       "endLine": 738,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/autoCombo/__tests__/autoCombo.test.ts#L732-L738"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Task Fitness DB Resolution Chain > falls back to static FITNESS_TABLE when DB is not initialized",
+      "Task Fitness DB Resolution Chain > resolution chain: static table takes priority over wildcard for known models"
+     ],
+     "locations": [
+      {
+       "path": "open-sse/services/autoCombo/__tests__/autoCombo.test.ts",
+       "line": 732,
+       "endLine": 738,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/autoCombo/__tests__/autoCombo.test.ts#L732-L738"
+      },
+      {
+       "path": "open-sse/services/autoCombo/__tests__/autoCombo.test.ts",
+       "line": 773,
+       "endLine": 778,
+       "url": "https://github.com/diegosouzapw/OmniRoute/blob/40523566e611838978835adbb6b84cda99602504/open-sse/services/autoCombo/__tests__/autoCombo.test.ts#L773-L778"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "earendil-works/pi",
+   "url": "https://github.com/earendil-works/pi",
+   "description": "AI agent toolkit: unified LLM API, agent loop, TUI, coding agent CLI",
+   "language": "TypeScript",
+   "stars": 117765,
+   "starsToday": 191,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "1402973a9dbe8c627341e04c9744c54953e285ca",
+   "scanMs": 7069,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 6078,
+    "unresolved": 569,
+    "files": 679
+   },
+   "comparablePercent": 90.6,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 74,
+     "tests": 231
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 10,
+     "tests": 54
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 5,
+     "tests": 275
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 9
+    }
+   ],
+   "findings": {
+    "total": 179,
+    "errors": 1,
+    "warnings": 178,
+    "byRule": {
+     "parameterization-candidate": 167,
+     "near-duplicate-test": 1,
+     "duplicate-test": 1,
+     "duplicate-test-name": 1,
+     "cross-file-duplicate": 9
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "totalTokens field > OpenRouter > deepseek/deepseek-chat - should return totalTokens equal to sum of components",
+      "totalTokens field > OpenRouter > deepseek/deepseek-chat - should return totalTokens equal to sum of components"
+     ],
+     "locations": [
+      {
+       "path": "packages/ai/test/total-tokens.test.ts",
+       "line": 726,
+       "endLine": 741,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/ai/test/total-tokens.test.ts#L726-L741"
+      },
+      {
+       "path": "packages/ai/test/total-tokens.test.ts",
+       "line": 777,
+       "endLine": 792,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/ai/test/total-tokens.test.ts#L777-L792"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "immutable revision diff > normalizes reordered distinct deeply-equal objects to a no-op",
+      "immutable revision diff > normalizes reordered distinct deeply-equal objects to a no-op"
+     ],
+     "locations": [
+      {
+       "path": "packages/chord/test/delta-diff.test.ts",
+       "line": 63,
+       "endLine": 68,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/delta-diff.test.ts#L63-L68"
+      },
+      {
+       "path": "packages/chord/test/state-diff.test.ts",
+       "line": 63,
+       "endLine": 68,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/state-diff.test.ts#L63-L68"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "immutable revision diff > validates and encodes permutations",
+      "immutable revision diff > validates and encodes permutations"
+     ],
+     "locations": [
+      {
+       "path": "packages/chord/test/delta-diff.test.ts",
+       "line": 70,
+       "endLine": 84,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/delta-diff.test.ts#L70-L84"
+      },
+      {
+       "path": "packages/chord/test/state-diff.test.ts",
+       "line": 70,
+       "endLine": 84,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/state-diff.test.ts#L70-L84"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "immutable revision diff > emits nothing for deeply equal reconstructed values",
+      "immutable revision diff > emits nothing for deeply equal reconstructed values"
+     ],
+     "locations": [
+      {
+       "path": "packages/chord/test/delta-diff.test.ts",
+       "line": 86,
+       "endLine": 90,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/delta-diff.test.ts#L86-L90"
+      },
+      {
+       "path": "packages/chord/test/state-diff.test.ts",
+       "line": 86,
+       "endLine": 90,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/state-diff.test.ts#L86-L90"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "immutable revision diff > does not retain a 1048576-byte removed-neighbor payload",
+      "immutable revision diff > does not retain a 1048576-byte removed-neighbor payload"
+     ],
+     "locations": [
+      {
+       "path": "packages/chord/test/delta-diff.test.ts",
+       "line": 163,
+       "endLine": 182,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/delta-diff.test.ts#L163-L182"
+      },
+      {
+       "path": "packages/chord/test/state-diff.test.ts",
+       "line": 163,
+       "endLine": 182,
+       "url": "https://github.com/earendil-works/pi/blob/1402973a9dbe8c627341e04c9744c54953e285ca/packages/chord/test/state-diff.test.ts#L163-L182"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "iptv-org/iptv",
+   "url": "https://github.com/iptv-org/iptv",
+   "description": "Collection of publicly available IPTV channels from all over the world",
+   "language": "TypeScript",
+   "stars": 142334,
+   "starsToday": 116,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "master",
+   "headSha": "8aebc5621085b0dfc81914af1fef7f36f1afbec6",
+   "scanMs": 821,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 25,
+    "unresolved": 0,
+    "files": 10
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 3,
+    "errors": 0,
+    "warnings": 3,
+    "byRule": {
+     "parameterization-candidate": 3
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "issue:validate > can handle streams:add request",
+      "issue:validate > can handle streams:remove request"
+     ],
+     "locations": [
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 20,
+       "endLine": 32,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L20-L32"
+      },
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 34,
+       "endLine": 46,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L34-L46"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "issue:validate > can handle streams:remove request",
+      "issue:validate > can handle streams:edit request"
+     ],
+     "locations": [
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 34,
+       "endLine": 46,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L34-L46"
+      },
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 48,
+       "endLine": 60,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L48-L60"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "issue:validate > can handle streams:edit request",
+      "issue:validate > can handle streams:edit request without changes"
+     ],
+     "locations": [
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 48,
+       "endLine": 60,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L48-L60"
+      },
+      {
+       "path": "tests/commands/issue/validate.test.ts",
+       "line": 62,
+       "endLine": 74,
+       "url": "https://github.com/iptv-org/iptv/blob/8aebc5621085b0dfc81914af1fef7f36f1afbec6/tests/commands/issue/validate.test.ts#L62-L74"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "twentyhq/twenty",
+   "url": "https://github.com/twentyhq/twenty",
+   "description": "The open alternative to Salesforce, designed for AI.",
+   "language": "TypeScript",
+   "stars": 59728,
+   "starsToday": 39,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "dd7099a02f83ddc021231b71d5344d3b83f4cf7d",
+   "scanMs": 5567,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 5631,
+    "unresolved": 419,
+    "files": 4717
+   },
+   "comparablePercent": 92.6,
+   "exclusions": [
+    {
+     "reason": "helper-setup-effects",
+     "files": 89,
+     "tests": 152
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 81,
+     "tests": 265
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 178,
+    "errors": 1,
+    "warnings": 177,
+    "byRule": {
+     "cross-file-duplicate": 1,
+     "parameterization-candidate": 173,
+     "near-duplicate-test": 3,
+     "duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "manifestValidate > valid object extensions > should pass validation with valid object extension by nameSingular",
+      "manifestValidate > UUID version validation > should pass with UUID v4 identifiers"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts",
+       "line": 174,
+       "endLine": 182,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts#L174-L182"
+      },
+      {
+       "path": "packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts",
+       "line": 614,
+       "endLine": 622,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-cli/src/app/manifest/__tests__/manifest-validate.spec.ts#L614-L622"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "application identifiers > should expose the application metadata constants",
+      "application identifiers > should expose the application metadata constants"
+     ],
+     "locations": [
+      {
+       "path": "packages/create-twenty-app/src/constants/template/src/__tests__/application-config.test.ts",
+       "line": 9,
+       "endLine": 13,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/create-twenty-app/src/constants/template/src/__tests__/application-config.test.ts#L9-L13"
+      },
+      {
+       "path": "packages/twenty-cli/app-template/src/__tests__/application-config.test.ts",
+       "line": 9,
+       "endLine": 13,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-cli/app-template/src/__tests__/application-config.test.ts#L9-L13"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "verifyFirefliesWebhookSignature > accepts a valid bare-hex signature",
+      "verifyFirefliesWebhookSignature > accepts a valid signature with sha256= prefix"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts",
+       "line": 13,
+       "endLine": 24,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts#L13-L24"
+      },
+      {
+       "path": "packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts",
+       "line": 26,
+       "endLine": 37,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-apps/public/fireflies/src/logic-functions/utils/__tests__/verify-fireflies-webhook-signature.test.ts#L26-L37"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "pull base file > should read back a base whose manifest has no views and no view fields",
+      "pull base file > should read back a base whose manifest has no page layouts and no page layout tabs"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 135,
+       "endLine": 151,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L135-L151"
+      },
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 183,
+       "endLine": 199,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L183-L199"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "pull base file > should read back a base whose manifest has no page layouts and no page layout tabs",
+      "pull base file > should read back a base whose manifest has no navigation menu items"
+     ],
+     "locations": [
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 183,
+       "endLine": 199,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L183-L199"
+      },
+      {
+       "path": "packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts",
+       "line": 231,
+       "endLine": 246,
+       "url": "https://github.com/twentyhq/twenty/blob/dd7099a02f83ddc021231b71d5344d3b83f4cf7d/packages/twenty-sdk/src/cli/utilities/pull/__tests__/pull-base-file.spec.ts#L231-L246"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "JacobLinCool/d1-manager",
+   "url": "https://github.com/JacobLinCool/d1-manager",
+   "description": "D1 Manager is a web UI and API for Cloudflare D1, a serverless SQL database. It provides a web interface for managing databases, tables, and records, as well as an AI assistant to help you write query in natural language.",
+   "language": "Svelte",
+   "stars": 651,
+   "starsToday": 0,
+   "lists": [
+    "svelte"
+   ],
+   "defaultBranch": "main",
+   "headSha": "3d446a75d1ce4135b9e7728199f364d1721f4984",
+   "scanMs": 843,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 16,
+    "unresolved": 0,
+    "files": 2
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 10,
+    "errors": 0,
+    "warnings": 10,
+    "byRule": {
+     "parameterization-candidate": 8,
+     "near-duplicate-test": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "SQL statement type checks > DROP TABLE is dangerous and modify",
+      "SQL statement type checks > Lowercase statements are handled correctly"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 34,
+       "endLine": 37,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L34-L37"
+      },
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 67,
+       "endLine": 70,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L67-L70"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "SQL statement type checks > Mixed statements detect highest risk",
+      "SQL statement type checks > WITH CTE and UPDATE is dangerous and modify"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 60,
+       "endLine": 64,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L60-L64"
+      },
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 86,
+       "endLine": 91,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L86-L91"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "SQL statement type checks > SELECT is neither dangerous nor modify",
+      "SQL statement type checks > INSERT is modify but not dangerous"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 6,
+       "endLine": 10,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L6-L10"
+      },
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 13,
+       "endLine": 17,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L13-L17"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "SQL statement type checks > INSERT is modify but not dangerous",
+      "SQL statement type checks > UPDATE is both dangerous and modify"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 13,
+       "endLine": 17,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L13-L17"
+      },
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 20,
+       "endLine": 24,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L20-L24"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "SQL statement type checks > UPDATE is both dangerous and modify",
+      "SQL statement type checks > DELETE is dangerous and modify"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 20,
+       "endLine": 24,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L20-L24"
+      },
+      {
+       "path": "src/lib/sql.test.ts",
+       "line": 27,
+       "endLine": 31,
+       "url": "https://github.com/JacobLinCool/d1-manager/blob/3d446a75d1ce4135b9e7728199f364d1721f4984/src/lib/sql.test.ts#L27-L31"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": []
+}

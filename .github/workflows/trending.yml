@@ -1,0 +1,81 @@
+name: Trending
+
+on:
+  schedule:
+    # 09:00 JST. GitHub may start scheduled runs a few minutes late.
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: trending
+  cancel-in-progress: false
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      # The snapshot is pushed to main, so a manual run on any branch still works from main.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Analyze trending Vitest repositories
+        run: node scripts/trending/analyze.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TRENDING_ARTIFACTS: ${{ runner.temp }}/trending-artifacts
+
+      # Full analyzer output for development: raw JSONL with test fingerprints, stderr and the run
+      # manifest (every candidate and why it was skipped). Only the summary is published.
+      - name: Upload full analyzer output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: trending-${{ github.run_id }}
+          path: ${{ runner.temp }}/trending-artifacts
+          retention-days: 90
+          if-no-files-found: warn
+
+      - name: Commit the snapshot
+        id: commit
+        run: |
+          if [ -z "$(git status --porcelain -- src/data/trending)" ]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/data/trending
+          git commit -m "chore(data): trending analysis $(date -u +%F)"
+          git pull --rebase origin main
+          git push origin main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      # A push made with GITHUB_TOKEN starts no workflow, so start the deploy explicitly, once the
+      # API serves the new head (a dispatch seconds after the push can still build the old one).
+      - name: Deploy
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SHA: ${{ steps.commit.outputs.sha }}
+        run: |
+          for _ in $(seq 1 30); do
+            head=$(gh api "repos/${GITHUB_REPOSITORY}/commits/main" --jq .sha 2>/dev/null || true)
+            if [ "$head" = "$SHA" ]; then
+              gh workflow run deploy.yml --ref main
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "main still at ${head:-?} after 150 s, not ${SHA}; deploy not dispatched" >&2
+          exit 1

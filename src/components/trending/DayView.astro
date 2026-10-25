@@ -1,0 +1,368 @@
+---
+import type { TrendingDay } from '../../lib/trending';
+import {
+  dayPath,
+  formatDay,
+  formatNumber,
+  isRebuilt,
+  repoPath,
+  trendingIndex,
+} from '../../lib/trending';
+import { siteConfig } from '../../lib/site';
+import Breadcrumbs from './Breadcrumbs.astro';
+
+interface Props {
+  day: TrendingDay;
+  isLatest: boolean;
+  /** Rendered at /trending/ itself, where a breadcrumb would only point back to this page. */
+  onIndex?: boolean;
+}
+
+const { day, isLatest, onIndex = false } = Astro.props;
+const rebuilt = isRebuilt(day);
+const totals = {
+  tests: day.repos.reduce((n, r) => n + r.tests.analyzed, 0),
+  findings: day.repos.reduce((n, r) => n + r.findings.total, 0),
+  errors: day.repos.reduce((n, r) => n + r.findings.errors, 0),
+  withErrors: day.repos.filter((r) => r.findings.errors > 0).length,
+};
+const tiles = [
+  {
+    label: 'Repositories analyzed',
+    value: formatNumber(day.repos.length),
+    note: rebuilt ? `of ${day.scanned} new trending entries` : `of ${day.scanned} trending`,
+  },
+  { label: 'Tests analyzed', value: formatNumber(totals.tests), note: 'read statically' },
+  { label: 'Findings', value: formatNumber(totals.findings), note: 'all rules' },
+  {
+    label: 'Exact duplicates',
+    value: formatNumber(totals.errors),
+    note: `error severity, in ${totals.withErrors} repos`,
+  },
+];
+const archive = [...trendingIndex.days].reverse();
+const position = trendingIndex.days.findIndex((d) => d.date === day.date);
+const prev = trendingIndex.days[position - 1]?.date;
+const next = trendingIndex.days[position + 1]?.date;
+// Sort keys match the data-* attributes on each row; the trending rank is the default order.
+const columns = [
+  { key: 'rank', label: '#', numeric: true },
+  { key: 'name', label: 'Repository', numeric: false },
+  { key: 'stars', label: 'Stars today', numeric: true },
+  { key: 'tests', label: 'Tests', numeric: true },
+  {
+    key: 'compared',
+    label: 'Compared',
+    numeric: true,
+    title: 'Share of tests the analyzer could compare',
+  },
+  { key: 'findings', label: 'Findings', numeric: true },
+  { key: 'errors', label: 'Duplicates', numeric: true, title: 'Error-severity exact duplicates' },
+];
+---
+
+<script>
+  // The day picker navigates as soon as a day is chosen.
+  for (const select of document.querySelectorAll<HTMLSelectElement>('select[data-day-select]')) {
+    select.addEventListener('change', () => {
+      window.location.href = select.value;
+    });
+  }
+
+  // Click a column header to re-rank the table; click again to reverse. Numbers sort high to low
+  // first, the rank and the repository name low to high.
+  for (const table of document.querySelectorAll<HTMLTableElement>('table[data-sortable]')) {
+    const body = table.tBodies[0];
+    const buttons = [...table.querySelectorAll<HTMLButtonElement>('button[data-sort-key]')];
+    for (const button of buttons) {
+      button.addEventListener('click', () => {
+        const key = button.dataset.sortKey!;
+        const numeric = button.hasAttribute('data-numeric');
+        const th = button.closest('th')!;
+        const ascendingFirst = key === 'rank' || !numeric;
+        const current = th.getAttribute('aria-sort');
+        const ascending = current === 'none' ? ascendingFirst : current === 'descending';
+        const value = (row: HTMLTableRowElement) =>
+          numeric ? Number(row.dataset[key]) : (row.dataset[key] ?? '');
+        const rows = [...body.rows].sort((a, b) => {
+          const x = value(a);
+          const y = value(b);
+          const order = x < y ? -1 : x > y ? 1 : 0;
+          // Ties keep the trending order whichever way the column sorts.
+          if (order === 0) return Number(a.dataset.rank) - Number(b.dataset.rank);
+          return ascending ? order : -order;
+        });
+        body.append(...rows);
+        for (const other of buttons) {
+          const cell = other.closest('th')!;
+          const active = other === button;
+          cell.setAttribute(
+            'aria-sort',
+            active ? (ascending ? 'ascending' : 'descending') : 'none',
+          );
+          other.querySelector('[data-sort-arrow]')!.textContent = active
+            ? ascending
+              ? '↑'
+              : '↓'
+            : '';
+        }
+      });
+    }
+  }
+</script>
+
+<section class="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+  <header>
+    {onIndex ? (
+      <p class="text-sm font-semibold uppercase tracking-widest text-accent">Trending</p>
+    ) : (
+      <Breadcrumbs
+        items={[{ label: 'Trending', href: '/trending/' }, { label: formatDay(day.date) }]}
+      />
+    )}
+    <h1 class="mt-3 text-3xl font-extrabold tracking-tight sm:text-4xl">
+      {isLatest ? 'Trending Vitest repos, analyzed' : `Trending on ${formatDay(day.date)}`}
+    </h1>
+    <div class="mx-auto max-w-3xl text-center">
+      <p class="mt-4 leading-relaxed text-muted">
+        Every day, the repositories on GitHub's daily{' '}
+        <a
+          href="https://github.com/trending"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent hover:underline"
+        >
+          trending
+        </a>{' '}
+        lists (all languages, TypeScript, JavaScript, Vue and Svelte) that use Vitest are
+        shallow-cloned and analyzed with the latest VitestDedup release. Nothing is installed or
+        executed: the analyzer reads configuration and test files statically.
+      </p>
+      <p class="mt-3 text-sm leading-relaxed text-muted">
+        Findings are candidates for review, not verdicts. Each repository page links them to the
+        exact lines at the analyzed commit and says how many tests the analyzer could not compare.
+      </p>
+      {rebuilt && (
+        <p class="mt-5 rounded-lg border border-amber-500/30 bg-amber-500/10 px-4 py-3 text-sm text-amber-700 dark:text-amber-200">
+          Rebuilt day. GitHub keeps no trending history, so this day lists only the repositories
+          that newly entered the daily trending lists, as recorded by{' '}
+          <a
+            href="https://github.com/vitalets/github-trending-repos"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium underline"
+          >
+            vitalets/github-trending-repos
+          </a>
+          . Each was analyzed at its last commit before that time.
+        </p>
+      )}
+    </div>
+  </header>
+
+  <dl class="mt-10 grid grid-cols-2 gap-3 lg:grid-cols-4">
+    {tiles.map((t) => (
+      <div class="rounded-xl border border-line bg-panel px-5 py-4">
+        <dt class="text-xs font-medium uppercase tracking-wider text-muted">{t.label}</dt>
+        <dd class="mt-1 font-mono text-2xl font-bold">{t.value}</dd>
+        <dd class="mt-0.5 text-xs text-muted">{t.note}</dd>
+      </div>
+    ))}
+  </dl>
+  <p class="mt-3 font-mono text-xs text-muted">
+    {formatDay(day.date)} · vitest-dedup {day.analyzerVersion} · generated{' '}
+    {day.generatedAt.slice(11, 16)} UTC
+  </p>
+
+  <nav
+    class="mt-8 flex flex-wrap items-center justify-center gap-2 text-sm"
+    aria-label="Choose a day"
+    data-day-nav
+  >
+    {prev ? (
+      <a
+        href={dayPath(prev)}
+        class="rounded-md border border-line px-3 py-1.5 hover:border-accent hover:text-accent"
+      >
+        ← Prev
+      </a>
+    ) : (
+      <span class="rounded-md border border-line px-3 py-1.5 text-muted opacity-50">← Prev</span>
+    )}
+    <label class="sr-only" for="trending-day">
+      Day
+    </label>
+    <select
+      id="trending-day"
+      class="rounded-md border border-line bg-panel px-3 py-1.5 font-mono text-ink"
+      data-day-select
+    >
+      {archive.map((d) => (
+        <option value={dayPath(d.date)} selected={d.date === day.date}>
+          {formatDay(d.date)}
+        </option>
+      ))}
+    </select>
+    {next ? (
+      <a
+        href={dayPath(next)}
+        class="rounded-md border border-line px-3 py-1.5 hover:border-accent hover:text-accent"
+      >
+        Next →
+      </a>
+    ) : (
+      <span class="rounded-md border border-line px-3 py-1.5 text-muted opacity-50">Next →</span>
+    )}
+    {!isLatest && (
+      <a href="/trending/" class="ml-1 font-medium text-accent hover:underline">
+        Latest
+      </a>
+    )}
+  </nav>
+
+  <div class="mt-4 overflow-x-auto rounded-xl border border-line">
+    <table class="w-full min-w-[720px] text-sm" data-sortable>
+      <thead class="bg-panel text-left text-xs uppercase tracking-wider text-muted">
+        <tr>
+          {columns.map((c) => (
+            <th
+              class:list={['px-4 py-3 font-medium', c.numeric && c.key !== 'rank' && 'text-right']}
+              aria-sort={c.key === 'rank' ? 'ascending' : 'none'}
+              title={c.title}
+            >
+              <button
+                type="button"
+                data-sort-key={c.key}
+                data-numeric={c.numeric ? '' : undefined}
+                class="inline-flex items-center gap-1 uppercase tracking-wider hover:text-ink"
+              >
+                {c.label}
+                <span data-sort-arrow aria-hidden="true" class="w-2 text-accent">
+                  {c.key === 'rank' ? '↑' : ''}
+                </span>
+              </button>
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-line">
+        {day.repos.map((r, i) => (
+          <tr
+            class="align-top hover:bg-accent-soft"
+            data-rank={i + 1}
+            data-name={r.name.toLowerCase()}
+            data-stars={r.starsToday}
+            data-tests={r.tests.analyzed}
+            data-compared={r.comparablePercent}
+            data-findings={r.findings.total}
+            data-errors={r.findings.errors}
+          >
+            <td class="px-4 py-3 font-mono text-muted">{i + 1}</td>
+            <td class="px-4 py-3">
+              <a href={repoPath(r.name)} class="font-mono font-semibold text-ink hover:text-accent">
+                {r.name}
+              </a>
+              {r.description && (
+                <p class="mt-0.5 line-clamp-1 max-w-md text-xs text-muted">{r.description}</p>
+              )}
+            </td>
+            <td class="px-4 py-3 text-right font-mono">{formatNumber(r.starsToday)}</td>
+            <td class="px-4 py-3 text-right font-mono">{formatNumber(r.tests.analyzed)}</td>
+            <td class="px-4 py-3 text-right font-mono">{r.comparablePercent}%</td>
+            <td class="px-4 py-3 text-right font-mono">{formatNumber(r.findings.total)}</td>
+            <td
+              class:list={[
+                'px-4 py-3 text-right font-mono',
+                r.findings.errors > 0 && 'font-semibold text-rose-600 dark:text-rose-300',
+              ]}
+            >
+              {formatNumber(r.findings.errors)}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  {day.skipped.length > 0 && (
+    <p class="mt-4 text-xs text-muted">
+      Not analyzed:{' '}
+      {day.skipped.map((s, i) => (
+        <>
+          {i > 0 && ', '}
+          <a
+            href={`https://github.com/${s.name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-mono hover:text-accent"
+          >
+            {s.name}
+          </a>{' '}
+          ({s.reason})
+        </>
+      ))}
+      .
+    </p>
+  )}
+
+  <div class="mt-12 grid gap-6 lg:grid-cols-2">
+    <div class="rounded-xl border border-line bg-panel p-6">
+      <h2 class="text-lg font-bold">Run it on your own suite</h2>
+      <p class="mt-2 text-sm text-muted">The same analysis, from the root of any Vitest project:</p>
+      <pre class="mt-4 overflow-x-auto rounded-lg bg-bg px-4 py-3 font-mono text-sm"><code>npx vitest-dedup .</code></pre>
+      <p class="mt-3 text-sm">
+        <a href="/docs/" class="font-medium text-accent hover:underline">
+          Read the docs
+        </a>
+        {siteConfig.repoUrl && (
+          <>
+            {' '}
+            ·{' '}
+            <a
+              href={siteConfig.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-accent hover:underline"
+            >
+              GitHub
+            </a>
+          </>
+        )}
+      </p>
+    </div>
+    <div class="rounded-xl border border-line bg-panel p-6">
+      <h2 class="text-lg font-bold">Archive</h2>
+      <ul class="mt-3 space-y-1.5 text-sm">
+        {archive.slice(0, 14).map((d) => (
+          <li class="flex items-baseline justify-between gap-3">
+            <a
+              href={dayPath(d.date)}
+              class:list={[
+                'font-mono hover:text-accent',
+                d.date === day.date ? 'text-accent' : 'text-ink',
+              ]}
+            >
+              {formatDay(d.date)}
+            </a>
+            <span class="font-mono text-xs text-muted">
+              {d.repos} repos · {formatNumber(d.tests)} tests · {formatNumber(d.findings)} findings
+              {isRebuilt(d) && ' · rebuilt'}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <p class="mt-4 text-xs text-muted">
+        Maintainers can ask for a repository to be left out by opening an issue on the{' '}
+        <a
+          href="https://github.com/figueiredoluiz/vitest-dedup-site/issues"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-accent hover:underline"
+        >
+          site repository
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+</section>

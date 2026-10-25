@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import DayView from '../../components/trending/DayView.astro';
+import { latestDate, loadDay, formatDay } from '../../lib/trending';
+import { siteConfig } from '../../lib/site';
+
+const day = await loadDay(latestDate);
+const title = `Trending Vitest repos, analyzed — ${siteConfig.name}`;
+const description = `VitestDedup analysis of ${day.repos.length} GitHub trending repositories that use Vitest on ${formatDay(day.date)}: duplicate and near-duplicate test candidates.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <DayView day={day} isLatest onIndex />
+</BaseLayout>
