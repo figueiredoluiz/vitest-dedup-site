@@ -12,5 +12,6 @@ export const siteConfig = {
 export const headerNav = [
   { label: 'Features', href: '/#features' },
   { label: 'Docs', href: '/docs/' },
+  { label: 'Trending', href: '/trending/' },
   { label: 'Changelog', href: '/changelog/' },
 ] as const;

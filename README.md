@@ -29,11 +29,12 @@ Documentation search (Pagefind) indexes at build time, so test it in `pnpm previ
 
 ## Pages
 
-| Route         | Content                                                                                                         |
-| ------------- | --------------------------------------------------------------------------------------------------------------- |
-| `/`           | Custom landing page: hero with terminal demo, problem/solution, features, report showcase, workflow, community. |
-| `/docs/`      | Starlight documentation: 11 pages of verified reference for the analyzer.                                       |
-| `/changelog/` | Release history rendered from a local fixture.                                                                  |
+| Route         | Content                                                                                                                     |
+| ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `/`           | Custom landing page: hero with terminal demo, problem/solution, features, report showcase, workflow, community.             |
+| `/docs/`      | Starlight documentation: 11 pages of verified reference for the analyzer.                                                   |
+| `/changelog/` | Release history rendered from a local fixture.                                                                              |
+| `/trending/`  | GitHub trending repositories that use Vitest, analyzed daily; `/trending/day/<date>/` and `/trending/repo/<owner>/<repo>/`. |
 
 ## Structure
 
@@ -53,6 +54,37 @@ Documentation search (Pagefind) indexes at build time, so test it in `pnpm previ
 │   ├── pages/               index.astro, changelog.astro
 │   └── styles/              tailwind.css (design tokens), starlight.css (docs palette)
 └── astro.config.mjs
+```
+
+## Trending data
+
+`.github/workflows/trending.yml` runs daily. It scrapes GitHub's daily trending lists (all languages,
+TypeScript, JavaScript, Vue, Svelte), keeps repositories that use Vitest (a `vitest.config.*` anywhere or
+`vitest` in the root `package.json`), shallow-clones only their JavaScript/TypeScript sources and manifests and runs the latest
+`vitest-dedup` from npm. Nothing from the cloned repositories is installed or executed.
+
+- `src/data/trending/days/YYYY-MM-DD.json` — the day's public snapshot, the source of truth.
+- `src/data/trending/index.json` — per-day totals and per-repository appearances, rebuilt from the snapshots.
+- The workflow artifact `trending-<run id>` (90 days) holds the full output: raw JSONL with test
+  fingerprints, stderr, and `manifest.json` listing every candidate and why it was or was not analyzed.
+- `scripts/trending/exclude.json` — repositories left out at their maintainers' request.
+
+Run it locally (writes the snapshot and `.trending-artifacts/<date>/`):
+
+```sh
+GITHUB_TOKEN=$(gh auth token) node scripts/trending/analyze.mjs
+```
+
+`VITEST_DEDUP_BIN` points it at another analyzer, such as a local build of `main`.
+
+Past days can be rebuilt with `scripts/trending/backfill.mjs`. GitHub keeps no trending history, so it
+reads the daily comments of [vitalets/github-trending-repos](https://github.com/vitalets/github-trending-repos),
+which list only the repositories that newly entered each list, and analyzes each one at its last commit
+before that time. Those days are marked as rebuilt on the page; existing snapshots are kept unless
+`--force` is given.
+
+```sh
+GITHUB_TOKEN=$(gh auth token) node scripts/trending/backfill.mjs --since 2026-10-19 --until 2026-10-24
 ```
 
 ## Configuration

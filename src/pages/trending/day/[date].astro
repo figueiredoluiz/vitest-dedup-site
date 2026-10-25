@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import DayView from '../../../components/trending/DayView.astro';
+import { latestDate, loadDay, formatDay, trendingIndex } from '../../../lib/trending';
+import { siteConfig } from '../../../lib/site';
+
+export function getStaticPaths() {
+  return trendingIndex.days.map((d) => ({ params: { date: d.date } }));
+}
+
+const { date } = Astro.params;
+const day = await loadDay(date);
+const title = `Trending on ${formatDay(date)} — ${siteConfig.name}`;
+const description = `VitestDedup analysis of ${day.repos.length} GitHub trending repositories that use Vitest on ${formatDay(date)}.`;
+---
+
+<BaseLayout title={title} description={description}>
+  <DayView day={day} isLatest={date === latestDate} />
+</BaseLayout>
