@@ -1,0 +1,483 @@
+{
+ "date": "2026-10-20",
+ "generatedAt": "2026-10-25T19:03:51.288Z",
+ "source": "backfill-new-entries",
+ "note": "Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by vitalets/github-trending-repos; each was analysed at its last commit before that time.",
+ "analyzerVersion": "0.7.0",
+ "scanned": 17,
+ "repos": [
+  {
+   "name": "headroomlabs-ai/headroom",
+   "url": "https://github.com/headroomlabs-ai/headroom",
+   "description": "Compress tool outputs, logs, files, and RAG chunks before they reach the LLM. 20% fewer tokens for coding agents, 60-95% fewer tokens for JSON, same answers. Library, proxy, MCP server.",
+   "language": "Python",
+   "stars": 77803,
+   "starsToday": 310,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "fbf7bc3278c11975299b9bd0a2ecf200dfd25a05",
+   "scanMs": 969,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 528,
+    "unresolved": 28,
+    "files": 35
+   },
+   "comparablePercent": 94.7,
+   "exclusions": [
+    {
+     "reason": "helper-export-unreadable",
+     "files": 5,
+     "tests": 18
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 2,
+     "tests": 10
+    }
+   ],
+   "findings": {
+    "total": 16,
+    "errors": 0,
+    "warnings": 16,
+    "byRule": {
+     "parameterization-candidate": 16
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "snakeToCamel > converts simple snake_case",
+      "snakeToCamel > converts multiple underscores",
+      "snakeToCamel > handles already camelCase",
+      "snakeToCamel > handles single word"
+     ],
+     "locations": [
+      {
+       "path": "sdk/typescript/test/utils/case.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/sdk/typescript/test/utils/case.test.ts#L13-L15"
+      },
+      {
+       "path": "sdk/typescript/test/utils/case.test.ts",
+       "line": 17,
+       "endLine": 19,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/sdk/typescript/test/utils/case.test.ts#L17-L19"
+      },
+      {
+       "path": "sdk/typescript/test/utils/case.test.ts",
+       "line": 21,
+       "endLine": 23,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/sdk/typescript/test/utils/case.test.ts#L21-L23"
+      },
+      {
+       "path": "sdk/typescript/test/utils/case.test.ts",
+       "line": 25,
+       "endLine": 27,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/sdk/typescript/test/utils/case.test.ts#L25-L27"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "HeadroomContextEngine transcriptSemantics contract > reports duplicate on a retried advancement key",
+      "HeadroomContextEngine transcriptSemantics contract > treats distinct advancement keys independently"
+     ],
+     "locations": [
+      {
+       "path": "plugins/openclaw/test/engine.test.ts",
+       "line": 363,
+       "endLine": 372,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/engine.test.ts#L363-L372"
+      },
+      {
+       "path": "plugins/openclaw/test/engine.test.ts",
+       "line": 374,
+       "endLine": 383,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/engine.test.ts#L374-L383"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "applyGatewayProviderBaseUrls > preserves protocol-specific GitHub Copilot OpenAI-family paths",
+      "applyGatewayProviderBaseUrls > preserves protocol-specific GitHub Copilot Claude-family paths"
+     ],
+     "locations": [
+      {
+       "path": "plugins/openclaw/test/gateway-config.test.ts",
+       "line": 137,
+       "endLine": 157,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/gateway-config.test.ts#L137-L157"
+      },
+      {
+       "path": "plugins/openclaw/test/gateway-config.test.ts",
+       "line": 159,
+       "endLine": 179,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/gateway-config.test.ts#L159-L179"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "applyGatewayProviderBaseUrls > preserves protocol-specific GitHub Copilot Claude-family paths",
+      "applyGatewayProviderBaseUrls > re-points an already routed provider to a new proxy origin without duplicating paths"
+     ],
+     "locations": [
+      {
+       "path": "plugins/openclaw/test/gateway-config.test.ts",
+       "line": 159,
+       "endLine": 179,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/gateway-config.test.ts#L159-L179"
+      },
+      {
+       "path": "plugins/openclaw/test/gateway-config.test.ts",
+       "line": 269,
+       "endLine": 289,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/gateway-config.test.ts#L269-L289"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "isLocalProxyUrl > returns true for localhost addresses",
+      "isLocalProxyUrl > returns false for remote addresses"
+     ],
+     "locations": [
+      {
+       "path": "plugins/openclaw/test/proxy-manager.test.ts",
+       "line": 65,
+       "endLine": 68,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/proxy-manager.test.ts#L65-L68"
+      },
+      {
+       "path": "plugins/openclaw/test/proxy-manager.test.ts",
+       "line": 70,
+       "endLine": 73,
+       "url": "https://github.com/headroomlabs-ai/headroom/blob/fbf7bc3278c11975299b9bd0a2ecf200dfd25a05/plugins/openclaw/test/proxy-manager.test.ts#L70-L73"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "koala73/worldmonitor",
+   "url": "https://github.com/koala73/worldmonitor",
+   "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface",
+   "language": "TypeScript",
+   "stars": 89502,
+   "starsToday": 146,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "6254e4d40526e756eaa5931a7d82ae6bb929c25a",
+   "scanMs": 4148,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2260,
+    "unresolved": 329,
+    "files": 143
+   },
+   "comparablePercent": 85.4,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 43,
+     "tests": 141
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 12,
+     "tests": 188
+    }
+   ],
+   "findings": {
+    "total": 35,
+    "errors": 0,
+    "warnings": 35,
+    "byRule": {
+     "parameterization-candidate": 34,
+     "near-duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "iso2 registry — sanity & boundary cases > isValidIso2 rejects regex-passing-but-non-ISO-2 codes",
+      "iso2 registry — sanity & boundary cases > isValidIso2 rejects bad-shape input"
+     ],
+     "locations": [
+      {
+       "path": "convex/__tests__/followed-countries-mutations.test.ts",
+       "line": 190,
+       "endLine": 194,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/followed-countries-mutations.test.ts#L190-L194"
+      },
+      {
+       "path": "convex/__tests__/followed-countries-mutations.test.ts",
+       "line": 196,
+       "endLine": 210,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/followed-countries-mutations.test.ts#L196-L210"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "10 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 10 tests form one cluster, reported as a single finding instead of 45 pairwise findings (span",
+     "titles": [
+      "inferLocaleFromEmail — known providers (high confidence) > qq.com → zh",
+      "inferLocaleFromEmail — known providers (high confidence) > yahoo.co.jp → ja (provider beats TLD)",
+      "inferLocaleFromEmail — known providers (high confidence) > naver.com → ko (TLD .com unmapped; provider lookup is the only path)",
+      "inferLocaleFromEmail — known providers (high confidence) > yandex.ru → ru"
+     ],
+     "locations": [
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 5,
+       "endLine": 7,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L5-L7"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 9,
+       "endLine": 15,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L9-L15"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 17,
+       "endLine": 19,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L17-L19"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 21,
+       "endLine": 23,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L21-L23"
+      }
+     ],
+     "more": 6
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "6 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 6 tests form one cluster, reported as a single finding instead of 15 pairwise findings (spanni",
+     "titles": [
+      "inferLocaleFromEmail — unknown / null returns > gmail.com → null (universal provider)",
+      "inferLocaleFromEmail — unknown / null returns > .fr TLD → null (deliberately dropped from v1 — too many English-fluent users)",
+      "inferLocaleFromEmail — unknown / null returns > .co.uk → null (not in provider Map, .uk not in TLD list)",
+      "inferLocaleFromEmail — defensive parsing > malformed (no @) → null"
+     ],
+     "locations": [
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 45,
+       "endLine": 47,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L45-L47"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 49,
+       "endLine": 51,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L49-L51"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 59,
+       "endLine": 61,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L59-L61"
+      },
+      {
+       "path": "convex/__tests__/localeHeuristic.test.ts",
+       "line": 79,
+       "endLine": 81,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/localeHeuristic.test.ts#L79-L81"
+      }
+     ],
+     "more": 2
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "alertRules — realtime+non-critical cross-field invariant > setAlertRules({sensitivity:'all'}) against existing realtime row → throws",
+      "alertRules — realtime+non-critical cross-field invariant > setAlertRules({sensitivity:'high'}) against existing realtime row → throws (tightened rule)"
+     ],
+     "locations": [
+      {
+       "path": "convex/__tests__/alertRules.test.ts",
+       "line": 51,
+       "endLine": 74,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/alertRules.test.ts#L51-L74"
+      },
+      {
+       "path": "convex/__tests__/alertRules.test.ts",
+       "line": 76,
+       "endLine": 99,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/alertRules.test.ts#L76-L99"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "alertRules — setNotificationConfigForUser atomic pair update > rejects (realtime, all) atomically",
+      "alertRules — setNotificationConfigForUser atomic pair update > setNotificationConfigForUser({digestMode:'realtime', sensitivity:'high'}) → throws (tightened rule)"
+     ],
+     "locations": [
+      {
+       "path": "convex/__tests__/alertRules.test.ts",
+       "line": 307,
+       "endLine": 318,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/alertRules.test.ts#L307-L318"
+      },
+      {
+       "path": "convex/__tests__/alertRules.test.ts",
+       "line": 354,
+       "endLine": 366,
+       "url": "https://github.com/koala73/worldmonitor/blob/6254e4d40526e756eaa5931a7d82ae6bb929c25a/convex/__tests__/alertRules.test.ts#L354-L366"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "flizzywine/dsh-tavern",
+   "url": "https://github.com/flizzywine/dsh-tavern",
+   "description": "基于DSH的Agent酒馆。类酒馆文字游戏Agent。兼容SillyTavern生态，人物卡直接导入就能玩。更快、更稳、更鲜活。所有模型都能用。手机也能玩。",
+   "language": "JavaScript",
+   "stars": 1293,
+   "starsToday": 38,
+   "lists": [
+    "javascript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "21e952afd805e4cf829b418778740ff6b851a535",
+   "scanMs": 2367,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 170,
+    "unresolved": 1,
+    "files": 565
+   },
+   "comparablePercent": 99.4,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 1
+    }
+   ],
+   "findings": {
+    "total": 2,
+    "errors": 0,
+    "warnings": 2,
+    "byRule": {
+     "parameterization-candidate": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "promoted image result conversation node > keeps the natural position in normal transcript mode even when the turn closes",
+      "promoted image result conversation node > re-anchors beside the final answer in compact transcript mode when the turn closes"
+     ],
+     "locations": [
+      {
+       "path": "tavern-plugin/packages/dsh-image-gen/tests/image-result-node.spec.ts",
+       "line": 122,
+       "endLine": 131,
+       "url": "https://github.com/flizzywine/dsh-tavern/blob/21e952afd805e4cf829b418778740ff6b851a535/tavern-plugin/packages/dsh-image-gen/tests/image-result-node.spec.ts#L122-L131"
+      },
+      {
+       "path": "tavern-plugin/packages/dsh-image-gen/tests/image-result-node.spec.ts",
+       "line": 133,
+       "endLine": 142,
+       "url": "https://github.com/flizzywine/dsh-tavern/blob/21e952afd805e4cf829b418778740ff6b851a535/tavern-plugin/packages/dsh-image-gen/tests/image-result-node.spec.ts#L133-L142"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "image tool registration > prepends the workflow preset before the user prompt on ComfyUI calls",
+      "image tool registration > omits the separator entirely when the workflow has no preset"
+     ],
+     "locations": [
+      {
+       "path": "tavern-plugin/packages/dsh-image-gen/tests/index.spec.ts",
+       "line": 218,
+       "endLine": 246,
+       "url": "https://github.com/flizzywine/dsh-tavern/blob/21e952afd805e4cf829b418778740ff6b851a535/tavern-plugin/packages/dsh-image-gen/tests/index.spec.ts#L218-L246"
+      },
+      {
+       "path": "tavern-plugin/packages/dsh-image-gen/tests/index.spec.ts",
+       "line": 248,
+       "endLine": 276,
+       "url": "https://github.com/flizzywine/dsh-tavern/blob/21e952afd805e4cf829b418778740ff6b851a535/tavern-plugin/packages/dsh-image-gen/tests/index.spec.ts#L248-L276"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "name": "pingdotgg/t3code",
+   "reason": "analysis failed"
+  }
+ ]
+}

@@ -1,0 +1,857 @@
+{
+ "date": "2026-10-24",
+ "generatedAt": "2026-10-25T19:15:59.402Z",
+ "source": "backfill-new-entries",
+ "note": "Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by vitalets/github-trending-repos; each was analysed at its last commit before that time.",
+ "analyzerVersion": "0.7.0",
+ "scanned": 15,
+ "repos": [
+  {
+   "name": "stablyai/orca",
+   "url": "https://github.com/stablyai/orca",
+   "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
+   "language": "TypeScript",
+   "stars": 105634,
+   "starsToday": 1081,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "41db63f8c25961e69632c0d9b73e959cb7a1f917",
+   "scanMs": 44667,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 130414,
+    "unresolved": 11013,
+    "files": 15854
+   },
+   "comparablePercent": 91.6,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 2643,
+     "tests": 7535
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 729,
+     "tests": 3236
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 26,
+     "tests": 242
+    }
+   ],
+   "findings": {
+    "total": 2865,
+    "errors": 6,
+    "warnings": 2859,
+    "byRule": {
+     "parameterization-candidate": 2802,
+     "near-duplicate-test": 55,
+     "duplicate-test": 6,
+     "duplicate-each-row": 1,
+     "cross-file-duplicate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "isNewBrowserTabPopupIntent > /foreground-tab → tab: true",
+      "isNewBrowserTabPopupIntent > keeps non-authorization URLs on the existing tab path: https://example.com/docs"
+     ],
+     "locations": [
+      {
+       "path": "src/main/browser/browser-popup-new-tab-intent.test.ts",
+       "line": 8,
+       "endLine": 19,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/browser/browser-popup-new-tab-intent.test.ts#L8-L19"
+      },
+      {
+       "path": "src/main/browser/browser-popup-new-tab-intent.test.ts",
+       "line": 92,
+       "endLine": 109,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/browser/browser-popup-new-tab-intent.test.ts#L92-L109"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "isWslDirectGitReadCommand > routes [\"remote\"] without a shell",
+      "isWslDirectGitReadCommand > routes the listing form [\"remote\"] without a shell"
+     ],
+     "locations": [
+      {
+       "path": "src/main/git/wsl-direct-git-read-commands.test.ts",
+       "line": 5,
+       "endLine": 30,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/git/wsl-direct-git-read-commands.test.ts#L5-L30"
+      },
+      {
+       "path": "src/main/git/wsl-direct-git-read-commands.test.ts",
+       "line": 67,
+       "endLine": 72,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/git/wsl-direct-git-read-commands.test.ts#L67-L72"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "GrokHookService > does not restore a user-cleared global hook config on the next launch",
+      "GrokHookService > leaves a user-cleared config alone on a startup install"
+     ],
+     "locations": [
+      {
+       "path": "src/main/grok/hook-service.test.ts",
+       "line": 353,
+       "endLine": 364,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/grok/hook-service.test.ts#L353-L364"
+      },
+      {
+       "path": "src/main/grok/hook-service.test.ts",
+       "line": 403,
+       "endLine": 414,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/main/grok/hook-service.test.ts#L403-L414"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "resumeSleepingAgentSessionsForWorktree > lets a preserved pane claim its provider session and clears only stale duplicates",
+      "resumeSleepingAgentSessionsForWorktree > lets quit/live pane-owned records claim provider sessions before stale duplicates launch"
+     ],
+     "locations": [
+      {
+       "path": "src/renderer/src/lib/resume-sleeping-agent-session.test.ts",
+       "line": 587,
+       "endLine": 615,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/renderer/src/lib/resume-sleeping-agent-session.test.ts#L587-L615"
+      },
+      {
+       "path": "src/renderer/src/lib/resume-sleeping-agent-session.test.ts",
+       "line": 617,
+       "endLine": 645,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/renderer/src/lib/resume-sleeping-agent-session.test.ts#L617-L645"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "ensureBrowserClientHostOnRuntimeContact > re-prepares after an in-flight preparation aimed at the dead runtime settles",
+      "ensureBrowserClientHostOnRuntimeContact > re-prepares when contact returns during a preparation that then fails"
+     ],
+     "locations": [
+      {
+       "path": "src/renderer/src/runtime/restored-client-hosted-browser-host-restart-attach.test.ts",
+       "line": 175,
+       "endLine": 193,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/renderer/src/runtime/restored-client-hosted-browser-host-restart-attach.test.ts#L175-L193"
+      },
+      {
+       "path": "src/renderer/src/runtime/restored-client-hosted-browser-host-restart-attach.test.ts",
+       "line": 196,
+       "endLine": 214,
+       "url": "https://github.com/stablyai/orca/blob/41db63f8c25961e69632c0d9b73e959cb7a1f917/src/renderer/src/runtime/restored-client-hosted-browser-host-restart-attach.test.ts#L196-L214"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "liguobao/ds-harness-remote",
+   "url": "https://github.com/liguobao/ds-harness-remote",
+   "description": "一个基于 DeepSeek Harness 插件机制构建的多端远程访问方案，通过安全、低延迟、端到端加密的 P2P 优先网络，支持从 PC、Android 和 Web 随时访问并操作远程 Harness 和 CodeX。 (A multi-device remote access solution built on the DeepSeek Harness plugin system, enabling PC, Android, and Web clients to securely access and operate remote Harness and CodeX over a low-latency, end-to-end encrypted, P2P-first network.)",
+   "language": "TypeScript",
+   "stars": 851,
+   "starsToday": 331,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "4d888ad3e359416836072796d06348eba37eccc6",
+   "scanMs": 3287,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 772,
+    "unresolved": 6,
+    "files": 118
+   },
+   "comparablePercent": 99.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 5,
+     "tests": 6
+    }
+   ],
+   "findings": {
+    "total": 2,
+    "errors": 0,
+    "warnings": 2,
+    "byRule": {
+     "parameterization-candidate": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Harness version discovery > prefers a valid host.describe version",
+      "Harness version discovery > replaces the legacy host.describe placeholder with the distribution version"
+     ],
+     "locations": [
+      {
+       "path": "packages/plugin/tests/harness-version.test.ts",
+       "line": 9,
+       "endLine": 11,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/4d888ad3e359416836072796d06348eba37eccc6/packages/plugin/tests/harness-version.test.ts#L9-L11"
+      },
+      {
+       "path": "packages/plugin/tests/harness-version.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/4d888ad3e359416836072796d06348eba37eccc6/packages/plugin/tests/harness-version.test.ts#L13-L15"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "RemoteHarnessApiProxy > does not classify legacy disconnect text without a structured error code",
+      "RemoteHarnessApiProxy > preserves unexpected event stream failures"
+     ],
+     "locations": [
+      {
+       "path": "packages/plugin/tests/remote-api-proxy.test.ts",
+       "line": 159,
+       "endLine": 168,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/4d888ad3e359416836072796d06348eba37eccc6/packages/plugin/tests/remote-api-proxy.test.ts#L159-L168"
+      },
+      {
+       "path": "packages/plugin/tests/remote-api-proxy.test.ts",
+       "line": 170,
+       "endLine": 179,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/4d888ad3e359416836072796d06348eba37eccc6/packages/plugin/tests/remote-api-proxy.test.ts#L170-L179"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "Vincentwei1021/video-shotcraft",
+   "url": "https://github.com/Vincentwei1021/video-shotcraft",
+   "description": "AI video skill for Claude Code & Codex — cinematic product videos with Remotion: 152 shot recipe cards, 209 motion previews, a production-ready template",
+   "language": "TypeScript",
+   "stars": 13581,
+   "starsToday": 259,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "43bd349a136651865ecfa6ea1cf012f6e957d304",
+   "scanMs": 1530,
+   "incomplete": false,
+   "tests": {
+    "analyzed": 23,
+    "unresolved": 0,
+    "files": 1
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  },
+  {
+   "name": "promptfoo/promptfoo",
+   "url": "https://github.com/promptfoo/promptfoo",
+   "description": "Test your prompts, agents, and RAGs. Red teaming/pentesting/vulnerability scanning for AI. Compare performance of GPT, Claude, Gemini, DeepSeek, and more. Simple declarative configs with command line and CI/CD integration.  Used by OpenAI and Anthropic.",
+   "language": "TypeScript",
+   "stars": 26417,
+   "starsToday": 56,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "c0b88a324175c60019cc80de1b2e32b4c849d4c3",
+   "scanMs": 21911,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 31390,
+    "unresolved": 5788,
+    "files": 1074
+   },
+   "comparablePercent": 81.6,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 355,
+     "tests": 2471
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 35,
+     "tests": 3230
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 25,
+     "tests": 74
+    },
+    {
+     "reason": "unsupported-expression",
+     "files": 1,
+     "tests": 13
+    }
+   ],
+   "findings": {
+    "total": 1299,
+    "errors": 19,
+    "warnings": 1280,
+    "byRule": {
+     "parameterization-candidate": 1232,
+     "near-duplicate-test": 45,
+     "duplicate-test": 19,
+     "redundant-hook": 1,
+     "duplicate-test-name": 1,
+     "cross-file-duplicate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "getGradingProvider > should return the default provider when provider is not provided",
+      "getAndCheckProvider > should return the default provider when no provider is specified"
+     ],
+     "locations": [
+      {
+       "path": "test/matchers/utils.test.ts",
+       "line": 82,
+       "endLine": 85,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/matchers/utils.test.ts#L82-L85"
+      },
+      {
+       "path": "test/matchers/utils.test.ts",
+       "line": 120,
+       "endLine": 123,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/matchers/utils.test.ts#L120-L123"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "GeminiImageProvider > Cost calculation > should return correct cost for gemini-3.1-flash-image (GA Nano Banana 2)",
+      "GeminiImageProvider > Cost calculation > should default resolution-tiered cost to the 1K price when imageSize is unset"
+     ],
+     "locations": [
+      {
+       "path": "test/providers/google/gemini-image.test.ts",
+       "line": 1613,
+       "endLine": 1621,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/google/gemini-image.test.ts#L1613-L1621"
+      },
+      {
+       "path": "test/providers/google/gemini-image.test.ts",
+       "line": 1653,
+       "endLine": 1661,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/google/gemini-image.test.ts#L1653-L1661"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "N8nProvider > constructor > should create instance with url",
+      "N8nProvider > id > should return n8n provider id"
+     ],
+     "locations": [
+      {
+       "path": "test/providers/n8n.test.ts",
+       "line": 44,
+       "endLine": 47,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/n8n.test.ts#L44-L47"
+      },
+      {
+       "path": "test/providers/n8n.test.ts",
+       "line": 81,
+       "endLine": 84,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/n8n.test.ts#L81-L84"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "OpenAiResponsesProvider reasoning models > deep research model validation > should use longer timeout for gpt-5.5-pro models",
+      "OpenAiResponsesProvider reasoning models > deep research model validation > should use longer timeout for gpt-5.5-pro models"
+     ],
+     "locations": [
+      {
+       "path": "test/providers/openai/responses/reasoning.test.ts",
+       "line": 431,
+       "endLine": 456,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/openai/responses/reasoning.test.ts#L431-L456"
+      },
+      {
+       "path": "test/providers/openai/responses/reasoning.test.ts",
+       "line": 458,
+       "endLine": 480,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/openai/responses/reasoning.test.ts#L458-L480"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "OpenAICodexSDKProvider > callApi > GPT-5.2 through GPT-6 Astra models > should recognize gpt-5.4 as a known model",
+      "OpenAICodexSDKProvider > callApi > GPT-5.4 models > should recognize gpt-5.4 as a known model"
+     ],
+     "locations": [
+      {
+       "path": "test/providers/openai-codex-sdk.test.ts",
+       "line": 3761,
+       "endLine": 3767,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/openai-codex-sdk.test.ts#L3761-L3767"
+      },
+      {
+       "path": "test/providers/openai-codex-sdk.test.ts",
+       "line": 3973,
+       "endLine": 3979,
+       "url": "https://github.com/promptfoo/promptfoo/blob/c0b88a324175c60019cc80de1b2e32b4c849d4c3/test/providers/openai-codex-sdk.test.ts#L3973-L3979"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "logto-io/logto",
+   "url": "https://github.com/logto-io/logto",
+   "description": "🧑‍🚀 Authentication and authorization infrastructure for SaaS and AI apps, built on OIDC and OAuth 2.1 with multi-tenancy, SSO, and RBAC.",
+   "language": "TypeScript",
+   "stars": 14784,
+   "starsToday": 12,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "master",
+   "headSha": "3caf470e5bb465e21c15714b569f7db697e31516",
+   "scanMs": 2000,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 582,
+    "unresolved": 74,
+    "files": 974
+   },
+   "comparablePercent": 87.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 11,
+     "tests": 74
+    }
+   ],
+   "findings": {
+    "total": 22,
+    "errors": 0,
+    "warnings": 22,
+    "byRule": {
+     "parameterization-candidate": 22
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "validateUsernameAgainstPolicy (lowercase-only, length 4-8) > rejects too short",
+      "validateUsernameAgainstPolicy (lowercase-only, length 4-8) > rejects too long",
+      "validateUsernameAgainstPolicy (lowercase-only, length 4-8) > rejects an uppercase letter",
+      "validateUsernameAgainstPolicy (lowercase-only, length 4-8) > rejects a digit"
+     ],
+     "locations": [
+      {
+       "path": "packages/toolkit/core-kit/src/username-policy.test.ts",
+       "line": 98,
+       "endLine": 100,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/toolkit/core-kit/src/username-policy.test.ts#L98-L100"
+      },
+      {
+       "path": "packages/toolkit/core-kit/src/username-policy.test.ts",
+       "line": 101,
+       "endLine": 103,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/toolkit/core-kit/src/username-policy.test.ts#L101-L103"
+      },
+      {
+       "path": "packages/toolkit/core-kit/src/username-policy.test.ts",
+       "line": 104,
+       "endLine": 106,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/toolkit/core-kit/src/username-policy.test.ts#L104-L106"
+      },
+      {
+       "path": "packages/toolkit/core-kit/src/username-policy.test.ts",
+       "line": 107,
+       "endLine": 109,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/toolkit/core-kit/src/username-policy.test.ts#L107-L109"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "domainVerificationFilesGuard > accepts verification file path /-verification.txt",
+      "domainVerificationFilesGuard > rejects verification file path /../secret.txt"
+     ],
+     "locations": [
+      {
+       "path": "packages/schemas/src/foundations/jsonb-types/custom-domain.test.ts",
+       "line": 9,
+       "endLine": 24,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/schemas/src/foundations/jsonb-types/custom-domain.test.ts#L9-L24"
+      },
+      {
+       "path": "packages/schemas/src/foundations/jsonb-types/custom-domain.test.ts",
+       "line": 26,
+       "endLine": 35,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/schemas/src/foundations/jsonb-types/custom-domain.test.ts#L26-L35"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "getType > getStringType",
+      "getType > should return number"
+     ],
+     "locations": [
+      {
+       "path": "packages/schemas/src/gen/utils.test.ts",
+       "line": 15,
+       "endLine": 17,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/schemas/src/gen/utils.test.ts#L15-L17"
+      },
+      {
+       "path": "packages/schemas/src/gen/utils.test.ts",
+       "line": 19,
+       "endLine": 21,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/schemas/src/gen/utils.test.ts#L19-L21"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "parsePhoneNumber > parsePhoneNumber should strip the leading +",
+      "parsePhoneNumber > parsePhoneNumber should strip the leading 0"
+     ],
+     "locations": [
+      {
+       "path": "packages/shared/src/utils/phone.test.ts",
+       "line": 11,
+       "endLine": 14,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/shared/src/utils/phone.test.ts#L11-L14"
+      },
+      {
+       "path": "packages/shared/src/utils/phone.test.ts",
+       "line": 16,
+       "endLine": 19,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/shared/src/utils/phone.test.ts#L16-L19"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "parsePhoneNumber > parsePhoneNumber should strip the leading 0",
+      "parsePhoneNumber > parsePhoneNumber should strip non-digit characters"
+     ],
+     "locations": [
+      {
+       "path": "packages/shared/src/utils/phone.test.ts",
+       "line": 16,
+       "endLine": 19,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/shared/src/utils/phone.test.ts#L16-L19"
+      },
+      {
+       "path": "packages/shared/src/utils/phone.test.ts",
+       "line": 21,
+       "endLine": 24,
+       "url": "https://github.com/logto-io/logto/blob/3caf470e5bb465e21c15714b569f7db697e31516/packages/shared/src/utils/phone.test.ts#L21-L24"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "lissy93/dashy",
+   "url": "https://github.com/lissy93/dashy",
+   "description": "🚀 A self-hostable personal dashboard built for you. Includes status-checking, widgets, themes, icon packs, a UI editor and tons more!",
+   "language": "Vue",
+   "stars": 26807,
+   "starsToday": 9,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "master",
+   "headSha": "93a33d945c8b84e5dd37c8bef103770d4701d175",
+   "scanMs": 1724,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 620,
+    "unresolved": 10,
+    "files": 39
+   },
+   "comparablePercent": 98.4,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 3,
+     "tests": 10
+    }
+   ],
+   "findings": {
+    "total": 71,
+    "errors": 0,
+    "warnings": 71,
+    "byRule": {
+     "parameterization-candidate": 68,
+     "near-duplicate-test": 3
+    }
+   },
+   "top": [
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "ConfigHelpers - getUrlForAlias > never matches items that have no alias",
+      "ConfigHelpers - getUrlForAlias > does not let a blank alias be reached by a blank lookup"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 440,
+       "endLine": 444,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L440-L444"
+      },
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 446,
+       "endLine": 450,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L446-L450"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "ConfigHelpers - getUrlForAlias > does not let a blank alias be reached by a blank lookup",
+      "ConfigHelpers - getUrlForAlias > ignores aliases YAML has coerced to a non-string"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 446,
+       "endLine": 450,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L446-L450"
+      },
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 452,
+       "endLine": 456,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L452-L456"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "Config Validator > validates a correct config file",
+      "Config Validator > allows items with just title"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/config-validator.test.js",
+       "line": 13,
+       "endLine": 26,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-validator.test.js#L13-L26"
+      },
+      {
+       "path": "tests/unit/config-validator.test.js",
+       "line": 57,
+       "endLine": 74,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-validator.test.js#L57-L74"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "CORS proxy > rejects invalid URL",
+      "CORS proxy > rejects ftp:// scheme",
+      "CORS proxy > blocks cloud metadata decimal bypass",
+      "CORS proxy > blocks GCP metadata DNS"
+     ],
+     "locations": [
+      {
+       "path": "tests/server/cors-proxy.test.js",
+       "line": 26,
+       "endLine": 29,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/server/cors-proxy.test.js#L26-L29"
+      },
+      {
+       "path": "tests/server/cors-proxy.test.js",
+       "line": 37,
+       "endLine": 40,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/server/cors-proxy.test.js#L37-L40"
+      },
+      {
+       "path": "tests/server/cors-proxy.test.js",
+       "line": 48,
+       "endLine": 51,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/server/cors-proxy.test.js#L48-L51"
+      },
+      {
+       "path": "tests/server/cors-proxy.test.js",
+       "line": 53,
+       "endLine": 56,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/server/cors-proxy.test.js#L53-L56"
+      }
+     ],
+     "more": 4
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "ConfigHelpers - makePageName > converts page name to lowercase",
+      "ConfigHelpers - makePageName > replaces spaces with hyphens",
+      "ConfigHelpers - makePageName > removes .yml extension",
+      "ConfigHelpers - makePageName > removes special characters"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 20,
+       "endLine": 22,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L20-L22"
+      },
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 24,
+       "endLine": 26,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L24-L26"
+      },
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 28,
+       "endLine": 30,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L28-L30"
+      },
+      {
+       "path": "tests/unit/config-helpers.test.js",
+       "line": 32,
+       "endLine": 34,
+       "url": "https://github.com/lissy93/dashy/blob/93a33d945c8b84e5dd37c8bef103770d4701d175/tests/unit/config-helpers.test.js#L32-L34"
+      }
+     ],
+     "more": 4
+    }
+   ]
+  }
+ ],
+ "skipped": []
+}
