@@ -100,9 +100,25 @@ const daySummary = (day) => ({
   skipped: day.skipped.length,
 });
 
+/** Repositories left out at their maintainers' request, lowercased `owner/name`. */
+export async function readExclusions() {
+  const json = JSON.parse(
+    await readFile(join(ROOT, 'scripts', 'trending', 'exclude.json'), 'utf8'),
+  );
+  return new Set(json.repositories.map((n) => n.toLowerCase()));
+}
+
+/** Every snapshot, oldest first, with excluded repositories removed from days already written. */
 export async function readDays() {
+  const excluded = await readExclusions();
+  const kept = (r) => !excluded.has(r.name.toLowerCase());
   const files = (await readdir(DAYS_DIR)).filter((f) => /^\d{4}-\d{2}-\d{2}\.json$/.test(f)).sort();
-  return Promise.all(files.map(async (f) => JSON.parse(await readFile(join(DAYS_DIR, f), 'utf8'))));
+  return Promise.all(
+    files.map(async (f) => {
+      const day = JSON.parse(await readFile(join(DAYS_DIR, f), 'utf8'));
+      return { ...day, repos: day.repos.filter(kept), skipped: day.skipped.filter(kept) };
+    }),
+  );
 }
 
 /** Rebuild index.json from every snapshot. */

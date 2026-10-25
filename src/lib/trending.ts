@@ -1,4 +1,7 @@
 import indexJson from '../data/trending/index.json';
+import excludeJson from '../../scripts/trending/exclude.json';
+
+const excluded = new Set(excludeJson.repositories.map((n: string) => n.toLowerCase()));
 
 export interface TrendingLocation {
   path: string;
@@ -89,7 +92,10 @@ export const latestDate = index.days[index.days.length - 1]?.date;
 export async function loadDay(date: string): Promise<TrendingDay> {
   const load = dayModules[`../data/trending/days/${date}.json`];
   if (!load) throw new Error(`no trending snapshot for ${date}`);
-  return (await load()).default;
+  const day = (await load()).default;
+  // Snapshots written before an exclusion request still list the repository; drop it here too.
+  const kept = (r: { name: string }) => !excluded.has(r.name.toLowerCase());
+  return { ...day, repos: day.repos.filter(kept), skipped: day.skipped.filter(kept) };
 }
 
 export const isRebuilt = (day: { source: string }) => day.source !== 'github-trending-daily';

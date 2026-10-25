@@ -4,11 +4,11 @@
  * sources at a commit, run vitest-dedup, and write the day's snapshot plus the full artifacts.
  */
 import { execFile } from 'node:child_process';
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { promisify } from 'node:util';
-import { DAYS_DIR, ROOT, buildIndex, summarizeReport } from './lib.mjs';
+import { DAYS_DIR, ROOT, buildIndex, readExclusions, summarizeReport } from './lib.mjs';
 
 export const exec = promisify(execFile);
 
@@ -215,11 +215,7 @@ export async function runDay({ date, source, note, candidates, maxRepos, minAnal
   const generatedAt = new Date().toISOString();
   const artifactDir = process.env.TRENDING_ARTIFACTS || join(ROOT, '.trending-artifacts', date);
   await mkdir(artifactDir, { recursive: true });
-  const exclude = new Set(
-    JSON.parse(
-      await readFile(join(ROOT, 'scripts/trending/exclude.json'), 'utf8'),
-    ).repositories.map((n) => n.toLowerCase()),
-  );
+  const exclude = await readExclusions();
   const manifest = {
     date,
     generatedAt,

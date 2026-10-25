@@ -85,7 +85,8 @@ for (const date of [...days.keys()].sort()) {
   }
   const candidates = [...days.get(date).values()].sort((a, b) => b.starsToday - a.starsToday);
   console.log(`${date}: ${candidates.length} new trending entries`);
-  await runDay({
+  // A day that writes no snapshot fails the run, after the remaining days are still processed.
+  const written = await runDay({
     date,
     source: 'backfill-new-entries',
     note: `Rebuilt from the repositories that newly entered GitHub's daily trending lists that day, as recorded by ${SOURCE_REPO}; each was analysed at its last commit before that time.`,
@@ -94,4 +95,5 @@ for (const date of [...days.keys()].sort()) {
     minAnalyzed: 1,
     version,
   });
+  if (!written) process.exitCode = 1;
 }
