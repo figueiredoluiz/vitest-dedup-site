@@ -1,6 +1,6 @@
 {
  "date": "2026-10-26",
- "generatedAt": "2026-10-26T00:28:41.924Z",
+ "generatedAt": "2026-10-26T03:01:18.340Z",
  "source": "github-trending-daily",
  "analyzerVersion": "0.8.0",
  "scanned": 60,
@@ -10,7 +10,7 @@
    "url": "https://github.com/makecindy/cindy",
    "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
    "language": "TypeScript",
-   "stars": 4850,
+   "stars": 5037,
    "starsToday": 675,
    "lists": [
     "all",
@@ -18,7 +18,7 @@
    ],
    "defaultBranch": "main",
    "headSha": "7c5bd270c956417127e12a74934d0ecdb97ba55d",
-   "scanMs": 47561,
+   "scanMs": 76410,
    "incomplete": true,
    "tests": {
     "analyzed": 82228,
@@ -199,14 +199,14 @@
    "url": "https://github.com/tashfeenahmed/freellmapi",
    "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
    "language": "TypeScript",
-   "stars": 41587,
+   "stars": 41626,
    "starsToday": 675,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "22b7ec74a09892d3efdb9107ec3e74c764dd71a1",
-   "scanMs": 1616,
+   "scanMs": 2577,
    "incomplete": true,
    "tests": {
     "analyzed": 4997,
@@ -365,14 +365,14 @@
    "url": "https://github.com/google-gemini/gemini-cli",
    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.",
    "language": "TypeScript",
-   "stars": 108382,
+   "stars": 108386,
    "starsToday": 658,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "cd1b45c2db0a5ea7b7fc3b67c1ba5879601d6005",
-   "scanMs": 4816,
+   "scanMs": 7543,
    "incomplete": true,
    "tests": {
     "analyzed": 15845,
@@ -543,14 +543,14 @@
    "url": "https://github.com/firecrawl/firecrawl",
    "description": "Supercharge your AI agents with data from the web and beyond. Building the library for superintelligence. 🔥",
    "language": "TypeScript",
-   "stars": 195332,
+   "stars": 195359,
    "starsToday": 377,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "989ee963c2796bdf6be9e7ab69889975ceb4cbc8",
-   "scanMs": 1700,
+   "scanMs": 2554,
    "incomplete": true,
    "tests": {
     "analyzed": 1187,
@@ -730,14 +730,14 @@
    "url": "https://github.com/remotion-dev/remotion",
    "description": "🎥      Make videos programmatically with React",
    "language": "TypeScript",
-   "stars": 67441,
+   "stars": 67481,
    "starsToday": 356,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "65ce99e14bb0509bc75a562bfd453aa5941c18a6",
-   "scanMs": 1168,
+   "scanMs": 1787,
    "incomplete": true,
    "tests": {
     "analyzed": 468,
@@ -908,14 +908,14 @@
    "url": "https://github.com/thedotmack/claude-mem",
    "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
    "language": "TypeScript",
-   "stars": 103119,
+   "stars": 103150,
    "starsToday": 301,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "d9b36b66dc68da92af9df238e4c4debab587ba62",
-   "scanMs": 986,
+   "scanMs": 1491,
    "incomplete": true,
    "tests": {
     "analyzed": 145,
@@ -985,14 +985,14 @@
    "url": "https://github.com/every-app/open-seo",
    "description": "Open source alternative to Semrush and Ahrefs",
    "language": "TypeScript",
-   "stars": 24962,
+   "stars": 24975,
    "starsToday": 133,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "236761ad848716077cd10d8503713bb690971b3b",
-   "scanMs": 1215,
+   "scanMs": 2002,
    "incomplete": true,
    "tests": {
     "analyzed": 1460,
@@ -1148,14 +1148,14 @@
    "url": "https://github.com/nightly-labs/openbot",
    "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
    "language": "TypeScript",
-   "stars": 977,
+   "stars": 999,
    "starsToday": 86,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
    "headSha": "1d92ac43bddc4863bac9b26825bb8cda132fc7bd",
-   "scanMs": 2921,
+   "scanMs": 4995,
    "incomplete": true,
    "tests": {
     "analyzed": 438,
@@ -1353,14 +1353,14 @@
    "url": "https://github.com/moeru-ai/airi",
    "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
    "language": "TypeScript",
-   "stars": 50713,
+   "stars": 50715,
    "starsToday": 44,
    "lists": [
     "typescript"
    ],
    "defaultBranch": "main",
-   "headSha": "22b182fe082f51341770f47b1a74fac44f0fd4d2",
-   "scanMs": 1149,
+   "headSha": "383c25ee4eb2b3ec242671a85ad864866a801de4",
+   "scanMs": 1978,
    "incomplete": true,
    "tests": {
     "analyzed": 4,
@@ -1388,11 +1388,11 @@
     "typescript"
    ],
    "defaultBranch": "main",
-   "headSha": "743f140978bddaf8b6aa524765fcd578f7c22fc9",
-   "scanMs": 10685,
+   "headSha": "1011d8b63fcc150998a4710641563cd0f73369c9",
+   "scanMs": 17383,
    "incomplete": true,
    "tests": {
-    "analyzed": 16657,
+    "analyzed": 16665,
     "unresolved": 698,
     "files": 1004
    },
@@ -1445,13 +1445,13 @@
        "path": "packages/kap-server/test/origin.test.ts",
        "line": 38,
        "endLine": 40,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kap-server/test/origin.test.ts#L38-L40"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kap-server/test/origin.test.ts#L38-L40"
       },
       {
        "path": "packages/kap-server/test/origin.test.ts",
        "line": 66,
        "endLine": 68,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kap-server/test/origin.test.ts#L66-L68"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kap-server/test/origin.test.ts#L66-L68"
       }
      ],
      "more": 0
@@ -1470,13 +1470,13 @@
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2031,
        "endLine": 2041,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2031-L2041"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2031-L2041"
       },
       {
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2382,
        "endLine": 2394,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2382-L2394"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2382-L2394"
       }
      ],
      "more": 0
@@ -1495,13 +1495,13 @@
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2296,
        "endLine": 2302,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2296-L2302"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2296-L2302"
       },
       {
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2396,
        "endLine": 2406,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2396-L2406"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2396-L2406"
       }
      ],
      "more": 0
@@ -1520,13 +1520,13 @@
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2334,
        "endLine": 2340,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2334-L2340"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2334-L2340"
       },
       {
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2382,
        "endLine": 2394,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2382-L2394"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2382-L2394"
       }
      ],
      "more": 0
@@ -1545,13 +1545,13 @@
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2375,
        "endLine": 2380,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2375-L2380"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2375-L2380"
       },
       {
        "path": "packages/kosong/test/anthropic.test.ts",
        "line": 2608,
        "endLine": 2632,
-       "url": "https://github.com/MoonshotAI/kimi-code/blob/743f140978bddaf8b6aa524765fcd578f7c22fc9/packages/kosong/test/anthropic.test.ts#L2608-L2632"
+       "url": "https://github.com/MoonshotAI/kimi-code/blob/1011d8b63fcc150998a4710641563cd0f73369c9/packages/kosong/test/anthropic.test.ts#L2608-L2632"
       }
      ],
      "more": 0
@@ -1563,14 +1563,14 @@
    "url": "https://github.com/algerkong/AlgerMusicPlayer",
    "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
    "language": "Vue",
-   "stars": 17098,
+   "stars": 17101,
    "starsToday": 16,
    "lists": [
     "vue"
    ],
    "defaultBranch": "main",
    "headSha": "4666fd0ca874452fda804e2d091524c2448bded9",
-   "scanMs": 447,
+   "scanMs": 654,
    "incomplete": true,
    "tests": {
     "analyzed": 68,
@@ -1592,14 +1592,14 @@
    "url": "https://github.com/CorentinTh/it-tools",
    "description": "Collection of handy online tools for developers, with great UX. ",
    "language": "Vue",
-   "stars": 40968,
+   "stars": 40971,
    "starsToday": 13,
    "lists": [
     "vue"
    ],
    "defaultBranch": "main",
    "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
-   "scanMs": 535,
+   "scanMs": 868,
    "incomplete": true,
    "tests": {
     "analyzed": 134,
@@ -1790,7 +1790,7 @@
    ],
    "defaultBranch": "main",
    "headSha": "0ced53573b0638d0acff9654db697d12e7747888",
-   "scanMs": 453,
+   "scanMs": 633,
    "incomplete": true,
    "tests": {
     "analyzed": 142,
@@ -2004,7 +2004,7 @@
    ],
    "defaultBranch": "develop",
    "headSha": "c6443738c959e75ddb0703fe2a7cacb1347b1877",
-   "scanMs": 433,
+   "scanMs": 634,
    "incomplete": true,
    "tests": {
     "analyzed": 131,
@@ -2061,7 +2061,7 @@
    ],
    "defaultBranch": "main",
    "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
-   "scanMs": 426,
+   "scanMs": 623,
    "incomplete": true,
    "tests": {
     "analyzed": 327,
@@ -2224,7 +2224,7 @@
    ],
    "defaultBranch": "v2",
    "headSha": "78fb7748aa4f87cdaad60d0282002ab685d6bf58",
-   "scanMs": 778,
+   "scanMs": 1196,
    "incomplete": true,
    "tests": {
     "analyzed": 2140,
@@ -2389,7 +2389,7 @@
    ],
    "defaultBranch": "master",
    "headSha": "8481471246783b645adc9d2f63e270f323a642b1",
-   "scanMs": 428,
+   "scanMs": 675,
    "incomplete": true,
    "tests": {
     "analyzed": 248,
