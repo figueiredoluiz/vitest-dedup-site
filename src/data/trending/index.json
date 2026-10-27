@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-26T03:01:18.340Z",
+ "updatedAt": "2026-10-27T03:33:16.699Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -88,6 +88,17 @@
    "findings": 3446,
    "errors": 79,
    "skipped": 0
+  },
+  {
+   "date": "2026-10-27",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.8.0",
+   "scanned": 66,
+   "repos": 15,
+   "tests": 97769,
+   "findings": 2289,
+   "errors": 47,
+   "skipped": 1
   }
  ],
  "repos": {
@@ -579,9 +590,20 @@
      "comparablePercent": 98.4,
      "findings": 71,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 9,
+     "analyzerVersion": "0.8.0",
+     "headSha": "193d89a62ea1057f64887803f52a30a26f0773f8",
+     "stars": 26824,
+     "tests": 624,
+     "comparablePercent": 98.4,
+     "findings": 71,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-24"
+   "latest": "2026-10-27"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -635,9 +657,20 @@
      "comparablePercent": 93.7,
      "findings": 1424,
      "errors": 26
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 1,
+     "analyzerVersion": "0.8.0",
+     "headSha": "0ca1c3d1f50b202d75878bac96c19e49b192e49c",
+     "stars": 6672,
+     "tests": 82658,
+     "comparablePercent": 93.6,
+     "findings": 1424,
+     "errors": 26
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "tashfeenahmed/freellmapi": {
    "name": "tashfeenahmed/freellmapi",
@@ -719,9 +752,20 @@
      "comparablePercent": 97.9,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 3,
+     "analyzerVersion": "0.8.0",
+     "headSha": "35f2ec0eb5b2b1e745564db4ce1ecec58eb331e7",
+     "stars": 103474,
+     "tests": 145,
+     "comparablePercent": 97.9,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "every-app/open-seo": {
    "name": "every-app/open-seo",
@@ -747,9 +791,20 @@
      "comparablePercent": 87.7,
      "findings": 18,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 5,
+     "analyzerVersion": "0.8.0",
+     "headSha": "99d9a49c8cb742d54eddd64d09efbc5302f6db89",
+     "stars": 25145,
+     "tests": 1508,
+     "comparablePercent": 88,
+     "findings": 18,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "nightly-labs/openbot": {
    "name": "nightly-labs/openbot",
@@ -775,9 +830,20 @@
      "comparablePercent": 86.8,
      "findings": 6,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 4,
+     "analyzerVersion": "0.8.0",
+     "headSha": "f91535fb0c8d6fd0a63911ec6e4b67154fd85ebe",
+     "stars": 1580,
+     "tests": 446,
+     "comparablePercent": 86.8,
+     "findings": 6,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "moeru-ai/airi": {
    "name": "moeru-ai/airi",
@@ -831,9 +897,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 11,
+     "analyzerVersion": "0.8.0",
+     "headSha": "4666fd0ca874452fda804e2d091524c2448bded9",
+     "stars": 17111,
+     "tests": 68,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -915,9 +992,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 12,
+     "analyzerVersion": "0.8.0",
+     "headSha": "f0266c389e599a916f1c9f69a32d05977488653f",
+     "stars": 3864,
+     "tests": 131,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -943,9 +1031,20 @@
      "comparablePercent": 100,
      "findings": 12,
      "errors": 1
+    },
+    {
+     "date": "2026-10-27",
+     "rank": 13,
+     "analyzerVersion": "0.8.0",
+     "headSha": "0ced53573b0638d0acff9654db697d12e7747888",
+     "stars": 3297,
+     "tests": 142,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 1
     }
    ],
-   "latest": "2026-10-26"
+   "latest": "2026-10-27"
   },
   "vaibhav-kakde-in/mdhero": {
    "name": "vaibhav-kakde-in/mdhero",
@@ -1030,6 +1129,125 @@
     }
    ],
    "latest": "2026-10-26"
+  },
+  "thesysdev/openui": {
+   "name": "thesysdev/openui",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 2,
+     "analyzerVersion": "0.8.0",
+     "headSha": "9bc3192b894c4f002aa3f9192176b7f16f5dea2a",
+     "stars": 14206,
+     "tests": 1189,
+     "comparablePercent": 95,
+     "findings": 56,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "Narcooo/inkos": {
+   "name": "Narcooo/inkos",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 6,
+     "analyzerVersion": "0.8.0",
+     "headSha": "53adac4e974b54dafda975edc4edd07cad364c18",
+     "stars": 10842,
+     "tests": 1085,
+     "comparablePercent": 99.7,
+     "findings": 58,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "refactoringhq/tolaria": {
+   "name": "refactoringhq/tolaria",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 7,
+     "analyzerVersion": "0.8.0",
+     "headSha": "9f764c163479f71fae37195c2102d391fed3bf3f",
+     "stars": 20356,
+     "tests": 6090,
+     "comparablePercent": 97.8,
+     "findings": 324,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "calcom/cal.diy": {
+   "name": "calcom/cal.diy",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 8,
+     "analyzerVersion": "0.8.0",
+     "headSha": "0f19cc46ef6b6426ee398c670575b3c96be7af9e",
+     "stars": 49403,
+     "tests": 3624,
+     "comparablePercent": 87.3,
+     "findings": 313,
+     "errors": 17
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "hefengxian/my-ielts": {
+   "name": "hefengxian/my-ielts",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 10,
+     "analyzerVersion": "0.8.0",
+     "headSha": "5cef573933663c4673c6e0093f1df04e68018b1a",
+     "stars": 3906,
+     "tests": 3,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "yuhonas/free-exercise-db": {
+   "name": "yuhonas/free-exercise-db",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 14,
+     "analyzerVersion": "0.8.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2050,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-27"
+  },
+  "mainsail-crew/mainsail": {
+   "name": "mainsail-crew/mainsail",
+   "appearances": [
+    {
+     "date": "2026-10-27",
+     "rank": 15,
+     "analyzerVersion": "0.8.0",
+     "headSha": "03a4d7b1d70b6df1061c8e1d998620320c126627",
+     "stars": 2234,
+     "tests": 51,
+     "comparablePercent": 100,
+     "findings": 5,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-10-27"
   }
  }
 }
