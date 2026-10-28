@@ -1,0 +1,1666 @@
+{
+ "date": "2026-10-28",
+ "generatedAt": "2026-10-28T03:49:17.688Z",
+ "source": "github-trending-daily",
+ "analyzerVersion": "0.9.0",
+ "scanned": 58,
+ "repos": [
+  {
+   "name": "HKUDS/DeepTutor",
+   "url": "https://github.com/HKUDS/DeepTutor",
+   "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+   "language": "Python",
+   "stars": 46248,
+   "starsToday": 1598,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "a31d82624c27d75f4e771d4fcb78dce16470b383",
+   "scanMs": 733,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 779,
+    "unresolved": 266,
+    "files": 380
+   },
+   "comparablePercent": 65.9,
+   "exclusions": [
+    {
+     "reason": "helper-setup-effects",
+     "files": 48,
+     "tests": 256
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 6,
+     "tests": 10
+    }
+   ],
+   "findings": {
+    "total": 3,
+    "errors": 0,
+    "warnings": 3,
+    "byRule": {
+     "parameterization-candidate": 3
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "uses English copy for a missing French translation",
+      "uses Ukrainian copy when a translation exists"
+     ],
+     "locations": [
+      {
+       "path": "web/tests/partial-locale-fallback.spec.ts",
+       "line": 5,
+       "endLine": 11,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/partial-locale-fallback.spec.ts#L5-L11"
+      },
+      {
+       "path": "web/tests/partial-locale-fallback.spec.ts",
+       "line": 13,
+       "endLine": 19,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/partial-locale-fallback.spec.ts#L13-L19"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "disables viewport prefetch for expanded sidebar navigation",
+      "disables viewport prefetch for collapsed sidebar navigation"
+     ],
+     "locations": [
+      {
+       "path": "web/tests/sidebar-prefetch.spec.tsx",
+       "line": 81,
+       "endLine": 86,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/sidebar-prefetch.spec.tsx#L81-L86"
+      },
+      {
+       "path": "web/tests/sidebar-prefetch.spec.tsx",
+       "line": 88,
+       "endLine": 93,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/sidebar-prefetch.spec.tsx#L88-L93"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "shows a fallback when the plugin renderer entry url is missing",
+      "renders an unknown native renderer as an explicit error"
+     ],
+     "locations": [
+      {
+       "path": "web/tests/visualize/VisualizationViewer.spec.tsx",
+       "line": 564,
+       "endLine": 582,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/visualize/VisualizationViewer.spec.tsx#L564-L582"
+      },
+      {
+       "path": "web/tests/visualize/VisualizationViewer.spec.tsx",
+       "line": 609,
+       "endLine": 627,
+       "url": "https://github.com/HKUDS/DeepTutor/blob/a31d82624c27d75f4e771d4fcb78dce16470b383/web/tests/visualize/VisualizationViewer.spec.tsx#L609-L627"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "makecindy/cindy",
+   "url": "https://github.com/makecindy/cindy",
+   "description": "Consider it done. The open-source AI agent that works out of the box · 想到，就能做到。开源、开箱即用的 AI Agent。",
+   "language": "TypeScript",
+   "stars": 7597,
+   "starsToday": 1465,
+   "lists": [
+    "all",
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "10b0faaef6fb9c1b35c8c6dff976730295c4514a",
+   "scanMs": 45498,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 83798,
+    "unresolved": 5728,
+    "files": 5668
+   },
+   "comparablePercent": 93.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1370,
+     "tests": 4426
+    },
+    {
+     "reason": "helper-effects-unproved",
+     "files": 26,
+     "tests": 361
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 22,
+     "tests": 866
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 12,
+     "tests": 42
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 4,
+     "tests": 22
+    },
+    {
+     "reason": "unsupported-expression",
+     "files": 1,
+     "tests": 11
+    }
+   ],
+   "findings": {
+    "total": 1430,
+    "errors": 26,
+    "warnings": 1404,
+    "byRule": {
+     "parameterization-candidate": 1336,
+     "duplicate-test": 26,
+     "near-duplicate-test": 63,
+     "duplicate-test-name": 2,
+     "cross-file-duplicate": 2,
+     "duplicate-each-row": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "analytics settings store > migrates a pre-existing signed-in user when the machine has no record",
+      "legacy consent migration window closure > does not affect a genuine legacy user whose window was never closed"
+     ],
+     "locations": [
+      {
+       "path": "apps/desktop/src/main/__tests__/analyticsSettingsStore.test.ts",
+       "line": 119,
+       "endLine": 124,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/__tests__/analyticsSettingsStore.test.ts#L119-L124"
+      },
+      {
+       "path": "apps/desktop/src/main/__tests__/analyticsSettingsStore.test.ts",
+       "line": 284,
+       "endLine": 290,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/__tests__/analyticsSettingsStore.test.ts#L284-L290"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "GhostScheduleSlot 推送内容 > 没有宿主窗口 → HOST_NOT_READY",
+      "GhostScheduleSlot 硬约束:只能开面板,不能建任务 > 没有可投窗口(全部销毁)→ HOST_NOT_READY,不静默丢弃"
+     ],
+     "locations": [
+      {
+       "path": "apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts",
+       "line": 264,
+       "endLine": 270,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts#L264-L270"
+      },
+      {
+       "path": "apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts",
+       "line": 325,
+       "endLine": 331,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts#L325-L331"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "isMainShellWindowUrl（投给哪个窗口的判据） > 右侧栏页签弹出窗(query) → 不是主壳窗",
+      "isMainShellWindowUrl（投给哪个窗口的判据） > 右侧栏页签弹出窗绝不能被当作可投窗口(本能力的主使用路径)"
+     ],
+     "locations": [
+      {
+       "path": "apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts",
+       "line": 400,
+       "endLine": 422,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts#L400-L422"
+      },
+      {
+       "path": "apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts",
+       "line": 429,
+       "endLine": 433,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/cindy-brain/__tests__/scheduleSlot.test.ts#L429-L433"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "clearDevice / clearAll > clearDevice 只作废在途写入,之后的新写入照常落盘",
+      "跨进程互斥(锁 + 清理完成标记) > 清理结束后写入恢复正常(计数只挡\"清理之前取到的内容\")"
+     ],
+     "locations": [
+      {
+       "path": "apps/desktop/src/main/device-link/__tests__/mirrorCacheStore.test.ts",
+       "line": 1315,
+       "endLine": 1320,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/device-link/__tests__/mirrorCacheStore.test.ts#L1315-L1320"
+      },
+      {
+       "path": "apps/desktop/src/main/device-link/__tests__/mirrorCacheStore.test.ts",
+       "line": 1856,
+       "endLine": 1861,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/device-link/__tests__/mirrorCacheStore.test.ts#L1856-L1861"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "官方 bot ack 表情 > 表情档位(与个人 bot 的三档同语义) > off: 一个表情都不发, 含 👀 与终态",
+      "官方 bot ack 表情 > 档位未就绪与中途切换 > 全程 off → 收口时也什么都不发(没打过就没有要收的)"
+     ],
+     "locations": [
+      {
+       "path": "apps/desktop/src/main/hook-control/__tests__/ackReactions.test.ts",
+       "line": 134,
+       "endLine": 139,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/hook-control/__tests__/ackReactions.test.ts#L134-L139"
+      },
+      {
+       "path": "apps/desktop/src/main/hook-control/__tests__/ackReactions.test.ts",
+       "line": 348,
+       "endLine": 353,
+       "url": "https://github.com/makecindy/cindy/blob/10b0faaef6fb9c1b35c8c6dff976730295c4514a/apps/desktop/src/main/hook-control/__tests__/ackReactions.test.ts#L348-L353"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "heygen-com/hyperframes",
+   "url": "https://github.com/heygen-com/hyperframes",
+   "description": "Write HTML. Render video. Built for agents.",
+   "language": "TypeScript",
+   "stars": 74051,
+   "starsToday": 934,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "8b1f88b3c06175f43fbdbe1af6e53933847cb195",
+   "scanMs": 16290,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 27935,
+    "unresolved": 2466,
+    "files": 2144
+   },
+   "comparablePercent": 91.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 280,
+     "tests": 2159
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 103,
+     "tests": 32
+    },
+    {
+     "reason": "helper-setup-effects",
+     "files": 29,
+     "tests": 227
+    },
+    {
+     "reason": "helper-effects-unproved",
+     "files": 2,
+     "tests": 44
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 4
+    }
+   ],
+   "findings": {
+    "total": 900,
+    "errors": 12,
+    "warnings": 888,
+    "byRule": {
+     "parameterization-candidate": 865,
+     "duplicate-test": 12,
+     "near-duplicate-test": 14,
+     "duplicate-test-name": 2,
+     "cross-file-duplicate": 7
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "auth/store > clearOAuth removes the whole file when no api_key remains",
+      "auth/store > clearOAuth still deletes the file when only a known (empty-after-clear) surface remains"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/src/auth/store.test.ts",
+       "line": 337,
+       "endLine": 341,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/auth/store.test.ts#L337-L341"
+      },
+      {
+       "path": "packages/cli/src/auth/store.test.ts",
+       "line": 407,
+       "endLine": 413,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/auth/store.test.ts#L407-L413"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "buildBrowserArgs > returns only the URL when no options are given",
+      "buildBrowserArgs --disable-gpu > omits --disable-gpu by default"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/src/utils/openBrowser.test.ts",
+       "line": 39,
+       "endLine": 41,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/utils/openBrowser.test.ts#L39-L41"
+      },
+      {
+       "path": "packages/cli/src/utils/openBrowser.test.ts",
+       "line": 200,
+       "endLine": 202,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/utils/openBrowser.test.ts#L200-L202"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "checkSkills foreign skills > never compares or refreshes a skill another publisher installed under one of our names",
+      "checkSkills foreign skills > never compares or refreshes a skill another publisher installed under one of our names"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/src/utils/skillsManifest.test.ts",
+       "line": 554,
+       "endLine": 563,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/utils/skillsManifest.test.ts#L554-L563"
+      },
+      {
+       "path": "packages/cli/src/utils/skillsManifest.test.ts",
+       "line": 565,
+       "endLine": 574,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/cli/src/utils/skillsManifest.test.ts#L565-L574"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "TransportClock > initial state > respects initial rate",
+      "TransportClock > rate > applies rate multiplier to elapsed time"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/runtime/clock.test.ts",
+       "line": 34,
+       "endLine": 39,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/core/src/runtime/clock.test.ts#L34-L39"
+      },
+      {
+       "path": "packages/core/src/runtime/clock.test.ts",
+       "line": 137,
+       "endLine": 142,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/core/src/runtime/clock.test.ts#L137-L142"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "syncRuntimeMedia > does not force audio forward while it's still buffering (gradual drift growth)",
+      "syncRuntimeMedia > does not force audio forward while it's still buffering (gradual drift growth)"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/runtime/media.test.ts",
+       "line": 1647,
+       "endLine": 1662,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/core/src/runtime/media.test.ts#L1647-L1662"
+      },
+      {
+       "path": "packages/core/src/runtime/media.test.ts",
+       "line": 1964,
+       "endLine": 1972,
+       "url": "https://github.com/heygen-com/hyperframes/blob/8b1f88b3c06175f43fbdbe1af6e53933847cb195/packages/core/src/runtime/media.test.ts#L1964-L1972"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "nightly-labs/openbot",
+   "url": "https://github.com/nightly-labs/openbot",
+   "description": "A local-first desktop workspace for persistent AI teammates. Run Codex, Claude, and Grok with dedicated workspaces, task queues, file sharing, browser control, and agent-to-agent collaboration.",
+   "language": "TypeScript",
+   "stars": 2578,
+   "starsToday": 777,
+   "lists": [
+    "all",
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1",
+   "scanMs": 2860,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 463,
+    "unresolved": 63,
+    "files": 62
+   },
+   "comparablePercent": 86.4,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 23,
+     "tests": 63
+    }
+   ],
+   "findings": {
+    "total": 6,
+    "errors": 0,
+    "warnings": 6,
+    "byRule": {
+     "parameterization-candidate": 6
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "redactText > redacts bearer tokens while keeping surrounding text",
+      "redactText > drops a payload too malformed to reparse",
+      "redactText > drops a balanced payload that does not parse, with everything under it",
+      "redactText > keeps a line whose braces hold no payload"
+     ],
+     "locations": [
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 20,
+       "endLine": 22,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L20-L22"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 131,
+       "endLine": 133,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L131-L133"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 135,
+       "endLine": 139,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L135-L139"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 142,
+       "endLine": 144,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L142-L144"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "6 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 6 tests form one cluster, reported as a single finding instead of 15 pairwise findings (spanni",
+     "titles": [
+      "OpenBotDatabase > refuses a v23 database whose history has lost migration 22",
+      "OpenBotDatabase > refuses a v24 database whose history has lost migration 23",
+      "OpenBotDatabase > refuses a v26 database whose history has lost migration 25",
+      "OpenBotDatabase > refuses a v27 database whose history has lost migration 26"
+     ],
+     "locations": [
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 3013,
+       "endLine": 3027,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L3013-L3027"
+      },
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 3178,
+       "endLine": 3192,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L3178-L3192"
+      },
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 3355,
+       "endLine": 3369,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L3355-L3369"
+      },
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 3371,
+       "endLine": 3385,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L3371-L3385"
+      }
+     ],
+     "more": 2
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "redactText > leaves an ordinary word that starts like a provider prefix alone",
+      "redactText > leaves prose that mentions a secret without assigning one intact",
+      "redactText > leaves scheme words used as ordinary prose alone",
+      "redactText > redacts a payload embedded in a longer line"
+     ],
+     "locations": [
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 120,
+       "endLine": 127,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L120-L127"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 174,
+       "endLine": 179,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L174-L179"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 186,
+       "endLine": 189,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L186-L189"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 218,
+       "endLine": 225,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L218-L225"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "registerSecretValue > does not register a value too short to be a secret",
+      "registerSecretValue > masks a longer credential that starts with a registered value"
+     ],
+     "locations": [
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 279,
+       "endLine": 283,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L279-L283"
+      },
+      {
+       "path": "packages/logging/src/redaction.test.ts",
+       "line": 305,
+       "endLine": 309,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/packages/logging/src/redaction.test.ts#L305-L309"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "OpenBotDatabase > deactivates existing provider sessions when reaction guidance changes",
+      "OpenBotDatabase > deactivates existing provider sessions when response attachment tools are added"
+     ],
+     "locations": [
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 2050,
+       "endLine": 2079,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L2050-L2079"
+      },
+      {
+       "path": "src/backend/openbot-database.test.ts",
+       "line": 2081,
+       "endLine": 2113,
+       "url": "https://github.com/nightly-labs/openbot/blob/75c2800d7ba0b6ebcaad41b9e26e5eed67197ff1/src/backend/openbot-database.test.ts#L2081-L2113"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "remotion-dev/remotion",
+   "url": "https://github.com/remotion-dev/remotion",
+   "description": "🎥      Make videos programmatically with React",
+   "language": "TypeScript",
+   "stars": 68317,
+   "starsToday": 387,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "4bf07553bd5493307ad1ae21988a23e593730bcd",
+   "scanMs": 1095,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 470,
+    "unresolved": 10,
+    "files": 1104
+   },
+   "comparablePercent": 97.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 5,
+     "tests": 10
+    }
+   ],
+   "findings": {
+    "total": 18,
+    "errors": 0,
+    "warnings": 18,
+    "byRule": {
+     "parameterization-candidate": 17,
+     "duplicate-test-name": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"cannot call getInputProps() while rendering client-side\"",
+     "titles": [
+      "cannot call getInputProps() while rendering client-side",
+      "cannot call getInputProps() while rendering client-side"
+     ],
+     "locations": [
+      {
+       "path": "packages/web-renderer/src/test/input-props.test.tsx",
+       "line": 41,
+       "endLine": 56,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/input-props.test.tsx#L41-L56"
+      },
+      {
+       "path": "packages/web-renderer/src/test/input-props.test.tsx",
+       "line": 58,
+       "endLine": 76,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/input-props.test.tsx#L58-L76"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "17 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 17 tests form one cluster, reported as a single finding instead of 136 pairwise findings (spa",
+     "titles": [
+      "should parse single pixel value",
+      "should parse zero value",
+      "should parse two values",
+      "should parse three values"
+     ],
+     "locations": [
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 5,
+       "endLine": 17,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/parse-border-radius.test.tsx#L5-L17"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 19,
+       "endLine": 31,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/parse-border-radius.test.tsx#L19-L31"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 33,
+       "endLine": 45,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/parse-border-radius.test.tsx#L33-L45"
+      },
+      {
+       "path": "packages/web-renderer/src/test/parse-border-radius.test.tsx",
+       "line": 47,
+       "endLine": 59,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/web-renderer/src/test/parse-border-radius.test.tsx#L47-L59"
+      }
+     ],
+     "more": 13
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "should not create too many iterators when the audio ends",
+      "should not create too many iterators when the audio ends (variant)"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/audio-iterator.test.ts",
+       "line": 260,
+       "endLine": 279,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/audio-iterator.test.ts#L260-L279"
+      },
+      {
+       "path": "packages/media/src/test/audio-iterator.test.ts",
+       "line": 281,
+       "endLine": 300,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/audio-iterator.test.ts#L281-L300"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "should inhibit the same behavior as <Html5Video> - no loop",
+      "should inhibit the same loop behavior as <Html5Video> - edge case"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/loop-trim-time-calculation.test.ts",
+       "line": 4,
+       "endLine": 18,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/loop-trim-time-calculation.test.ts#L4-L18"
+      },
+      {
+       "path": "packages/media/src/test/loop-trim-time-calculation.test.ts",
+       "line": 68,
+       "endLine": 82,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/loop-trim-time-calculation.test.ts#L68-L82"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "a small configured budget shrinks the source cache",
+      "a large configured budget is capped at the mediabunny default"
+     ],
+     "locations": [
+      {
+       "path": "packages/media/src/test/max-source-cache-size.test.ts",
+       "line": 18,
+       "endLine": 20,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/max-source-cache-size.test.ts#L18-L20"
+      },
+      {
+       "path": "packages/media/src/test/max-source-cache-size.test.ts",
+       "line": 22,
+       "endLine": 24,
+       "url": "https://github.com/remotion-dev/remotion/blob/4bf07553bd5493307ad1ae21988a23e593730bcd/packages/media/src/test/max-source-cache-size.test.ts#L22-L24"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "thedotmack/claude-mem",
+   "url": "https://github.com/thedotmack/claude-mem",
+   "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+   "language": "TypeScript",
+   "stars": 103770,
+   "starsToday": 338,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f4cae3d5bd355789558a35b1a5cded89d2363118",
+   "scanMs": 904,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 145,
+    "unresolved": 3,
+    "files": 1097
+   },
+   "comparablePercent": 97.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 2,
+     "tests": 3
+    }
+   ],
+   "findings": {
+    "total": 1,
+    "errors": 0,
+    "warnings": 1,
+    "byRule": {
+     "parameterization-candidate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "token verification (real path) > does not honor the removed legacy bypass on a production URL",
+      "token verification (real path) > authorizes when verify returns the matching canonical userId",
+      "token verification (real path) > accepts the snake_case user_id variant",
+      "token verification (real path) > 401s when verify rejects the token (401)"
+     ],
+     "locations": [
+      {
+       "path": "workers/sync-hub/test/auth.test.ts",
+       "line": 41,
+       "endLine": 46,
+       "url": "https://github.com/thedotmack/claude-mem/blob/f4cae3d5bd355789558a35b1a5cded89d2363118/workers/sync-hub/test/auth.test.ts#L41-L46"
+      },
+      {
+       "path": "workers/sync-hub/test/auth.test.ts",
+       "line": 48,
+       "endLine": 51,
+       "url": "https://github.com/thedotmack/claude-mem/blob/f4cae3d5bd355789558a35b1a5cded89d2363118/workers/sync-hub/test/auth.test.ts#L48-L51"
+      },
+      {
+       "path": "workers/sync-hub/test/auth.test.ts",
+       "line": 53,
+       "endLine": 56,
+       "url": "https://github.com/thedotmack/claude-mem/blob/f4cae3d5bd355789558a35b1a5cded89d2363118/workers/sync-hub/test/auth.test.ts#L53-L56"
+      },
+      {
+       "path": "workers/sync-hub/test/auth.test.ts",
+       "line": 79,
+       "endLine": 82,
+       "url": "https://github.com/thedotmack/claude-mem/blob/f4cae3d5bd355789558a35b1a5cded89d2363118/workers/sync-hub/test/auth.test.ts#L79-L82"
+      }
+     ],
+     "more": 3
+    }
+   ]
+  },
+  {
+   "name": "processing/p5.js",
+   "url": "https://github.com/processing/p5.js",
+   "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
+   "language": "JavaScript",
+   "stars": 24246,
+   "starsToday": 40,
+   "lists": [
+    "javascript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "13125c2423c52ad360f67688a55c28d17d11479e",
+   "scanMs": 1457,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2427,
+    "unresolved": 238,
+    "files": 92
+   },
+   "comparablePercent": 90.2,
+   "exclusions": [
+    {
+     "reason": "helper-setup-effects",
+     "files": 11,
+     "tests": 203
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 9,
+     "tests": 35
+    }
+   ],
+   "findings": {
+    "total": 121,
+    "errors": 7,
+    "warnings": 114,
+    "byRule": {
+     "duplicate-test": 7,
+     "parameterization-candidate": 94,
+     "duplicate-test-name": 18,
+     "near-duplicate-test": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Rendering bench test > normal",
+      "Another suite > normal v2"
+     ],
+     "locations": [
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 7,
+       "endLine": 35,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L7-L35"
+      },
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 105,
+       "endLine": 133,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L105-L133"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Rendering bench test > thousand",
+      "Rendering bench test > 10k"
+     ],
+     "locations": [
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 37,
+       "endLine": 68,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L37-L68"
+      },
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 70,
+       "endLine": 101,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L70-L101"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Rendering bench test > 10k",
+      "Another suite > 10k v2"
+     ],
+     "locations": [
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 70,
+       "endLine": 101,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L70-L101"
+      },
+      {
+       "path": "test/bench/rendering.bench.js",
+       "line": 168,
+       "endLine": 199,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/bench/rendering.bench.js#L168-L199"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Calculation > p5.prototype.max > should return larger right argument",
+      "Calculation > p5.prototype.max > should return larger value from array"
+     ],
+     "locations": [
+      {
+       "path": "test/unit/math/calculation.js",
+       "line": 287,
+       "endLine": 290,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/unit/math/calculation.js#L287-L290"
+      },
+      {
+       "path": "test/unit/math/calculation.js",
+       "line": 299,
+       "endLine": 302,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/unit/math/calculation.js#L299-L302"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Trigonometry > p5.prototype.angleMode > should set constant to DEGREES",
+      "Trigonometry > p5.prototype.angleMode > should return degrees"
+     ],
+     "locations": [
+      {
+       "path": "test/unit/math/trigonometry.js",
+       "line": 50,
+       "endLine": 53,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/unit/math/trigonometry.js#L50-L53"
+      },
+      {
+       "path": "test/unit/math/trigonometry.js",
+       "line": 65,
+       "endLine": 68,
+       "url": "https://github.com/processing/p5.js/blob/13125c2423c52ad360f67688a55c28d17d11479e/test/unit/math/trigonometry.js#L65-L68"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "algerkong/AlgerMusicPlayer",
+   "url": "https://github.com/algerkong/AlgerMusicPlayer",
+   "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+   "language": "Vue",
+   "stars": 17119,
+   "starsToday": 16,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f57204d4205769a4457f5975796a35e41785f1d8",
+   "scanMs": 400,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 72,
+    "unresolved": 0,
+    "files": 7
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  },
+  {
+   "name": "github/docs",
+   "url": "https://github.com/github/docs",
+   "description": "The open-source repo for docs.github.com",
+   "language": "TypeScript",
+   "stars": 21142,
+   "starsToday": 9,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "3869faed240317911b720c484aef61931b8474ec",
+   "scanMs": 2544,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 3955,
+    "unresolved": 469,
+    "files": 429
+   },
+   "comparablePercent": 88.1,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 84,
+     "tests": 441
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 10,
+     "tests": 28
+    }
+   ],
+   "findings": {
+    "total": 363,
+    "errors": 4,
+    "warnings": 359,
+    "byRule": {
+     "parameterization-candidate": 345,
+     "cross-file-duplicate": 3,
+     "duplicate-test": 4,
+     "duplicate-test-name": 3,
+     "near-duplicate-test": 8
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "REST transformer > API version is mentioned in auth note",
+      "REST transformer > Missing apiVersion defaults to latest"
+     ],
+     "locations": [
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 113,
+       "endLine": 118,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/article-api/tests/rest-transformer.ts#L113-L118"
+      },
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 206,
+       "endLine": 211,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/article-api/tests/rest-transformer.ts#L206-L211"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "REST transformer > Code examples include specified API version in auth note",
+      "REST transformer > Valid apiVersion passes validation"
+     ],
+     "locations": [
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 120,
+       "endLine": 125,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/article-api/tests/rest-transformer.ts#L120-L125"
+      },
+      {
+       "path": "src/article-api/tests/rest-transformer.ts",
+       "line": 199,
+       "endLine": 204,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/article-api/tests/rest-transformer.ts#L199-L204"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "buildMiniTocFromCollected > creates empty toc",
+      "buildMiniTocFromCollected > returns empty for no headings"
+     ],
+     "locations": [
+      {
+       "path": "src/frame/tests/mini-toc-items.ts",
+       "line": 47,
+       "endLine": 50,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/frame/tests/mini-toc-items.ts#L47-L50"
+      },
+      {
+       "path": "src/frame/tests/mini-toc-items.ts",
+       "line": 95,
+       "endLine": 98,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/frame/tests/mini-toc-items.ts#L95-L98"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "sidebar custom links > page without sidebarLink frontmatter does not show custom link",
+      "sidebar custom links > sidebar custom link does not appear on unrelated pages"
+     ],
+     "locations": [
+      {
+       "path": "src/landings/tests/sidebar-custom-links.ts",
+       "line": 14,
+       "endLine": 20,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/landings/tests/sidebar-custom-links.ts#L14-L20"
+      },
+      {
+       "path": "src/landings/tests/sidebar-custom-links.ts",
+       "line": 71,
+       "endLine": 77,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/landings/tests/sidebar-custom-links.ts#L71-L77"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "enterprise deprecation > redirects language-prefixed requests for deprecated enterprise content",
+      "redirects > <2.12 deprecated enterprise > english language code redirects to no language code"
+     ],
+     "locations": [
+      {
+       "path": "src/archives/tests/deprecated-enterprise-versions.ts",
+       "line": 10,
+       "endLine": 14,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/archives/tests/deprecated-enterprise-versions.ts#L10-L14"
+      },
+      {
+       "path": "src/redirects/tests/redirects.ts",
+       "line": 238,
+       "endLine": 242,
+       "url": "https://github.com/github/docs/blob/3869faed240317911b720c484aef61931b8474ec/src/redirects/tests/redirects.ts#L238-L242"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "frappe/crm",
+   "url": "https://github.com/frappe/crm",
+   "description": "Fully featured, open source CRM",
+   "language": "Vue",
+   "stars": 3874,
+   "starsToday": 7,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "develop",
+   "headSha": "be370a1916f03dfee1a4a811b1004bc0f712860b",
+   "scanMs": 419,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 131,
+    "unresolved": 0,
+    "files": 50
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 1,
+    "errors": 0,
+    "warnings": 1,
+    "byRule": {
+     "parameterization-candidate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "supportsTreeFilter > offers the hierarchy operator for a Link to a tree doctype",
+      "supportsTreeFilter > leaves a Link to a flat doctype alone"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/supportsTreeFilter.test.ts",
+       "line": 9,
+       "endLine": 16,
+       "url": "https://github.com/frappe/crm/blob/be370a1916f03dfee1a4a811b1004bc0f712860b/frontend/tests/unit/supportsTreeFilter.test.ts#L9-L16"
+      },
+      {
+       "path": "frontend/tests/unit/supportsTreeFilter.test.ts",
+       "line": 18,
+       "endLine": 21,
+       "url": "https://github.com/frappe/crm/blob/be370a1916f03dfee1a4a811b1004bc0f712860b/frontend/tests/unit/supportsTreeFilter.test.ts#L18-L21"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "unovue/reka-ui",
+   "url": "https://github.com/unovue/reka-ui",
+   "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
+   "language": "Vue",
+   "stars": 6911,
+   "starsToday": 3,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "v2",
+   "headSha": "27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26",
+   "scanMs": 874,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2163,
+    "unresolved": 87,
+    "files": 121
+   },
+   "comparablePercent": 96,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 20,
+     "tests": 77
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 1,
+     "tests": 10
+    }
+   ],
+   "findings": {
+    "total": 174,
+    "errors": 2,
+    "warnings": 172,
+    "byRule": {
+     "parameterization-candidate": 169,
+     "duplicate-test": 2,
+     "near-duplicate-test": 3
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "given default ColorField (hex mode) > should update value on input",
+      "given default ColorField (hex mode) > should accept valid hex colors"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/ColorField/ColorField.test.ts",
+       "line": 32,
+       "endLine": 38,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/ColorField/ColorField.test.ts#L32-L38"
+      },
+      {
+       "path": "packages/core/src/ColorField/ColorField.test.ts",
+       "line": 40,
+       "endLine": 46,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/ColorField/ColorField.test.ts#L40-L46"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "given radio in a form > after clicking submit button > should trigger submit once",
+      "given radio in a form > after uncheck and click submit button again > should trigger submit once"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/RadioGroup/RadioGroup.test.ts",
+       "line": 137,
+       "endLine": 140,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/RadioGroup/RadioGroup.test.ts#L137-L140"
+      },
+      {
+       "path": "packages/core/src/RadioGroup/RadioGroup.test.ts",
+       "line": 149,
+       "endLine": 152,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/RadioGroup/RadioGroup.test.ts#L149-L152"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events with at least one different ordering under an equivalent context; if the reordered statements are independent this may be redundant coverage, but equivalence is not proven, so the likely remedy is to",
+     "titles": [
+      "given FocusGuards > adds exactly 2 guard elements to document.body on mount",
+      "given FocusGuards > removes guard elements from document.body on unmount"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/FocusGuards/FocusGuards.test.ts",
+       "line": 22,
+       "endLine": 28,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/FocusGuards/FocusGuards.test.ts#L22-L28"
+      },
+      {
+       "path": "packages/core/src/FocusGuards/FocusGuards.test.ts",
+       "line": 30,
+       "endLine": 35,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/FocusGuards/FocusGuards.test.ts#L30-L35"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "transformOrigin direction-aware logic > left/right placements use Y-axis alignment, unaffected by dir > right-start: y origin is 0% for both RTL and LTR",
+      "transformOrigin direction-aware logic > left/right placements use Y-axis alignment, unaffected by dir > left-start: y origin is 0% for both RTL and LTR"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 79,
+       "endLine": 82,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/Popper/Popper.test.ts#L79-L82"
+      },
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 87,
+       "endLine": 90,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/Popper/Popper.test.ts#L87-L90"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "transformOrigin direction-aware logic > left/right placements use Y-axis alignment, unaffected by dir > right-end: y origin is 100% for both RTL and LTR",
+      "transformOrigin direction-aware logic > left/right placements use Y-axis alignment, unaffected by dir > left-end: y origin is 100% for both RTL and LTR"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 83,
+       "endLine": 86,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/Popper/Popper.test.ts#L83-L86"
+      },
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 91,
+       "endLine": 94,
+       "url": "https://github.com/unovue/reka-ui/blob/27e13d655e1ef075ebfb5d6d3d6ee2e10b29bc26/packages/core/src/Popper/Popper.test.ts#L91-L94"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "VueTorrent/VueTorrent",
+   "url": "https://github.com/VueTorrent/VueTorrent",
+   "description": "The sleekest looking WEBUI for qBittorrent made with Vuejs!",
+   "language": "Vue",
+   "stars": 7011,
+   "starsToday": 2,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "master",
+   "headSha": "0db2edd024bf01c50cca263d3c2d6c38be80b859",
+   "scanMs": 381,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 100,
+    "unresolved": 15,
+    "files": 30
+   },
+   "comparablePercent": 85,
+   "exclusions": [
+    {
+     "reason": "globals-undetermined",
+     "files": 30,
+     "tests": 15
+    }
+   ],
+   "findings": {
+    "total": 2,
+    "errors": 0,
+    "warnings": 2,
+    "byRule": {
+     "parameterization-candidate": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "composables/SearchQuery > should return no items when search query does not match any item",
+      "composables/SearchQuery > should return no items when all tokens in the search query are filtered out"
+     ],
+     "locations": [
+      {
+       "path": "src/composables/SearchQuery.spec.ts",
+       "line": 15,
+       "endLine": 18,
+       "url": "https://github.com/VueTorrent/VueTorrent/blob/0db2edd024bf01c50cca263d3c2d6c38be80b859/src/composables/SearchQuery.spec.ts#L15-L18"
+      },
+      {
+       "path": "src/composables/SearchQuery.spec.ts",
+       "line": 50,
+       "endLine": 53,
+       "url": "https://github.com/VueTorrent/VueTorrent/blob/0db2edd024bf01c50cca263d3c2d6c38be80b859/src/composables/SearchQuery.spec.ts#L50-L53"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "composables/SearchQuery > should return items that match search query partially",
+      "composables/SearchQuery > should return items that match search query with multiple words"
+     ],
+     "locations": [
+      {
+       "path": "src/composables/SearchQuery.spec.ts",
+       "line": 20,
+       "endLine": 23,
+       "url": "https://github.com/VueTorrent/VueTorrent/blob/0db2edd024bf01c50cca263d3c2d6c38be80b859/src/composables/SearchQuery.spec.ts#L20-L23"
+      },
+      {
+       "path": "src/composables/SearchQuery.spec.ts",
+       "line": 25,
+       "endLine": 28,
+       "url": "https://github.com/VueTorrent/VueTorrent/blob/0db2edd024bf01c50cca263d3c2d6c38be80b859/src/composables/SearchQuery.spec.ts#L25-L28"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "name": "gitroomhq/postiz-app",
+   "reason": "analysis failed"
+  },
+  {
+   "name": "pingdotgg/t3code",
+   "reason": "analysis failed"
+  }
+ ]
+}
