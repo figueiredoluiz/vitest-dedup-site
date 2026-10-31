@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-10-30T04:12:42.859Z",
+ "updatedAt": "2026-10-31T03:54:36.041Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -132,6 +132,17 @@
    "findings": 3224,
    "errors": 41,
    "skipped": 1
+  },
+  {
+   "date": "2026-10-31",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.9.0",
+   "scanned": 56,
+   "repos": 15,
+   "tests": 200029,
+   "findings": 6691,
+   "errors": 150,
+   "skipped": 2
   }
  ],
  "repos": {
@@ -678,9 +689,20 @@
      "comparablePercent": 98.4,
      "findings": 71,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 12,
+     "analyzerVersion": "0.9.0",
+     "headSha": "5b50eda0709df90118cfec78590dae5dbaa5a5d6",
+     "stars": 26877,
+     "tests": 629,
+     "comparablePercent": 98.4,
+     "findings": 71,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -895,9 +917,20 @@
      "comparablePercent": 97.9,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 2,
+     "analyzerVersion": "0.9.0",
+     "headSha": "70aa40042cfb8157a0d84954b9c0d2b30b50af80",
+     "stars": 106475,
+     "tests": 145,
+     "comparablePercent": 97.9,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "every-app/open-seo": {
    "name": "every-app/open-seo",
@@ -1017,9 +1050,20 @@
      "comparablePercent": 86.7,
      "findings": 6,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 5,
+     "analyzerVersion": "0.9.0",
+     "headSha": "3b384b21bba953e76c42ccf3a5487db5a0caf902",
+     "stars": 4251,
+     "tests": 475,
+     "comparablePercent": 86.7,
+     "findings": 6,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "moeru-ai/airi": {
    "name": "moeru-ai/airi",
@@ -1245,9 +1289,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 13,
+     "analyzerVersion": "0.9.0",
+     "headSha": "55c61880e44c0bdcaafc19210f658d8c9c66cbdd",
+     "stars": 3890,
+     "tests": 139,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -1547,9 +1602,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 14,
+     "analyzerVersion": "0.9.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2070,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-27"
+   "latest": "2026-10-31"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -1614,9 +1680,20 @@
      "comparablePercent": 68.2,
      "findings": 4,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 1,
+     "analyzerVersion": "0.9.0",
+     "headSha": "1ea7df155447f4caf0e3abc86b3ff5395479cd4a",
+     "stars": 51887,
+     "tests": 929,
+     "comparablePercent": 68.2,
+     "findings": 4,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "heygen-com/hyperframes": {
    "name": "heygen-com/hyperframes",
@@ -1710,9 +1787,20 @@
      "comparablePercent": 11.4,
      "findings": 72,
      "errors": 1
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 6,
+     "analyzerVersion": "0.9.0",
+     "headSha": "b5bab5af377ae4fd37e8b97b78b4770c49ac0125",
+     "stars": 209158,
+     "tests": 17636,
+     "comparablePercent": 12.1,
+     "findings": 74,
+     "errors": 1
     }
    ],
-   "latest": "2026-10-29"
+   "latest": "2026-10-31"
   },
   "macro-inc/macro": {
    "name": "macro-inc/macro",
@@ -1727,9 +1815,20 @@
      "comparablePercent": 94.7,
      "findings": 370,
      "errors": 4
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 9,
+     "analyzerVersion": "0.9.0",
+     "headSha": "28ef4f26e77872cf622b5cca595ec76ae4b70923",
+     "stars": 5905,
+     "tests": 19609,
+     "comparablePercent": 94.5,
+     "findings": 370,
+     "errors": 4
     }
    ],
-   "latest": "2026-10-29"
+   "latest": "2026-10-31"
   },
   "decolua/9router": {
    "name": "decolua/9router",
@@ -1795,9 +1894,20 @@
      "comparablePercent": 95.1,
      "findings": 176,
      "errors": 4
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 4,
+     "analyzerVersion": "0.9.0",
+     "headSha": "7de00e425848d5f1a2a845cb4784851b87d8cad2",
+     "stars": 8795,
+     "tests": 24104,
+     "comparablePercent": 95.1,
+     "findings": 178,
+     "errors": 4
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "lfnovo/open-notebook": {
    "name": "lfnovo/open-notebook",
@@ -1812,9 +1922,20 @@
      "comparablePercent": 98.7,
      "findings": 16,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 8,
+     "analyzerVersion": "0.9.0",
+     "headSha": "a0f6f3081ae06328f0a451b3a3ef2959ca25721d",
+     "stars": 41017,
+     "tests": 157,
+     "comparablePercent": 98.7,
+     "findings": 16,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
   },
   "chthollyphile/folia-major": {
    "name": "chthollyphile/folia-major",
@@ -1931,9 +2052,88 @@
      "comparablePercent": 9.1,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-10-31",
+     "rank": 15,
+     "analyzerVersion": "0.9.0",
+     "headSha": "36965f13dc40597deeb16192a8568308cbeb70d9",
+     "stars": 14447,
+     "tests": 11,
+     "comparablePercent": 9.1,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-30"
+   "latest": "2026-10-31"
+  },
+  "Orkas-AI/Orkas": {
+   "name": "Orkas-AI/Orkas",
+   "appearances": [
+    {
+     "date": "2026-10-31",
+     "rank": 3,
+     "analyzerVersion": "0.9.0",
+     "headSha": "53894cf1b849e39dcdd975c7ef82ee341d7e0ad2",
+     "stars": 5202,
+     "tests": 16901,
+     "comparablePercent": 84.7,
+     "findings": 264,
+     "errors": 7
+    }
+   ],
+   "latest": "2026-10-31"
+  },
+  "AdguardTeam/AdGuardHome": {
+   "name": "AdguardTeam/AdGuardHome",
+   "appearances": [
+    {
+     "date": "2026-10-31",
+     "rank": 7,
+     "analyzerVersion": "0.9.0",
+     "headSha": "5c4d531d8d13f189dc7609a32d5073c63587746d",
+     "stars": 37983,
+     "tests": 1340,
+     "comparablePercent": 99.3,
+     "findings": 175,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-10-31"
+  },
+  "QwenLM/qwen-code": {
+   "name": "QwenLM/qwen-code",
+   "appearances": [
+    {
+     "date": "2026-10-31",
+     "rank": 10,
+     "analyzerVersion": "0.9.0",
+     "headSha": "32245f1d5b5b8f2251dbec856e2b6cdf5b5f0774",
+     "stars": 28841,
+     "tests": 94621,
+     "comparablePercent": 90.5,
+     "findings": 2973,
+     "errors": 39
+    }
+   ],
+   "latest": "2026-10-31"
+  },
+  "phaserjs/phaser": {
+   "name": "phaserjs/phaser",
+   "appearances": [
+    {
+     "date": "2026-10-31",
+     "rank": 11,
+     "analyzerVersion": "0.9.0",
+     "headSha": "02d8931b626d9764c133cbb3fbf99966c03c757c",
+     "stars": 40608,
+     "tests": 23328,
+     "comparablePercent": 100,
+     "findings": 2558,
+     "errors": 94
+    }
+   ],
+   "latest": "2026-10-31"
   }
  }
 }
