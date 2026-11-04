@@ -1,0 +1,1396 @@
+{
+ "date": "2026-11-04",
+ "generatedAt": "2026-11-04T04:41:13.971Z",
+ "source": "github-trending-daily",
+ "analyzerVersion": "0.9.0",
+ "scanned": 47,
+ "repos": [
+  {
+   "name": "thedotmack/claude-mem",
+   "url": "https://github.com/thedotmack/claude-mem",
+   "description": "Persistent Context Across Sessions for Every Agent –  Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
+   "language": "TypeScript",
+   "stars": 112110,
+   "starsToday": 1139,
+   "lists": [
+    "all",
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "531fbfcfc0de8f1bf2597aa71e1c61422c493361",
+   "scanMs": 1639,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 151,
+    "unresolved": 3,
+    "files": 1180
+   },
+   "comparablePercent": 98,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 2,
+     "tests": 3
+    }
+   ],
+   "findings": {
+    "total": 1,
+    "errors": 0,
+    "warnings": 1,
+    "byRule": {
+     "parameterization-candidate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "token verification (real path) > does not honor the removed legacy bypass on a production URL",
+      "token verification (real path) > authorizes when verify returns the matching canonical userId",
+      "token verification (real path) > accepts the snake_case user_id variant",
+      "token verification (real path) > 401s when verify rejects the token (401)"
+     ],
+     "locations": [
+      {
+       "path": "services/sync-hub/test/auth.test.ts",
+       "line": 41,
+       "endLine": 46,
+       "url": "https://github.com/thedotmack/claude-mem/blob/531fbfcfc0de8f1bf2597aa71e1c61422c493361/services/sync-hub/test/auth.test.ts#L41-L46"
+      },
+      {
+       "path": "services/sync-hub/test/auth.test.ts",
+       "line": 48,
+       "endLine": 51,
+       "url": "https://github.com/thedotmack/claude-mem/blob/531fbfcfc0de8f1bf2597aa71e1c61422c493361/services/sync-hub/test/auth.test.ts#L48-L51"
+      },
+      {
+       "path": "services/sync-hub/test/auth.test.ts",
+       "line": 53,
+       "endLine": 56,
+       "url": "https://github.com/thedotmack/claude-mem/blob/531fbfcfc0de8f1bf2597aa71e1c61422c493361/services/sync-hub/test/auth.test.ts#L53-L56"
+      },
+      {
+       "path": "services/sync-hub/test/auth.test.ts",
+       "line": 79,
+       "endLine": 82,
+       "url": "https://github.com/thedotmack/claude-mem/blob/531fbfcfc0de8f1bf2597aa71e1c61422c493361/services/sync-hub/test/auth.test.ts#L79-L82"
+      }
+     ],
+     "more": 3
+    }
+   ]
+  },
+  {
+   "name": "tashfeenahmed/freellmapi",
+   "url": "https://github.com/tashfeenahmed/freellmapi",
+   "description": "7.4 billion tokens per month. 34 free LLM providers. 635 free model endpoints. All behind one /v1 endpoint, plus any custom OpenAI-compatible endpoint. Smart routing, automatic failover, encrypted keys. Personal experimentation only.",
+   "language": "TypeScript",
+   "stars": 47149,
+   "starsToday": 688,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "d9c4e11cbae8b60454899e4de7f221d7e943a633",
+   "scanMs": 2578,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 5220,
+    "unresolved": 129,
+    "files": 464
+   },
+   "comparablePercent": 97.5,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 38,
+     "tests": 127
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 1,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 178,
+    "errors": 2,
+    "warnings": 176,
+    "byRule": {
+     "parameterization-candidate": 169,
+     "duplicate-test-name": 2,
+     "near-duplicate-test": 5,
+     "duplicate-test": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "LLMTR provider > rejects invalid credentials (403)",
+      "LLMTR provider > #1390: a plain 403 with an ordinary auth message still reports invalid"
+     ],
+     "locations": [
+      {
+       "path": "server/src/__tests__/providers/llmtr.test.ts",
+       "line": 74,
+       "endLine": 77,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/llmtr.test.ts#L74-L77"
+      },
+      {
+       "path": "server/src/__tests__/providers/llmtr.test.ts",
+       "line": 95,
+       "endLine": 98,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/llmtr.test.ts#L95-L98"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "isRetryableError > provider tool-call generation 400s fail over (#168) > but a bare validation \"400 Bad Request\" (our own schema) is still NOT retryable",
+      "isRetryableError > 403 model not on this key's tier fails over instead of 502 (issue #256) > still treats a bare 400 validation error as non-retryable"
+     ],
+     "locations": [
+      {
+       "path": "server/src/__tests__/routes/proxy-retry.test.ts",
+       "line": 155,
+       "endLine": 157,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/routes/proxy-retry.test.ts#L155-L157"
+      },
+      {
+       "path": "server/src/__tests__/routes/proxy-retry.test.ts",
+       "line": 192,
+       "endLine": 194,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/routes/proxy-retry.test.ts#L192-L194"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "unifiedMaxTokensCap > is disabled for 'off', '0' and an empty value",
+      "unifiedMaxTokensCap > treats garbage as disabled so a bad value can never 400 requests"
+     ],
+     "locations": [
+      {
+       "path": "server/src/__tests__/lib/unified-max-tokens.test.ts",
+       "line": 36,
+       "endLine": 41,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/lib/unified-max-tokens.test.ts#L36-L41"
+      },
+      {
+       "path": "server/src/__tests__/lib/unified-max-tokens.test.ts",
+       "line": 57,
+       "endLine": 62,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/lib/unified-max-tokens.test.ts#L57-L62"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "readSseFrames data: prefix (issue #1087) > parses data: {json} with a space after the colon",
+      "readSseFrames data: prefix (issue #1087) > parses data:{json} with no space after the colon"
+     ],
+     "locations": [
+      {
+       "path": "server/src/__tests__/providers/read-sse-frames.test.ts",
+       "line": 38,
+       "endLine": 46,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/read-sse-frames.test.ts#L38-L46"
+      },
+      {
+       "path": "server/src/__tests__/providers/read-sse-frames.test.ts",
+       "line": 48,
+       "endLine": 56,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/read-sse-frames.test.ts#L48-L56"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "readSseFrames data: prefix (issue #1087) > parses data:{json} with no space after the colon",
+      "readSseFrames data: prefix (issue #1087) > ignores SSE comment lines like : keepalive"
+     ],
+     "locations": [
+      {
+       "path": "server/src/__tests__/providers/read-sse-frames.test.ts",
+       "line": 48,
+       "endLine": 56,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/read-sse-frames.test.ts#L48-L56"
+      },
+      {
+       "path": "server/src/__tests__/providers/read-sse-frames.test.ts",
+       "line": 82,
+       "endLine": 90,
+       "url": "https://github.com/tashfeenahmed/freellmapi/blob/d9c4e11cbae8b60454899e4de7f221d7e943a633/server/src/__tests__/providers/read-sse-frames.test.ts#L82-L90"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "floci-io/floci",
+   "url": "https://github.com/floci-io/floci",
+   "description": "Light, fluffy, and always free - The AWS Local Emulator alternative",
+   "language": "Java",
+   "stars": 28958,
+   "starsToday": 482,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "d098a4729a39a521643022cd46ab33226f64f414",
+   "scanMs": 896,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 505,
+    "unresolved": 0,
+    "files": 37
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 6,
+    "errors": 0,
+    "warnings": 6,
+    "byRule": {
+     "parameterization-candidate": 6
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "API Gateway v1 — resource/method resolution precedence > should serve GET /users/me from the parameterised sibling",
+      "API Gateway v1 — resource/method resolution precedence > should keep the literal resource for the method it declares",
+      "API Gateway v1 — resource/method resolution precedence > should serve an ordinary id from the parameterised resource",
+      "API Gateway v1 — resource/method resolution precedence > should keep the literal resource for GET /things/real"
+     ],
+     "locations": [
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigateway.test.ts",
+       "line": 917,
+       "endLine": 919,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigateway.test.ts#L917-L919"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigateway.test.ts",
+       "line": 921,
+       "endLine": 923,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigateway.test.ts#L921-L923"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigateway.test.ts",
+       "line": 925,
+       "endLine": 927,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigateway.test.ts#L925-L927"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigateway.test.ts",
+       "line": 929,
+       "endLine": 931,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigateway.test.ts#L929-L931"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "S3 CORS Enforcement > should reject preflight without CORS config",
+      "S3 CORS Enforcement > should reject non-matching origin",
+      "S3 CORS Enforcement > should reject non-matching method",
+      "S3 CORS Enforcement > should reject https with http wildcard pattern"
+     ],
+     "locations": [
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/s3-cors.test.ts",
+       "line": 63,
+       "endLine": 69,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/s3-cors.test.ts#L63-L69"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/s3-cors.test.ts",
+       "line": 145,
+       "endLine": 151,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/s3-cors.test.ts#L145-L151"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/s3-cors.test.ts",
+       "line": 153,
+       "endLine": 159,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/s3-cors.test.ts#L153-L159"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/s3-cors.test.ts",
+       "line": 210,
+       "endLine": 216,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/s3-cors.test.ts#L210-L216"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "WebSocket Data-Plane > Route selection > should route \"ping\" action to ping handler",
+      "WebSocket Data-Plane > Route selection > should route unknown action to $default handler"
+     ],
+     "locations": [
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-dataplane.test.ts",
+       "line": 431,
+       "endLine": 440,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-dataplane.test.ts#L431-L440"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-dataplane.test.ts",
+       "line": 453,
+       "endLine": 462,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-dataplane.test.ts#L453-L462"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "WebSocket over TLS (WSS) > Route selection over WSS > should route \"ping\" action over WSS",
+      "WebSocket over TLS (WSS) > Route selection over WSS > should route unknown action to $default over WSS"
+     ],
+     "locations": [
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-tls.test.ts",
+       "line": 459,
+       "endLine": 468,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-tls.test.ts#L459-L468"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-tls.test.ts",
+       "line": 481,
+       "endLine": 490,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/apigatewayv2-websocket-tls.test.ts#L481-L490"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "DynamoDB — Phase 1: ListTables > rejects Limit=0 with ValidationException",
+      "DynamoDB — Phase 1: ListTables > rejects Limit=101 with ValidationException"
+     ],
+     "locations": [
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/dynamodb-conformance.test.ts",
+       "line": 108,
+       "endLine": 110,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/dynamodb-conformance.test.ts#L108-L110"
+      },
+      {
+       "path": "compatibility-tests/sdk-test-node/tests/dynamodb-conformance.test.ts",
+       "line": 112,
+       "endLine": 114,
+       "url": "https://github.com/floci-io/floci/blob/d098a4729a39a521643022cd46ab33226f64f414/compatibility-tests/sdk-test-node/tests/dynamodb-conformance.test.ts#L112-L114"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "liguobao/ds-harness-remote",
+   "url": "https://github.com/liguobao/ds-harness-remote",
+   "description": "基于 DeepSeek Harness 插件机制构建的远程访问方案，通过低延迟、端到端加密的 P2P 网络，支持使用 PC、移动端 和 Web 随时访问本地设备上的DSH 、CodeX、Cursor、Claude Code等工作区。 (Built on DeepSeek Harness plugins, this low-latency, end-to-end encrypted P2P solution lets PC, mobile, and web clients access local DSH, Codex, Cursor, and Claude Code workspaces.)",
+   "language": "TypeScript",
+   "stars": 1567,
+   "starsToday": 162,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "a0dca1af66cff788e467ee98e92a39afdafbb058",
+   "scanMs": 1360,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 1148,
+    "unresolved": 9,
+    "files": 149
+   },
+   "comparablePercent": 99.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 7,
+     "tests": 9
+    }
+   ],
+   "findings": {
+    "total": 18,
+    "errors": 0,
+    "warnings": 18,
+    "byRule": {
+     "parameterization-candidate": 18
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "chat-files utilities > formatUploadedFilesReferencePrompt > formats single file as @path with leading dot slash stripped",
+      "chat-files utilities > formatUploadedFilesReferencePrompt > quotes file paths that contain spaces"
+     ],
+     "locations": [
+      {
+       "path": "apps/android/tests/chat-files.test.ts",
+       "line": 149,
+       "endLine": 152,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-files.test.ts#L149-L152"
+      },
+      {
+       "path": "apps/android/tests/chat-files.test.ts",
+       "line": 154,
+       "endLine": 157,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-files.test.ts#L154-L157"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "chat-files utilities > formatUploadedFilesReferencePrompt > quotes file paths that contain spaces",
+      "chat-files utilities > formatUploadedFilesReferencePrompt > escapes and quotes file paths that contain double quotes"
+     ],
+     "locations": [
+      {
+       "path": "apps/android/tests/chat-files.test.ts",
+       "line": 154,
+       "endLine": 157,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-files.test.ts#L154-L157"
+      },
+      {
+       "path": "apps/android/tests/chat-files.test.ts",
+       "line": 159,
+       "endLine": 162,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-files.test.ts#L159-L162"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Quote snippet formatting (Figure 3 alignment) > preserves text within maxLength without ellipsis",
+      "Quote snippet formatting (Figure 3 alignment) > normalizes internal newlines and tabs to single spaces"
+     ],
+     "locations": [
+      {
+       "path": "apps/android/tests/chat-quote-and-composer.test.ts",
+       "line": 11,
+       "endLine": 14,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-quote-and-composer.test.ts#L11-L14"
+      },
+      {
+       "path": "apps/android/tests/chat-quote-and-composer.test.ts",
+       "line": 16,
+       "endLine": 19,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-quote-and-composer.test.ts#L16-L19"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Blank session detection (Sidebar New Session deduplication) > recognizes explicit server blank sessions",
+      "Blank session detection (Sidebar New Session deduplication) > rejects un-cached history sessions with blank=false"
+     ],
+     "locations": [
+      {
+       "path": "apps/android/tests/chat-quote-and-composer.test.ts",
+       "line": 58,
+       "endLine": 60,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-quote-and-composer.test.ts#L58-L60"
+      },
+      {
+       "path": "apps/android/tests/chat-quote-and-composer.test.ts",
+       "line": 62,
+       "endLine": 64,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-quote-and-composer.test.ts#L62-L64"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "会话链接排版与交互系统 (Link & Citation System) > 1. 严格协议白名单校验与安全清洗 (sanitizeAndValidateHref) > 拒绝畸形协议相对 URL (如 ///, //\\)",
+      "会话链接排版与交互系统 (Link & Citation System) > 1. 严格协议白名单校验与安全清洗 (sanitizeAndValidateHref) > 拒绝非法/畸形 HTTP URL (无 host 或缺少斜杠)"
+     ],
+     "locations": [
+      {
+       "path": "apps/android/tests/chat-session-links.test.ts",
+       "line": 76,
+       "endLine": 79,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-session-links.test.ts#L76-L79"
+      },
+      {
+       "path": "apps/android/tests/chat-session-links.test.ts",
+       "line": 97,
+       "endLine": 100,
+       "url": "https://github.com/liguobao/ds-harness-remote/blob/a0dca1af66cff788e467ee98e92a39afdafbb058/apps/android/tests/chat-session-links.test.ts#L97-L100"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "Fission-AI/OpenSpec",
+   "url": "https://github.com/Fission-AI/OpenSpec",
+   "description": "Spec-driven development (SDD) for AI coding assistants.",
+   "language": "TypeScript",
+   "stars": 73847,
+   "starsToday": 117,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "2bd5bc3be964404657439f538857fcdf550f7398",
+   "scanMs": 2655,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 4721,
+    "unresolved": 268,
+    "files": 234
+   },
+   "comparablePercent": 94.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 45,
+     "tests": 268
+    }
+   ],
+   "findings": {
+    "total": 291,
+    "errors": 4,
+    "warnings": 287,
+    "byRule": {
+     "parameterization-candidate": 283,
+     "duplicate-test": 4,
+     "near-duplicate-test": 4
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "command-generation/registry > get > should return the Devin adapter for \"devin\", the id Windsurf became",
+      "command-generation/registry > get > should return Devin adapter for \"devin\""
+     ],
+     "locations": [
+      {
+       "path": "test/core/command-generation/registry.test.ts",
+       "line": 19,
+       "endLine": 23,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/command-generation/registry.test.ts#L19-L23"
+      },
+      {
+       "path": "test/core/command-generation/registry.test.ts",
+       "line": 25,
+       "endLine": 29,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/command-generation/registry.test.ts#L25-L29"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "FishInstaller > uninstall > should return failure when completion script is not installed",
+      "FishInstaller > uninstall > should handle uninstall when parent directory does not exist"
+     ],
+     "locations": [
+      {
+       "path": "test/core/completions/installers/fish-installer.test.ts",
+       "line": 270,
+       "endLine": 275,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/completions/installers/fish-installer.test.ts#L270-L275"
+      },
+      {
+       "path": "test/core/completions/installers/fish-installer.test.ts",
+       "line": 326,
+       "endLine": 332,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/completions/installers/fish-installer.test.ts#L326-L332"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "PowerShellInstaller > uninstall > should return failure when completion script is not installed",
+      "PowerShellInstaller > uninstall > should handle uninstall when parent directory does not exist"
+     ],
+     "locations": [
+      {
+       "path": "test/core/completions/installers/powershell-installer.test.ts",
+       "line": 780,
+       "endLine": 785,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/completions/installers/powershell-installer.test.ts#L780-L785"
+      },
+      {
+       "path": "test/core/completions/installers/powershell-installer.test.ts",
+       "line": 863,
+       "endLine": 868,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/completions/installers/powershell-installer.test.ts#L863-L868"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "detectLineEnding > reports CRLF for a CRLF file",
+      "detectLineEnding > does not count a CRLF as an LF"
+     ],
+     "locations": [
+      {
+       "path": "test/utils/line-endings.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/utils/line-endings.test.ts#L13-L15"
+      },
+      {
+       "path": "test/utils/line-endings.test.ts",
+       "line": 22,
+       "endLine": 25,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/utils/line-endings.test.ts#L22-L25"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events with at least one different ordering under an equivalent context; if the reordered statements are independent this may be redundant coverage, but equivalence is not proven, so the likely remedy is to",
+     "titles": [
+      "profile sync drift detection > detects drift for skills-only delivery when commands still exist",
+      "profile sync drift detection > detects drift for commands-only delivery when skills still exist"
+     ],
+     "locations": [
+      {
+       "path": "test/core/profile-sync-drift.test.ts",
+       "line": 68,
+       "endLine": 74,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/profile-sync-drift.test.ts#L68-L74"
+      },
+      {
+       "path": "test/core/profile-sync-drift.test.ts",
+       "line": 76,
+       "endLine": 82,
+       "url": "https://github.com/Fission-AI/OpenSpec/blob/2bd5bc3be964404657439f538857fcdf550f7398/test/core/profile-sync-drift.test.ts#L76-L82"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "CNCKitchen/ScanRuler",
+   "url": "https://github.com/CNCKitchen/ScanRuler",
+   "description": "",
+   "language": "TypeScript",
+   "stars": 834,
+   "starsToday": 115,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "5c1f2f96b7ac336d5c2bad64148ae19790b0443c",
+   "scanMs": 10543,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 3129,
+    "unresolved": 21,
+    "files": 386
+   },
+   "comparablePercent": 99.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 13,
+     "tests": 21
+    }
+   ],
+   "findings": {
+    "total": 8,
+    "errors": 0,
+    "warnings": 8,
+    "byRule": {
+     "parameterization-candidate": 8
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "a join > standing apart from every body is a body of its own",
+      "a new body > stays a body of its own, whatever it overlaps"
+     ],
+     "locations": [
+      {
+       "path": "plugins/reverse/tests/reAutoBodies.test.ts",
+       "line": 59,
+       "endLine": 67,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/plugins/reverse/tests/reAutoBodies.test.ts#L59-L67"
+      },
+      {
+       "path": "plugins/reverse/tests/reAutoBodies.test.ts",
+       "line": 204,
+       "endLine": 212,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/plugins/reverse/tests/reAutoBodies.test.ts#L204-L212"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "openFromAddress > ?open= resolves a relative address against the page",
+      "openFromAddress > ?open= wins over a short path"
+     ],
+     "locations": [
+      {
+       "path": "tests/addressOpen.test.ts",
+       "line": 26,
+       "endLine": 28,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/addressOpen.test.ts#L26-L28"
+      },
+      {
+       "path": "tests/addressOpen.test.ts",
+       "line": 71,
+       "endLine": 73,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/addressOpen.test.ts#L71-L73"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "a fit told which side > takes the cup’s inside from a seed on its rim",
+      "a fit told which side > and its outside when asked for that"
+     ],
+     "locations": [
+      {
+       "path": "tests/fitGuide.test.ts",
+       "line": 32,
+       "endLine": 35,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/fitGuide.test.ts#L32-L35"
+      },
+      {
+       "path": "tests/fitGuide.test.ts",
+       "line": 37,
+       "endLine": 40,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/fitGuide.test.ts#L37-L40"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "distance calibration > accepts a diagonal reference in isotropic mode",
+      "distance calibration > adopts the measured factor for the other axis when none is held yet"
+     ],
+     "locations": [
+      {
+       "path": "tests/flatCalibration.test.ts",
+       "line": 17,
+       "endLine": 21,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/flatCalibration.test.ts#L17-L21"
+      },
+      {
+       "path": "tests/flatCalibration.test.ts",
+       "line": 39,
+       "endLine": 43,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/flatCalibration.test.ts#L39-L43"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "PNG pHYs > reads pixels per metre",
+      "PNG pHYs > keeps X and Y apart"
+     ],
+     "locations": [
+      {
+       "path": "tests/flatImage.test.ts",
+       "line": 41,
+       "endLine": 47,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/flatImage.test.ts#L41-L47"
+      },
+      {
+       "path": "tests/flatImage.test.ts",
+       "line": 49,
+       "endLine": 54,
+       "url": "https://github.com/CNCKitchen/ScanRuler/blob/5c1f2f96b7ac336d5c2bad64148ae19790b0443c/tests/flatImage.test.ts#L49-L54"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "immich-app/immich",
+   "url": "https://github.com/immich-app/immich",
+   "description": "High performance self-hosted photo and video management solution.",
+   "language": "TypeScript",
+   "stars": 118153,
+   "starsToday": 104,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "78515cbda9e397eafae5fb61a1ad6fafed31543c",
+   "scanMs": 822,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 270,
+    "unresolved": 91,
+    "files": 265
+   },
+   "comparablePercent": 66.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 8,
+     "tests": 91
+    }
+   ],
+   "findings": {
+    "total": 20,
+    "errors": 1,
+    "warnings": 19,
+    "byRule": {
+     "parameterization-candidate": 18,
+     "near-duplicate-test": 1,
+     "duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "OcrManager > initial state > should initialize with hasOcrData as false",
+      "OcrManager > hasOcrData derived state > should be false when data is empty"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/stores/ocr.svelte.spec.ts",
+       "line": 49,
+       "endLine": 51,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/stores/ocr.svelte.spec.ts#L49-L51"
+      },
+      {
+       "path": "web/src/lib/stores/ocr.svelte.spec.ts",
+       "line": 186,
+       "endLine": 188,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/stores/ocr.svelte.spec.ts#L186-L188"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "isLeapDayObserved > should return false on february 28th in a leap year",
+      "isLeapDayObserved > should return false on other days"
+     ],
+     "locations": [
+      {
+       "path": "server/src/utils/date.spec.ts",
+       "line": 37,
+       "endLine": 40,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/date.spec.ts#L37-L40"
+      },
+      {
+       "path": "server/src/utils/date.spec.ts",
+       "line": 47,
+       "endLine": 50,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/date.spec.ts#L47-L50"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "boundingBoxOverlap > should return 0 for non-overlapping boxes",
+      "boundingBoxOverlap > should return 0.5 for 50% overlap",
+      "boundingBoxOverlap > should return 0.25 for 25% overlap",
+      "boundingBoxOverlap > should return 1 when boxA is fully contained in boxB"
+     ],
+     "locations": [
+      {
+       "path": "server/src/utils/editor.spec.ts",
+       "line": 13,
+       "endLine": 17,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/editor.spec.ts#L13-L17"
+      },
+      {
+       "path": "server/src/utils/editor.spec.ts",
+       "line": 19,
+       "endLine": 23,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/editor.spec.ts#L19-L23"
+      },
+      {
+       "path": "server/src/utils/editor.spec.ts",
+       "line": 25,
+       "endLine": 29,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/editor.spec.ts#L25-L29"
+      },
+      {
+       "path": "server/src/utils/editor.spec.ts",
+       "line": 31,
+       "endLine": 35,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/server/src/utils/editor.spec.ts#L31-L35"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "findClosestTimelineMonthForDate > should handle year boundaries correctly (2023-12 vs 2024-01)",
+      "findClosestTimelineMonthForDate > should correctly calculate distance across years",
+      "findClosestTimelineMonthForDate > should handle target before all months",
+      "findClosestTimelineMonthForDate > should handle target after all months"
+     ],
+     "locations": [
+      {
+       "path": "web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts",
+       "line": 43,
+       "endLine": 49,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts#L43-L49"
+      },
+      {
+       "path": "web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts",
+       "line": 51,
+       "endLine": 56,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts#L51-L56"
+      },
+      {
+       "path": "web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts",
+       "line": 58,
+       "endLine": 62,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts#L58-L62"
+      },
+      {
+       "path": "web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts",
+       "line": 64,
+       "endLine": 68,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/web/src/lib/managers/timeline-manager/internal/search-support.svelte.spec.ts#L64-L68"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "findSidecar > should find sidecar file with photo.xmp naming convention",
+      "findSidecar > should find sidecar file with photo.ext.xmp naming convention"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/src/commands/asset.spec.ts",
+       "line": 398,
+       "endLine": 404,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/packages/cli/src/commands/asset.spec.ts#L398-L404"
+      },
+      {
+       "path": "packages/cli/src/commands/asset.spec.ts",
+       "line": 406,
+       "endLine": 412,
+       "url": "https://github.com/immich-app/immich/blob/78515cbda9e397eafae5fb61a1ad6fafed31543c/packages/cli/src/commands/asset.spec.ts#L406-L412"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "mattpocock/sandcastle",
+   "url": "https://github.com/mattpocock/sandcastle",
+   "description": "Orchestrate sandboxed coding agents in TypeScript with sandcastle.run()",
+   "language": "TypeScript",
+   "stars": 8823,
+   "starsToday": 31,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "8c2c5689a836a626232ff09b4c62cfdf72ad7684",
+   "scanMs": 1570,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 1841,
+    "unresolved": 120,
+    "files": 94
+   },
+   "comparablePercent": 93.5,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 18,
+     "tests": 101
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 2,
+     "tests": 8
+    },
+    {
+     "reason": "mock-factory-unreadable",
+     "files": 1,
+     "tests": 11
+    }
+   ],
+   "findings": {
+    "total": 110,
+    "errors": 3,
+    "warnings": 107,
+    "byRule": {
+     "parameterization-candidate": 105,
+     "duplicate-test": 3,
+     "near-duplicate-test": 1,
+     "cross-file-duplicate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "copyToWorktree > succeeds when first cp fails but fallback cp -R succeeds",
+      "copyToWorktree > defaults to 60s timeout when timeoutMs is omitted"
+     ],
+     "locations": [
+      {
+       "path": "src/CopyToWorktree.test.ts",
+       "line": 64,
+       "endLine": 81,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/CopyToWorktree.test.ts#L64-L81"
+      },
+      {
+       "path": "src/CopyToWorktree.test.ts",
+       "line": 258,
+       "endLine": 274,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/CopyToWorktree.test.ts#L258-L274"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "FileDisplay > intro is a no-op (only delimiter in log)",
+      "FileDisplay > creates log file with run delimiter on initialization"
+     ],
+     "locations": [
+      {
+       "path": "src/Display.test.ts",
+       "line": 215,
+       "endLine": 227,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/Display.test.ts#L215-L227"
+      },
+      {
+       "path": "src/Display.test.ts",
+       "line": 411,
+       "endLine": 423,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/Display.test.ts#L411-L423"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "output type-level exclusion > InteractiveOptions does not accept output",
+      "output type-level exclusion > WorktreeInteractiveOptions does not accept output"
+     ],
+     "locations": [
+      {
+       "path": "src/run.test.ts",
+       "line": 1087,
+       "endLine": 1094,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/run.test.ts#L1087-L1094"
+      },
+      {
+       "path": "src/run.test.ts",
+       "line": 1096,
+       "endLine": 1103,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/run.test.ts#L1096-L1103"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "cross-file-duplicate",
+     "severity": "warning",
+     "verdict": "redundant",
+     "message": "2 tests across 2 files have identical bodies under an equivalent context",
+     "titles": [
+      "worktree.run() > sandbox is required (type error if omitted)",
+      "RunOptions > requires sandbox field typed as SandboxProvider"
+     ],
+     "locations": [
+      {
+       "path": "src/createWorktree.test.ts",
+       "line": 1293,
+       "endLine": 1300,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/createWorktree.test.ts#L1293-L1300"
+      },
+      {
+       "path": "src/run.test.ts",
+       "line": 355,
+       "endLine": 361,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/run.test.ts#L355-L361"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "worktree.interactive() > signal option has correct type on WorktreeInteractiveOptions",
+      "worktree.run() > signal option has the correct type on WorktreeRunOptions"
+     ],
+     "locations": [
+      {
+       "path": "src/createWorktree.test.ts",
+       "line": 622,
+       "endLine": 628,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/createWorktree.test.ts#L622-L628"
+      },
+      {
+       "path": "src/createWorktree.test.ts",
+       "line": 1415,
+       "endLine": 1422,
+       "url": "https://github.com/mattpocock/sandcastle/blob/8c2c5689a836a626232ff09b4c62cfdf72ad7684/src/createWorktree.test.ts#L1415-L1422"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "algerkong/AlgerMusicPlayer",
+   "url": "https://github.com/algerkong/AlgerMusicPlayer",
+   "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+   "language": "Vue",
+   "stars": 17204,
+   "starsToday": 18,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f57204d4205769a4457f5975796a35e41785f1d8",
+   "scanMs": 644,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 72,
+    "unresolved": 0,
+    "files": 7
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  },
+  {
+   "name": "hefengxian/my-ielts",
+   "url": "https://github.com/hefengxian/my-ielts",
+   "description": "雅思词汇真经、雅思语法、听力 179、阅读 538  同义替换等。Everything during preparing for my IELTS exam. ",
+   "language": "Vue",
+   "stars": 4039,
+   "starsToday": 17,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "master",
+   "headSha": "5cef573933663c4673c6e0093f1df04e68018b1a",
+   "scanMs": 535,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 3,
+    "unresolved": 0,
+    "files": 2
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  },
+  {
+   "name": "yuhonas/free-exercise-db",
+   "url": "https://github.com/yuhonas/free-exercise-db",
+   "description": "Open Public Domain Exercise Dataset in JSON format, over 800 exercises with a browsable public searchable frontend",
+   "language": "Vue",
+   "stars": 2088,
+   "starsToday": 5,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+   "scanMs": 493,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 5,
+    "unresolved": 0,
+    "files": 3
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  }
+ ],
+ "skipped": [
+  {
+   "name": "pingdotgg/t3code",
+   "reason": "analysis failed"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-03T05:10:58.055Z",
+ "updatedAt": "2026-11-04T04:41:13.971Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -175,6 +175,17 @@
    "tests": 139478,
    "findings": 2694,
    "errors": 42,
+   "skipped": 1
+  },
+  {
+   "date": "2026-11-04",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.9.0",
+   "scanned": 47,
+   "repos": 11,
+   "tests": 17065,
+   "findings": 632,
+   "errors": 10,
    "skipped": 1
   }
  ],
@@ -665,9 +676,20 @@
      "comparablePercent": 99.2,
      "findings": 2,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 4,
+     "analyzerVersion": "0.9.0",
+     "headSha": "a0dca1af66cff788e467ee98e92a39afdafbb058",
+     "stars": 1567,
+     "tests": 1148,
+     "comparablePercent": 99.2,
+     "findings": 18,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-24"
+   "latest": "2026-11-04"
   },
   "Vincentwei1021/video-shotcraft": {
    "name": "Vincentwei1021/video-shotcraft",
@@ -916,9 +938,20 @@
      "comparablePercent": 97.6,
      "findings": 178,
      "errors": 2
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 2,
+     "analyzerVersion": "0.9.0",
+     "headSha": "d9c4e11cbae8b60454899e4de7f221d7e943a633",
+     "stars": 47149,
+     "tests": 5220,
+     "comparablePercent": 97.5,
+     "findings": 178,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-01"
+   "latest": "2026-11-04"
   },
   "firecrawl/firecrawl": {
    "name": "firecrawl/firecrawl",
@@ -1060,9 +1093,20 @@
      "comparablePercent": 97.9,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 1,
+     "analyzerVersion": "0.9.0",
+     "headSha": "531fbfcfc0de8f1bf2597aa71e1c61422c493361",
+     "stars": 112110,
+     "tests": 151,
+     "comparablePercent": 98,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-04"
   },
   "every-app/open-seo": {
    "name": "every-app/open-seo",
@@ -1293,9 +1337,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 9,
+     "analyzerVersion": "0.9.0",
+     "headSha": "f57204d4205769a4457f5975796a35e41785f1d8",
+     "stars": 17204,
+     "tests": 72,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-04"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -1860,9 +1915,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 10,
+     "analyzerVersion": "0.9.0",
+     "headSha": "5cef573933663c4673c6e0093f1df04e68018b1a",
+     "stars": 4039,
+     "tests": 3,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-04"
   },
   "yuhonas/free-exercise-db": {
    "name": "yuhonas/free-exercise-db",
@@ -1910,9 +1976,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 11,
+     "analyzerVersion": "0.9.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2088,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-02"
+   "latest": "2026-11-04"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -2903,9 +2980,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-04",
+     "rank": 6,
+     "analyzerVersion": "0.9.0",
+     "headSha": "5c1f2f96b7ac336d5c2bad64148ae19790b0443c",
+     "stars": 834,
+     "tests": 3129,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-04"
   },
   "mksglu/context-mode": {
    "name": "mksglu/context-mode",
@@ -2974,6 +3062,74 @@
     }
    ],
    "latest": "2026-11-03"
+  },
+  "floci-io/floci": {
+   "name": "floci-io/floci",
+   "appearances": [
+    {
+     "date": "2026-11-04",
+     "rank": 3,
+     "analyzerVersion": "0.9.0",
+     "headSha": "d098a4729a39a521643022cd46ab33226f64f414",
+     "stars": 28958,
+     "tests": 505,
+     "comparablePercent": 100,
+     "findings": 6,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-04"
+  },
+  "Fission-AI/OpenSpec": {
+   "name": "Fission-AI/OpenSpec",
+   "appearances": [
+    {
+     "date": "2026-11-04",
+     "rank": 5,
+     "analyzerVersion": "0.9.0",
+     "headSha": "2bd5bc3be964404657439f538857fcdf550f7398",
+     "stars": 73847,
+     "tests": 4721,
+     "comparablePercent": 94.3,
+     "findings": 291,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-11-04"
+  },
+  "immich-app/immich": {
+   "name": "immich-app/immich",
+   "appearances": [
+    {
+     "date": "2026-11-04",
+     "rank": 7,
+     "analyzerVersion": "0.9.0",
+     "headSha": "78515cbda9e397eafae5fb61a1ad6fafed31543c",
+     "stars": 118153,
+     "tests": 270,
+     "comparablePercent": 66.3,
+     "findings": 20,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-11-04"
+  },
+  "mattpocock/sandcastle": {
+   "name": "mattpocock/sandcastle",
+   "appearances": [
+    {
+     "date": "2026-11-04",
+     "rank": 8,
+     "analyzerVersion": "0.9.0",
+     "headSha": "8c2c5689a836a626232ff09b4c62cfdf72ad7684",
+     "stars": 8823,
+     "tests": 1841,
+     "comparablePercent": 93.5,
+     "findings": 110,
+     "errors": 3
+    }
+   ],
+   "latest": "2026-11-04"
   }
  }
 }
