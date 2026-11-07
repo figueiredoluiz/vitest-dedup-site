@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T04:55:44.583Z",
+ "updatedAt": "2026-11-07T04:28:12.235Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -209,6 +209,17 @@
    "findings": 1546,
    "errors": 15,
    "skipped": 1
+  },
+  {
+   "date": "2026-11-07",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 70,
+   "repos": 22,
+   "tests": 243262,
+   "findings": 9332,
+   "errors": 107,
+   "skipped": 0
   }
  ],
  "repos": {
@@ -608,9 +619,20 @@
      "comparablePercent": 96.5,
      "findings": 67,
      "errors": 1
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "a579e352a66fbdce6a51d4e1f67006ccf4f91343",
+     "stars": 83845,
+     "tests": 878,
+     "comparablePercent": 75.7,
+     "findings": 57,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-23"
+   "latest": "2026-11-07"
   },
   "github/docs": {
    "name": "github/docs",
@@ -692,9 +714,20 @@
      "comparablePercent": 90.3,
      "findings": 2308,
      "errors": 6
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "c108ee4ea7540d75c3a76f667f06c3e9818400ac",
+     "stars": 117944,
+     "tests": 74374,
+     "comparablePercent": 96.1,
+     "findings": 1440,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-01"
+   "latest": "2026-11-07"
   },
   "liguobao/ds-harness-remote": {
    "name": "liguobao/ds-harness-remote",
@@ -1447,9 +1480,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f57204d4205769a4457f5975796a35e41785f1d8",
+     "stars": 17281,
+     "tests": 72,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-07"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -1536,9 +1580,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 18,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41145,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-05"
+   "latest": "2026-11-07"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -1641,9 +1696,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 19,
+     "analyzerVersion": "0.10.0",
+     "headSha": "986fea3e525a42ecab034b4e16ef784041552f78",
+     "stars": 3924,
+     "tests": 139,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-07"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -1890,9 +1956,20 @@
      "comparablePercent": 95.7,
      "findings": 174,
      "errors": 2
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 21,
+     "analyzerVersion": "0.10.0",
+     "headSha": "63091e63d62d58948f595b4bbebb47efa0611c91",
+     "stars": 6935,
+     "tests": 2232,
+     "comparablePercent": 99.2,
+     "findings": 195,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-07"
   },
   "zwave-js/zwave-js-ui": {
    "name": "zwave-js/zwave-js-ui",
@@ -2723,9 +2800,20 @@
      "comparablePercent": 9.1,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 22,
+     "analyzerVersion": "0.10.0",
+     "headSha": "36965f13dc40597deeb16192a8568308cbeb70d9",
+     "stars": 14450,
+     "tests": 14,
+     "comparablePercent": 78.6,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-31"
+   "latest": "2026-11-07"
   },
   "Orkas-AI/Orkas": {
    "name": "Orkas-AI/Orkas",
@@ -2986,9 +3074,20 @@
      "comparablePercent": 96.4,
      "findings": 1011,
      "errors": 17
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d4da7e312d146b4daceef495e86d1fe64912b6b6",
+     "stars": 5236,
+     "tests": 36152,
+     "comparablePercent": 94.5,
+     "findings": 1294,
+     "errors": 12
     }
    ],
-   "latest": "2026-11-05"
+   "latest": "2026-11-07"
   },
   "CodeWithCJ/SparkyFitness": {
    "name": "CodeWithCJ/SparkyFitness",
@@ -3583,9 +3682,20 @@
      "comparablePercent": 98.8,
      "findings": 45,
      "errors": 5
+    },
+    {
+     "date": "2026-11-07",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f1b911917ab0b23895883f22a62f7a0395451fe6",
+     "stars": 45874,
+     "tests": 1350,
+     "comparablePercent": 96.9,
+     "findings": 49,
+     "errors": 5
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-07"
   },
   "mihomo-party-org/clash-party": {
    "name": "mihomo-party-org/clash-party",
@@ -3603,6 +3713,227 @@
     }
    ],
    "latest": "2026-11-06"
+  },
+  "microsoft/vscode": {
+   "name": "microsoft/vscode",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "1745a4a6102e93173430b4b2debc1247a91cd036",
+     "stars": 195061,
+     "tests": 8030,
+     "comparablePercent": 94.7,
+     "findings": 609,
+     "errors": 5
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "elder-plinius/T3MP3ST": {
+   "name": "elder-plinius/T3MP3ST",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "29824d5625ede419ac8cdae418c8f4c72c6270f7",
+     "stars": 6955,
+     "tests": 957,
+     "comparablePercent": 100,
+     "findings": 60,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "lobehub/lobehub": {
+   "name": "lobehub/lobehub",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b477606131e68469ce81bf191c7cc50c8d490b55",
+     "stars": 84262,
+     "tests": 68696,
+     "comparablePercent": 93.8,
+     "findings": 3643,
+     "errors": 15
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "meta/astryx": {
+   "name": "meta/astryx",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6cbcbf846bc94f1cd23e1d053488ccf3b54a24fb",
+     "stars": 14062,
+     "tests": 29447,
+     "comparablePercent": 97.3,
+     "findings": 1006,
+     "errors": 32
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "vuejs/vue": {
+   "name": "vuejs/vue",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9e88707940088cb1f4cd7dd210c9168a50dc347c",
+     "stars": 212622,
+     "tests": 1796,
+     "comparablePercent": 76.8,
+     "findings": 105,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "tailwindlabs/tailwindcss": {
+   "name": "tailwindlabs/tailwindcss",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9b2c925c19aae46ff4f9cf54a2fa6d2dbac7fa19",
+     "stars": 98170,
+     "tests": 4023,
+     "comparablePercent": 53.7,
+     "findings": 43,
+     "errors": 6
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "sveltejs/svelte": {
+   "name": "sveltejs/svelte",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "7775f73b7cbe32de3bb566f3515113208887e961",
+     "stars": 88658,
+     "tests": 131,
+     "comparablePercent": 87,
+     "findings": 4,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "prometheus/prometheus": {
+   "name": "prometheus/prometheus",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "dd7aa6b0f19f4e952a55cbebd6e15458fe0ad9c6",
+     "stars": 67224,
+     "tests": 91,
+     "comparablePercent": 98.9,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "solidjs/solid": {
+   "name": "solidjs/solid",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "bc50fe5649ba4fb1ef33f26643dba56c1c002b56",
+     "stars": 36335,
+     "tests": 500,
+     "comparablePercent": 88.4,
+     "findings": 8,
+     "errors": 3
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "tldraw/tldraw": {
+   "name": "tldraw/tldraw",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "616a7c49576f139dc5d091e0621cb589c48a80d8",
+     "stars": 51387,
+     "tests": 8864,
+     "comparablePercent": 97.2,
+     "findings": 440,
+     "errors": 18
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "withastro/astro": {
+   "name": "withastro/astro",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "39ede5f061297fdda7af945aa8e576f625ab5152",
+     "stars": 63794,
+     "tests": 14,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "novuhq/novu": {
+   "name": "novuhq/novu",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6eb1303372ef86a884ac5a2d0d9ed8f77587025b",
+     "stars": 40295,
+     "tests": 4023,
+     "comparablePercent": 97.7,
+     "findings": 266,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-11-07"
+  },
+  "sveltejs/kit": {
+   "name": "sveltejs/kit",
+   "appearances": [
+    {
+     "date": "2026-11-07",
+     "rank": 20,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5c7f430b99c792a5b030e90d5cf2cf4f3c1fc836",
+     "stars": 20903,
+     "tests": 1345,
+     "comparablePercent": 92.3,
+     "findings": 96,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-11-07"
   }
  }
 }
