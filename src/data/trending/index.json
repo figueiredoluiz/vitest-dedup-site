@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-08T04:12:37.267Z",
+ "updatedAt": "2026-11-09T04:28:20.457Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -231,6 +231,17 @@
    "findings": 7940,
    "errors": 87,
    "skipped": 0
+  },
+  {
+   "date": "2026-11-09",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 47,
+   "repos": 19,
+   "tests": 168346,
+   "findings": 6163,
+   "errors": 56,
+   "skipped": 1
   }
  ],
  "repos": {
@@ -596,9 +607,20 @@
      "comparablePercent": 94.9,
      "findings": 9,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "eac478f71dcff342d196a65c724dc955c221eeee",
+     "stars": 21368,
+     "tests": 141,
+     "comparablePercent": 100,
+     "findings": 9,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-23"
+   "latest": "2026-11-09"
   },
   "Dokploy/dokploy": {
    "name": "Dokploy/dokploy",
@@ -931,9 +953,20 @@
      "comparablePercent": 97.7,
      "findings": 71,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "305778b3b9393822da4346b64ba499d0fc839239",
+     "stars": 26952,
+     "tests": 658,
+     "comparablePercent": 98,
+     "findings": 85,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-09"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -1524,9 +1557,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f17418c99b688c72ef65972e945b989b170ff3e5",
+     "stars": 17387,
+     "tests": 72,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -1635,9 +1679,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41162,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -1939,9 +1994,20 @@
      "comparablePercent": 97.8,
      "findings": 26,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
+     "stars": 340,
+     "tests": 325,
+     "comparablePercent": 97.8,
+     "findings": 26,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "unovue/reka-ui": {
    "name": "unovue/reka-ui",
@@ -2044,9 +2110,20 @@
      "comparablePercent": 99.3,
      "findings": 196,
      "errors": 2
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 19,
+     "analyzerVersion": "0.10.0",
+     "headSha": "820b31716813c11693115174d91df64f15d3dea7",
+     "stars": 6938,
+     "tests": 2287,
+     "comparablePercent": 99.3,
+     "findings": 196,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "zwave-js/zwave-js-ui": {
    "name": "zwave-js/zwave-js-ui",
@@ -2328,9 +2405,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2115,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -2708,9 +2796,20 @@
      "comparablePercent": 94,
      "findings": 299,
      "errors": 5
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "1d72099d5c05cdadcd01a579508e27dbb97afa26",
+     "stars": 18584,
+     "tests": 29931,
+     "comparablePercent": 94,
+     "findings": 302,
+     "errors": 5
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "lfnovo/open-notebook": {
    "name": "lfnovo/open-notebook",
@@ -3285,9 +3384,20 @@
      "comparablePercent": 99.7,
      "findings": 16,
      "errors": 1
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 18,
+     "analyzerVersion": "0.10.0",
+     "headSha": "4cc4f76cade3a6472e8067301acd9901507ba793",
+     "stars": 388,
+     "tests": 308,
+     "comparablePercent": 100,
+     "findings": 22,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-09"
   },
   "beenuar/AiSOC": {
    "name": "beenuar/AiSOC",
@@ -3667,9 +3777,20 @@
      "comparablePercent": 84.3,
      "findings": 272,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0a36a40786bfa1d9bdf5c3b61da89e69942b6b1a",
+     "stars": 7589,
+     "tests": 24030,
+     "comparablePercent": 96.8,
+     "findings": 420,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-06"
+   "latest": "2026-11-09"
   },
   "open-webui/open-webui": {
    "name": "open-webui/open-webui",
@@ -3706,9 +3827,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+     "stars": 158159,
+     "tests": 8,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -3937,9 +4069,20 @@
      "comparablePercent": 93.7,
      "findings": 3625,
      "errors": 7
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "130692d4bfa982d3ee23a3813bee124d26e1dd65",
+     "stars": 84459,
+     "tests": 69407,
+     "comparablePercent": 93.8,
+     "findings": 3632,
+     "errors": 7
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "meta/astryx": {
    "name": "meta/astryx",
@@ -3965,9 +4108,20 @@
      "comparablePercent": 97.3,
      "findings": 1014,
      "errors": 33
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "4fbef8a6bb944816d0e77e62ff895bb294895daa",
+     "stars": 17315,
+     "tests": 30627,
+     "comparablePercent": 97.3,
+     "findings": 1027,
+     "errors": 35
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "vuejs/vue": {
    "name": "vuejs/vue",
@@ -4010,9 +4164,20 @@
      "comparablePercent": 53.7,
      "findings": 43,
      "errors": 6
+    },
+    {
+     "date": "2026-11-09",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9b2c925c19aae46ff4f9cf54a2fa6d2dbac7fa19",
+     "stars": 98648,
+     "tests": 4023,
+     "comparablePercent": 53.7,
+     "findings": 43,
+     "errors": 6
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-09"
   },
   "sveltejs/svelte": {
    "name": "sveltejs/svelte",
@@ -4222,6 +4387,91 @@
     }
    ],
    "latest": "2026-11-08"
+  },
+  "vercel-labs/json-render": {
+   "name": "vercel-labs/json-render",
+   "appearances": [
+    {
+     "date": "2026-11-09",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "18194121c8f087afacd9a8ef65fbda18374ee039",
+     "stars": 19465,
+     "tests": 1260,
+     "comparablePercent": 96.8,
+     "findings": 153,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-09"
+  },
+  "poco-ai/Agentero": {
+   "name": "poco-ai/Agentero",
+   "appearances": [
+    {
+     "date": "2026-11-09",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "817760d871a80ec21bd120b8c3bac9dcdbb14c56",
+     "stars": 2081,
+     "tests": 2911,
+     "comparablePercent": 99.2,
+     "findings": 139,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-09"
+  },
+  "kortix-ai/CompanyOS": {
+   "name": "kortix-ai/CompanyOS",
+   "appearances": [
+    {
+     "date": "2026-11-09",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "555324da9fa28cf2472dcafcc36dea21f53e8d5b",
+     "stars": 20583,
+     "tests": 973,
+     "comparablePercent": 96.7,
+     "findings": 17,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-09"
+  },
+  "arcsin1/oh-my-ppt": {
+   "name": "arcsin1/oh-my-ppt",
+   "appearances": [
+    {
+     "date": "2026-11-09",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "1f1da525616f1508111b820800865c7783ca7145",
+     "stars": 2469,
+     "tests": 1188,
+     "comparablePercent": 99.7,
+     "findings": 77,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-09"
+  },
+  "freqtrade/frequi": {
+   "name": "freqtrade/frequi",
+   "appearances": [
+    {
+     "date": "2026-11-09",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e8becb2b8abcaa0cc744e73f38efb48111496456",
+     "stars": 1114,
+     "tests": 58,
+     "comparablePercent": 100,
+     "findings": 6,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-09"
   }
  }
 }
