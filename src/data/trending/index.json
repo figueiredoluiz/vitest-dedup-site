@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-09T04:28:20.457Z",
+ "updatedAt": "2026-11-10T05:49:30.379Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -241,6 +241,17 @@
    "tests": 168346,
    "findings": 6163,
    "errors": 56,
+   "skipped": 1
+  },
+  {
+   "date": "2026-11-10",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 48,
+   "repos": 15,
+   "tests": 92958,
+   "findings": 2349,
+   "errors": 44,
    "skipped": 1
   }
  ],
@@ -964,9 +975,20 @@
      "comparablePercent": 98,
      "findings": 85,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "305778b3b9393822da4346b64ba499d0fc839239",
+     "stars": 26960,
+     "tests": 658,
+     "comparablePercent": 98,
+     "findings": 85,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -1568,9 +1590,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f17418c99b688c72ef65972e945b989b170ff3e5",
+     "stars": 17462,
+     "tests": 72,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -1690,9 +1723,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41169,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -1817,9 +1861,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "2cecd300c8291d5abe6793e20fafe7e81a77d989",
+     "stars": 3941,
+     "tests": 139,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-10"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -2121,9 +2176,20 @@
      "comparablePercent": 99.3,
      "findings": 196,
      "errors": 2
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "02e69e122cb20f4d2a734ef89c9ca6c37595b2c5",
+     "stars": 6943,
+     "tests": 2292,
+     "comparablePercent": 99.3,
+     "findings": 196,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "zwave-js/zwave-js-ui": {
    "name": "zwave-js/zwave-js-ui",
@@ -2416,9 +2482,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2120,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -2606,9 +2683,20 @@
      "comparablePercent": 100,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "61150313dec90f6d093d9ee93643257938c603bc",
+     "stars": 103625,
+     "tests": 53,
+     "comparablePercent": 100,
+     "findings": 13,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-29"
+   "latest": "2026-11-10"
   },
   "n8n-io/n8n": {
    "name": "n8n-io/n8n",
@@ -2807,9 +2895,20 @@
      "comparablePercent": 94,
      "findings": 302,
      "errors": 5
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f9c25dd2400c62e7e322c894cef32b5203096cbf",
+     "stars": 20012,
+     "tests": 30359,
+     "comparablePercent": 94,
+     "findings": 307,
+     "errors": 5
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "lfnovo/open-notebook": {
    "name": "lfnovo/open-notebook",
@@ -3395,9 +3494,20 @@
      "comparablePercent": 100,
      "findings": 22,
      "errors": 1
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "4cc4f76cade3a6472e8067301acd9901507ba793",
+     "stars": 388,
+     "tests": 308,
+     "comparablePercent": 100,
+     "findings": 22,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "beenuar/AiSOC": {
    "name": "beenuar/AiSOC",
@@ -3788,9 +3898,20 @@
      "comparablePercent": 96.8,
      "findings": 420,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6c7e1bcc6a44156295b01d4af32d1c1ddcec5418",
+     "stars": 7728,
+     "tests": 24192,
+     "comparablePercent": 96.8,
+     "findings": 426,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "open-webui/open-webui": {
    "name": "open-webui/open-webui",
@@ -3838,9 +3959,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+     "stars": 158256,
+     "tests": 8,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -4119,9 +4251,20 @@
      "comparablePercent": 97.3,
      "findings": 1027,
      "errors": 35
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3582c71f9d841647e853f5a9952d8d4b74e2e916",
+     "stars": 20722,
+     "tests": 31084,
+     "comparablePercent": 97.3,
+     "findings": 1033,
+     "errors": 35
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "vuejs/vue": {
    "name": "vuejs/vue",
@@ -4401,9 +4544,20 @@
      "comparablePercent": 96.8,
      "findings": 153,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "18194121c8f087afacd9a8ef65fbda18374ee039",
+     "stars": 19528,
+     "tests": 1260,
+     "comparablePercent": 96.8,
+     "findings": 153,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "poco-ai/Agentero": {
    "name": "poco-ai/Agentero",
@@ -4435,9 +4589,20 @@
      "comparablePercent": 96.7,
      "findings": 17,
      "errors": 0
+    },
+    {
+     "date": "2026-11-10",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6b7f9476dadecdace0343a50354520e51f0bb7ca",
+     "stars": 20616,
+     "tests": 1018,
+     "comparablePercent": 96.9,
+     "findings": 25,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-09"
+   "latest": "2026-11-10"
   },
   "arcsin1/oh-my-ppt": {
    "name": "arcsin1/oh-my-ppt",
@@ -4472,6 +4637,23 @@
     }
    ],
    "latest": "2026-11-09"
+  },
+  "ZhuLinsen/daily_stock_analysis": {
+   "name": "ZhuLinsen/daily_stock_analysis",
+   "appearances": [
+    {
+     "date": "2026-11-10",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "15c7cdc0ca07bd71158e268fb8596f3ae356ad9b",
+     "stars": 69162,
+     "tests": 1376,
+     "comparablePercent": 98.3,
+     "findings": 73,
+     "errors": 1
+    }
+   ],
+   "latest": "2026-11-10"
   }
  }
 }
