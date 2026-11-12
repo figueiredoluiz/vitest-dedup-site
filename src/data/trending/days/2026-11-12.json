@@ -1,0 +1,2432 @@
+{
+ "date": "2026-11-12",
+ "generatedAt": "2026-11-12T05:37:13.046Z",
+ "source": "github-trending-daily",
+ "analyzerVersion": "0.10.0",
+ "scanned": 54,
+ "repos": [
+  {
+   "name": "meta/astryx",
+   "url": "https://github.com/meta/astryx",
+   "description": "An open source design system that's fully customizable and agent ready",
+   "language": "TypeScript",
+   "stars": 25391,
+   "starsToday": 2776,
+   "lists": [
+    "all",
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f980d1c6a884ff5981771878d78e67537c579210",
+   "scanMs": 80041,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 32688,
+    "unresolved": 868,
+    "files": 2415
+   },
+   "comparablePercent": 97.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 140,
+     "tests": 434
+    },
+    {
+     "reason": "registered-elsewhere",
+     "files": 33,
+     "tests": 99
+    },
+    {
+     "reason": "helper-export-unreadable",
+     "files": 8,
+     "tests": 310
+    },
+    {
+     "reason": "order-dependent-state",
+     "files": 7,
+     "tests": 25
+    }
+   ],
+   "findings": {
+    "total": 1061,
+    "errors": 35,
+    "warnings": 1026,
+    "byRule": {
+     "parameterization-candidate": 1008,
+     "duplicate-test": 35,
+     "near-duplicate-test": 1,
+     "cross-file-duplicate": 3,
+     "duplicate-test-name": 14
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "a declaration in prose vs a declaration that is applied > catches an override a whole rule, which is a stylesheet on …",
+      "a declaration-shaped template in prose vs applied > catches a template a whole rule, which is a stylesheet on …"
+     ],
+     "locations": [
+      {
+       "path": "internal/vibe-tests/setup-test/setup-important.test.mjs",
+       "line": 503,
+       "endLine": 544,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/internal/vibe-tests/setup-test/setup-important.test.mjs#L503-L544"
+      },
+      {
+       "path": "internal/vibe-tests/setup-test/setup-important.test.mjs",
+       "line": 585,
+       "endLine": 626,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/internal/vibe-tests/setup-test/setup-important.test.mjs#L585-L626"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "resolveAgentPaths > claude preset falls back to .claude/CLAUDE.md",
+      "resolveAgentPaths > claude preset still creates .claude/CLAUDE.md when nothing exists (hermes is additive)"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/foundation/agent-docs/agent-docs.test.mjs",
+       "line": 1391,
+       "endLine": 1394,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/foundation/agent-docs/agent-docs.test.mjs#L1391-L1394"
+      },
+      {
+       "path": "packages/cli/foundation/agent-docs/agent-docs.test.mjs",
+       "line": 1434,
+       "endLine": 1437,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/foundation/agent-docs/agent-docs.test.mjs#L1434-L1437"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "which targets the swizzle proof checks > checks the affected targets of a pull request that changes component source",
+      "which targets the swizzle proof checks > checks the affected targets of main's run, diffed against its parent"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/test/swizzle-proof/scope.test.mjs",
+       "line": 31,
+       "endLine": 40,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/test/swizzle-proof/scope.test.mjs#L31-L40"
+      },
+      {
+       "path": "packages/cli/test/swizzle-proof/scope.test.mjs",
+       "line": 42,
+       "endLine": 51,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/test/swizzle-proof/scope.test.mjs#L42-L51"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "which targets the swizzle proof checks > checks every target of a local run whose change git cannot read",
+      "which targets the swizzle proof checks > checks every target when git fails in a checkout that has a parent, such as a merge-queue run"
+     ],
+     "locations": [
+      {
+       "path": "packages/cli/test/swizzle-proof/scope.test.mjs",
+       "line": 75,
+       "endLine": 84,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/test/swizzle-proof/scope.test.mjs#L75-L84"
+      },
+      {
+       "path": "packages/cli/test/swizzle-proof/scope.test.mjs",
+       "line": 97,
+       "endLine": 106,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/cli/test/swizzle-proof/scope.test.mjs#L97-L106"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "DateInput > displays formatted date when value is provided",
+      "DateInput > format > defaults to the long-month date_long shape"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/DateInput/DateInput.test.tsx",
+       "line": 55,
+       "endLine": 58,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/core/src/DateInput/DateInput.test.tsx#L55-L58"
+      },
+      {
+       "path": "packages/core/src/DateInput/DateInput.test.tsx",
+       "line": 1555,
+       "endLine": 1560,
+       "url": "https://github.com/meta/astryx/blob/f980d1c6a884ff5981771878d78e67537c579210/packages/core/src/DateInput/DateInput.test.tsx#L1555-L1560"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "ZhuLinsen/daily_stock_analysis",
+   "url": "https://github.com/ZhuLinsen/daily_stock_analysis",
+   "description": "LLM 驱动的多市场股票智能分析系统：多源行情、实时新闻、决策看板与自动推送，支持零成本定时运行。  LLM-powered multi-market stock analysis system with multi-source market data, real-time news, decision dashboard, automated notifications, and cost-free scheduled runs.",
+   "language": "Python",
+   "stars": 70560,
+   "starsToday": 278,
+   "lists": [
+    "all"
+   ],
+   "defaultBranch": "main",
+   "headSha": "ef44660f00e08ce66dcd4dc4d2e700836c45e833",
+   "scanMs": 3567,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 1376,
+    "unresolved": 23,
+    "files": 118
+   },
+   "comparablePercent": 98.3,
+   "exclusions": [
+    {
+     "reason": "helper-export-unreadable",
+     "files": 1,
+     "tests": 19
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 4
+    }
+   ],
+   "findings": {
+    "total": 73,
+    "errors": 1,
+    "warnings": 72,
+    "byRule": {
+     "parameterization-candidate": 72,
+     "duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "truncateStockName > edge cases > returns empty string unchanged",
+      "truncateStockName > edge cases > returns undefined unchanged (but should not happen in practice)"
+     ],
+     "locations": [
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 56,
+       "endLine": 58,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L56-L58"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 75,
+       "endLine": 79,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L75-L79"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "truncateStockName > English strings > truncates to 15 chars with trailing dot",
+      "truncateStockName > Chinese strings > returns unchanged when at or below 8 chars",
+      "truncateStockName > Chinese strings > truncates to 8 chars with trailing dot",
+      "truncateStockName > Mixed Chinese and English strings > returns unchanged when at or below 10 chars"
+     ],
+     "locations": [
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 16,
+       "endLine": 19,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L16-L19"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 27,
+       "endLine": 30,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L27-L30"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 32,
+       "endLine": 37,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L32-L37"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/stockName.test.ts",
+       "line": 41,
+       "endLine": 44,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/stockName.test.ts#L41-L44"
+      }
+     ],
+     "more": 4
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "normalizeQuery > normalizeQuery - Query normalization > removes leading and trailing spaces",
+      "normalizeQuery > normalizeQuery - Query normalization > converts to lowercase",
+      "normalizeQuery > normalizeQuery - Query normalization > removes internal extra spaces",
+      "normalizeQuery > normalizeQuery - Query normalization > normalizes full-width latin characters to ASCII"
+     ],
+     "locations": [
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts",
+       "line": 22,
+       "endLine": 25,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts#L22-L25"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts",
+       "line": 27,
+       "endLine": 30,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts#L27-L30"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts",
+       "line": 32,
+       "endLine": 35,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts#L32-L35"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts",
+       "line": 41,
+       "endLine": 44,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/normalizeQuery.test.ts#L41-L44"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "6 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 6 tests form one cluster, reported as a single finding instead of 15 pairwise findings (spanni",
+     "titles": [
+      "searchStocks > 无结果时返回空数组",
+      "searchStocks > 空查询返回空数组",
+      "searchStocks > Edge case tests > special character query",
+      "searchStocks > Edge case tests > pure space query"
+     ],
+     "locations": [
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 198,
+       "endLine": 201,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L198-L201"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 203,
+       "endLine": 206,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L203-L206"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 287,
+       "endLine": 290,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L287-L290"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 292,
+       "endLine": 295,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L292-L295"
+      }
+     ],
+     "more": 2
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "searchStocks > 美股代码匹配",
+      "searchStocks > 港股代码匹配",
+      "searchStocks > 日股 Yahoo 后缀代码匹配",
+      "searchStocks > 韩股 KOSPI Yahoo 后缀代码匹配"
+     ],
+     "locations": [
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 230,
+       "endLine": 235,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L230-L235"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 245,
+       "endLine": 250,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L245-L250"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 252,
+       "endLine": 257,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L252-L257"
+      },
+      {
+       "path": "apps/dsa-web/src/utils/__tests__/searchStocks.test.ts",
+       "line": 266,
+       "endLine": 271,
+       "url": "https://github.com/ZhuLinsen/daily_stock_analysis/blob/ef44660f00e08ce66dcd4dc4d2e700836c45e833/apps/dsa-web/src/utils/__tests__/searchStocks.test.ts#L266-L271"
+      }
+     ],
+     "more": 1
+    }
+   ]
+  },
+  {
+   "name": "LibreSpark/LibreTV",
+   "url": "https://github.com/LibreSpark/LibreTV",
+   "description": "一分钟搭建影视站，支持Docker等部署方式",
+   "language": "TypeScript",
+   "stars": 24503,
+   "starsToday": 198,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "97f6ec437ab70ee4aeb49b745ced693d7ea0522a",
+   "scanMs": 1552,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 601,
+    "unresolved": 0,
+    "files": 41
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 32,
+    "errors": 0,
+    "warnings": 32,
+    "byRule": {
+     "parameterization-candidate": 31,
+     "near-duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "isWebAudioSafeForVideo > blob: / data: 源（hls.js MSE 产物）安全",
+      "isWebAudioSafeForVideo > 同源直连与本站代理路径安全"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/volume-boost.test.ts",
+       "line": 122,
+       "endLine": 127,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/volume-boost.test.ts#L122-L127"
+      },
+      {
+       "path": "src/lib/volume-boost.test.ts",
+       "line": 129,
+       "endLine": 134,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/volume-boost.test.ts#L129-L134"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "POST /api/live/probe > 返回 HTML 的伪 m3u8 判为不可用",
+      "POST /api/live/probe > 返回 HTML 的伪直链判为不可用（content-type 校验）"
+     ],
+     "locations": [
+      {
+       "path": "src/app/api/live/probe/route.test.ts",
+       "line": 96,
+       "endLine": 102,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/app/api/live/probe/route.test.ts#L96-L102"
+      },
+      {
+       "path": "src/app/api/live/probe/route.test.ts",
+       "line": 104,
+       "endLine": 110,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/app/api/live/probe/route.test.ts#L104-L110"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "extractEpisodesFromPlayUrl > 过滤无 URL 或非 http 的集",
+      "extractEpisodesFromPlayUrl > 第一条线路为中转页时优先取 m3u8 线路（量子/非凡类源）"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 58,
+       "endLine": 61,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L58-L61"
+      },
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 63,
+       "endLine": 69,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L63-L69"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "extractEpisodesFromPlayUrl > 第一条线路为中转页时优先取 m3u8 线路（量子/非凡类源）",
+      "extractEpisodesFromPlayUrl > 第一条线路为空时取后续有效线路"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 63,
+       "endLine": 69,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L63-L69"
+      },
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 71,
+       "endLine": 74,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L71-L74"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "extractEpisodesFromPlayUrl > 第一条线路为空时取后续有效线路",
+      "extractEpisodesFromPlayUrl > 两条线路均无 m3u8 时回退第一条"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 71,
+       "endLine": 74,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L71-L74"
+      },
+      {
+       "path": "src/lib/cms-parser.test.ts",
+       "line": 76,
+       "endLine": 79,
+       "url": "https://github.com/LibreSpark/LibreTV/blob/97f6ec437ab70ee4aeb49b745ced693d7ea0522a/src/lib/cms-parser.test.ts#L76-L79"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "dream-num/univer",
+   "url": "https://github.com/dream-num/univer",
+   "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
+   "language": "TypeScript",
+   "stars": 23304,
+   "starsToday": 138,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "dev",
+   "headSha": "5a06a7842c8e13fa0646d0733dc3662cf4b330b9",
+   "scanMs": 20964,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 15323,
+    "unresolved": 189,
+    "files": 1911
+   },
+   "comparablePercent": 98.8,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 14,
+     "tests": 91
+    },
+    {
+     "reason": "order-dependent-state",
+     "files": 11,
+     "tests": 98
+    }
+   ],
+   "findings": {
+    "total": 518,
+    "errors": 20,
+    "warnings": 498,
+    "byRule": {
+     "parameterization-candidate": 457,
+     "near-duplicate-test": 38,
+     "duplicate-test": 20,
+     "cross-file-duplicate": 1,
+     "duplicate-test-name": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "excludePointsFromRange function > should handle empty points array",
+      "excludePointsFromRange function > excludePointsFromRange function > should handle empty points array"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 24,
+       "endLine": 28,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L24-L28"
+      },
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 67,
+       "endLine": 71,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L67-L71"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "excludePointsFromRange function > should handle points at the beginning and end",
+      "excludePointsFromRange function > excludePointsFromRange function > should handle points at the beginning and end"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 30,
+       "endLine": 34,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L30-L34"
+      },
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 73,
+       "endLine": 77,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L73-L77"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "excludePointsFromRange function > should handle overlapping points",
+      "excludePointsFromRange function > excludePointsFromRange function > should handle overlapping points"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 36,
+       "endLine": 40,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L36-L40"
+      },
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 79,
+       "endLine": 83,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L79-L83"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "excludePointsFromRange function > should handle points outside the range",
+      "excludePointsFromRange function > excludePointsFromRange function > should handle points outside the range"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 42,
+       "endLine": 46,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L42-L46"
+      },
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 85,
+       "endLine": 89,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L85-L89"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "excludePointsFromRange function > should handle a single point in the middle",
+      "excludePointsFromRange function > excludePointsFromRange function > should handle a single point in the middle"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 48,
+       "endLine": 52,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L48-L52"
+      },
+      {
+       "path": "packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts",
+       "line": 91,
+       "endLine": 95,
+       "url": "https://github.com/dream-num/univer/blob/5a06a7842c8e13fa0646d0733dc3662cf4b330b9/packages/core/src/docs/data-model/text-x/build-utils/__tests__/custom-range.spec.ts#L91-L95"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "open-webui/open-webui",
+   "url": "https://github.com/open-webui/open-webui",
+   "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+   "language": "Svelte",
+   "stars": 158436,
+   "starsToday": 115,
+   "lists": [
+    "svelte"
+   ],
+   "defaultBranch": "main",
+   "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+   "scanMs": 1058,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 8,
+    "unresolved": 0,
+    "files": 2
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 0,
+    "errors": 0,
+    "warnings": 0,
+    "byRule": {}
+   },
+   "top": []
+  },
+  {
+   "name": "WhiteTowerAI/ohmygame",
+   "url": "https://github.com/WhiteTowerAI/ohmygame",
+   "description": "The open-source studio for making games with AI. Your own one-person game studio. Everything you need to make games with AI, in one app. Game canvas.  Bring your own key.",
+   "language": "TypeScript",
+   "stars": 2122,
+   "starsToday": 89,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f353687d74adb31044cbeaae5d7a16615be24253",
+   "scanMs": 6752,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 5082,
+    "unresolved": 788,
+    "files": 392
+   },
+   "comparablePercent": 84.5,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 57,
+     "tests": 772
+    },
+    {
+     "reason": "order-dependent-state",
+     "files": 1,
+     "tests": 14
+    },
+    {
+     "reason": "registered-elsewhere",
+     "files": 1,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 19,
+    "errors": 0,
+    "warnings": 19,
+    "byRule": {
+     "parameterization-candidate": 19
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "conversationItems > restores Plugin references as natural Composer mentions",
+      "conversationItems > restores an expanded Pi skill invocation as Composer syntax"
+     ],
+     "locations": [
+      {
+       "path": "test/agent.test.ts",
+       "line": 275,
+       "endLine": 289,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/agent.test.ts#L275-L289"
+      },
+      {
+       "path": "test/agent.test.ts",
+       "line": 291,
+       "endLine": 300,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/agent.test.ts#L291-L300"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "daemon > returns the skills loaded by the current conversation session",
+      "daemon > exposes the shared Plugins and Skills to Interactive Story conversations"
+     ],
+     "locations": [
+      {
+       "path": "test/app.test.ts",
+       "line": 941,
+       "endLine": 964,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/app.test.ts#L941-L964"
+      },
+      {
+       "path": "test/app.test.ts",
+       "line": 966,
+       "endLine": 989,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/app.test.ts#L966-L989"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Asset Canvas schema diagnostics > accepts a persisted Tripo V3.1 node above Meshy's polycount ceiling",
+      "Asset Canvas schema diagnostics > rejects an invalid node shape: %j"
+     ],
+     "locations": [
+      {
+       "path": "test/asset-canvas-schema.test.ts",
+       "line": 30,
+       "endLine": 34,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/asset-canvas-schema.test.ts#L30-L34"
+      },
+      {
+       "path": "test/asset-canvas-schema.test.ts",
+       "line": 70,
+       "endLine": 75,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/asset-canvas-schema.test.ts#L70-L75"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "canvas alignment guides > reports exact edge alignment on both axes",
+      "canvas alignment guides > uses the visual content frame instead of the full node wrapper"
+     ],
+     "locations": [
+      {
+       "path": "test/canvas-alignment.test.ts",
+       "line": 20,
+       "endLine": 28,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/canvas-alignment.test.ts#L20-L28"
+      },
+      {
+       "path": "test/canvas-alignment.test.ts",
+       "line": 37,
+       "endLine": 53,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/canvas-alignment.test.ts#L37-L53"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "canvas alignment guides > uses the visual content frame instead of the full node wrapper",
+      "canvas alignment guides > aligns a scene content frame with the complete Start frame"
+     ],
+     "locations": [
+      {
+       "path": "test/canvas-alignment.test.ts",
+       "line": 37,
+       "endLine": 53,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/canvas-alignment.test.ts#L37-L53"
+      },
+      {
+       "path": "test/canvas-alignment.test.ts",
+       "line": 55,
+       "endLine": 71,
+       "url": "https://github.com/WhiteTowerAI/ohmygame/blob/f353687d74adb31044cbeaae5d7a16615be24253/test/canvas-alignment.test.ts#L55-L71"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "OpenCTI-Platform/opencti",
+   "url": "https://github.com/OpenCTI-Platform/opencti",
+   "description": "Open Cyber Threat Intelligence Platform",
+   "language": "TypeScript",
+   "stars": 10346,
+   "starsToday": 47,
+   "lists": [
+    "typescript"
+   ],
+   "defaultBranch": "master",
+   "headSha": "29d01eab64b423bab3abd8aaa3dc0338b1cff861",
+   "scanMs": 14713,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 4608,
+    "unresolved": 385,
+    "files": 525
+   },
+   "comparablePercent": 91.6,
+   "exclusions": [
+    {
+     "reason": "helper-export-unreadable",
+     "files": 50,
+     "tests": 372
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 13
+    }
+   ],
+   "findings": {
+    "total": 236,
+    "errors": 4,
+    "warnings": 232,
+    "byRule": {
+     "parameterization-candidate": 228,
+     "near-duplicate-test": 2,
+     "duplicate-test": 4,
+     "duplicate-test-name": 2
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Workflow Component > Component rendering > should call fitView on mount",
+      "Workflow Component > ReactFlow integration > should call fitView with correct options"
+     ],
+     "locations": [
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx",
+       "line": 296,
+       "endLine": 299,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx#L296-L299"
+      },
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx",
+       "line": 500,
+       "endLine": 504,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx#L500-L504"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "Workflow Component > User interactions > should open drawer when Add Status button is clicked",
+      "Workflow Component > Drawer interactions > should set selectedElement when opening drawer for new status"
+     ],
+     "locations": [
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx",
+       "line": 303,
+       "endLine": 311,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx#L303-L311"
+      },
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx",
+       "line": 455,
+       "endLine": 463,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/settings/sub_types/workflow/Workflow.test.tsx#L455-L463"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "buildInitialFilters > when host is a fintel template > when host entity type is a container > when perspective is entities > preconfigures an objects filter with SELF_ID value",
+      "buildInitialFilters > when host is a custom view > when host entity type is a container > when perspective is entities > preconfigures an objects filter with SELF_ID value"
+     ],
+     "locations": [
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx",
+       "line": 10,
+       "endLine": 32,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx#L10-L32"
+      },
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx",
+       "line": 120,
+       "endLine": 142,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx#L120-L142"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "buildInitialFilters > when host is a fintel template > when host entity type is a container > when perspective is relationships > preconfigures an objects filter with SELF_ID value",
+      "buildInitialFilters > when host is a custom view > when host entity type is a container > when perspective is relationships > preconfigures an objects filter with SELF_ID value"
+     ],
+     "locations": [
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx",
+       "line": 36,
+       "endLine": 58,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx#L36-L58"
+      },
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx",
+       "line": 146,
+       "endLine": 168,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/widgets/WidgetCreationPerspective.test.tsx#L146-L168"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events in the same order under an equivalent context, but their normalized bodies differ; a supported normalization may explain the similarity, but equivalence is not proven, so the likely remedy is to cons",
+     "titles": [
+      "useStixRelationshipsMultiHorizontalBars > should return correct chartData when stixRelationshipsDistribution is filled with scos entities such as marking definitions",
+      "useStixRelationshipsMultiHorizontalBars > should return correct chartData when stixRelationshipsDistribution is filled with non scos entities such as users"
+     ],
+     "locations": [
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/common/stix_relationships/StixRelationshipsMultiHorizontalBars/useStixRelationshipsMultiHorizontalBars.test.ts",
+       "line": 12,
+       "endLine": 131,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/common/stix_relationships/StixRelationshipsMultiHorizontalBars/useStixRelationshipsMultiHorizontalBars.test.ts#L12-L131"
+      },
+      {
+       "path": "opencti-platform/opencti-front/src/private/components/common/stix_relationships/StixRelationshipsMultiHorizontalBars/useStixRelationshipsMultiHorizontalBars.test.ts",
+       "line": 133,
+       "endLine": 219,
+       "url": "https://github.com/OpenCTI-Platform/opencti/blob/29d01eab64b423bab3abd8aaa3dc0338b1cff861/opencti-platform/opencti-front/src/private/components/common/stix_relationships/StixRelationshipsMultiHorizontalBars/useStixRelationshipsMultiHorizontalBars.test.ts#L133-L219"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "algerkong/AlgerMusicPlayer",
+   "url": "https://github.com/algerkong/AlgerMusicPlayer",
+   "description": "一个第三方音乐播放器、本地服务、桌面歌词、音乐下载、远程控制",
+   "language": "Vue",
+   "stars": 17541,
+   "starsToday": 38,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "f17418c99b688c72ef65972e945b989b170ff3e5",
+   "scanMs": 725,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 72,
+    "unresolved": 0,
+    "files": 7
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 1,
+    "errors": 0,
+    "warnings": 1,
+    "byRule": {
+     "parameterization-candidate": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "validatePluginMediaSource > 拒绝非 http(s) URL",
+      "validatePluginMediaSource > 拒绝非法请求头"
+     ],
+     "locations": [
+      {
+       "path": "tests/musicSourcePlugin.test.ts",
+       "line": 117,
+       "endLine": 120,
+       "url": "https://github.com/algerkong/AlgerMusicPlayer/blob/f17418c99b688c72ef65972e945b989b170ff3e5/tests/musicSourcePlugin.test.ts#L117-L120"
+      },
+      {
+       "path": "tests/musicSourcePlugin.test.ts",
+       "line": 122,
+       "endLine": 129,
+       "url": "https://github.com/algerkong/AlgerMusicPlayer/blob/f17418c99b688c72ef65972e945b989b170ff3e5/tests/musicSourcePlugin.test.ts#L122-L129"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "fishjar/kiss-translator",
+   "url": "https://github.com/fishjar/kiss-translator",
+   "description": "A simple, open source bilingual translation extension & Greasemonkey script (一个简约、开源的 双语对照翻译扩展 & 油猴脚本)",
+   "language": "JavaScript",
+   "stars": 13298,
+   "starsToday": 21,
+   "lists": [
+    "javascript"
+   ],
+   "defaultBranch": "dev",
+   "headSha": "ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9",
+   "scanMs": 8486,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 472,
+    "unresolved": 4,
+    "files": 453
+   },
+   "comparablePercent": 99.2,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 2
+    },
+    {
+     "reason": "order-dependent-state",
+     "files": 1,
+     "tests": 2
+    }
+   ],
+   "findings": {
+    "total": 4,
+    "errors": 0,
+    "warnings": 4,
+    "byRule": {
+     "parameterization-candidate": 4
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "mapAsrLanguage > zh-hans → chinese + t2s",
+      "mapAsrLanguage > zh-hant → chinese + s2t",
+      "mapAsrLanguage > english 直接透传",
+      "mapAsrLanguage > 空值 → 自动检测（whisper 为 null）"
+     ],
+     "locations": [
+      {
+       "path": "src/localAi/core/__tests__/asrLanguages.test.ts",
+       "line": 5,
+       "endLine": 7,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/asrLanguages.test.ts#L5-L7"
+      },
+      {
+       "path": "src/localAi/core/__tests__/asrLanguages.test.ts",
+       "line": 9,
+       "endLine": 11,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/asrLanguages.test.ts#L9-L11"
+      },
+      {
+       "path": "src/localAi/core/__tests__/asrLanguages.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/asrLanguages.test.ts#L13-L15"
+      },
+      {
+       "path": "src/localAi/core/__tests__/asrLanguages.test.ts",
+       "line": 22,
+       "endLine": 24,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/asrLanguages.test.ts#L22-L24"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "ocrVlmPrompts > resolves official GLM-OCR prompts by task mode",
+      "ocrVlmPrompts > resolves official PaddleOCR-VL-1.6 prompts by task mode"
+     ],
+     "locations": [
+      {
+       "path": "src/localAi/core/__tests__/ocrVlmPrompts.test.ts",
+       "line": 9,
+       "endLine": 19,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ocrVlmPrompts.test.ts#L9-L19"
+      },
+      {
+       "path": "src/localAi/core/__tests__/ocrVlmPrompts.test.ts",
+       "line": 21,
+       "endLine": 29,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ocrVlmPrompts.test.ts#L21-L29"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "pinyinSyllableToPhonemes > ü 韵与 j/q/x 的 un→ün",
+      "pinyinSyllableToPhonemes > 短写韵母 iu/ui/un"
+     ],
+     "locations": [
+      {
+       "path": "src/localAi/core/__tests__/ttsG2p.test.ts",
+       "line": 36,
+       "endLine": 40,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ttsG2p.test.ts#L36-L40"
+      },
+      {
+       "path": "src/localAi/core/__tests__/ttsG2p.test.ts",
+       "line": 42,
+       "endLine": 47,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ttsG2p.test.ts#L42-L47"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "zhTextToPhonemes > 整句转换",
+      "zhTextToPhonemes > 一/不 变调由 pinyin-pro 处理"
+     ],
+     "locations": [
+      {
+       "path": "src/localAi/core/__tests__/ttsG2p.test.ts",
+       "line": 56,
+       "endLine": 59,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ttsG2p.test.ts#L56-L59"
+      },
+      {
+       "path": "src/localAi/core/__tests__/ttsG2p.test.ts",
+       "line": 61,
+       "endLine": 65,
+       "url": "https://github.com/fishjar/kiss-translator/blob/ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9/src/localAi/core/__tests__/ttsG2p.test.ts#L61-L65"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "CorentinTh/it-tools",
+   "url": "https://github.com/CorentinTh/it-tools",
+   "description": "Collection of handy online tools for developers, with great UX. ",
+   "language": "Vue",
+   "stars": 41210,
+   "starsToday": 15,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+   "scanMs": 984,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 134,
+    "unresolved": 1,
+    "files": 59
+   },
+   "comparablePercent": 99.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 1
+    }
+   ],
+   "findings": {
+    "total": 8,
+    "errors": 0,
+    "warnings": 8,
+    "byRule": {
+     "parameterization-candidate": 8
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "password-strength-analyser-and-crack-time-estimation > getCharsetLength > computes the charset length of a given password > the charset length is 26 when the password is only lowercase characters",
+      "password-strength-analyser-and-crack-time-estimation > getCharsetLength > computes the charset length of a given password > the charset length is 26 when the password is only uppercase characters",
+      "password-strength-analyser-and-crack-time-estimation > getCharsetLength > computes the charset length of a given password > the charset length is 10 when the password is only digits",
+      "password-strength-analyser-and-crack-time-estimation > getCharsetLength > computes the charset length of a given password > the charset length is 32 when the password is only special characters"
+     ],
+     "locations": [
+      {
+       "path": "src/tools/password-strength-analyser/password-strength-analyser.service.test.ts",
+       "line": 7,
+       "endLine": 9,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/password-strength-analyser/password-strength-analyser.service.test.ts#L7-L9"
+      },
+      {
+       "path": "src/tools/password-strength-analyser/password-strength-analyser.service.test.ts",
+       "line": 10,
+       "endLine": 12,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/password-strength-analyser/password-strength-analyser.service.test.ts#L10-L12"
+      },
+      {
+       "path": "src/tools/password-strength-analyser/password-strength-analyser.service.test.ts",
+       "line": 13,
+       "endLine": 15,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/password-strength-analyser/password-strength-analyser.service.test.ts#L13-L15"
+      },
+      {
+       "path": "src/tools/password-strength-analyser/password-strength-analyser.service.test.ts",
+       "line": 16,
+       "endLine": 18,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/password-strength-analyser/password-strength-analyser.service.test.ts#L16-L18"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "5 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 5 tests form one cluster, reported as a single finding instead of 10 pairwise findings (spanni",
+     "titles": [
+      "token-generator > createToken > should generate a random string with just uppercase if only withUppercase is set",
+      "token-generator > createToken > should generate a random string with just lowercase if only withLowercase is set",
+      "token-generator > createToken > should generate a random string with just numbers if only withNumbers is set",
+      "token-generator > createToken > should generate a random string with just symbols if only withSymbols is set"
+     ],
+     "locations": [
+      {
+       "path": "src/tools/token-generator/token-generator.service.test.ts",
+       "line": 33,
+       "endLine": 44,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/token-generator/token-generator.service.test.ts#L33-L44"
+      },
+      {
+       "path": "src/tools/token-generator/token-generator.service.test.ts",
+       "line": 46,
+       "endLine": 57,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/token-generator/token-generator.service.test.ts#L46-L57"
+      },
+      {
+       "path": "src/tools/token-generator/token-generator.service.test.ts",
+       "line": 59,
+       "endLine": 70,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/token-generator/token-generator.service.test.ts#L59-L70"
+      },
+      {
+       "path": "src/tools/token-generator/token-generator.service.test.ts",
+       "line": 72,
+       "endLine": 83,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/token-generator/token-generator.service.test.ts#L72-L83"
+      }
+     ],
+     "more": 1
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "ipv4RangeExpander > when there are two valid ipv4 addresses given > should calculate valid cidr for given addresses",
+      "ipv4RangeExpander > when there are two valid ipv4 addresses given > should calculate valid cidr for given addresses, where first octet is lower than 128"
+     ],
+     "locations": [
+      {
+       "path": "src/tools/ipv4-range-expander/ipv4-range-expander.service.test.ts",
+       "line": 6,
+       "endLine": 15,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/ipv4-range-expander/ipv4-range-expander.service.test.ts#L6-L15"
+      },
+      {
+       "path": "src/tools/ipv4-range-expander/ipv4-range-expander.service.test.ts",
+       "line": 17,
+       "endLine": 26,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/ipv4-range-expander/ipv4-range-expander.service.test.ts#L17-L26"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "safelink-decoder > decodeSafeLinksURL > decode outlook safelink urls > should decode basic safelink urls",
+      "safelink-decoder > decodeSafeLinksURL > decode outlook safelink urls > should decode encoded safelink urls"
+     ],
+     "locations": [
+      {
+       "path": "src/tools/safelink-decoder/safelink-decoder.service.test.ts",
+       "line": 7,
+       "endLine": 10,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/safelink-decoder/safelink-decoder.service.test.ts#L7-L10"
+      },
+      {
+       "path": "src/tools/safelink-decoder/safelink-decoder.service.test.ts",
+       "line": 11,
+       "endLine": 14,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/tools/safelink-decoder/safelink-decoder.service.test.ts#L11-L14"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "CInputText > Renders a placeholder",
+      "CInputText > Renders a provided id"
+     ],
+     "locations": [
+      {
+       "path": "src/ui/c-input-text/c-input-text.test.ts",
+       "line": 23,
+       "endLine": 31,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/ui/c-input-text/c-input-text.test.ts#L23-L31"
+      },
+      {
+       "path": "src/ui/c-input-text/c-input-text.test.ts",
+       "line": 43,
+       "endLine": 51,
+       "url": "https://github.com/CorentinTh/it-tools/blob/d505845f918e946ec300af7b36efc107e2f66e9e/src/ui/c-input-text/c-input-text.test.ts#L43-L51"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "frappe/crm",
+   "url": "https://github.com/frappe/crm",
+   "description": "Fully featured, open source CRM",
+   "language": "Vue",
+   "stars": 3957,
+   "starsToday": 10,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "develop",
+   "headSha": "d68ef63d1eb239fbe60b56bfd9f74a44ad364a94",
+   "scanMs": 765,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 139,
+    "unresolved": 1,
+    "files": 53
+   },
+   "comparablePercent": 99.3,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 1
+    }
+   ],
+   "findings": {
+    "total": 7,
+    "errors": 0,
+    "warnings": 7,
+    "byRule": {
+     "parameterization-candidate": 7
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "importListQuery and importListFilters > filters an insert import to the records its user created in its window",
+      "importListQuery and importListFilters > filters an update import to the records its user changed in its window"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/dataImportListQuery.test.ts",
+       "line": 21,
+       "endLine": 30,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/dataImportListQuery.test.ts#L21-L30"
+      },
+      {
+       "path": "frontend/tests/unit/dataImportListQuery.test.ts",
+       "line": 32,
+       "endLine": 41,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/dataImportListQuery.test.ts#L32-L41"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "getDataImportRow > colours the status badge, with gray for an unknown status",
+      "getDataImportRow > shows the Google Sheet without filtering the file on its URL"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/dataImportRow.test.ts",
+       "line": 10,
+       "endLine": 19,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/dataImportRow.test.ts#L10-L19"
+      },
+      {
+       "path": "frontend/tests/unit/dataImportRow.test.ts",
+       "line": 32,
+       "endLine": 42,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/dataImportRow.test.ts#L32-L42"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "holdsEnrichedValue > matches the value enrichment wrote",
+      "holdsEnrichedValue > treats a whole-number float as equal to its integer"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/enrichedFields.test.ts",
+       "line": 8,
+       "endLine": 13,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/enrichedFields.test.ts#L8-L13"
+      },
+      {
+       "path": "frontend/tests/unit/enrichedFields.test.ts",
+       "line": 23,
+       "endLine": 27,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/enrichedFields.test.ts#L23-L27"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "holdsEnrichedValue > treats a whole-number float as equal to its integer",
+      "holdsEnrichedValue > treats null and empty string as the same"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/enrichedFields.test.ts",
+       "line": 23,
+       "endLine": 27,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/enrichedFields.test.ts#L23-L27"
+      },
+      {
+       "path": "frontend/tests/unit/enrichedFields.test.ts",
+       "line": 29,
+       "endLine": 32,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/enrichedFields.test.ts#L29-L32"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "supportsTreeFilter > offers the hierarchy operator for a Link to a tree doctype",
+      "supportsTreeFilter > leaves a Link to a flat doctype alone"
+     ],
+     "locations": [
+      {
+       "path": "frontend/tests/unit/supportsTreeFilter.test.ts",
+       "line": 9,
+       "endLine": 16,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/supportsTreeFilter.test.ts#L9-L16"
+      },
+      {
+       "path": "frontend/tests/unit/supportsTreeFilter.test.ts",
+       "line": 18,
+       "endLine": 21,
+       "url": "https://github.com/frappe/crm/blob/d68ef63d1eb239fbe60b56bfd9f74a44ad364a94/frontend/tests/unit/supportsTreeFilter.test.ts#L18-L21"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "unovue/reka-ui",
+   "url": "https://github.com/unovue/reka-ui",
+   "description": "An open-source UI component library for building high-quality, accessible design systems and web apps for Vue. Previously Radix Vue",
+   "language": "TypeScript",
+   "stars": 6951,
+   "starsToday": 2,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "v2",
+   "headSha": "46521026c9f11ca9f17b8effc8d059b1bf7755ea",
+   "scanMs": 2639,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 2761,
+    "unresolved": 57,
+    "files": 158
+   },
+   "comparablePercent": 97.9,
+   "exclusions": [
+    {
+     "reason": "unresolved-context",
+     "files": 11,
+     "tests": 54
+    },
+    {
+     "reason": "registered-elsewhere",
+     "files": 3,
+     "tests": 3
+    }
+   ],
+   "findings": {
+    "total": 201,
+    "errors": 2,
+    "warnings": 199,
+    "byRule": {
+     "parameterization-candidate": 198,
+     "duplicate-test": 2,
+     "near-duplicate-test": 1
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "given default ColorField (hex mode) > should update value on input",
+      "given default ColorField (hex mode) > should accept valid hex colors"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/ColorField/ColorField.test.ts",
+       "line": 32,
+       "endLine": 38,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorField/ColorField.test.ts#L32-L38"
+      },
+      {
+       "path": "packages/core/src/ColorField/ColorField.test.ts",
+       "line": 40,
+       "endLine": 46,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorField/ColorField.test.ts#L40-L46"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "given radio in a form > after clicking submit button > should trigger submit once",
+      "given radio in a form > after uncheck and click submit button again > should trigger submit once"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/RadioGroup/RadioGroup.test.ts",
+       "line": 137,
+       "endLine": 140,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/RadioGroup/RadioGroup.test.ts#L137-L140"
+      },
+      {
+       "path": "packages/core/src/RadioGroup/RadioGroup.test.ts",
+       "line": 149,
+       "endLine": 152,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/RadioGroup/RadioGroup.test.ts#L149-L152"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "near-duplicate-test",
+     "severity": "warning",
+     "verdict": "similar-uncertain",
+     "message": "2 tests execute the same behavior events with at least one different ordering under an equivalent context; if the reordered statements are independent this may be redundant coverage, but equivalence is not proven, so the likely remedy is to",
+     "titles": [
+      "given FocusGuards > adds exactly 2 guard elements to document.body on mount",
+      "given FocusGuards > removes guard elements from document.body on unmount"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/FocusGuards/FocusGuards.test.ts",
+       "line": 22,
+       "endLine": 28,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/FocusGuards/FocusGuards.test.ts#L22-L28"
+      },
+      {
+       "path": "packages/core/src/FocusGuards/FocusGuards.test.ts",
+       "line": 30,
+       "endLine": 35,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/FocusGuards/FocusGuards.test.ts#L30-L35"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "9 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 9 tests form one cluster, reported as a single finding instead of 36 pairwise findings (spanni",
+     "titles": [
+      "colorSwatch > given a default ColorSwatch > should render with role=\"img\"",
+      "colorSwatch > given a default ColorSwatch > should render with aria-roledescription=\"color swatch\"",
+      "colorSwatch > aria-label > should use custom label when provided",
+      "colorSwatch > aria-label > should show \"transparent\" for alpha=0 color"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/ColorSwatch/ColorSwatch.test.ts",
+       "line": 16,
+       "endLine": 21,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorSwatch/ColorSwatch.test.ts#L16-L21"
+      },
+      {
+       "path": "packages/core/src/ColorSwatch/ColorSwatch.test.ts",
+       "line": 23,
+       "endLine": 28,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorSwatch/ColorSwatch.test.ts#L23-L28"
+      },
+      {
+       "path": "packages/core/src/ColorSwatch/ColorSwatch.test.ts",
+       "line": 41,
+       "endLine": 46,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorSwatch/ColorSwatch.test.ts#L41-L46"
+      },
+      {
+       "path": "packages/core/src/ColorSwatch/ColorSwatch.test.ts",
+       "line": 48,
+       "endLine": 53,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/ColorSwatch/ColorSwatch.test.ts#L48-L53"
+      }
+     ],
+     "more": 5
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "transformOrigin direction-aware logic > bottom placement > rTL flips start origin to 100%",
+      "transformOrigin direction-aware logic > bottom placement > lTR keeps start origin at 0%",
+      "transformOrigin direction-aware logic > bottom placement > rTL flips end origin to 0%",
+      "transformOrigin direction-aware logic > bottom placement > lTR keeps end origin at 100%"
+     ],
+     "locations": [
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 45,
+       "endLine": 47,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/Popper/Popper.test.ts#L45-L47"
+      },
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 48,
+       "endLine": 50,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/Popper/Popper.test.ts#L48-L50"
+      },
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 51,
+       "endLine": 53,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/Popper/Popper.test.ts#L51-L53"
+      },
+      {
+       "path": "packages/core/src/Popper/Popper.test.ts",
+       "line": 54,
+       "endLine": 56,
+       "url": "https://github.com/unovue/reka-ui/blob/46521026c9f11ca9f17b8effc8d059b1bf7755ea/packages/core/src/Popper/Popper.test.ts#L54-L56"
+      }
+     ],
+     "more": 4
+    }
+   ]
+  },
+  {
+   "name": "freqtrade/frequi",
+   "url": "https://github.com/freqtrade/frequi",
+   "description": "Freqtrade UI - Frontend for Freqtrade",
+   "language": "Vue",
+   "stars": 1118,
+   "starsToday": 1,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "main",
+   "headSha": "0231873d25025d183022a05ecbdfd062c129322d",
+   "scanMs": 741,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 58,
+    "unresolved": 0,
+    "files": 12
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 6,
+    "errors": 0,
+    "warnings": 6,
+    "byRule": {
+     "duplicate-test-name": 1,
+     "parameterization-candidate": 5
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test-name",
+     "severity": "warning",
+     "verdict": "name-collision",
+     "message": "2 tests in this file share the full title \"splitTradePair > Extracts stake and quote currencies from spot pairs\"",
+     "titles": [
+      "splitTradePair > Extracts stake and quote currencies from spot pairs",
+      "splitTradePair > Extracts stake and quote currencies from spot pairs"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/formatPair.spec.ts",
+       "line": 5,
+       "endLine": 10,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/formatPair.spec.ts#L5-L10"
+      },
+      {
+       "path": "tests/unit/formatPair.spec.ts",
+       "line": 11,
+       "endLine": 25,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/formatPair.spec.ts#L11-L25"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "splitTradePair > Extracts stake and quote currencies from spot pairs",
+      "splitTradePair > Extracts stake and quote currencies from spot pairs"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/formatPair.spec.ts",
+       "line": 5,
+       "endLine": 10,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/formatPair.spec.ts#L5-L10"
+      },
+      {
+       "path": "tests/unit/formatPair.spec.ts",
+       "line": 11,
+       "endLine": 25,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/formatPair.spec.ts#L11-L25"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "replaceTemplateColumns > Updates main plot values",
+      "replaceTemplateColumns > Updates subplot plot values"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 7,
+       "endLine": 27,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L7-L27"
+      },
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 28,
+       "endLine": 52,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L28-L52"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "replaceTemplateColumns > Updates subplot plot values",
+      "replaceTemplateColumns > Updates both main and subplot values"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 28,
+       "endLine": 52,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L28-L52"
+      },
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 53,
+       "endLine": 97,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L53-L97"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "replaceTemplateColumns > Updates both main and subplot values",
+      "replaceTemplateColumns > Updates \"fill to\" values"
+     ],
+     "locations": [
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 53,
+       "endLine": 97,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L53-L97"
+      },
+      {
+       "path": "tests/unit/plotTemplates.spec.ts",
+       "line": 99,
+       "endLine": 159,
+       "url": "https://github.com/freqtrade/frequi/blob/0231873d25025d183022a05ecbdfd062c129322d/tests/unit/plotTemplates.spec.ts#L99-L159"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "zwave-js/zwave-js-ui",
+   "url": "https://github.com/zwave-js/zwave-js-ui",
+   "description": "Full featured Z-Wave Control Panel UI and MQTT gateway. Built using Nodejs, and Vue/Vuetify",
+   "language": "Vue",
+   "stars": 1253,
+   "starsToday": 0,
+   "lists": [
+    "vue"
+   ],
+   "defaultBranch": "master",
+   "headSha": "80fc69b3966d4a75ce34315d1c50e3d97498f246",
+   "scanMs": 738,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 263,
+    "unresolved": 12,
+    "files": 20
+   },
+   "comparablePercent": 95.4,
+   "exclusions": [
+    {
+     "reason": "order-dependent-state",
+     "files": 1,
+     "tests": 11
+    },
+    {
+     "reason": "unresolved-context",
+     "files": 1,
+     "tests": 1
+    }
+   ],
+   "findings": {
+    "total": 26,
+    "errors": 1,
+    "warnings": 25,
+    "byRule": {
+     "duplicate-test": 1,
+     "parameterization-candidate": 25
+    }
+   },
+   "top": [
+    {
+     "rule": "duplicate-test",
+     "severity": "error",
+     "verdict": "redundant",
+     "message": "2 tests have identical bodies under an equivalent context",
+     "titles": [
+      "ManagedItems > #reset > resets the table items per page",
+      "ManagedItems > #reset > resets the table page"
+     ],
+     "locations": [
+      {
+       "path": "src/modules/ManagedItems.test.ts",
+       "line": 88,
+       "endLine": 93,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/src/modules/ManagedItems.test.ts#L88-L93"
+      },
+      {
+       "path": "src/modules/ManagedItems.test.ts",
+       "line": 94,
+       "endLine": 99,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/src/modules/ManagedItems.test.ts#L94-L99"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "#Constants > #meterType() > electric kWh → energy",
+      "#Constants > #meterType() > electric kVAh → no device class",
+      "#Constants > #meterType() > electric Pulse count → no device class",
+      "#Constants > #meterType() > gas m³ → gas"
+     ],
+     "locations": [
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 50,
+       "endLine": 56,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L50-L56"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 57,
+       "endLine": 62,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L57-L62"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 63,
+       "endLine": 68,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L63-L68"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 69,
+       "endLine": 75,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L69-L75"
+      }
+     ],
+     "more": 4
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "#Constants > #productionType() > known",
+      "#Constants > #productionType() > unknown"
+     ],
+     "locations": [
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 7,
+       "endLine": 12,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L7-L12"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 13,
+       "endLine": 18,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L13-L18"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "#Constants > #productionType() > unknown",
+      "#Constants > #productionType() > timestamp"
+     ],
+     "locations": [
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 13,
+       "endLine": 18,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L13-L18"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 19,
+       "endLine": 24,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L19-L24"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "#Constants > #sensorType() > known",
+      "#Constants > #sensorType() > no props"
+     ],
+     "locations": [
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 27,
+       "endLine": 35,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L27-L35"
+      },
+      {
+       "path": "test/lib/Constants.test.ts",
+       "line": 36,
+       "endLine": 41,
+       "url": "https://github.com/zwave-js/zwave-js-ui/blob/80fc69b3966d4a75ce34315d1c50e3d97498f246/test/lib/Constants.test.ts#L36-L41"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  },
+  {
+   "name": "openfoodfacts/openfoodfacts-explorer",
+   "url": "https://github.com/openfoodfacts/openfoodfacts-explorer",
+   "description": "The next-generation frontend for OpenFoodFacts, made with SvelteKit",
+   "language": "Svelte",
+   "stars": 80,
+   "starsToday": 0,
+   "lists": [
+    "svelte"
+   ],
+   "defaultBranch": "main",
+   "headSha": "978170404dc4082bbd6d60caaed77cd9ffce9e08",
+   "scanMs": 841,
+   "incomplete": true,
+   "tests": {
+    "analyzed": 168,
+    "unresolved": 0,
+    "files": 30
+   },
+   "comparablePercent": 100,
+   "exclusions": [],
+   "findings": {
+    "total": 12,
+    "errors": 0,
+    "warnings": 12,
+    "byRule": {
+     "parameterization-candidate": 12
+    }
+   },
+   "top": [
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "8 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 8 tests form one cluster, reported as a single finding instead of 28 pairwise findings (spanni",
+     "titles": [
+      "toLuceneString > handles a single include facet without a query",
+      "toLuceneString > handles a single exclude facet without a query",
+      "toLuceneString > handles multiple include values for the same facet",
+      "toLuceneString > handles multiple exclude values for the same facet"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/facets.test.ts",
+       "line": 27,
+       "endLine": 33,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/facets.test.ts#L27-L33"
+      },
+      {
+       "path": "src/lib/facets.test.ts",
+       "line": 35,
+       "endLine": 41,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/facets.test.ts#L35-L41"
+      },
+      {
+       "path": "src/lib/facets.test.ts",
+       "line": 43,
+       "endLine": 49,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/facets.test.ts#L43-L49"
+      },
+      {
+       "path": "src/lib/facets.test.ts",
+       "line": 51,
+       "endLine": 57,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/facets.test.ts#L51-L57"
+      }
+     ],
+     "more": 4
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "7 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 7 tests form one cluster, reported as a single finding instead of 21 pairwise findings (spanni",
+     "titles": [
+      "Gs1Barcode.parse() > invalid input > rejects too-short digits",
+      "Gs1Barcode.parse() > invalid input > rejects wrong-length digits with valid-looking content",
+      "Gs1Barcode.parse() > invalid input > rejects EAN-13 with wrong checksum",
+      "Gs1Barcode.parse() > invalid input > rejects non-numeric string"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 83,
+       "endLine": 85,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L83-L85"
+      },
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 87,
+       "endLine": 89,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L87-L89"
+      },
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 91,
+       "endLine": 94,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L91-L94"
+      },
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 96,
+       "endLine": 98,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L96-L98"
+      }
+     ],
+     "more": 3
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "6 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row; 6 tests form one cluster, reported as a single finding instead of 15 pairwise findings (spanni",
+     "titles": [
+      "getServingSizeValidationResult > shows an error when the input has no number at all",
+      "getServingSizeValidationResult > shows an error when the input is only a number",
+      "getServingSizeValidationResult > shows a warning when the number is there but the unit is unknown",
+      "getServingSizeValidationResult > does not let punctuation contribute to identifying an unknown unit"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/ui/edit-product-steps/nutrition.test.ts",
+       "line": 20,
+       "endLine": 24,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/ui/edit-product-steps/nutrition.test.ts#L20-L24"
+      },
+      {
+       "path": "src/lib/ui/edit-product-steps/nutrition.test.ts",
+       "line": 26,
+       "endLine": 30,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/ui/edit-product-steps/nutrition.test.ts#L26-L30"
+      },
+      {
+       "path": "src/lib/ui/edit-product-steps/nutrition.test.ts",
+       "line": 32,
+       "endLine": 36,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/ui/edit-product-steps/nutrition.test.ts#L32-L36"
+      },
+      {
+       "path": "src/lib/ui/edit-product-steps/nutrition.test.ts",
+       "line": 38,
+       "endLine": 42,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/ui/edit-product-steps/nutrition.test.ts#L38-L42"
+      }
+     ],
+     "more": 2
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "makeSiteRelativeUrlsAbsolute > rebases root-relative and page-relative URLs against the source page",
+      "makeSiteRelativeUrlsAbsolute > preserves fragment-only and absolute URLs"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/api/staticPages.test.ts",
+       "line": 40,
+       "endLine": 59,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/api/staticPages.test.ts#L40-L59"
+      },
+      {
+       "path": "src/lib/api/staticPages.test.ts",
+       "line": 61,
+       "endLine": 71,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/api/staticPages.test.ts#L61-L71"
+      }
+     ],
+     "more": 0
+    },
+    {
+     "rule": "parameterization-candidate",
+     "severity": "warning",
+     "verdict": "consolidatable",
+     "message": "2 tests share identical structure but differ only in literal values; consolidate into one `test.each` table that keeps every case as its own row",
+     "titles": [
+      "Gs1Barcode.parse() > valid barcodes > parses EAN-13 (4006381333931)",
+      "Gs1Barcode.parse() > valid barcodes > parses EAN-8 (GTIN-8)"
+     ],
+     "locations": [
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 25,
+       "endLine": 31,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L25-L31"
+      },
+      {
+       "path": "src/lib/barcodes/gs1.test.ts",
+       "line": 43,
+       "endLine": 49,
+       "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/blob/978170404dc4082bbd6d60caaed77cd9ffce9e08/src/lib/barcodes/gs1.test.ts#L43-L49"
+      }
+     ],
+     "more": 0
+    }
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "name": "HuLaSpark/HuLa",
+   "reason": "analysis failed"
+  }
+ ]
+}

@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T04:31:28.396Z",
+ "updatedAt": "2026-11-12T05:37:13.046Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -264,6 +264,17 @@
    "findings": 1426,
    "errors": 40,
    "skipped": 1
+  },
+  {
+   "date": "2026-11-12",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 54,
+   "repos": 15,
+   "tests": 63753,
+   "findings": 2204,
+   "errors": 63,
+   "skipped": 1
   }
  ],
  "repos": {
@@ -494,9 +505,20 @@
      "comparablePercent": 100,
      "findings": 12,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "978170404dc4082bbd6d60caaed77cd9ffce9e08",
+     "stars": 80,
+     "tests": 168,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-02"
+   "latest": "2026-11-12"
   },
   "supabase/supabase": {
    "name": "supabase/supabase",
@@ -1634,9 +1656,20 @@
      "comparablePercent": 100,
      "findings": 1,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f17418c99b688c72ef65972e945b989b170ff3e5",
+     "stars": 17541,
+     "tests": 72,
+     "comparablePercent": 100,
+     "findings": 1,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
   },
   "MoonshotAI/kimi-code": {
    "name": "MoonshotAI/kimi-code",
@@ -1767,9 +1800,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41210,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-10"
+   "latest": "2026-11-12"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -1916,9 +1960,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d68ef63d1eb239fbe60b56bfd9f74a44ad364a94",
+     "stars": 3957,
+     "tests": 139,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -2231,9 +2286,20 @@
      "comparablePercent": 99.3,
      "findings": 196,
      "errors": 2
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "46521026c9f11ca9f17b8effc8d059b1bf7755ea",
+     "stars": 6951,
+     "tests": 2761,
+     "comparablePercent": 97.9,
+     "findings": 201,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-10"
+   "latest": "2026-11-12"
   },
   "zwave-js/zwave-js-ui": {
    "name": "zwave-js/zwave-js-ui",
@@ -2270,9 +2336,20 @@
      "comparablePercent": 91.6,
      "findings": 20,
      "errors": 1
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "80fc69b3966d4a75ce34315d1c50e3d97498f246",
+     "stars": 1253,
+     "tests": 263,
+     "comparablePercent": 95.4,
+     "findings": 26,
+     "errors": 1
     }
    ],
-   "latest": "2026-10-29"
+   "latest": "2026-11-12"
   },
   "thesysdev/openui": {
    "name": "thesysdev/openui",
@@ -3532,9 +3609,20 @@
      "comparablePercent": 97.8,
      "findings": 204,
      "errors": 4
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "29d01eab64b423bab3abd8aaa3dc0338b1cff861",
+     "stars": 10346,
+     "tests": 4608,
+     "comparablePercent": 91.6,
+     "findings": 236,
+     "errors": 4
     }
    ],
-   "latest": "2026-11-01"
+   "latest": "2026-11-12"
   },
   "Rule-34/App": {
    "name": "Rule-34/App",
@@ -4069,9 +4157,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+     "stars": 158436,
+     "tests": 8,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -4372,9 +4471,20 @@
      "comparablePercent": 97.3,
      "findings": 1046,
      "errors": 35
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f980d1c6a884ff5981771878d78e67537c579210",
+     "stars": 25391,
+     "tests": 32688,
+     "comparablePercent": 97.3,
+     "findings": 1061,
+     "errors": 35
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
   },
   "vuejs/vue": {
    "name": "vuejs/vue",
@@ -4755,9 +4865,20 @@
      "comparablePercent": 100,
      "findings": 6,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0231873d25025d183022a05ecbdfd062c129322d",
+     "stars": 1118,
+     "tests": 58,
+     "comparablePercent": 100,
+     "findings": 6,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
   },
   "ZhuLinsen/daily_stock_analysis": {
    "name": "ZhuLinsen/daily_stock_analysis",
@@ -4772,9 +4893,20 @@
      "comparablePercent": 98.3,
      "findings": 73,
      "errors": 1
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "ef44660f00e08ce66dcd4dc4d2e700836c45e833",
+     "stars": 70560,
+     "tests": 1376,
+     "comparablePercent": 98.3,
+     "findings": 73,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-10"
+   "latest": "2026-11-12"
   },
   "WhiteTowerAI/ohmygame": {
    "name": "WhiteTowerAI/ohmygame",
@@ -4789,9 +4921,71 @@
      "comparablePercent": 84.8,
      "findings": 18,
      "errors": 0
+    },
+    {
+     "date": "2026-11-12",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f353687d74adb31044cbeaae5d7a16615be24253",
+     "stars": 2122,
+     "tests": 5082,
+     "comparablePercent": 84.5,
+     "findings": 19,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-12"
+  },
+  "LibreSpark/LibreTV": {
+   "name": "LibreSpark/LibreTV",
+   "appearances": [
+    {
+     "date": "2026-11-12",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "97f6ec437ab70ee4aeb49b745ced693d7ea0522a",
+     "stars": 24503,
+     "tests": 601,
+     "comparablePercent": 100,
+     "findings": 32,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-12"
+  },
+  "dream-num/univer": {
+   "name": "dream-num/univer",
+   "appearances": [
+    {
+     "date": "2026-11-12",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5a06a7842c8e13fa0646d0733dc3662cf4b330b9",
+     "stars": 23304,
+     "tests": 15323,
+     "comparablePercent": 98.8,
+     "findings": 518,
+     "errors": 20
+    }
+   ],
+   "latest": "2026-11-12"
+  },
+  "fishjar/kiss-translator": {
+   "name": "fishjar/kiss-translator",
+   "appearances": [
+    {
+     "date": "2026-11-12",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "ab5a5f47b8fd515ff8aa169e7375398ef1b5b8a9",
+     "stars": 13298,
+     "tests": 472,
+     "comparablePercent": 99.2,
+     "findings": 4,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-12"
   }
  }
 }
