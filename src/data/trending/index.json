@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-13T04:53:39.699Z",
+ "updatedAt": "2026-11-14T04:46:51.735Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -286,6 +286,17 @@
    "findings": 8505,
    "errors": 105,
    "skipped": 2
+  },
+  {
+   "date": "2026-11-14",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 57,
+   "repos": 17,
+   "tests": 188252,
+   "findings": 8050,
+   "errors": 85,
+   "skipped": 0
   }
  ],
  "repos": {
@@ -527,9 +538,20 @@
      "comparablePercent": 100,
      "findings": 12,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "978170404dc4082bbd6d60caaed77cd9ffce9e08",
+     "stars": 81,
+     "tests": 168,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-12"
+   "latest": "2026-11-14"
   },
   "supabase/supabase": {
    "name": "supabase/supabase",
@@ -1866,9 +1888,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41259,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -2037,9 +2070,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "73ec05a1712909ea2ad0e631e088baa5fa3ea4a5",
+     "stars": 3974,
+     "tests": 139,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -2120,9 +2164,20 @@
      "comparablePercent": 100,
      "findings": 13,
      "errors": 1
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6e79ef68ec0a524d71e8330e9f37daa86baa6524",
+     "stars": 3362,
+     "tests": 142,
+     "comparablePercent": 100,
+     "findings": 13,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "vaibhav-kakde-in/mdhero": {
    "name": "vaibhav-kakde-in/mdhero",
@@ -2247,9 +2302,20 @@
      "comparablePercent": 97.8,
      "findings": 26,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
+     "stars": 356,
+     "tests": 325,
+     "comparablePercent": 97.8,
+     "findings": 26,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "unovue/reka-ui": {
    "name": "unovue/reka-ui",
@@ -2452,9 +2518,20 @@
      "comparablePercent": 95,
      "findings": 56,
      "errors": 2
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e0aec340cb4a07c5605d678eedb036dbb5313d60",
+     "stars": 15199,
+     "tests": 1279,
+     "comparablePercent": 98.1,
+     "findings": 66,
+     "errors": 2
     }
    ],
-   "latest": "2026-10-27"
+   "latest": "2026-11-14"
   },
   "Narcooo/inkos": {
    "name": "Narcooo/inkos",
@@ -3304,9 +3381,20 @@
      "comparablePercent": 97.1,
      "findings": 1013,
      "errors": 1
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3dff4291f8ad5a86078679e23c7a0a2cd2adf9b3",
+     "stars": 4198,
+     "tests": 22999,
+     "comparablePercent": 97.1,
+     "findings": 1013,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "CopilotKit/CopilotKit": {
    "name": "CopilotKit/CopilotKit",
@@ -3522,9 +3610,20 @@
      "comparablePercent": 93.9,
      "findings": 3881,
      "errors": 44
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "114694062b83f69093a936a3caea4c35bdbeb41d",
+     "stars": 30127,
+     "tests": 105883,
+     "comparablePercent": 94,
+     "findings": 3890,
+     "errors": 44
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "phaserjs/phaser": {
    "name": "phaserjs/phaser",
@@ -3735,9 +3834,20 @@
      "comparablePercent": 96.2,
      "findings": 59,
      "errors": 2
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3ed9601862ecc78027e20ac80ad8b1b98a5d9079",
+     "stars": 17320,
+     "tests": 1455,
+     "comparablePercent": 98.1,
+     "findings": 40,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-01"
+   "latest": "2026-11-14"
   },
   "OpenCTI-Platform/opencti": {
    "name": "OpenCTI-Platform/opencti",
@@ -4322,9 +4432,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+     "stars": 158599,
+     "tests": 8,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -5080,9 +5201,20 @@
      "comparablePercent": 98.3,
      "findings": 73,
      "errors": 1
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "70f250597e9a2b0afe2d7dd6b992c90926916105",
+     "stars": 71780,
+     "tests": 1378,
+     "comparablePercent": 98.3,
+     "findings": 73,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-12"
+   "latest": "2026-11-14"
   },
   "WhiteTowerAI/ohmygame": {
    "name": "WhiteTowerAI/ohmygame",
@@ -5176,9 +5308,20 @@
      "comparablePercent": 99.9,
      "findings": 22,
      "errors": 0
+    },
+    {
+     "date": "2026-11-14",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "12c5e365e4015d3eeaa8b6fac51ee43eb5293cc4",
+     "stars": 1483,
+     "tests": 1106,
+     "comparablePercent": 99.9,
+     "findings": 22,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-14"
   },
   "axios/axios": {
    "name": "axios/axios",
@@ -5230,6 +5373,91 @@
     }
    ],
    "latest": "2026-11-13"
+  },
+  "alibaba/open-code-review": {
+   "name": "alibaba/open-code-review",
+   "appearances": [
+    {
+     "date": "2026-11-14",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "abd6416e6faec64e00af170a74633e34d56ab467",
+     "stars": 50775,
+     "tests": 38,
+     "comparablePercent": 97.4,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-14"
+  },
+  "abhigyanpatwari/GitNexus": {
+   "name": "abhigyanpatwari/GitNexus",
+   "appearances": [
+    {
+     "date": "2026-11-14",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "ef126ea2079cd7016593fb116eaa33b575125394",
+     "stars": 48522,
+     "tests": 31732,
+     "comparablePercent": 94.4,
+     "findings": 2174,
+     "errors": 28
+    }
+   ],
+   "latest": "2026-11-14"
+  },
+  "callstack/agent-device": {
+   "name": "callstack/agent-device",
+   "appearances": [
+    {
+     "date": "2026-11-14",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "ddbfc855661fa9d29b8c836057b7f5b099bcad44",
+     "stars": 5378,
+     "tests": 17664,
+     "comparablePercent": 96.1,
+     "findings": 395,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-11-14"
+  },
+  "tabler/tabler-icons": {
+   "name": "tabler/tabler-icons",
+   "appearances": [
+    {
+     "date": "2026-11-14",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3951a41ba543ca79c87cdaf00de7f16370d855e7",
+     "stars": 22645,
+     "tests": 66,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-14"
+  },
+  "AdventDevInc/kudu": {
+   "name": "AdventDevInc/kudu",
+   "appearances": [
+    {
+     "date": "2026-11-14",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "a21934c2bd313f23efbd9b563eb8622b2799f517",
+     "stars": 4342,
+     "tests": 3736,
+     "comparablePercent": 99.4,
+     "findings": 311,
+     "errors": 2
+    }
+   ],
+   "latest": "2026-11-14"
   }
  }
 }
