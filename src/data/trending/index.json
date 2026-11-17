@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T04:35:10.841Z",
+ "updatedAt": "2026-11-17T06:21:36.204Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -319,6 +319,17 @@
    "findings": 1952,
    "errors": 26,
    "skipped": 1
+  },
+  {
+   "date": "2026-11-17",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 63,
+   "repos": 17,
+   "tests": 76565,
+   "findings": 2007,
+   "errors": 33,
+   "skipped": 0
   }
  ],
  "repos": {
@@ -459,9 +470,20 @@
      "comparablePercent": 87.3,
      "findings": 41,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "eae6764548fe6418ea3ff0155b0e5f155a89e25b",
+     "stars": 90796,
+     "tests": 3234,
+     "comparablePercent": 94.6,
+     "findings": 73,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-03"
+   "latest": "2026-11-17"
   },
   "flizzywine/dsh-tavern": {
    "name": "flizzywine/dsh-tavern",
@@ -571,9 +593,20 @@
      "comparablePercent": 100,
      "findings": 12,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "17821bcb7e2e33c5637d5187f0b73b26d83e8b0b",
+     "stars": 82,
+     "tests": 177,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-14"
+   "latest": "2026-11-17"
   },
   "supabase/supabase": {
    "name": "supabase/supabase",
@@ -2285,9 +2318,20 @@
      "comparablePercent": 100,
      "findings": 13,
      "errors": 1
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6e79ef68ec0a524d71e8330e9f37daa86baa6524",
+     "stars": 3367,
+     "tests": 142,
+     "comparablePercent": 100,
+     "findings": 13,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "vaibhav-kakde-in/mdhero": {
    "name": "vaibhav-kakde-in/mdhero",
@@ -2445,9 +2489,20 @@
      "comparablePercent": 97.8,
      "findings": 26,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
+     "stars": 366,
+     "tests": 325,
+     "comparablePercent": 97.8,
+     "findings": 26,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "unovue/reka-ui": {
    "name": "unovue/reka-ui",
@@ -2966,9 +3021,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2144,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-17"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -3926,9 +3992,20 @@
      "comparablePercent": 0,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d6f3f02d41f13ba90b1c588c9b7277e648414a1f",
+     "stars": 16300,
+     "tests": 2,
+     "comparablePercent": 0,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "melgarafael/DeskcommCRM": {
    "name": "melgarafael/DeskcommCRM",
@@ -4525,9 +4602,20 @@
      "comparablePercent": 96.8,
      "findings": 426,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3198c3ed368f50b553166dad5aa495e5abbe949f",
+     "stars": 8895,
+     "tests": 29429,
+     "comparablePercent": 96.8,
+     "findings": 481,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-10"
+   "latest": "2026-11-17"
   },
   "open-webui/open-webui": {
    "name": "open-webui/open-webui",
@@ -4652,9 +4740,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b0e6098e940942281d9c83f3529ea117287a3a22",
+     "stars": 158874,
+     "tests": 8,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -5072,9 +5171,20 @@
      "comparablePercent": 87.4,
      "findings": 4,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "99c07450d2e093c0d637903dc2c94f28f264d70d",
+     "stars": 89090,
+     "tests": 135,
+     "comparablePercent": 87.4,
+     "findings": 4,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-17"
   },
   "prometheus/prometheus": {
    "name": "prometheus/prometheus",
@@ -5516,9 +5626,20 @@
      "comparablePercent": 98.8,
      "findings": 522,
      "errors": 20
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "1aafe9375e46f20d03c916dd6fcd8276f799036a",
+     "stars": 28039,
+     "tests": 15819,
+     "comparablePercent": 98.8,
+     "findings": 524,
+     "errors": 20
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "fishjar/kiss-translator": {
    "name": "fishjar/kiss-translator",
@@ -5578,9 +5699,20 @@
      "comparablePercent": 96.3,
      "findings": 73,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "c0d4c900515a55bd1e258eee16adb25c404d56ed",
+     "stars": 109366,
+     "tests": 1788,
+     "comparablePercent": 96.4,
+     "findings": 73,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-17"
   },
   "block/buzz-app": {
    "name": "block/buzz-app",
@@ -5651,9 +5783,20 @@
      "comparablePercent": 97.4,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b5e81a11e926a7557b0cc0c50b98058e0c85b39e",
+     "stars": 53137,
+     "tests": 38,
+     "comparablePercent": 97.4,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "abhigyanpatwari/GitNexus": {
    "name": "abhigyanpatwari/GitNexus",
@@ -5809,9 +5952,20 @@
      "comparablePercent": 95.9,
      "findings": 148,
      "errors": 2
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "79530a25f3476d0abb93cb00761906fda757a2d5",
+     "stars": 19391,
+     "tests": 4854,
+     "comparablePercent": 95.9,
+     "findings": 148,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "LodyAI/Lody": {
    "name": "LodyAI/Lody",
@@ -5860,9 +6014,20 @@
      "comparablePercent": 88,
      "findings": 20,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "7b91435c301d530351dcf5ebb91dd139c002e405",
+     "stars": 19991,
+     "tests": 275,
+     "comparablePercent": 88,
+     "findings": 20,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
   },
   "assistant-ui/assistant-ui": {
    "name": "assistant-ui/assistant-ui",
@@ -5894,9 +6059,54 @@
      "comparablePercent": 100,
      "findings": 52,
      "errors": 0
+    },
+    {
+     "date": "2026-11-17",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "fb5c3479271d1c9af46f87ab253a9f474c6ef13c",
+     "stars": 1102,
+     "tests": 462,
+     "comparablePercent": 100,
+     "findings": 52,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-17"
+  },
+  "esengine/estella": {
+   "name": "esengine/estella",
+   "appearances": [
+    {
+     "date": "2026-11-17",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9c885962531bc737c9d011b2179863b29c02d497",
+     "stars": 956,
+     "tests": 12720,
+     "comparablePercent": 95.7,
+     "findings": 252,
+     "errors": 4
+    }
+   ],
+   "latest": "2026-11-17"
+  },
+  "nestjs/nest": {
+   "name": "nestjs/nest",
+   "appearances": [
+    {
+     "date": "2026-11-17",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "09b656cb8df02a5f6ae1d0c5f1a0f2fadf7bc43c",
+     "stars": 77116,
+     "tests": 7152,
+     "comparablePercent": 99.1,
+     "findings": 329,
+     "errors": 6
+    }
+   ],
+   "latest": "2026-11-17"
   }
  }
 }
