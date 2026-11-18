@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T06:21:36.204Z",
+ "updatedAt": "2026-11-18T05:46:42.454Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -329,6 +329,17 @@
    "tests": 76565,
    "findings": 2007,
    "errors": 33,
+   "skipped": 0
+  },
+  {
+   "date": "2026-11-18",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 62,
+   "repos": 23,
+   "tests": 208899,
+   "findings": 5160,
+   "errors": 99,
    "skipped": 0
   }
  ],
@@ -912,9 +923,20 @@
      "comparablePercent": 95.3,
      "findings": 691,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9c6d2ed1e7990d47c7a984805aaaa7882c7bdc43",
+     "stars": 128084,
+     "tests": 17421,
+     "comparablePercent": 96.3,
+     "findings": 104,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-08"
+   "latest": "2026-11-18"
   },
   "liguobao/ds-harness-remote": {
    "name": "liguobao/ds-harness-remote",
@@ -1140,9 +1162,20 @@
      "comparablePercent": 98,
      "findings": 85,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 18,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5a8dc18c1bceeeac9d5c0832af0517c709e163a4",
+     "stars": 27017,
+     "tests": 658,
+     "comparablePercent": 98,
+     "findings": 85,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-18"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -1290,9 +1323,20 @@
      "comparablePercent": 98.4,
      "findings": 240,
      "errors": 2
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9d2b4b407b12e489ecd35320cd630d5ff97cd666",
+     "stars": 54173,
+     "tests": 6067,
+     "comparablePercent": 98.4,
+     "findings": 241,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-18"
   },
   "firecrawl/firecrawl": {
    "name": "firecrawl/firecrawl",
@@ -1611,9 +1655,20 @@
      "comparablePercent": 86.7,
      "findings": 6,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f50eb06efd9894bcf03a53fb8c05ab9ad170cfc4",
+     "stars": 8730,
+     "tests": 897,
+     "comparablePercent": 99.2,
+     "findings": 13,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-31"
+   "latest": "2026-11-18"
   },
   "moeru-ai/airi": {
    "name": "moeru-ai/airi",
@@ -2009,9 +2064,20 @@
      "comparablePercent": 99.3,
      "findings": 8,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "d505845f918e946ec300af7b36efc107e2f66e9e",
+     "stars": 41303,
+     "tests": 134,
+     "comparablePercent": 99.3,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-15"
+   "latest": "2026-11-18"
   },
   "frappe/crm": {
    "name": "frappe/crm",
@@ -2202,9 +2268,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 19,
+     "analyzerVersion": "0.10.0",
+     "headSha": "135867649e253ce5ed2853e430f56a446797b29c",
+     "stars": 4004,
+     "tests": 150,
+     "comparablePercent": 99.3,
+     "findings": 7,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-15"
+   "latest": "2026-11-18"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -2500,9 +2577,20 @@
      "comparablePercent": 97.8,
      "findings": 26,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 22,
+     "analyzerVersion": "0.10.0",
+     "headSha": "dc4b3f5cfa2adc172052344e9391a41f0a795b26",
+     "stars": 369,
+     "tests": 325,
+     "comparablePercent": 97.8,
+     "findings": 26,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "unovue/reka-ui": {
    "name": "unovue/reka-ui",
@@ -2883,9 +2971,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5cef573933663c4673c6e0093f1df04e68018b1a",
+     "stars": 4245,
+     "tests": 3,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-18"
   },
   "yuhonas/free-exercise-db": {
    "name": "yuhonas/free-exercise-db",
@@ -3032,9 +3131,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 20,
+     "analyzerVersion": "0.10.0",
+     "headSha": "f00c92c7dcf1216a928a52c3706c7ce8e2f71ed5",
+     "stars": 2148,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "mainsail-crew/mainsail": {
    "name": "mainsail-crew/mainsail",
@@ -3478,9 +3588,20 @@
      "comparablePercent": 94.1,
      "findings": 314,
      "errors": 5
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "c175749a8becc545bf29f4ec40c8fd1eeab8cf41",
+     "stars": 24953,
+     "tests": 37476,
+     "comparablePercent": 94.3,
+     "findings": 343,
+     "errors": 3
     }
    ],
-   "latest": "2026-11-11"
+   "latest": "2026-11-18"
   },
   "lfnovo/open-notebook": {
    "name": "lfnovo/open-notebook",
@@ -3897,9 +4018,20 @@
      "comparablePercent": 96.7,
      "findings": 61,
      "errors": 1
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e4a68a94c42a3c17cbd560d66ce2e46a7048ab99",
+     "stars": 22593,
+     "tests": 9481,
+     "comparablePercent": 24.6,
+     "findings": 35,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-02"
+   "latest": "2026-11-18"
   },
   "paperclipai/paperclip": {
    "name": "paperclipai/paperclip",
@@ -4613,9 +4745,20 @@
      "comparablePercent": 96.8,
      "findings": 481,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "fda7757c25e20492c5cd86ecf72790f966b6c3ce",
+     "stars": 9059,
+     "tests": 29987,
+     "comparablePercent": 96.8,
+     "findings": 487,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "open-webui/open-webui": {
    "name": "open-webui/open-webui",
@@ -4751,9 +4894,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0666e59d26a4d056e0bacee41742486badd71cf8",
+     "stars": 158982,
+     "tests": 4,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -5182,9 +5336,20 @@
      "comparablePercent": 87.4,
      "findings": 4,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0de3934780f33a3d393b0af5a4c88b0178d66ce3",
+     "stars": 89661,
+     "tests": 135,
+     "comparablePercent": 87.4,
+     "findings": 4,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "prometheus/prometheus": {
    "name": "prometheus/prometheus",
@@ -5637,9 +5802,20 @@
      "comparablePercent": 98.8,
      "findings": 524,
      "errors": 20
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "6c6ce3848cf1106faef221123510d61e3f0f6a88",
+     "stars": 29240,
+     "tests": 15933,
+     "comparablePercent": 98.8,
+     "findings": 526,
+     "errors": 20
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "fishjar/kiss-translator": {
    "name": "fishjar/kiss-translator",
@@ -5744,9 +5920,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 23,
+     "analyzerVersion": "0.10.0",
+     "headSha": "b263b646eec77a6c567cd33ea9ed549d6d058aba",
+     "stars": 185,
+     "tests": 27,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-18"
   },
   "alibaba/open-code-review": {
    "name": "alibaba/open-code-review",
@@ -5794,9 +5981,20 @@
      "comparablePercent": 97.4,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "319c34239de70f718f365f832e20ab74a86ea9e0",
+     "stars": 53894,
+     "tests": 42,
+     "comparablePercent": 97.6,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "abhigyanpatwari/GitNexus": {
    "name": "abhigyanpatwari/GitNexus",
@@ -5907,9 +6105,20 @@
      "comparablePercent": 100,
      "findings": 4,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e89cda9804643d3631e77652d1bca47a079adb69",
+     "stars": 3440,
+     "tests": 388,
+     "comparablePercent": 100,
+     "findings": 4,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-16"
+   "latest": "2026-11-18"
   },
   "totec448-spec/chat-on-steroids": {
    "name": "totec448-spec/chat-on-steroids",
@@ -5963,9 +6172,20 @@
      "comparablePercent": 95.9,
      "findings": 148,
      "errors": 2
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3416b86da4b3288e87f827c7f2759a7fa18b5231",
+     "stars": 20120,
+     "tests": 4993,
+     "comparablePercent": 95.2,
+     "findings": 148,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "LodyAI/Lody": {
    "name": "LodyAI/Lody",
@@ -6070,9 +6290,20 @@
      "comparablePercent": 100,
      "findings": 52,
      "errors": 0
+    },
+    {
+     "date": "2026-11-18",
+     "rank": 21,
+     "analyzerVersion": "0.10.0",
+     "headSha": "fb5c3479271d1c9af46f87ab253a9f474c6ef13c",
+     "stars": 1102,
+     "tests": 462,
+     "comparablePercent": 100,
+     "findings": 52,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-18"
   },
   "esengine/estella": {
    "name": "esengine/estella",
@@ -6107,6 +6338,57 @@
     }
    ],
    "latest": "2026-11-17"
+  },
+  "lnkiai/m3e-canvas": {
+   "name": "lnkiai/m3e-canvas",
+   "appearances": [
+    {
+     "date": "2026-11-18",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "488689262a9b42344e0819282fbce7ac7ebef8e3",
+     "stars": 10575,
+     "tests": 629,
+     "comparablePercent": 99.8,
+     "findings": 23,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-18"
+  },
+  "karakeep-app/karakeep": {
+   "name": "karakeep-app/karakeep",
+   "appearances": [
+    {
+     "date": "2026-11-18",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "bcc4b90a2ae89f4b96ec23ce395ee9d3d1df6a72",
+     "stars": 30665,
+     "tests": 1310,
+     "comparablePercent": 89.1,
+     "findings": 83,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-18"
+  },
+  "mastra-ai/mastra": {
+   "name": "mastra-ai/mastra",
+   "appearances": [
+    {
+     "date": "2026-11-18",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "a2261669fa02d5c9e3cf7c01a183002d5b3dc87f",
+     "stars": 29587,
+     "tests": 82372,
+     "comparablePercent": 92.6,
+     "findings": 2971,
+     "errors": 72
+    }
+   ],
+   "latest": "2026-11-18"
   }
  }
 }
