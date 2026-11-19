@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T05:46:42.454Z",
+ "updatedAt": "2026-11-19T05:45:40.759Z",
  "days": [
   {
    "date": "2026-10-19",
@@ -341,6 +341,17 @@
    "findings": 5160,
    "errors": 99,
    "skipped": 0
+  },
+  {
+   "date": "2026-11-19",
+   "source": "github-trending-daily",
+   "analyzerVersion": "0.10.0",
+   "scanned": 64,
+   "repos": 20,
+   "tests": 109921,
+   "findings": 4460,
+   "errors": 88,
+   "skipped": 2
   }
  ],
  "repos": {
@@ -615,9 +626,20 @@
      "comparablePercent": 100,
      "findings": 12,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 19,
+     "analyzerVersion": "0.10.0",
+     "headSha": "17821bcb7e2e33c5637d5187f0b73b26d83e8b0b",
+     "stars": 82,
+     "tests": 177,
+     "comparablePercent": 100,
+     "findings": 12,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-19"
   },
   "supabase/supabase": {
    "name": "supabase/supabase",
@@ -1001,9 +1023,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 6,
+     "analyzerVersion": "0.10.0",
+     "headSha": "075b548c2405a07b77129eb448b0b504fc60dea3",
+     "stars": 21423,
+     "tests": 23,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-10-24"
+   "latest": "2026-11-19"
   },
   "promptfoo/promptfoo": {
    "name": "promptfoo/promptfoo",
@@ -1173,9 +1206,20 @@
      "comparablePercent": 98,
      "findings": 85,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 16,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5a8dc18c1bceeeac9d5c0832af0517c709e163a4",
+     "stars": 27023,
+     "tests": 658,
+     "comparablePercent": 98,
+     "findings": 85,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "google-gemini/gemini-cli": {
    "name": "google-gemini/gemini-cli",
@@ -2279,9 +2323,20 @@
      "comparablePercent": 99.3,
      "findings": 7,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 17,
+     "analyzerVersion": "0.10.0",
+     "headSha": "cc13f5c5a2540d8f4a34ea384db5ac1605f5ff0b",
+     "stars": 4006,
+     "tests": 171,
+     "comparablePercent": 99.4,
+     "findings": 8,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "tranxuanthang/lrcget": {
    "name": "tranxuanthang/lrcget",
@@ -2982,9 +3037,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 15,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5cef573933663c4673c6e0093f1df04e68018b1a",
+     "stars": 4265,
+     "tests": 3,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "yuhonas/free-exercise-db": {
    "name": "yuhonas/free-exercise-db",
@@ -3393,9 +3459,20 @@
      "comparablePercent": 97.7,
      "findings": 1066,
      "errors": 12
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 4,
+     "analyzerVersion": "0.10.0",
+     "headSha": "71370107b42e989a9759a5acdc6af604eb3120ac",
+     "stars": 211206,
+     "tests": 20289,
+     "comparablePercent": 97.4,
+     "findings": 1077,
+     "errors": 12
     }
    ],
-   "latest": "2026-11-13"
+   "latest": "2026-11-19"
   },
   "macro-inc/macro": {
    "name": "macro-inc/macro",
@@ -4029,9 +4106,20 @@
      "comparablePercent": 24.6,
      "findings": 35,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 5,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e4a68a94c42a3c17cbd560d66ce2e46a7048ab99",
+     "stars": 22781,
+     "tests": 9481,
+     "comparablePercent": 24.6,
+     "findings": 35,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "paperclipai/paperclip": {
    "name": "paperclipai/paperclip",
@@ -4905,9 +4993,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 10,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0666e59d26a4d056e0bacee41742486badd71cf8",
+     "stars": 159058,
+     "tests": 4,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "vercel/next.js": {
    "name": "vercel/next.js",
@@ -4922,9 +5021,20 @@
      "comparablePercent": 100,
      "findings": 0,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 11,
+     "analyzerVersion": "0.10.0",
+     "headSha": "5395cf44d1fcd1e257ad32365f8674a473c664ac",
+     "stars": 143570,
+     "tests": 5,
+     "comparablePercent": 100,
+     "findings": 0,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-05"
+   "latest": "2026-11-19"
   },
   "mermaid-js/mermaid": {
    "name": "mermaid-js/mermaid",
@@ -5347,9 +5457,20 @@
      "comparablePercent": 87.4,
      "findings": 4,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 2,
+     "analyzerVersion": "0.10.0",
+     "headSha": "a0823d965a7894b621e0e30ad845ddd5a05d9d39",
+     "stars": 89671,
+     "tests": 135,
+     "comparablePercent": 87.4,
+     "findings": 4,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "prometheus/prometheus": {
    "name": "prometheus/prometheus",
@@ -5392,9 +5513,20 @@
      "comparablePercent": 88.4,
      "findings": 8,
      "errors": 3
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 13,
+     "analyzerVersion": "0.10.0",
+     "headSha": "63e5284e745ce584b0635d0d1784366e1ef39f99",
+     "stars": 36666,
+     "tests": 7000,
+     "comparablePercent": 90,
+     "findings": 101,
+     "errors": 8
     }
    ],
-   "latest": "2026-11-07"
+   "latest": "2026-11-19"
   },
   "tldraw/tldraw": {
    "name": "tldraw/tldraw",
@@ -5813,9 +5945,20 @@
      "comparablePercent": 98.8,
      "findings": 526,
      "errors": 20
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 1,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3e99ef1265dd55bacc1e8df45c01d7b5a0434894",
+     "stars": 29936,
+     "tests": 15983,
+     "comparablePercent": 98.8,
+     "findings": 526,
+     "errors": 20
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "fishjar/kiss-translator": {
    "name": "fishjar/kiss-translator",
@@ -5886,9 +6029,20 @@
      "comparablePercent": 96.4,
      "findings": 73,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 9,
+     "analyzerVersion": "0.10.0",
+     "headSha": "9f0f4ddfe72b4c06afafe1a658e6ee53d35b5760",
+     "stars": 109357,
+     "tests": 1788,
+     "comparablePercent": 96.4,
+     "findings": 73,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-19"
   },
   "block/buzz-app": {
    "name": "block/buzz-app",
@@ -6183,9 +6337,20 @@
      "comparablePercent": 95.2,
      "findings": 148,
      "errors": 2
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 3,
+     "analyzerVersion": "0.10.0",
+     "headSha": "3416b86da4b3288e87f827c7f2759a7fa18b5231",
+     "stars": 20488,
+     "tests": 4993,
+     "comparablePercent": 95.2,
+     "findings": 148,
+     "errors": 2
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "LodyAI/Lody": {
    "name": "LodyAI/Lody",
@@ -6217,9 +6382,20 @@
      "comparablePercent": 100,
      "findings": 51,
      "errors": 1
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 18,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0fdb1287a1db12aede7e142b9cdcd847e2be36d7",
+     "stars": 1845,
+     "tests": 805,
+     "comparablePercent": 100,
+     "findings": 51,
+     "errors": 1
     }
    ],
-   "latest": "2026-11-15"
+   "latest": "2026-11-19"
   },
   "motion-canvas/motion-canvas": {
    "name": "motion-canvas/motion-canvas",
@@ -6301,9 +6477,20 @@
      "comparablePercent": 100,
      "findings": 52,
      "errors": 0
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 20,
+     "analyzerVersion": "0.10.0",
+     "headSha": "fb5c3479271d1c9af46f87ab253a9f474c6ef13c",
+     "stars": 1102,
+     "tests": 462,
+     "comparablePercent": 100,
+     "findings": 52,
+     "errors": 0
     }
    ],
-   "latest": "2026-11-18"
+   "latest": "2026-11-19"
   },
   "esengine/estella": {
    "name": "esengine/estella",
@@ -6335,9 +6522,20 @@
      "comparablePercent": 99.1,
      "findings": 329,
      "errors": 6
+    },
+    {
+     "date": "2026-11-19",
+     "rank": 7,
+     "analyzerVersion": "0.10.0",
+     "headSha": "bbbfaf1765308826a581a75424a11d0f3e59521a",
+     "stars": 77085,
+     "tests": 7252,
+     "comparablePercent": 99.1,
+     "findings": 329,
+     "errors": 6
     }
    ],
-   "latest": "2026-11-17"
+   "latest": "2026-11-19"
   },
   "lnkiai/m3e-canvas": {
    "name": "lnkiai/m3e-canvas",
@@ -6389,6 +6587,57 @@
     }
    ],
    "latest": "2026-11-18"
+  },
+  "colbymchenry/codegraph": {
+   "name": "colbymchenry/codegraph",
+   "appearances": [
+    {
+     "date": "2026-11-19",
+     "rank": 8,
+     "analyzerVersion": "0.10.0",
+     "headSha": "e879216bba01cdc3b860405b750276549a1217ea",
+     "stars": 78022,
+     "tests": 10141,
+     "comparablePercent": 72.7,
+     "findings": 466,
+     "errors": 0
+    }
+   ],
+   "latest": "2026-11-19"
+  },
+  "vercel/eve": {
+   "name": "vercel/eve",
+   "appearances": [
+    {
+     "date": "2026-11-19",
+     "rank": 12,
+     "analyzerVersion": "0.10.0",
+     "headSha": "08034cde67d2c301c8c339f56db5d118cf14b74a",
+     "stars": 6001,
+     "tests": 14752,
+     "comparablePercent": 98.6,
+     "findings": 394,
+     "errors": 6
+    }
+   ],
+   "latest": "2026-11-19"
+  },
+  "storybookjs/storybook": {
+   "name": "storybookjs/storybook",
+   "appearances": [
+    {
+     "date": "2026-11-19",
+     "rank": 14,
+     "analyzerVersion": "0.10.0",
+     "headSha": "0cdcdc9c2552760b66339943dfd83a2de587c269",
+     "stars": 91639,
+     "tests": 15799,
+     "comparablePercent": 97.9,
+     "findings": 1099,
+     "errors": 33
+    }
+   ],
+   "latest": "2026-11-19"
   }
  }
 }
