@@ -20,11 +20,11 @@ jobs:
     timeout-minutes: 60
     steps:
       # The snapshot is pushed to main, so a manual run on any branch still works from main.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: main
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
 
@@ -38,7 +38,7 @@ jobs:
       # manifest (every candidate and why it was skipped). Only the summary is published.
       - name: Upload full analyzer output
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: trending-${{ github.run_id }}
           path: ${{ runner.temp }}/trending-artifacts
